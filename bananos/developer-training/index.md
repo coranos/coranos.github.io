@@ -5,7 +5,7 @@
 | Number | Discord Id   | Progress             |
 |:------ |:------------ |:-------------------  |
 | 1      | Coranos#4281 | Completed Lesson Two |
-
+| 69     | not_idol#3950| Completed Lesson One |
 
 ## Lesson One, Github and Atom.
 
