@@ -41,6 +41,7 @@
 | 24   |@ Algiorno Oficial!#8968 |![24-id] | Hello everyone, my project is to buy a bartender kit to work on my own at the end of Samana, since I currently work from Monday to Friday in an office and in my free time (Saturdays, Sundays) I work for a celebration agency as a waiter The cost of the kit that I would like to buy is Bsf 94,999,999 which is approximately 15834 bananas. Greetings. | | 15834 BAN |
 | 25   |@ Cristian#2261 |![25-id] | Instant transactions are very necessary nowadays in my country Venezuela, to process payments in a very fast way, it is for this reason that I have come up with the idea of starting to implement the use of instant coins like banana processing basic food payments like rice, sugar, eggs, sweets, fruits in a mini store thus introducing not only trade with bananas but also donations to people who buy any of the products of the mini store with bananas in its opening stage. For me it is important since it would simplify the way of making payments. | | 1,000,000 BAN |
 | 26   |@ guillew#8609  |![26-id] | My ideal business is an ice cream shop and cafeteria, a place where you can get all kinds of ice cream and fast food, I want to implement a payment method in cryptocurrencies, mainly including payment for bananos, because in Venezuela the connections are deficient, so the points of Sales are always down or are very slow. It would also include a system of donations, "in bananos", so that people and ourselves can donate to give them lunch or breakfast, in my city there is an increase of homeless children asking for food in the streets, it would be nice to give at least one food a day. | |  1,500,000 ban |
+| 27 | @Team Junglo Arisbelyz # 7758 |! [27-id] | La crisis humanitaria en Venezuela y la falta de alimentos significa que muchos padres con familias no tienen los recursos necesarios para mantenerse a sí mismos, por lo tanto; Mi proyecto es el siguiente: mi familia y yo heredamos más de 100 hectáreas de tierra de mis abuelos, podemos plantar maíz y granos. Venezuela es el mayor consumidor de maíz en América Latina, ofrece trabajo y alimentos a muchas personas que participarán en las plantaciones, donaciones de alimentos a familias en condición crítica y maíz, granos, etc. a precios muy bajos para las comunidades, recuperando el inversiones que fueron hechas. || 92,000 o 92 nano |
 
 [01-id]: https://coranos.github.io/bananos/thanos/thananos.png "thumbnail"
 [01-video-01]: https://coranos.github.io/bananos/thanos/thananos.png "video-1"
@@ -105,6 +106,10 @@
 [25-id]: https://cdn.discordapp.com/attachments/465561310554357766/474981981235445780/Coranos_contest_bussines.jpg "thumbnail"
 
 [26-id]: https://cdn.discordapp.com/attachments/464831542880108545/474998841528156160/bananosplit.jpg
+
+
+[ 27-id ]: https://cdn.discordapp.com/attachments/447542240705904663/474729617392009256/lidow_201882194510809.jpg "thumbnail"
+[ 27-video-01 ]: https: //www.youtube.com/watch? V = 7CQQk0ouDHU "video-01"
 
 ### The Contest (Required)
 1. In the United States this would be called an "Elevator Pitch" contest.  
