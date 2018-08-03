@@ -40,6 +40,7 @@
 | 23   |@ javierapon#7216                        |![23-id] | I propose to create a corporate software development company for medium-sized companies in Latin America and Europe, specifically websites and websites. The company will be made up of members of the banana community and the profits will be divided based on the contribution once the initial investment has been recovered. For this project you need people who know: web development and design, publicists, graphic designers, coordinators, transcriptionists, translators, administrators and all other charges that may be needed. With this we could give jobs to many people in Venezuela and other countries. With this we can finance future projects | 1,000,000 BAN |
 | 24   |@ Algiorno Oficial!#8968 |![24-id] | Hello everyone, my project is to buy a bartender kit to work on my own at the end of Samana, since I currently work from Monday to Friday in an office and in my free time (Saturdays, Sundays) I work for a celebration agency as a waiter The cost of the kit that I would like to buy is Bsf 94,999,999 which is approximately 15834 bananas. Greetings. | | 15834 BAN |
 | 25   |@ Cristian#2261 |![25-id] | Instant transactions are very necessary nowadays in my country Venezuela, to process payments in a very fast way, it is for this reason that I have come up with the idea of starting to implement the use of instant coins like banana processing basic food payments like rice, sugar, eggs, sweets, fruits in a mini store thus introducing not only trade with bananas but also donations to people who buy any of the products of the mini store with bananas in its opening stage. For me it is important since it would simplify the way of making payments. | | 1,000,000 BAN |
+| 26   |@ guillew#8609  |![26-id] | My ideal business is an ice cream shop and cafeteria, a place where you can get all kinds of ice cream and fast food, I want to implement a payment method in cryptocurrencies, mainly including payment for bananos, because in Venezuela the connections are deficient, so the points of Sales are always down or are very slow. It would also include a system of donations, "in bananos", so that people and ourselves can donate to give them lunch or breakfast, in my city there is an increase of homeless children asking for food in the streets, it would be nice to give at least one food a day. | |  1,500,000 ban |
 
 [01-id]: https://coranos.github.io/bananos/thanos/thananos.png "thumbnail"
 [01-video-01]: https://coranos.github.io/bananos/thanos/thananos.png "video-1"
@@ -102,6 +103,8 @@
 [24-id]: https://i.imgur.com/xjbfiFN.jpg "thumbnail"
 
 [25-id]: https://cdn.discordapp.com/attachments/465561310554357766/474981981235445780/Coranos_contest_bussines.jpg "thumbnail"
+
+[26-id]: https://cdn.discordapp.com/attachments/464831542880108545/474998841528156160/bananosplit.jpg
 
 ### The Contest (Required)
 1. In the United States this would be called an "Elevator Pitch" contest.  
