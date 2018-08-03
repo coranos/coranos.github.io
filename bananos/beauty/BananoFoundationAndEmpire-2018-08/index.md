@@ -36,6 +36,7 @@
 | 19    |@ Mayrapina#9547                        |![19-id] | My idea is to plant different types of vegetables and fruits on the other hand raise egg-laying hens. This land is unused and to be honest with the situation as this would be both a means of production and a humanitarian aid because in my country food is so expensive that we could in the future supply fruit shops and sell eggs at a lower value thus helping others to obtain such food as well as eventualities such as '' sopazos '' that are sponsored by the Banana Coin currency through this project. I started testing the land only without resources it costs a lot since only with my daughter does not give me much time to herd the floor and that maintenance that could be given as work to some people who need it on the other hand I emphasize again that I have knowledge in this of agriculture and I know that it is an excellent idea since we are talking about that if it is done we can produce this same production for others and help that is the value that characterizes us | 35000 BAN |
 | 20   |@ may11#6709                             |![20-id]  | we accept your great donation to be better every day | | ?? BAN |
 | 21   |@ cattacastro#2625                       |![21-id]  | As everyone knows, I devote myself to the pastry .. Maybe you remember my banana cookies, I like this contest because we have the opportunity to help us grow, I came to Venezuela 13 years ago fleeing the crisis in my country (Colombia) looking for a better future new opportunities !! I have been working for 1 years and it is difficult to keep up with the increase in value of the products, sometimes I must buy them at double the price and even exchange products to find them, I dedicate my pastry work from my apartment and I have a kitchen and some artifacts, but apart from my struggle with the products, I still need some things to improve my work .. artifacts: - mixer - mold - pallets - trays the mixer is the most expensive and the one I need the most, my mixer was burned a couple of weeks ago and since then I have been doing it manually, products: - cocoa (chocolate) - wheat flour - leavening flour - sugar - milk These are the items that I use the most every day which I plan to buy in quantities to have time to search as they go by finishing .. | ![21-picture-01] | 200,000 BAN |
+| 22   |@ Oriana#4323                            |![22-id]  ![22-photo-01] | TRANSBAN is a project app that corresponds to new technologies, a transforming and optimizing revolution when requesting a private transport, adding new and favorable forms of payments for those involved, apart from the customary payment in cash, cards or transfer, can form links with cryptocurrencies, being the main Banana Coin, thus creating a new possibility for its use and knowledge. A company that offers in Venezuela, a connection between drivers and passengers in a modernized, easy, fast and safe way. Part of the funds acquired from the app will be used for the reconstruction of the country. |  2,000,000 BAN |
 
 [01-id]: https://coranos.github.io/bananos/thanos/thananos.png "thumbnail"
 [01-video-01]: https://coranos.github.io/bananos/thanos/thananos.png "video-1"
@@ -88,6 +89,11 @@
 
 [21-id]: https://cdn.discordapp.com/attachments/449261138946031629/474763661576241173/IMG-20180802-WA0005.png "thumbnail"
 [21-picture-01]: https://cdn.discordapp.com/attachments/449261138946031629/474764508590637076/IMG_20171104_183254.png "thumbnail"
+
+[22-id]: https://i.imgur.com/RPwtw9w.jpg "thumbnail"
+[22-photo-01]: https://i.imgur.com/h1wWBeC.png "thumbnail"
+[22-video-01]: https://www.youtube.com/watch?v=x3Mz3E_zyQ0 "video-01"
+
 
 ### The Contest (Required)
 1. In the United States this would be called an "Elevator Pitch" contest.  
