@@ -107,9 +107,8 @@
 
 [26-id]: https://cdn.discordapp.com/attachments/464831542880108545/474998841528156160/bananosplit.jpg
 
-
 [ 27-id ]: https://cdn.discordapp.com/attachments/447542240705904663/474729617392009256/lidow_201882194510809.jpg "thumbnail"
-[ 27-video-01 ]: https: //www.youtube.com/watch? V = 7CQQk0ouDHU "video-01"
+[ 27-video-01 ]: https://www.youtube.com/watch?v=7CQQk0ouDHU "video-01"
 
 ### The Contest (Required)
 1. In the United States this would be called an "Elevator Pitch" contest.  
