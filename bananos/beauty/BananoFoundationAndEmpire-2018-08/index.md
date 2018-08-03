@@ -42,7 +42,7 @@
 | 25   |@ Cristian#2261 |![25-id] | Instant transactions are very necessary nowadays in my country Venezuela, to process payments in a very fast way, it is for this reason that I have come up with the idea of starting to implement the use of instant coins like banana processing basic food payments like rice, sugar, eggs, sweets, fruits in a mini store thus introducing not only trade with bananas but also donations to people who buy any of the products of the mini store with bananas in its opening stage. For me it is important since it would simplify the way of making payments. | | 1,000,000 BAN |
 | 26   |@ guillew#8609  |![26-id] | My ideal business is an ice cream shop and cafeteria, a place where you can get all kinds of ice cream and fast food, I want to implement a payment method in cryptocurrencies, mainly including payment for bananos, because in Venezuela the connections are deficient, so the points of Sales are always down or are very slow. It would also include a system of donations, "in bananos", so that people and ourselves can donate to give them lunch or breakfast, in my city there is an increase of homeless children asking for food in the streets, it would be nice to give at least one food a day. | |  1,500,000 ban |
 | 27 | @ Team Junglo Arisbelyz # 7758 |![27-id] | La crisis humanitaria en Venezuela y la falta de alimentos significa que muchos padres con familias no tienen los recursos necesarios para mantenerse a sí mismos, por lo tanto; Mi proyecto es el siguiente: mi familia y yo heredamos más de 100 hectáreas de tierra de mis abuelos, podemos plantar maíz y granos. Venezuela es el mayor consumidor de maíz en América Latina, ofrece trabajo y alimentos a muchas personas que participarán en las plantaciones, donaciones de alimentos a familias en condición crítica y maíz, granos, etc. a precios muy bajos para las comunidades, recuperando el inversiones que fueron hechas. | | 92,000 o 92 nano |
-| 28 | @ KN#1585 | | The idea is very simple. Within the Banano coin website create a virtual shop, where they will sell gadgets, t-shirts, clothing all branded Banano. We could use the funniest monkeys characters and give customers the opportunity to customize their purchase by choosing the character that best suits them. All proceeds can be donated to the most needy populations for basic necessities. | | 0 BAN |
+| 28 | @ KN#1585 |![28-id] | The idea is very simple. Within the Banano coin website create a virtual shop, where they will sell gadgets, t-shirts, clothing all branded Banano. We could use the funniest monkeys characters and give customers the opportunity to customize their purchase by choosing the character that best suits them. All proceeds can be donated to the most needy populations for basic necessities. | | 0 BAN |
 
 [01-id]: https://coranos.github.io/bananos/thanos/thananos.png "thumbnail"
 [01-video-01]: https://coranos.github.io/bananos/thanos/thananos.png "video-1"
@@ -108,8 +108,10 @@
 
 [26-id]: https://cdn.discordapp.com/attachments/464831542880108545/474998841528156160/bananosplit.jpg
 
-[ 27-id ]: https://cdn.discordapp.com/attachments/447542240705904663/474729617392009256/lidow_201882194510809.jpg "thumbnail"
-[ 27-video-01 ]: https://www.youtube.com/watch?v=7CQQk0ouDHU "video-01"
+[27-id]: https://cdn.discordapp.com/attachments/447542240705904663/474729617392009256/lidow_201882194510809.jpg "thumbnail"
+[27-video-01]: https://www.youtube.com/watch?v=7CQQk0ouDHU "video-01"
+
+[28-id]: https://cdn.discordapp.com/attachments/465209253968216064/475021387501666312/kyUJcFbB_400x400.jpg "thumbnail"
 
 ### The Contest (Required)
 1. In the United States this would be called an "Elevator Pitch" contest.  
