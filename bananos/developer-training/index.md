@@ -178,6 +178,12 @@ git pull;git commit -a -m "updated index.html";git push;
 </html>
 ```
 
+## Lesson Five, tables in index.html.
+
+read up on html here: https://www.w3schools.com/html/default.asp
+
+read up on css here: https://www.w3schools.com/css/default.asp
+
 ### eventually
 freelancer amazon-turk fiverr wordpress prestashop opencart joomla magento autotrading-crypto-arbitrage-bot
 
