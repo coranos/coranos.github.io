@@ -107,10 +107,6 @@
 		{
 			"rank": "27",
 			"contestant": "@thompsano#8149"
-		},
-		{
-			"rank": "32",
-			"contestant": "@carmizp #3326"
 		}
 	],
 	"@ junglo steph#1771": [
@@ -217,10 +213,6 @@
 		{
 			"rank": "27",
 			"contestant": "@gladiache#4650"
-		},
-		{
-			"rank": "28",
-			"contestant": "@carmizp #3326"
 		},
 		{
 			"rank": "29",
@@ -352,10 +344,6 @@
 			"contestant": "@Deacero1000#3856"
 		},
 		{
-			"rank": "27",
-			"contestant": "@carmizp #3326"
-		},
-		{
 			"rank": "28",
 			"contestant": "@thompsano#8149"
 		},
@@ -390,7 +378,6 @@
 		"@gladiache#4650",
 		"@ashleybananin2",
 		"@Keysil#6623",
-		"@carmizp #3326",
 		"@Deacero1000#3856",
 		"@thompsano#8149"
 	],
@@ -486,10 +473,6 @@
 		{
 			"rank": "33",
 			"contestant": "@Deacero1000#3856"
-		},
-		{
-			"rank": "36",
-			"contestant": "@carmizp #3326"
 		},
 		{
 			"rank": "37",
@@ -606,10 +589,6 @@
 			"contestant": "@Deacero1000#3856"
 		},
 		{
-			"rank": "27",
-			"contestant": "@carmizp #3326"
-		},
-		{
 			"rank": "28",
 			"contestant": "@ashleybananin2"
 		}
@@ -716,10 +695,6 @@
 			"contestant": "@thompsano#8149"
 		},
 		{
-			"rank": "36",
-			"contestant": "@carmizp #3326"
-		},
-		{
 			"rank": "37",
 			"contestant": "@ashleybananin2"
 		}
@@ -784,10 +759,6 @@
 		{
 			"rank": "15",
 			"contestant": "@jbrice#2496"
-		},
-		{
-			"rank": "16",
-			"contestant": "@carmizp #3326"
 		},
 		{
 			"rank": "17",
@@ -940,10 +911,6 @@
 			"contestant": "@Bananoeira#4382"
 		},
 		{
-			"rank": "36",
-			"contestant": "@carmizp #3326"
-		},
-		{
 			"rank": "37",
 			"contestant": "@thompsano#8149"
 		},
@@ -1054,10 +1021,6 @@
 			"contestant": "@Deacero1000#3856"
 		},
 		{
-			"rank": "36",
-			"contestant": "@carmizp #3326"
-		},
-		{
 			"rank": "37",
 			"contestant": "@thompsano#8149"
 		},
@@ -1068,6 +1031,7 @@
 	],
 	"@ Coranos#4281": [
 		"@Bananoeira#4382",
+		"@chjpmay1996#4174",
 		"@gladiache#4650",
 		"@Gollo Tattoo 56#5364",
 		"@oskita_20#3723",
@@ -1091,7 +1055,7 @@
 		"@jCristalla#6092",
 		"@Deacero1000#3856",
 		"@Andreiniana.junglo#3438",
-		"@ashleybananin2",
-		"@chjpmay1996#4174"
+		"@thompsano#8149",
+		"@ashleybananin2"
 	]
 }
