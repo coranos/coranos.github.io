@@ -13,6 +13,7 @@
 | 06     | Monachita#2427| Completed Lesson Four |[lanegrologia1.github.io]   |
 | 07     | Trigger Haven#5767| Completed Lesson  |   |
 | 08     | Scarlet Alejandra#4565| completed lesson one |
+| 09     | azuLeto#1082 | Completed Lesson One | https://azuleto.github.io/ |
 
 
 
