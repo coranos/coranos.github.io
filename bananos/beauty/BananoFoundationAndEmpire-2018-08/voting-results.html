@@ -451,7 +451,7 @@
                 if(fraction >= 1.0) {
                   throw 'vote fraction ' + contestant_total_votes[contestant] + ' greater than total ' + total_votes;
                 }
-                const votes = judges.length + fraction;
+                const votes = judges.length + (1.0 - fraction);
                 return votes;
               }
               

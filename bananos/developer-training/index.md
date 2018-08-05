@@ -10,7 +10,7 @@
 | 69     | not_idol#3950 | Completed Lesson Four  |[not-idol.github.io]    |
 | 04     | Lee#2040      | Completed Lesson Two   |[acidlee.github.io]     |
 | 05     | Parvu#7388    | Completed Lesson Three |[parvulitum.github.io]  |
-| 06     | Monachita#2427| Completed Lesson Three |[lanegrologia1.github.io]   |
+| 06     | Monachita#2427| Completed Lesson Four |[lanegrologia1.github.io]   |
 | 07     | Trigger Haven#5767| Completed Lesson  |   |
 | 08     | Scarlet Alejandra#4565| completed lesson one |
 
@@ -177,6 +177,12 @@ git pull;git commit -a -m "updated index.html";git push;
 </body>
 </html>
 ```
+
+## Lesson Five, tables in index.html.
+
+read up on html here: https://www.w3schools.com/html/default.asp
+
+read up on css here: https://www.w3schools.com/css/default.asp
 
 ### eventually
 freelancer amazon-turk fiverr wordpress prestashop opencart joomla magento autotrading-crypto-arbitrage-bot
