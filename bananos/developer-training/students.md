@@ -16,6 +16,6 @@
 [coranos.github.io]: https://coranos.github.io/
 [mayrapina007.github.io]: https://mayrapina007.github.io/
 [not-idol.github.io]: https://not-idol.github.io/
-[acidlee.github.io]: https://not-idol.github.io/
+[acidlee.github.io]: https://acidlee.github.io/
 [parvulitum.github.io]: https://Parvulitum.github.io/
 [lanegrologia1.github.io]: https://lanegrologia1.github.io/
