@@ -16,7 +16,7 @@
 | 11     |*Parzival # 8194   | completed lesson seven   | [parakeet1.github.io]    |
 | 12     | IsBємsh👽C94´#0467     | completed lesson one   |[IsBemsho.github.io]      |
 | 13     | liam05 #5013          | completed lesson one   |[isata23677.github.io]    |
-| 14   | @Geysel#7366 | termino la leccion 2  | [Geysel2902.github.io]  |  
+| 14   | @Geysel#7366 | termino la leccion 4              | [Geysel2902.github.io]  |  
  
 [coranos.github.io]: https://coranos.github.io/
 [mayrapina007.github.io]: https://mayrapina007.github.io/
