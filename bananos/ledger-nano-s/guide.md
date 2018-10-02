@@ -12,19 +12,17 @@ We recommend using Bananovault:
 [bananovault](https://vault.banano.co.in/)
 
 ## Installation and Setup Instructions
-To install and setup a ledger Nano S with Bananovault, you can now protect your Banano with the most popular hardware wallet on the market!
 
 ### Initial setup
 
 The Ledger device must have been already [initialized](https://support.ledgerwallet.com/hc/en-us/articles/360000613793) with the latest firmware [installed](https://support.ledgerwallet.com/hc/en-us/articles/360002731113)
 
 Ledger Live [installed and ready to use](https://support.ledgerwallet.com/hc/en-us/articles/360006395233)
-Google Chrome [installed](https://www.google.com/chrome/)
 
 * Open Ledger Live Desktop, select "Manager" in the left panel, and install the Banano application.
 ![image2]
 
-* Connect and unlock your Ledger Nano S 
+* Connect and unlock your Ledger Device Nano S 
 ![connected]
 
 * Find Banano in the app catalog, since the Bananovault app requires it 
@@ -51,11 +49,9 @@ You should now see something that looks like this:
 
 ![image6]
 
-If your Ledger is properly connected to your computer with the Banano application installed, you will see "Ledger Ready" on the left sidebar of BananoVault.  
+If your Ledger Device is properly connected to your computer with the Banano application installed, you will see "Ledger Ready" on the left sidebar of BananoVault.  
 
 ![image5]
-
-After sending Banano from BananoVault, you should now receive a notification on your Ledger prompting you to confirm or deny the transaction.  By default, BananoVault will receive transactions automatically.  If a transaction is pending, it can be confirmed manually by selecting "Receive" from the left sidebar, which will trigger the option to confirm manually on your Ledger device.  
 
 ## View Account Balance
 To view the account balance:
@@ -85,7 +81,7 @@ To send crypto
 
 ![send]
 
-Be sure to verify the the transaction details on the device!
+Be sure to verify the the transaction details on the device before confirming the transaction!
 
 ## Support
 If you have trouble, the best way to get help is to contact Coranos#4281 on the Banano Discord Server.
