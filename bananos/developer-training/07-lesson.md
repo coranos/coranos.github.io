@@ -9,6 +9,9 @@ Read up about json in the javascript reference on the main developer training pa
 http://bbdevelopment.website:8000/trade?start=2018-01-01T00:00:00&end=2018-09-08T00:00:00
 ```
 
+If you wish to format it so it's readable, use the JSON Beautifier:
+https://codebeautify.org/jsonviewer
+
 ## 7.3 On your gh-pages site add a new file called trades.js with the following content, which will help load the data as a graph:
 ```
 const loadJson = (url,callback) => {
