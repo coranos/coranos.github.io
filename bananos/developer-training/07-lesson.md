@@ -2,14 +2,14 @@
 
 Read up about json in the javascript reference on the main developer training page.
 
-## 6.1 - On your gh-pages site add a new file called trades.json
+## 7.1 - On your gh-pages site add a new file called trades.json
 
-## 6.2 download the Banano trade history JSON from the below URL and put it in trades.json.
+## 7.2 download the Banano trade history JSON from the below URL and put it in trades.json.
 ```
 http://bbdevelopment.website:8000/trade?start=2018-01-01T00:00:00&end=2018-09-08T00:00:00
 ```
 
-## 6.3 On your gh-pages site add a new file called trades.js with the following content, which will help load the data as a graph:
+## 7.3 On your gh-pages site add a new file called trades.js with the following content, which will help load the data as a graph:
 ```
 const loadJson = (url,callback) => {
     const xhttp = new XMLHttpRequest();
@@ -181,7 +181,7 @@ window.onload = function () {
 };
 ```
 
-## 6.4 On your gh-pages site add a new file called trades.html with the following content, which will load the data as a graph:
+## 7.4 On your gh-pages site add a new file called trades.html with the following content, which will load the data as a graph:
 ```
 <!doctype html>
 <html>
