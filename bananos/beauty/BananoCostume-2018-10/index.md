@@ -1,7 +1,10 @@
 # Banano Costume Contest October 2018
 
-# 300,000 Banano
-# 0 Nano
+![01-photo-header-01] ![01-photo-header-02] ![01-photo-header-03] ![01-photo-header-04] ![01-photo-header-05]
+
+## 300,000 Banano
+## 0 Nano
+
 # Contest Entry Deadline is Saturday November 3rd 13:00 Caracas time, or 5:00 PM UTC
 
 # please send all submissions to @ Coranos#4281
@@ -81,3 +84,9 @@
 [01-photo-example-01]: https://cdn.discordapp.com/attachments/449894883633922059/502261790126768140/Madasiaka4876_.png "thumbnail"
 
 [01-photo-example-02]: https://cdn.discordapp.com/attachments/449894883633922059/502261680806559744/CaptainClaw7542_3.png "thumbnail"
+
+[01-photo-header-01]: https://cdn.discordapp.com/attachments/449894883633922059/502261815313563649/Snappadoodle4147_.png "thumbnail"
+[01-photo-header-02]: https://cdn.discordapp.com/attachments/449894883633922059/502261611017404447/Deiv1662_3.png "thumbnail"
+[01-photo-header-03]: https://cdn.discordapp.com/attachments/449894883633922059/502261651878445059/Banano_Hero4472.png "thumbnail"
+[01-photo-header-04]: https://cdn.discordapp.com/attachments/449894883633922059/501929358001438740/mmm.png "thumbnail"
+[01-photo-header-05]: https://i.imgur.com/yZSVo6y.jpg "thumbnail"
