@@ -50,27 +50,34 @@
 (es)  
 (pt)  
 
-### imágenes e identificación
+## imágenes e identificación
 
-### images and identification
+## images and identification
 
 1. The contest will consist of one verification image, and one costume picture.  
 
-* Imagen uno / identificacion
-* Image one / identification
+### Imagen uno / identificacion
+### Image one / identification
 
-1. First photo, it must be the participant holding a paper with his ID and discord user name. Usually, the face must be visible. If the user does not want to show their face, the participant must be in full costume in this photo.   
+1. First photo, it must be the participant holding a paper with their discord ID and discord user name. Usually, the face must be visible. If the user does not want to show their face, the participant must be in full costume in this photo.   
 (es)   
 (pt)   
+![01-photo-example-01]
 
 
-* Image two / identification
+### Image two / costume
 2. Second photo, it must be the participant in costume. The costume cannot be just street clothes, at least a little effort must be put into making it a halloween costume. Judges have final say.   
 (es)   
 (pt)   
+![01-photo-example-02]
 
+
+### Image limits
 
 3. Limit of 3 photos per contestant.  
 (es) Limite de 3 fotos por concursante.  
 (pt) Limite de 3 fotos por competidor.  
 
+[01-photo-example-01]: https://cdn.discordapp.com/attachments/449894883633922059/502261790126768140/Madasiaka4876_.png "thumbnail"
+
+[01-photo-example-02]: https://cdn.discordapp.com/attachments/449894883633922059/502261680806559744/CaptainClaw7542_3.png "thumbnail"
