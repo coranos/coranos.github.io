@@ -1,10 +1,10 @@
-# Costume Contest Banano October 2018
+# Banano Costume Contest October 2018
 
 # 300,000 Banano
 # 0 Nano
 # Contest Entry Deadline is Saturday November 3rd 13:00 Caracas time, or 5:00 PM UTC
 
-# please give all submissions to @ Coranos#4281 or @ Mayrapina#9547 on the #contest-submissions channel
+# please send all submissions to @ Coranos#4281
 
 ### Judges
 | Number | Discord Id                         |
