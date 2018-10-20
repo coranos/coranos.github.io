@@ -1,6 +1,6 @@
 # Costume Contest Banano October 2018
 
-# 150,000 Banano
+# 300,000 Banano
 # 0 Nano
 # Contest Entry Deadline is Saturday November 3rd 13:00 Caracas time, or 5:00 PM UTC
 
@@ -45,6 +45,10 @@
 3. Avoid including anything that would help someone harrass you, like your street address.  
 (es) Evite incluir cualquier cosa que pueda permitir a otros acosarle, como su dirección de casa, etc.  
 (pt) Evite incluir algo que ajude alguém a atormentá-lo, como seu endereço.  
+
+4. children can participate if accompanied by an adult.
+(es)  
+(pt)  
 
 ### imágenes e identificación
 
