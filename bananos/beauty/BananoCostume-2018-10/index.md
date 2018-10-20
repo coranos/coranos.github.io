@@ -15,9 +15,9 @@
 | 1      | @ Coranos#4281                      |
 
 ### Contestants
-| Number | Discord Id                   | Id Images | Food Images   | Recipie                                      |
-|:------ | :--------------------------- |:--------- |:------------- |:-------------------------------------------- |
-| 1      | @                            | ![01-id] | ![01-photo-01] |                                             |
+| Number | Discord Id                   | Id Images | Costume Images   |
+|:------ | :--------------------------- |:--------- |:---------------- |
+| 1      | @                            | ![01-id] | ![01-photo-01]    |
 
 ### The Contest (Required)
 
