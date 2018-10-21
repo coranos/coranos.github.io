@@ -57,9 +57,9 @@
 
 ## images and identification
 
-1. The contest will consist of one verification image, and one costume picture. 
-(es) El concurso consistirá en una imagen de verificación y una foto de vestuario.    
-(pt) O concurso consistirá em uma imagem de verificação e uma foto de fantasia.     
+1. The contest will consist of one verification image, and one costume picture.      
+(es) El concurso consistirá en una imagen de verificación y una foto de vestuario.        
+(pt) O concurso consistirá em uma imagem de verificação e uma foto de fantasia.        
 
 ### Image one / identification
 
