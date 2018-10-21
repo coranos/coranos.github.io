@@ -20,6 +20,7 @@
 | Number | Discord Id                   | Id Images | Costume Images   |
 |:------ | :--------------------------- |:--------- |:---------------- |
 | 1      | @                            | ![01-id] | ![01-photo-01]    |
+| 2      | @  Snappadoodle#4147         | ![02-id] | ![02-photo-01] ![02-photo-02] ![02-photo-03]    |
 
 ### The Contest (Required)  
 
@@ -91,3 +92,8 @@
 [01-photo-header-03]: https://cdn.discordapp.com/attachments/449894883633922059/502261651878445059/Banano_Hero4472.png "thumbnail"
 [01-photo-header-04]: https://cdn.discordapp.com/attachments/449894883633922059/501929358001438740/mmm.png "thumbnail"
 [01-photo-header-05]: https://i.imgur.com/yZSVo6y.jpg "thumbnail"
+
+[02-id]: https://cdn.discordapp.com/attachments/416341951416369153/503618221480345603/IMG_20181021_101546.jpg "thumbnail"
+[02-photo-01]: https://cdn.discordapp.com/attachments/416341951416369153/503605999203123201/BogdanoffCostume.jpg "thumbnail"
+[02-photo-02]: https://cdn.discordapp.com/attachments/416341951416369153/503606746791542785/IMG_20181021_093211.jpg "thumbnail"
+[02-photo-03]: https://cdn.discordapp.com/attachments/416341951416369153/503606747521613847/IMG_20181021_093207.jpg "thumbnail"
