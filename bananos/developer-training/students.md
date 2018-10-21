@@ -12,11 +12,11 @@
 | 07     | Trigger Haven#5767    | Completed Lesson       |                          |
 | 08     | Scarlet Alejandra#4565| completed lesson one   |
 | 09     | azuLeto#1082          | Completed Lesson One   |[azuleto.github.io]       |
-| 10     | Deathmetall#7371      | Completed Lesson Eight |[tomasmetal23.github.io]  |
-| 11     |*Parzival # 8194   | completed lesson seven   | [parakeet1.github.io]    |
-| 12     | IsBємsh👽C94´#0467     | completed lesson one   |[IsBemsho.github.io]      |
+| 10     | Deathmetall#7371      | Completed Lesson Ten   |[tomasmetal23.github.io]  |
+| 11     |*Parzival # 8194       | completed lesson seven | [parakeet1.github.io]    |
+| 12     | IsBємsh👽C94´#0467    | completed lesson one   |[IsBemsho.github.io]      |
 | 13     | liam05 #5013          | completed lesson one   |[isata23677.github.io]    |
-| 14   | @Geysel#7366 | termino la leccion 2  | [Geysel2902.github.io]  |  
+| 14     | @Geysel#7366          | termino la leccion 2  | [Geysel2902.github.io]  |  
  
 [coranos.github.io]: https://coranos.github.io/
 [mayrapina007.github.io]: https://mayrapina007.github.io/
