@@ -4086,36 +4086,56 @@
 |3698 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482657258983915520/barco.gif) |
 |3699 |Astronauta#9644| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482675796306296834/RAIN.gif) |
 |3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482676716934922240/monomokey.gif) |
-|3691 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3692 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3693 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3694 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |ç
-|3695 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3696 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3697 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3698 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3699 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3700 |Larry™#1961| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3701 | DemiL#3373| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482698811840397312/new_meme.jpg) |
+|3702 |thompsano#8149| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482739590101204992/JESUSRISING.jpg) |
+|3703 |corduroy_pillows#3067| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482745177832685581/Animated_GIF-downsized_large_3.gif) |
+|3704 |Connor#3072| 2018-08-24 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482750969109544963/MEME_RUBINHO.jpg) |
+|3705 |HeartlessJoker♠#8153| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482866657115635712/20180825_001913.gif) |
+|3706 |Nano the best#9067| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482872690017828864/to-do-list-2.jpg) |
+|3707 |HeartlessJoker♠#8153| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482872823950475284/IMG_20180823_221425_954.jpg) |
+|3708 |HeartlessJoker♠#8153| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482874449574756352/1535195058555.jpg) |
+|3709 |HeartlessJoker♠#8153| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482874740046823424/806026812_37844.jpg) |
+|3710 |Snappadoodle#4147| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482903145270476820/bbfaucetwojak.jpg) |
+|3711 |HeartlessJoker♠#8153| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482927657739091978/MOSHED-2018-8-25-10-55-37.gif) |
+|3712 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482930898510020618/MOSHED-2018-8-26-10-50-48.gif) |
+|3713 |HeartlessJoker♠#8153| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482932748651069451/jokerbannn.gif) |
+|3714 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482937058072199179/Bananolove.gif) |
+|3715 |rah🇨🇦#0704| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482957640113324053/Stroke.png) |
+|3716 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482959938327674881/bananocoin.gif) |
+|3717 |rah🇨🇦#0704| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482969819793195008/JIMMYSONG.png) |
+|3718 |Andy-UK#2000| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482970027260248066/Screenshot_20180825_184808.jpg) |
+|3719 |steph#1771| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482973483316281355/unknown.png) |
+|3720 |black hawk#1154| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482976860956000256/oie_1721830HuMvxpO5.gif) |
+|3721 |HeartlessJoker♠#8153| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482993147262271540/banjoker.gif) |
+|3722 |△FlipSid3™△#9286| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482994001981603840/MOSHED-2018-8-27-15-11-13.gif) |
+|3723 |Madasiaka#4876| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483014556772466699/1535230002605.jpg) |
+|3724 |Andy-UK#2000| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483019616344604684/jimmy_nano.png) |
+|3725 |Andy-UK#2000| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/414080683397611528/483019567258402816/unknown.png) |
+|3726 |Andy-UK#2000| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483037801882058760/jimmy_nano.jpg) |
+|3727 |steph#1771| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483058232764530698/me_molestas.jpg) |
+|3728 |Atalaya#1919| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483059747692740629/Presentacion_2.jpg) |
+|3729 |steph#1771| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483060421754880000/y_el_pote.jpg) |
+|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3750 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
 
 
 
