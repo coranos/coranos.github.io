@@ -4115,26 +4115,78 @@
 |3727 |steph#1771| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483058232764530698/me_molestas.jpg) |
 |3728 |Atalaya#1919| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483059747692740629/Presentacion_2.jpg) |
 |3729 |steph#1771| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483060421754880000/y_el_pote.jpg) |
-|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3730 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
-|3740 |Larry™#1961| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/482667042902769665/Aprendiendo.gif) |
+|3730 |black hawk#1154| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483061360721264651/mm12.png) |
+|3731 |steph#1771| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483065848404115460/34284513_977743612400848_8206374139653521408_n.jpg) |
+|3732 |Rubinho#9738| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483081666139521025/20180825_215320.jpg) |
+|3733 |Duk7#8440| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483087653940625418/banano_girl.jpg) |
+|3734 |Rubinho#9738| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483104581581275137/unknown-3.png) |
+|3735 |Gissy#1688| 2018-08-25 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483115130599505930/How_to_get_banano.jpg) |
+|3736 |Ram-Z#4436| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483210292503904267/imgonline-com-ua-Piconpic-DxNP8DQUj0uq.jpg) |
+|3737 |Shikoku#8138| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483221392653942795/Untitled.png) |
+|3738 |Banano Hero#4472| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483303576027004930/unknown.png) |
+|3739 |Astronauta#9644| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483305449890906132/aqbL6pj_700b_como_Objeto_Inteligente-1.png) |
+|3740 |zeuseshands#4403| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483311857529257994/Adobe_20180826_122805.jpg) |
+|3741 |Connor#3072| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483322245167448074/MEME_BAZAR.jpg) |
+|3742 |Psychol#8860| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483326677628354561/Garlic_contest.jpg) |
+|3743 |rah🇨🇦#0704| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483337336604852235/4wvxn3e2hpg11.png) |
+|3744 |Augusto#0372| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483344506104840192/meme.png) |
+|3745 |ESKA#0001| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483347235107635240/unknown.png) |
+|3746 |El ROCKERO#3331| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483351778277195796/pizap.com15353552931101.jpg) |
+|3747 |Oops#5023| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483361472601128960/los-tres-memencios.jpg) |
+|3748 |Augusto#0372| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483390225511481344/memelumo.png) |
+|3749 |Bread#9760| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483397194666475520/image0.jpg) |
+|3750 |Mariツ Pancake💙#0036| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483401700422451200/unknown.png) |
+|3751 |El ROCKERO#3331| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483408369273667584/pizap.com15353687671361.jpg) |
+|3752 |stefano#1858| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483424933666357258/unknown.png) |
+|3753 |xxxxx | 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483428277898313744/bcvbcbc.png) |
+|3754 |lukas#6039| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483441936754016280/image0.jpg) |
+|3755 |thompsano#8149| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483443188271415298/kalium.jpg) |
+|3756 |zeuseshands#4403| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483449001849651230/Adobe_20180826_212424.jpg) |
+|3757 |DemiL#3373| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483455295809650699/39385805_2080383762213472_3341442727601504256_n.jpg) |
+|3758 |DemiL#3373| 2018-08-26 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483469199356985344/39891493_10217779714192756_9129100021558411264_n.jpg) |
+|3759 |TefyHukuroou.u#7742| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483506525445423134/chinazo_rampage_y_cegarias.png) |
+|3760 |BeardlessDuck#4387| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483511524271456256/colinsob.png) |
+|3761 |BeardlessDuck#4387| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483513368116854794/colinjoy.png) |
+|3762 |BeardlessDuck#4387| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483513370125795339/colinlaugh2.png) |
+|3763 |stefano#1858| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483515324482846760/unknown.png) |
+|3764 |BeardlessDuck#4387| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483515693073956872/colinhearteyes.png) |
+|3765 |BeardlessDuck#4387| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483516565376073739/unknown.png) |
+|3766 |BeardlessDuck#4387| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483553589608841217/lumowallet.png) |
+|3767 |Muziu#7735| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483568033084735488/PicsArt_08-27-05.22.59.jpg) |
+|3768 |Joset_Bear#7442| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483586360008245248/Screenshot_2017-12-31-00-23-17.png) |
+|3769 |Muziu#7735| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483599698939215892/PicsArt_08-27-07.29.50.jpg) |
+|3770 |stefano#1858| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483609787108425748/unknown.png) |
+|3771 |Muziu#7735| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483610191913418772/PicsArt_08-27-05.39.17.jpg) |
+|3772 |stefano#1858| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483614087595687936/unknown.png) |
+|3773 |Muziu#7735| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483614562197962752/preview.jpg) |
+|3774 |Algiorno El Zorro WTFox Say#8968| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483629156253564928/39834841_904147653119928_7930997964963577856_n.png) |
+|3775 |Algiorno El Zorro WTFox Say#8968| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483632179658752001/40002096_622015468193132_697423403774115840_n.png) |
+|3776 |Muziu#7735| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483633175395041280/preview.jpg) |
+|3777 |Snappadoodle#4147| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483653011990773771/internethusbandhitgreen.jpg) |
+|3778 |Joset_Bear#7442| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483655758064386048/1535382764164.png) |
+|3779 |stefano#1858| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483658685243981824/unknown.png) |
+|3780 |Nano the best#9067| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483665584848896011/kallium.jpg) |
+|3781 |B U N N Y#9430| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483666427715387392/40099880_2199184556789732_5591844885914189824_n.jpg) |
+|3782 |stefano#1858| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483696938211082250/unknown.png) |
+|3783 |XXXXXXX| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483701604365762561/jghj.png) |
+|3784 |XXXXXXX| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483702057409314836/GFGFG.png) |
+|3785 |Algiorno El Zorro WTFox Say#8968| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483714684772679696/meme.png) |
+|3786 |KONG#1771| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483787670087008256/Screenshot_2018-08-27-19-56-45_com.instagram.android_1535414290106.jpg) |
+|3787 |black hawk#1154| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483790881191624724/fdf.png) |
+|3788 |DrPugsley#2300| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483796336559259668/banano_beautiful.png) |
+|3789 |jesus★#2308| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483814239492898816/fotonoticia_20150303212925_800.png) |
+|3790 |black hawk#1154| 2018-08-27 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483816472309923851/jghjghj.png) |
+|3791 |BeardlessDuck#4387| 2018-08-28 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483891332704763915/colinsmug.png) |
+|3792 |ESKA#0001| 2018-08-28 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483897148262449162/unknown.png) |
+|3793 |BeardlessDuck#4387| 2018-08-28 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483905987548545024/lumocash.png)|
+|3794 |dayrianaj#2375| 2018-08-28 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483907476660551680/nano_banano.jpg) |
+|3795 |dayrianaj#2375| 2018-08-28 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483907773269278721/picture13820319197348.jpg) |
+|3796 |Randomizer#1136| 2018-08-28 | ![](https://media.discordapp.net/attachments/416341951416369153/481933229440630784/image0.jpg?width=1365&height=910) |
+|3797 |jesus★#2308| 2018-08-28 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483953518726610944/good_morning_team.png) |
+|3798 |ESKA#0001| 2018-08-28 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483956259008020480/meme-cfc-renesq.png) |
+|3799 |jesus★#2308| 2018-08-28 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483980462876917771/funny-pussy-cat-way-of-saying-good-morning-for-him-and-her-meme.png) |
+|3600 |stefano#1858| 2018-08-28 | ![](https://cdn.discordapp.com/attachments/416341951416369153/483987060810579979/unknown.png) |
+
 
 
 
