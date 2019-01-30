@@ -1,0 +1,258 @@
+[
+	{
+		"startDate": "Sep 21 2018",
+		"endDate": "Sep 22 2018",
+		"taskName": "Create Roadmap",
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Sep 22 2018",
+		"endDate": "Feb 04 2019",
+		"taskName": "Refine Roadmap",
+		"status": "RUNNING"
+	},
+	{
+		"startDate": "Sept 23 2018",
+		"endDate": "Sept 25 2018",
+		"taskName": [
+			"get Elastos.ELA and Elastos.ELA.Client working locally",
+			{
+				"startDate": "Sep 24 2018",
+				"endDate": "Sep 25 2018",
+				"taskName": "get Elastos.ELA working locally",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Sep 24 2018",
+				"endDate": "Sep 25 2018",
+				"taskName": "get Elastos.ELA.Client working locally",
+				"status": "SUCCEEDED"
+			}
+		],
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Sept 25 2018",
+		"endDate": "Nov 12th 2018",
+		"status": "SUCCEEDED",
+		"taskName": [
+			"build and alpha test javascript light wallet",
+			{
+				"startDate": "Sept 25 2018",
+				"endDate": "Sept 25 2018",
+				"taskName": "create github repo https://github.com/coranos/elastos-light-wallet",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 01 2018",
+				"endDate": "Oct 02 2018",
+				"taskName": "convert private key to public address, P256 curve",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 02 2018",
+				"endDate": "Oct 03 2018",
+				"taskName": "create a transaction that is byte-identical to ELA transaction.go (decode tx)",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 12 2018",
+				"endDate": "Oct 14 2018",
+				"taskName": "get nodejs and node-hid to detect the ledger",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 14 2018",
+				"endDate": "Oct 15 2018",
+				"taskName": "create GUI that takes private key, and the displays public key, account",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 15 2018",
+				"endDate": "Oct 16 2018",
+				"taskName": "create GUI that displays transaction history",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 17 2018",
+				"endDate": "Oct 31 2018",
+				"taskName": "create GUI that takes private key, and the displays utxos, and balance",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 15 2018",
+				"endDate": "Oct 31 2018",
+				"taskName": "create a transaction that is byte-identical to ELA transaction.go (encode tx)",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 15 2018",
+				"endDate": "Oct 31 2018",
+				"taskName": "create GUI to create transaction (from,to,amount,fee)",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 15 2018",
+				"endDate": "Oct 31 2018",
+				"taskName": "create GUI to sign transaction from private key",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 15 2018",
+				"endDate": "Oct 31 2018",
+				"taskName": "create GUI to send signed transaction",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 15 2018",
+				"endDate": "Oct 31 2018",
+				"taskName": "create GUI to sign transaction using ledger",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Oct 08 2018",
+				"endDate": "Oct 22 2018",
+				"taskName": "ask UKHb80 for design help",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Nov 3rd 2018",
+				"endDate": "Nov 9th 2018",
+				"taskName": "create mocckup based on design feedback https://coranos.github.io/elastos-light-wallet/docs/mockup",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Nov 10th 2018",
+				"endDate": "Nov 12th 2018",
+				"taskName": "merge mockup into app",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Nov 10th 2018",
+				"endDate": "Nov 12th 2018",
+				"taskName": "rewire app to use mockup's buttons and page layout",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Nov 10th 2018",
+				"endDate": "Nov 12th 2018",
+				"taskName": "test app and make sure it works with new buttons and page layout",
+				"status": "SUCCEEDED"
+			}
+		]
+	},
+	{
+		"startDate": "Nov 19th 2018",
+		"endDate": "Dec 7th 2018",
+		"taskName": [
+			"beta test javascript light wallet",
+			{
+				"startDate": "Nov 26th 2018",
+				"endDate": "Nov 27th 2018",
+				"taskName": "test receive",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Nov 26th 2018",
+				"endDate": "Nov 27th 2018",
+				"taskName": "test send",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Nov 26th 2018",
+				"endDate": "Nov 27th 2018",
+				"taskName": "test viewing transaction history",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Nov 26th 2018",
+				"endDate": "Nov 27th 2018",
+				"taskName": "test logout",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Nov 26th 2018",
+				"endDate": "Nov 27th 2018",
+				"taskName": "build executables",
+				"status": "SUCCEEDED"
+			}
+		],
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Sept 25th 2018",
+		"endDate": "Jan 4th 2019",
+		"taskName": [
+			"Build ledger nano Elastos APP",
+			{
+				"startDate": "Sept 25th 2018",
+				"endDate": "Sept 25th 2018",
+				"taskName": "create github repo https://github.com/coranos/blue-app-elastos",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Dec 24th 2018",
+				"endDate": "Dec 26th 2018",
+				"taskName": "create ledger app that returns public key and account via USB",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Dec 26th 2018",
+				"endDate": "Dec 28th 2018",
+				"taskName": "update ledger app to display transaction",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Dec 26th 2018",
+				"endDate": "Dec 28th 2018",
+				"taskName": "update ledger app to sign transaction",
+				"status": "SUCCEEDED"
+			}
+		],
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Dec 3rd 2018",
+		"endDate": "Dec 7th 2018",
+		"taskName": "Test ledger nano Elastos APP with offline transactions",
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Dec 10th 2018",
+		"endDate": "Dec 14th 2018",
+		"taskName": "Test ledger nano Elastos APP with transactions from light wallet",
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Jan 26th 2019",
+		"endDate": "Feb 4th 2019",
+		"taskName": [
+			"Release nodejs javascript light wallet",
+			{
+				"startDate": "Jan 26th 2019",
+				"endDate": "Jan 27th 2019",
+				"taskName": "test creating private keys",
+				"status": "SUCCEEDED"
+			},
+			{
+				"startDate": "Dec 3rd 2018",
+				"endDate": "Dec 4th 2018",
+				"taskName": "sign executables",
+				"status": "NOT STARTED"
+			},
+			{
+				"startDate": "Dec 3rd 2018",
+				"endDate": "Dec 4th 2018",
+				"taskName": "release signed executables on https://github.com/coranos/elastos-light-wallet/releases",
+				"status": "NOT STARTED"
+			}
+		],
+		"status": "RUNNING"
+	},
+	{
+		"startDate": "Jan 26th 2019",
+		"endDate": "Feb 4th 2019",
+		"taskName": "Release ledger nano Elastos APP",
+		"status": "RUNNING"
+	}
+]

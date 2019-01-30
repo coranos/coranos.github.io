@@ -1,0 +1,2 @@
+to find the size of subfolders:
+sudo du . -h --max-depth=1

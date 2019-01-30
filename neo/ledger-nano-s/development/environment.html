@@ -1,0 +1,225 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+<head>
+<title>NEO Ledger Nano S Hardware Wallet - Development Environment</title>
+</head>
+<body onload="onLoad();">
+  <h1>Environment Setup</h1>
+  <p>2018-03-12
+  <p>
+    The plan is to build <b>blue-app-neo</b>
+  <p>I am doing development on OSX High Sierra. Since OSX does not have a libc6-i386 package, I cannot natively build the Ledger application.
+  <p>Fortunately, Docker runs on OSX, and Ubuntu runs on docker, so I can build the application inside a docker container.
+  <h2>Steps to set up a docker container to build the Ledger Nano S</h2>
+  <ol>
+    <li>Download Docker
+      <p>
+        <a href="https://docs.docker.com/engine/installation/">https://docs.docker.com/engine/installation/</a>
+    </li>
+
+    <li>Create some directories
+      <p>
+        <code>mkdir docker-shared</code>
+      <p>
+        <code>cd docker-shared</code>
+      <p>
+        <code>mkdir ledger-nano-s</code>
+      <p>
+        <code>cd ledger-nano-s</code>
+    </li>
+    <li>Download some source code
+      <p>
+        <code>pwd</code>
+      <p>
+        <code>~/docker-shared/ledger-nano-s</code>
+      <p>
+        <code>git clone https://github.com/LedgerHQ/nanos-secure-sdk.git</code>
+      <p>
+        <code>git clone https://github.com/coranos/blue-app-neo.git</code>
+    </li>
+    <li>Start Docker for OSX</li>
+    <li>in the Docker preferences share the directory
+      <p>
+        <code>~/docker-shared</code>
+        to
+        <code>/docker-shared</code>
+    </li>
+    <li>Open up a terminal, and start a docker instance with
+      <p>
+        <code>docker run -it ubuntu</code>
+    </li>
+    <li>Install some apt-get packages
+      <p>
+        <code>apt-get install lib32z1</code>
+      <p>
+        <code>apt-get install gcc</code>
+      <p>
+        <code>apt-get install libstdc++6-4.7-dev</code>
+      <p>
+        <code>apt-get install libc6-dev-i386</code>
+      <p>
+        <code>apt-get install python3</code>
+      <p>
+        <code>apt-get install python3-pip</code>
+      <p>
+        <code>apt-get install libusb-1.0-0-dev</code>
+      <p>
+        <code> apt-get install libudev-dev</code>
+      <p>
+        <b>for Nano(RaiBlocks)</b>
+        <code> apt-get install libssl-dev</code>
+      <p>
+        <code>cd /usr/include/openssl/</code>
+      <p>
+        <code> ln -s /usr/include/gnutls/openssl.h .</code>
+      <p>
+        <code> ln -s ../x86_64-linux-gnu/openssl/opensslconf.h .</code>
+    </li>
+    <li>Install some python pip packages
+      <p>
+        <code>pip install ledgerblue</code>
+        <b>if you need to get latest from github try: <code>apt-get update</code> <br> <code> apt-get install git</code> <br> <code>pip3
+            install git+https://github.com/LedgerHQ/blue-loader-python.git --upgrade</code></b>
+    </li>
+    <li>Follow some setup instructions
+      <p>
+        <a href="https://github.com/LedgerHQ/blue-devenv/tree/master">https://github.com/LedgerHQ/blue-devenv/tree/master</a>
+      <ol>
+        <li>Download a prebuild gcc from <a href="https://launchpad.net/gcc-arm-embedded/+milestone/5-2016-q1-update">https://launchpad.net/gcc-arm-embedded/+milestone/5-2016-q1-update</a>
+          and unpack it into /docker-shared/ledger-nano-s/gcc-arm-none-eabi-5_3-2016q1
+        </li>
+        <li>
+          <p>if you did it right, this file should exist:
+          <p>
+            <code>ls /docker-shared/ledger-nano-s/gcc-arm-none-eabi-5_3-2016q1/bin/arm-none-eabi-gcc</code>
+        </li>
+        <li>Download a prebuild clang from <a href="http://releases.llvm.org/download.html#4.0.0">http://releases.llvm.org/download.html#4.0.0 </a>and
+          unpack it into clang-arm-fropi
+        </li>
+        <li>
+          <p>if you did it right, this file should exist:
+          <p>
+            <code>ls /docker-shared/ledger-nano-s/clang-arm-fropi/bin/clang</code>
+        </li>
+      </ol>
+    <li>Setup some environment variables
+      <p>
+        <code>export BOLOS_ENV=/docker-shared/ledger-nano-s</code>
+      <p>
+        <br>FOR NANO<br>
+        <code>export BOLOS_SDK=/docker-shared/ledger-nano-s/nanos-secure-sdk</code>
+        <br>FOR BLUE<br>
+        <code>export BOLOS_SDK=/docker-shared/ledger-nano-s/blue-secure-sdk</code>
+        <br>
+      <p>
+        <code> alias python=/usr/local/bin/python2.7</code>
+    </li>
+    <li>Try to build
+      <p>
+        <code>cd /docker-shared/ledger-nano-s/blue-app-neo</code>
+      <p>
+        <code>make clean</code>
+      <p>
+        <code>make load</code>
+      <p>It should build and then fail to install over USB:
+      <p>
+        <code>ledgerblue.commException.CommException: Exception : No dongle found</code>
+    </li>
+  </ol>
+  <h2>Setup OSX to load image (using macports to install python and ledgerblue)</h2>
+  <ol>
+    <li>Open up a terminal</li>
+    <li>Install some macport packages
+      <p>
+        <code>sudo port install python36</code>
+      <p>
+        <code>sudo port select --set python python36</code>
+        <b>if you get errors saying ledgerblue is not found, run 'which python'. If it points to /usr/bin/python then you aren't set up correctly. It should
+          point to opt/local/bin/python</b>
+      <p>
+        <code>sudo port install py36-pip</code>
+      <p>
+        <code>sudo port select --set pip pip36</code>
+    </li>
+    <li>Install some python pip packages
+      <p>
+        <code>pip install ledgerblue</code>
+        <b>If you need to update it, run <code>pip install ledgerblue --upgrade</code></b>
+    </li>
+    <li>Setup some environment variables
+      <p>
+        <code>export BOLOS_ENV=~/docker-shared/ledger-nano-s</code>
+      <p>
+        FOR NANO<br>
+        <code>export BOLOS_SDK=~/docker-shared/ledger-nano-s/nanos-secure-sdk</code>
+        <br> FOR BLUE<br>
+        <code>export BOLOS_SDK=~/docker-shared/ledger-nano-s/blue-secure-sdk</code>
+        <br>
+      <p>
+        <code>PATH="/opt/local/bin:$PATH"</code>
+      <p>
+        <code>unalias python</code>
+    </li>
+    <li>Go to the same directory that the docker image just ran <code>make load</code> (note the ~ at the beginning because we aren't inside docker
+      anymore)
+      <p>
+        <code>cd ~/docker-shared/ledger-nano-s/blue-app-neo</code>
+    <li>run the command again, outside of docker, so it sees the USB drive.
+      <p>
+        <code>make load</code>
+      <p>if it works you should see:
+      <div style="word-break: break-all;">
+        TARGET_NAME=TARGET_NANOS TARGET_ID=0x31100002
+        <p>BOLOS_ENV=~/docker-shared/ledger-nano-s
+        <p>python -m ledgerblue.loadApp --appFlags 0x40 --targetId 0x31100002 --fileName bin/app.hex --appName "NEO" `ICONHEX=\`python
+          ~/docker-shared/ledger-nano-s/nanos-secure-sdk/icon.py icon.gif hexbitmaponly 2>/dev/null\` ; [ ! -z "$ICONHEX" ] &amp;&amp; echo "--icon $ICONHEX"`
+        <p>Generated random root public key :
+          045df749959ac8ab64eb74197bf58fa2d5c7bb6964e673f26d8334e9fd8142d7816367bab64d4e8f35c9e383a51e252cc9cdfb20e19e9c69e659fb4d3b20f60680
+        <p>Using test master key
+          045df749959ac8ab64eb74197bf58fa2d5c7bb6964e673f26d8334e9fd8142d7816367bab64d4e8f35c9e383a51e252cc9cdfb20e19e9c69e659fb4d3b20f60680
+        <p>Using ephemeral key
+          040abf5e970fd609166be4000ce90ca8ea6134ab08eb5d66ba0f4e1a01d9070543055cf0f3ec1a6731c1c6b5e8158a6b78affa877675035188b0b9514136e2b9d2
+        <p>Broken certificate chain - loading from user key
+        <p>Application hash : 2d75ee634dc72d67e7bdee3aec23289dd076d74449bee25355b0ef8563dbe96f
+      </div>
+      <p>
+    <li>If you try to install, and you already have it installed, you will get an error:
+      <p>
+        <code>ledgerblue.commException.CommException: Exception : Invalid status 6a80</code>
+      <p>To fix this error, run the delete command
+      <p>
+        <code>make delete</code>
+      <p>if it works you should see:
+      <div style="word-break: break-all;">
+        <p>TARGET_NAME=TARGET_NANOS TARGET_ID=0x31100002
+        <p>BOLOS_ENV=~/docker-shared/ledger-nano-s
+        <p>python -m ledgerblue.deleteApp --targetId 0x31100002 --appName "NEO"
+        <p>Generated random root public key :
+          048c9ad14778307592059d5bfdfca5012fc411d42bbecacce245c8c29ce87c1a5ef5cc7d396a4284b81b4d5be21edd5f5d0a607946b0a325b086e9713efcb1e99a
+        <p>Using test master key
+          048c9ad14778307592059d5bfdfca5012fc411d42bbecacce245c8c29ce87c1a5ef5cc7d396a4284b81b4d5be21edd5f5d0a607946b0a325b086e9713efcb1e99a
+        <p>Using ephemeral key
+          046e2ff2fdf321355ef5a063818c62e107680a7ecbf488ce4669d02e9a7c2725722a311b4fff2aa6103157a4cec5a95f705926c22a98ed0c68a53e0877cf2969cd
+        <p>Broken certificate chain - loading from user key
+      </div>
+  </ol>
+  <h2>NEON wallet</h2>
+  <ol>
+    <li><p>build and run the neon wallet from my repo, and confirm it sees the ledger.
+      <p>https://github.com/coranos/neon-wallet</li>
+  </ol>
+  <hr>
+  <script src="../../js-lib/google-tracking.js">
+      
+    </script>
+  <script>
+      callGoogleTracker();
+
+      function onLoad () {
+
+      }
+    </script>
+
+</body>
+</html>

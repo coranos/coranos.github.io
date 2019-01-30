@@ -1,0 +1,80 @@
+<!DOCTYPE html5>
+<html>
+<meta charset='utf-8' />
+<head>
+<title>Banano Account List</title>
+<style type='text/css'>
+.solid {
+  border: solid;
+  border-width: 0.5px;
+  text-align: right;
+  font-family: monospace;
+}
+
+form {
+  display: inline;
+}
+</style>
+</head>
+<body onload='onLoad();'>
+  <table id='dataTable' class='solid'>
+    <thead class='solid'>
+    </thead>
+    <tbody class='solid'>
+    </tbody>
+  </table>
+  <hr>
+  <script src='../../js-lib/jquery-3.2.1.js'></script>
+  <script src='../../js-lib/load-json.js'></script>
+  <script src='../../js-lib/json-table.js'></script>
+  <script>
+      function numberWithCommas (x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      }
+      function onLoad () {
+        jsonTable('#dataTable', {
+          head : [ 'Banano Rank', 'Account', 'Banano','Banano Out' ],
+          thClass : 'solid',
+          trClass : 'solid',
+          sortTable : false
+        });
+
+        let options = {};
+        options.json = [ 'rank', 'account', 'balance','balanceOut' ];
+
+        $.ajaxSetup({
+          beforeSend : function (xhr) {
+            if (xhr.overrideMimeType) {
+              xhr.overrideMimeType('application/json');
+            }
+          }
+        });
+        $.getJSON('account-history.json', function (response) {
+          let table = $('#dataTable').find('tbody');
+          table.empty();
+
+          response.results.sort(function (a, b) {
+            return b.balance - a.balance;
+          });
+          
+          for (let dataIx = 0; dataIx < response.results.length; dataIx++) {
+            response.results[dataIx].rank = dataIx + 1;
+            response.results[dataIx].balance = numberWithCommas(response.results[dataIx].balance);
+            var balanceOut = 0;
+            for (const [key, value] of Object.entries(response.results[dataIx].history)) {
+                balanceOut += parseInt(value);
+            }
+            response.results[dataIx].balanceOut = numberWithCommas(balanceOut);
+          }
+
+          let row = makeRow(response, options, 'solid', 'solid');
+          table.append(row);
+        });
+      }
+    </script>
+  <script src='../js-lib/google-tracking.js'></script>
+  <script>
+      callGoogleTracker();
+    </script>
+</body>
+</html>

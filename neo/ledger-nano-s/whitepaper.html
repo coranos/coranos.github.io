@@ -1,0 +1,88 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+<head>
+<title>NEO Ledger Nano S Whitepaper</title>
+</head>
+<body onload="onLoad();">
+  <h2>Introduction To Cryptocoins and Hardware Wallets</h2>
+  <p>NEO is a cryptocoin that uses 256 bit addresses (called private keys) to govern the transfer of NEO, GAS and other tokens on the NEO blockchain, by
+    digitally signing the transaction that executes the transfer.
+  <p>As with other cryptocoins, this means anyone that knows this 256 bit address can transfer (and thus sell) the NEO at the given address. For this
+    reason, the 256 bit address must be kept in a safe place so it cannot easily be stolen. At the same time, the address must be accessible so a user can use
+    it to sign transactions.
+  <p>This can be done by using a piece of hardware to store the private key, and have that same hardware use the key to digitally sign transactions.
+  <h2>Introduction To The Ledger Nano S</h2>
+  <p>The Ledger Nano S is a device that connects to a computer's USB port and can accept data requests via USB. It has a monochrome screen with a small
+    screen resolution, and two buttons at the top.
+  <p>The idea is you store your private key on the hardware wallet, and then you send transactions to the hardware wallet for signing. You select 'yes' or
+    'no' by pressing one of the two buttons on the top.
+  <h2>Using The Ledger Nano S with NEO</h2>
+  <p>There are two parts that need to be built in order to use NEO with the hardware wallet:
+  <ol>
+    <li>The software to run on the hardware wallet itself, to sign transactions.</li>
+    <li>The software to run on the host computer, which will:
+      <ol>
+        <li>create the transaction</li>
+        <li>send it to the hardware wallet for signing</li>
+        <li>accept the wallet's decision to sign or not</li>
+        <li>connect to the NEO network and send the signed transactions</li>
+      </ol>
+    </li>
+  </ol>
+  <h3>hardware wallet software</h3>
+  The hardware wallet software will allow the user to sign a transaction, or reject signing the transaction.
+  <ol>
+    <li>Ledger Nano S Hardware Wallet GUI design</li>
+    <li>User Workflow Diagram - What actions can the user take on each screen?
+      <p>This turns out to be very simple, as the controls are limited.
+      <p>The user can scroll through the below actions using the buttons, and perform an action by clicking both buttons together.
+      <ol>
+        <li><b>Before any action has been taken</b>, a user can exit using the left hand X. The message displayed is "Wake Up, NEO..."</li>
+        <li><b>After a transaction has been sent to the ledger to be signed</b>, a user can navigate down using the left arrow, and up using the right
+          arrow. clicking both buttons performs the action in brackets.</li>
+        <li>Confirm a transaction and sign, without looking at the details [sign]</li>
+        <li>View each output asset id, amount, and destination address [no action]</li>
+        <li>View the total system fee and gas fee. [no action]</li>
+        <li>Reject Transaction and do not sign. [reject]</li>
+        <li>Confirm Transaction and sign. [sign]</li>
+        <li>Exit</li>
+      </ol>
+    </li>
+    <li><a href="development/ledger-ui-mockup">Ui Mockup</a></li>
+    <li>Class Diagram - What models, views, and controllers need to be made?</li>
+    <li>Sequence Diagrams - When a user takes an action, what happens in the classes in the class diagram?</li>
+    <li>Coding Everything</li>
+  </ol>
+  <h3>TestNET Client GUI in Electrum</h3>
+  After that is complete, I will create a bare bones GUI in Electrum.
+  <a href="https://github.com/coranos/ledger-neo-testnet-wallet">ledger-neo-testnet-wallet</a>
+  <ol>
+    <li>Electrum Client specific GUI design</li>
+    <li>User Workflow Diagram - What actions can the user take on each screen?
+      <p>Actions would be:
+      <ol>
+        <li>Loading the firmware onto the hardware wallet</li>
+        <li>Creating a 'Send GAS' transaction for signing (done)</li>
+        <li>Viewing a signed transaction before sending (done)</li>
+        <li>Sending a signed transaction (done)</li>
+        <li>Exit (done)</li>
+      </ol>
+    </li>
+    <li>Class Diagram - What models, views, and controllers need to be made?</li>
+    <li>Sequence Diagrams - When a user takes an action, what happens in the classes in the class diagram?</li>
+    <li>Coding Everything</li>
+  </ol>
+  <p>I chose electrum because it has USB support:
+  <p>https://www.npmjs.com/package/electron-usb
+  <hr>
+  <script src="../../js-lib/google-tracking.js"></script>
+  <script>
+      callGoogleTracker();
+
+      function onLoad() {
+
+      }
+    </script>
+</body>
+</html>

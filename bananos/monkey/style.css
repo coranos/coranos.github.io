@@ -1,0 +1,66 @@
+.solid_border {
+  border: solid;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+
+.monospace {
+  font-family: monospace;
+  font-size: 1.em;
+}
+
+.centered_text {
+  text-align: center;
+}
+
+.align_left {
+  text-align: left;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.align_top {
+  vertical-align: top;
+}
+
+input.image[type="submit"] {
+  display: none;
+  border-width: 0px;
+  padding: 0px;
+}
+
+label {
+  display: none;
+  padding: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: -6px;
+  font-size: 0px;
+  position: relative;
+  z-index: 0;
+}
+
+svg.choice {
+  position: relative;
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  z-index: 0;
+}
+
+svg.expected {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: none;
+  padding: 0px;
+  margin: 0px;
+  z-index: -1;
+}
+
+#game {
+  position: relative;
+}

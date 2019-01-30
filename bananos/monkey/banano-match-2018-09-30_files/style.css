@@ -1,0 +1,33 @@
+.cb {
+  border: solid;
+  border-width: 0.5px;
+  font-family: monospace;
+  text-align: center;
+  vertical-align: top;
+}
+
+.w100pct {
+  width: 100%;
+}
+
+.width_600px {
+  width: 600px;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.g {
+  background: lightgreen;
+}
+
+.r {
+  background: pink;
+}
+
+input[type="submit"][name="choice"] {
+  display: none;
+}

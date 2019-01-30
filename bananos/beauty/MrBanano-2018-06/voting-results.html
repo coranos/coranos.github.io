@@ -1,0 +1,463 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+<head>
+<title>Mr Banano June 2018 - Community Pageant - Sponsored by La Jungla - Voting Results</title>
+<style type='text/css'>
+.titles {
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.solid_border {
+  border: solid;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+
+.thumbnail {
+  height: 100px;
+  max-width: 100%;
+}
+
+.centered_text {
+  text-align: center;
+}
+
+.rules_column {
+  width: 20%;
+  text-align: left;
+  vertical-align: top;
+}
+
+.rankup:active {
+  background: yellow;
+}
+
+.rankup {
+  display: block;
+  border: solid;
+  text-align: center;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+
+.rankdown:active {
+  background: yellow;
+}
+
+.rankdown {
+  display: block;
+  border: solid;
+  text-align: center;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+</style>
+</head>
+<body onload="onLoad();">
+  Ranking algorithm:
+  <ol>
+    <li>Sum how many votes each contestant got for each rank.</li>
+    <li>If a contestant at the top rank has a majority of votes in the top rank, they win. (I.E. a candidate needs a majority to win first place)</li>
+    <li>If there is not a majority winner, eliminate the candidate with the least number of votes in the top rank, and for the judges that voted for that
+      voted for that candidate, pull in their choice from the next rank. (I.E. if the votes in Rank 1 are : {A:2,B:2,C:1} eliminate C, and find out who voted
+      for C. take their Rank 2 choice.)</li>
+    <li>If there is still not a majority winner due to ties, reset the elimination votes, and combine the next lower rank's votes with the top rank (I.E.
+      if the votes in Rank 1 are : {A:3,B:3,C:2}, you eliminate C, and get {A:4,B:4}, reset to {A:3,B:3,C:2} and pull in rank 2.)</li>
+  </ol>
+  <h2>winnerTable</h2>
+  <table id='winnerTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <h2>judgementTable</h2>
+  <table id='judgementTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <h2>contestantTable</h2>
+  <table id='contestantTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <h2>scoringTable</h2>
+  <table id='scoringTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <h2>judgesTable</h2>
+  <table id='judgesTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <script src="../../../js-lib/google-tracking.js"></script>
+  <script src='../../../js-lib/jquery-3.2.1.js'></script>
+  <script src='../../../js-lib/load-json.js'></script>
+  <script src='../../../js-lib/json-table.js'></script>
+  <script>
+      callGoogleTracker();
+
+      function onLoad () {
+        jsonTable('#winnerTable', {
+          head : [ 'Log Ix','Category','Description'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
+        jsonTable('#judgementTable', {
+          head : [ 'Log Ix','Category','Description'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+        
+        jsonTable('#contestantTable', {
+          head : [ 'Rank', 'Contestants'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
+        jsonTable('#scoringTable', {
+          head : [ 'Rank', 'Contestants'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
+        jsonTable('#judgesTable', {
+          head : [ 'Judge', 'Contestants'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
+        let winnerTableOptions = {};
+        winnerTableOptions.json = [ 'ix', 'category', 'description' ];
+
+        let judgementTableOptions = {};
+        judgementTableOptions.json = [ 'ix', 'category', 'description' ];
+
+        let contestantTableOptions = {};
+        contestantTableOptions.json = [ 'rank', 'contestants' ];
+
+        let scoringTableOptions = {};
+        scoringTableOptions.json = [ 'rank', 'contestants' ];
+
+        let judgesTableOptions = {};
+        judgesTableOptions.json = [ 'judge', 'contestants' ];
+
+        $.ajaxSetup({
+          beforeSend : function (xhr) {
+            if (xhr.overrideMimeType) {
+              xhr.overrideMimeType('application/json');
+            }
+          }
+        });
+
+        $.getJSON('judges-votes.json', function (results) {
+          
+          let contestantTable = $('#contestantTable').find('tbody');
+          contestantTable.empty();
+          const contestantResponse = {};
+          contestantResponse.results = [];
+
+          let scoringTable = $('#scoringTable').find('tbody');
+          scoringTable.empty();
+          const scoringResponse = {};
+          scoringResponse.results = [];
+
+          let judgesTable = $('#judgesTable').find('tbody');
+          judgesTable.empty();
+          const judgesResponse = {};
+          judgesResponse.results = [];
+
+          const rank_scores = {};
+          const rank_judges = {};
+          
+          for (const [judge, votes] of Object.entries(results)) {
+            votes.forEach(function (vote) {
+              const rank = vote.rank;
+              const contestant = vote.contestant;
+              if(rank_scores[rank] === undefined) {
+                rank_scores[rank] = {};
+              }
+              if(rank_scores[rank][contestant] == undefined) {
+                rank_scores[rank][contestant] = 1;
+              } else {
+                rank_scores[rank][contestant] += 1;
+              }
+              
+              if(rank_judges[rank] === undefined) {
+                rank_judges[rank] = {};
+              }
+              if(rank_judges[rank][contestant] == undefined) {
+                rank_judges[rank][contestant] = [];
+              }
+              rank_judges[rank][contestant].push(judge);
+            });
+          }
+
+          for (const [rank, contestants] of Object.entries(rank_scores)) {
+            const responseRow = {};
+            responseRow.rank = rank;
+            responseRow.contestants = JSON.stringify(contestants, null, 2);
+            contestantResponse.results.push(responseRow);
+          }
+
+          for (const [rank, contestants] of Object.entries(rank_judges)) {
+            const responseRow = {};
+            responseRow.rank = rank;
+            responseRow.contestants = JSON.stringify(contestants, null, 2).replace(new RegExp('([,\{\}])', 'g'),'$1<br>');
+            scoringResponse.results.push(responseRow);
+          }
+          
+
+          for (const [judge, votes] of Object.entries(results)) {
+            const responseRow = {};
+            responseRow.judge = judge;
+            responseRow.contestants = JSON.stringify(votes, null, 2);
+            judgesResponse.results.push(responseRow);
+          }
+          
+          const contestantRow = makeRow(contestantResponse, contestantTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          contestantTable.append(contestantRow);
+          
+          const scoringRow = makeRow(scoringResponse, scoringTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          scoringTable.append(scoringRow);
+          
+          const judgesRow = makeRow(judgesResponse, judgesTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          judgesTable.append(judgesRow);
+          
+
+          for (const [judge, votes] of Object.entries(results)) {
+            if(votes.length == 0) {
+              delete results[judge];
+            }
+          }
+          
+          const winnerTable = $('#winnerTable').find('tbody');
+          winnerTable.empty();
+          const winnerResponse = {};
+          winnerResponse.results = [];
+          
+          const judgementTable = $('#judgementTable').find('tbody');
+          judgementTable.empty();
+          const judgementResponse = {};
+          judgementResponse.results = [];
+          
+          const pushWinnerRow = (category,description) => {
+            const responseRow = {};
+            responseRow.ix = winnerResponse.results.length + 1;
+            responseRow.category = category;
+            responseRow.description = description;
+            winnerResponse.results.push(responseRow);
+          };
+          
+          const pushJudgementRow = (category,description) => {
+            const responseRow = {};
+            responseRow.ix = judgementResponse.results.length + 1;
+            responseRow.category = category;
+            responseRow.description = description;
+            judgementResponse.results.push(responseRow);
+          };
+          
+          const winners = new Set();
+          
+          const places = [];
+          places.push('First');
+          places.push('Second');
+          places.push('Third');
+          places.push('Fourth');
+          places.push('Fifth');
+          places.push('Sixth');
+          places.push('Seventh');
+          places.push('Eigth');
+          places.push('Ninth');
+          places.push('Tenth');
+
+          const rounds = [];
+          rounds.push('One');
+          rounds.push('Two');
+          rounds.push('Three');
+          rounds.push('Four');
+          rounds.push('Five');
+          rounds.push('Six');
+          rounds.push('Seven');
+          rounds.push('Eight');
+          rounds.push('Nine');
+          rounds.push('Ten');
+          rounds.push('Eleven');
+          rounds.push('Twelve');
+          rounds.push('Thirteen');
+          rounds.push('Fourteen');
+          rounds.push('Fifteen');
+          rounds.push('Sixteen');
+          rounds.push('Seventeen');
+          rounds.push('Eighteen');
+          rounds.push('Ninteen');
+          rounds.push('Twenty');
+          rounds.push('Twenty One');
+          rounds.push('Twenty Two');
+          rounds.push('Twenty Three');
+          rounds.push('Twenty Four');
+          rounds.push('Twenty Five');
+          rounds.push('Twenty Six');
+          rounds.push('Twenty Seven');
+          rounds.push('Twenty Eight');
+          rounds.push('Twenty Nine');
+          rounds.push('Thirty');
+          rounds.push('Thirty One');
+          rounds.push('Thirty Two');
+          rounds.push('Thirty Three');
+          rounds.push('Thirty Four');
+          rounds.push('Thirty Five');
+          rounds.push('Thirty Six');
+          rounds.push('Thirty Seven');
+          rounds.push('Thirty Eight');
+          rounds.push('Thirty Nine');
+          rounds.push('Fourty');
+
+          for(var placeIx = 0; placeIx < places.length; placeIx++) {
+            pushJudgementRow('Placement','<h1>' + places[placeIx] + ' Place</h1>');
+            
+            var winner = undefined;
+
+            const activeRankForJudges = {};
+            for (const [judge, votes] of Object.entries(results)) {
+              activeRankForJudges[judge] = 1;
+            }
+            
+            const getActiveContestant = (judge, votes) => {
+              const activeRank = activeRankForJudges[judge];
+              var contestant;
+              votes.forEach(function (vote) {
+                const rank = vote.rank;
+                if(rank == activeRank) {
+                  contestant = vote.contestant;
+                }
+              });
+              return contestant;
+            };
+            
+            const incrementJudgePreference = (judge) => {
+              const oldRank = activeRankForJudges[judge];
+              const oldContestant = getActiveContestant(judge, results[judge]);
+              activeRankForJudges[judge] ++;
+              while(winners.has(getActiveContestant(judge, results[judge]))) {
+                activeRankForJudges[judge] ++;
+              }
+              const newRank = activeRankForJudges[judge];
+              const newContestant = getActiveContestant(judge, results[judge]);
+          	  pushJudgementRow('Judge Updating', 'updated ' + judge
+          	    + ' from [' + oldRank + ']' + oldContestant
+                + ' to [' + newRank + ']' + newContestant
+          	  );
+            }
+            
+            const incrementJudgesPreference = (judges) => {
+              judges.forEach(incrementJudgePreference);
+            };
+            
+            for(var ix = 0; ix < winners.size; ix++) {
+              for (const [judge, votes] of Object.entries(results)) {
+                const contestant = getActiveContestant(judge, votes);
+                if(winners.has(contestant)) {
+                  activeRankForJudges[judge] ++;
+                  const newContestant = getActiveContestant(judge, votes);
+               	  pushJudgementRow('Winner Contestant Skipping', 'updated ' + judge + ' from ' + contestant + ' to ' + newContestant);
+                }
+              }
+            }
+            
+            for(var roundIx = 0; (roundIx < rounds.length) && (winner === undefined); roundIx++) {
+              pushJudgementRow('Scoring Round','<h2>Round ' + rounds[roundIx] + '</h2>');
+              const judgesForContestants = {};
+              
+              const judgeVotes = Object.entries(results);
+
+              for (const [judge, votes] of judgeVotes) {
+                const activeRank = activeRankForJudges[judge];
+                const contestant = getActiveContestant(judge, votes);
+                if(judgesForContestants[contestant] === undefined) {
+                  judgesForContestants[contestant] = [];
+                }
+                judgesForContestants[contestant].push(judge);
+              	pushJudgementRow('Judge Choice', 'Judge ' + judge + ' voted for ' + contestant + ' rank ' + activeRank);
+              }
+              
+              const entries = Object.entries(judgesForContestants);
+              const totalVoteCount = judgeVotes.length;
+              var lowestVoteCount = totalVoteCount;
+
+              for (const [contestant, judges] of entries) {
+                const votes = judges.length;
+                if(votes >= (totalVoteCount / 2)) {
+                  winner = contestant;
+               	  winners.add(winner);
+                }
+                if(votes < lowestVoteCount) {
+                  lowestVoteCount = votes;
+                }
+              }
+              
+              for (const [contestant, judges] of entries) {
+                const votes = judges.length;
+                if(contestant == winner) {
+                  	const description = '<b>WINNER ' + places[placeIx] + ' Place ' + votes + ' of ' + totalVoteCount + ' for ' + contestant + '</b>';
+                	pushJudgementRow('WINNER', description);
+                	pushWinnerRow('WINNER',description);
+                } else {
+                	pushJudgementRow('Also Ran', votes + ' of ' + totalVoteCount + ' for ' + contestant);
+                }
+              }
+              
+              if(winner === undefined) {
+                for (const [contestant, judges] of entries) {
+                  const votes = judges.length;
+                  if(votes == lowestVoteCount) {
+                  	pushJudgementRow('Loser Elimination', 'eliminating ' + contestant + ' from future rounds as they have lowest votes (' + votes + ').');
+                  	incrementJudgesPreference(judges);
+                  }
+                }
+              } else {
+              	pushJudgementRow('Winner Elimination', 'eliminating ' + winner + ' from future rounds as they won.');
+                for (const [contestant, judges] of entries) {
+                  if(contestant == winner) {
+                  	incrementJudgesPreference(judges);
+                  }
+                }
+              }
+            }
+          }
+        
+          const judgementRow = makeRow(judgementResponse, judgementTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          judgementTable.append(judgementRow);
+
+          const winnerRow = makeRow(winnerResponse, winnerTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          winnerTable.append(winnerRow);
+        });
+      }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+<head>
+<title>Checksum Test</title>
+</head>
+<body>
+	If you find this form useful, feel free to donate. My ripple wallet address is: r92a6kZ5WiZZm2pTjb1yQ45a9aYMGNaK2d
+	<p>
+		<a href="safety.html" target="blank">How to use this tool safely</a>
+	<p>
+		<!--  -->
+	<form onsubmit="return checkRipple();">
+		Ripple Secret (starts with the lower case letter s) <br> <input type="text" size="60" id="secret">
+		<p>
+			Max Number Of Positive Matches <br> <input type="number" size="10" id="maxPositive" value="10">
+		<p>
+			Max Number Of Characters To Alter (3 matches takes 3gb of ram and 8 hrs, 4 matches takes 3tb ram and 41 days) <br> <input type="number" size="10"
+				id="maxAlteredCharacters" value="2" min="1" max="3">
+		<p>
+			<input type="submit" value="submit">
+	</form>
+	<p>
+	<div id="result"></div>
+	<p>
+	<div id="debug"></div>
+	<script src="js/google-tracking.js"></script>
+	<script src="js/2.5.3-crypto-sha256.js"></script>
+	<script src="js/jsbn.js"></script>
+	<script src="js/jsbn2.js"></script>
+	<script src="js/ripple-checksum.js"></script>
+	<script>
+		var w;
+
+		function checkRipple() {
+			var baseSecret = document.getElementById("secret").value;
+
+			var maxPositive = document.getElementById("maxPositive").value;
+
+			var maxAlteredCharacters = document.getElementById("maxAlteredCharacters").value;
+
+			var isSecret = check_address(baseSecret);
+
+			var html = "";
+
+			if (isSecret) {
+				html += baseSecret + " is a valid secret.<br>";
+			} else {
+				html += baseSecret + " is not a valid secret. checking for " + maxPositive + "  alternative matches by at most modifying "
+						+ maxAlteredCharacters + " characters.<br>";
+			}
+			document.getElementById("result").innerHTML = html;
+
+			if (isSecret) {
+				return false;
+			}
+
+			if (typeof (Worker) !== "undefined") {
+				if (typeof (w) == "undefined") {
+					w = new Worker("js/workerRippleChecksum.js");
+				}
+				w.onmessage = function(event) {
+					document.getElementById("result").innerHTML = html + event.data;
+				};
+			} else {
+				document.getElementById("result").innerHTML = html + "Sorry! No Web Worker support.";
+			}
+
+			var e = {};
+			e.baseSecret = baseSecret;
+			e.maxPositive = maxPositive;
+			e.maxAlteredCharacters = maxAlteredCharacters;
+
+			//console.log("workerRippleChecksum in " + JSON.stringify(e));
+			w.postMessage(e);
+
+			return false;
+		}
+		callGoogleTracker();
+	</script>
+</body>
+</html>

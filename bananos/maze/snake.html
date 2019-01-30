@@ -1,0 +1,198 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+
+<head>
+<title>Banano Maze</title>
+<style type='text/css'>
+.titles {
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.solid_border {
+  border: solid;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 0;
+}
+
+img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.maze_img_12 {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+}
+
+.maze_img_22 {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+}
+
+.maze_img_21 {
+  transform: rotate(+90deg);
+  -webkit-transform: rotate(+90deg);
+  -ms-transform: rotate(+90deg);
+}
+
+.maze_img_32 {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+}
+
+.maze_img_41 {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+}
+
+.maze_img_42 {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+}
+
+.maze_img_44 {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+}
+
+.wrapper {
+  display: flex;
+}
+
+#L {
+  flex: 0 0 50%;
+}
+
+#R {
+  flex: 1;
+}
+</style>
+</head>
+
+<body onload="onLoad();">
+Objective: Make a game that shows two <a href="https://en.wikipedia.org/wiki/Lattice_graph#Square_grid_graph">Square grid graph</a>
+  <div class="wrapper">
+    <div class="solid_border centered">
+      <table style="width: 50%;" class="centered solid_border" id="L">
+        <tr>
+          <td>Enter =>=&darr;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="11"></td>
+          <td class="12"></td>
+        </tr>
+        <tr>
+          <td class="21"></td>
+          <td class="22"></td>
+        </tr>
+        <tr>
+          <td class="31"></td>
+          <td class="32"></td>
+        </tr>
+        <tr>
+          <td class="41"></td>
+          <td class="42"></td>
+        </tr>
+        <tr>
+          <td>Leave =&darr;</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div class="solid_border centered">
+      <table style="width: 50%;" class="centered solid_border" id="R">
+        <tr>
+          <td>Enter =>=&darr;</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="11"></td>
+          <td class="12"></td>
+        </tr>
+        <tr>
+          <td class="21"></td>
+          <td class="22"></td>
+        </tr>
+        <tr>
+          <td class="31"></td>
+          <td class="32"></td>
+        </tr>
+        <tr>
+          <td class="41"></td>
+          <td class="42"></td>
+        </tr>
+        <tr>
+          <td>Leave =&darr;</td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src='../../js-lib/jquery-3.2.1.js'></script>
+  <script>
+      function randomInt (range) {
+        return Math.floor(Math.random() * range) + 1;
+      }
+
+      function onLoad () {
+        const badIndex = randomInt(8);
+
+        const useLeft = randomInt(2) == 1;
+
+        const leftCells = $("#L td");
+        //console.log(leftCells);
+        leftCells.each(function (index) {
+          const cl = $(this).attr("class");
+          if (cl !== undefined) {
+            $(this).empty();
+            if ((index == badIndex) && (useLeft)) {
+              $(this).append('<img class="maze_img_' + cl + '" src="bad_001.png" />');
+            } else {
+              $(this).append('<img class="maze_img_' + cl + '" src="good_001.png" />');
+            }
+          }
+        });
+
+        const rightCells = $("#R td");
+        //console.log(rightCells);
+        rightCells.each(function (index) {
+          const cl = $(this).attr("class");
+          if (cl !== undefined) {
+            $(this).empty();
+            if ((index == badIndex) && (!useLeft)) {
+              $(this).append('<img class="maze_img_' + cl + '" src="bad_001.png" />');
+            } else {
+              $(this).append('<img class="maze_img_' + cl + '" src="good_001.png" />');
+            }
+          }
+        });
+      }
+    </script>
+</body>
+
+</html>
