@@ -46,7 +46,6 @@ git checkout gh-pages;git rebase master;git push origin gh-pages;git checkout ma
 ## force only most recent version of coranos.github.io
 rm -rf .git;
 git init;
-git lfs uninstall;
 git add .;
 git commit -m "Initial commit";
 git remote add origin https://github.com/coranos/coranos.github.io.git;
