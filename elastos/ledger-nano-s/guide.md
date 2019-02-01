@@ -18,43 +18,44 @@ Initial setup:
 If you haven’t already, create a PIN for your Ledger and install Ledger Live Desktop from http://ledger.com or https://github.com/LedgerHQ/ledger-live-desktop/releases.
 Don’t forget to back up your recovery phrase!
 
-Connect your Ledger device to your computer via USB and unlock it with your PIN.
+### Connect your Ledger device to your computer via USB and unlock it with your PIN.
 Open Ledger Live Desktop, select “Manager” in the left panel, and install the Elastos application.
 
 ![Ledger App Manager](guide-images/ledger-app-manager.png)
 
-On your Ledger device, select the newly installed Elastos application.
+### On your Ledger device, select the newly installed Elastos application.
 
-![Elastos App Icon](guide-images/ledger-app-icon.png)
+![Elastos App Icon](guide-images/ledger-app-icon.jpg)
 
 You should now see a home screen that looks like this:
 
-![Elastos App Home Screen](guide-images/ledger-app-home-screen.png)
+![Elastos App Home Screen](guide-images/ledger-app-home-screen.jpg)
 
-Connect your Ledger to Elastos Light Wallet:
+## Connect your Ledger to Elastos Light Wallet.
 
-With your Ledger connected to your computer, open the Elastos Light Wallet.
+### With your Ledger connected to your computer, open the Elastos Light Wallet.
 
 ![Elastos Light Wallet Home Screen](guide-images/elastos-light-wallet-home-screen.png)
 
 If your Ledger is properly connected to your computer with the Elastos application installed and open, you will see “Ledger Ready” on the main screen of the light wallet.
 
-Click the 'use ledger' button.
+### Click the 'use ledger' button.
 
 ![Elastos Light Wallet Send Screen](guide-images/elastos-light-wallet-send-screen.png)
 
 After sending ELA from the light wallet you should now receive a notification on your Ledger prompting you to confirm or deny the transaction.
 
 ## View Account Balance
-To view the account balance, click on "Receive" on the left side, and click on the account you wish to view.  
-![Elastos Light Wallet Receive Screen](guide-images/elastos-light-wallet-receive-screen.png)
+### To view the account balance, click on "Send" on the left side, and the account balance will be displayed.  
+![Elastos Light Wallet Send Screen](guide-images/elastos-light-wallet-send-screen.png)
 
 ## Receive Crypto
-To receive crypto, click on "Receive" on the left side, and click on the account you wish to view.  
+### To receive crypto, click on "Receive" on the left side, that will show the receiving address where you can receive crypto.  
 ![Elastos Light Wallet Receive Screen](guide-images/elastos-light-wallet-receive-screen.png)
 
 ## Send Crypto
-To send crypto, click on "Send" on the left side, specify the "to" account, and the "amount" and click "send".  
+### To send crypto, click on "Send" on the left side, specify the "to" account, and the "amount" and click "send".  
+
 Be sure to verify the the transaction details on the device!
 ![Elastos Light Wallet Send Screen](guide-images/elastos-light-wallet-send-screen.png)
 
@@ -62,5 +63,8 @@ Be sure to verify the the transaction details on the device!
 If you have trouble, the best way to get help is to contact coranos2 on reddit.
 [Coranos2 on Reddit](https://www.reddit.com/user/coranos2)
 
-## Ledger Third Party Application Design Guidelines
+## How It was made
+This guide was made according to the ledger third party application design guidelines.
+
+### Ledger Third Party Application Design Guidelines
 [Ledger Third Party Application Design Guidelines](https://ledger.readthedocs.io/en/latest/additional/publishing_an_app.html#design-guidelines)
