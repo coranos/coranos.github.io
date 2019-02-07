@@ -44,6 +44,7 @@ then refresh and add it to .gitignore.
 git checkout gh-pages;git rebase master;git push origin gh-pages;git checkout master
 
 ## force only most recent version of coranos.github.io
+find . -exec touch {} \;
 rm -rf .git;
 git init;
 git add .;
