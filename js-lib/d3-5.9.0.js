@@ -1250,9 +1250,6 @@ function styleRemove(name) {
 
 function styleConstant(name, value, priority) {
   return function() {
-    if(this.style === undefined) {
-      console.trace('undefined style', this);
-    }
     this.style.setProperty(name, value, priority);
   };
 }
