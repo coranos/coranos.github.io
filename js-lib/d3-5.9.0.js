@@ -1251,7 +1251,7 @@ function styleRemove(name) {
 function styleConstant(name, value, priority) {
   return function() {
     if(this.style === undefined) {
-      console.error('undefined style', this);
+      console.trace('undefined style', this);
     }
     this.style.setProperty(name, value, priority);
   };
