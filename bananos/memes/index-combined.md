@@ -1,3 +1,10 @@
+# Credits
+
+All memes were copied over from discord by:
+Monachita#2427
+
+Thank you and well done.
+
 |  id  | user id      | date       | url |
 | :--- | :----------- | :----      | :--- |
 | 1    | Coranos#4281 | 2018-07-17 |  ![](https://coranos.github.io/bananos/thanos/thananosbig.png) |
