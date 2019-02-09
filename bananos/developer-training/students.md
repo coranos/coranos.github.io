@@ -8,7 +8,7 @@
 | 69     | not_idol#3950         | Completed Lesson Four  |[not-idol.github.io]      |
 | 04     | Lee#2040              | Completed Lesson Two   |[acidlee.github.io]       |
 | 05     | Parvu#7388            | Completed Lesson Three |[parvulitum.github.io]    |
-| 06     | Monachita#2427        | Completed Lesson seven |[lanegrologia1.github.io] |
+| 06     | Monachita#2427        | Completed Course       |[lanegrologia1.github.io] |
 | 07     | Trigger Haven#5767    | Completed Lesson       |                          |
 | 08     | Scarlet Alejandra#4565| completed lesson one   |
 | 09     | azuLeto#1082          | Completed Lesson One   |[azuleto.github.io]       |
@@ -31,3 +31,7 @@
 [IsBemsho.github.io]: https://IsBemsho.github.io/
 [isata23677.github.io]: https://isata23677.github.io/
 [Geysel2902.github.io]: https://github.com/Geysel2902/coranos.github.io/ 
+
+### Completed Students
+
+Congratulations Monachiita on completeing the basic banano developer course! 
