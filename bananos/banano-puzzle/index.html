@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript" src="script.js">
+
+  </script>
+
+  <style>
+    .black {
+        background-color: black;
+        color:white;
+      }
+
+      .blue {
+        background-color: blue;
+        color:white;
+      }
+
+      .yellow {
+        background-color: yellow;
+        color:black;
+      }
+
+      .green {
+        background-color: green;
+        color:white;
+      }
+
+      .red {
+        background-color: red;
+        color:white;
+      }
+
+      .control {
+        margin-bottom: 10px;
+      }
+
+      .up {
+        display: block;
+        margin-left: 70px;
+      }
+      button {
+
+      }
+
+    </style>
+
+</head>
+
+<body id="body">
+
+
+
+  <canvas id="canvas-back" style="position:absolute; z-index:1;"></canvas>
+  <canvas id="canvas" style="position:absolute; z-index:2;"></canvas>
+
+
+  <div class="" style="margin-left:410px;">
+
+    <div class="control">
+      <button id="up2" class="up red" name="button">UP2</button>
+      <button id="left2" class="left red" name="button">LEFT2</button>
+      <button id="down2" class="down red" name="button">DOWN2</button>
+      <button id="right2" class="right red" name="button">RIGHT2</button>
+    </div>
+
+    <div class="control">
+      <button id="up3" class="up green" name="button">UP3</button>
+      <button id="left3" class="left green" name="button">LEFT3</button>
+      <button id="down3" class="down green" name="button">DOWN3</button>
+      <button id="right3" class="right green" name="button">RIGHT3</button>
+    </div>
+
+    <div class="control">
+      <button id="up1" class="up black" name="button">UP1</button>
+      <button id="left1" class="left black" name="button">LEFT1</button>
+      <button id="down1" class="down black" name="button">DOWN1</button>
+      <button id="right1" class="right black" name="button">RIGHT1</button>
+    </div>
+
+    <div class="control">
+      <button id="up4" class="up blue" name="button">UP4</button>
+      <button id="left4" class="left blue" name="button">LEFT4</button>
+      <button id="down4" class="down blue" name="button">DOWN4</button>
+      <button id="right4" class="right blue" name="button">RIGHT4</button>
+    </div>
+
+    <div class="control">
+      <button id="up5" class="up yellow" name="button">UP5</button>
+      <button id="left5" class="left yellow" name="button">LEFT5</button>
+      <button id="down5" class="down yellow" name="button">DOWN5</button>
+      <button id="right5" class="right yellow" name="button">RIGHT5</button>
+    </div>
+
+    <p id="counter" style="margin-top:50px;">Counter: 0</p>
+    <input id="path"></inputs>
+    <button id="copy" type="button" name="button">COPY SOLUTION</button>
+    <button style="display:block;margin-top:30px;" id="reset" type="button" name="button">RESET</button>
+
+    <h3 style="margin-bottom:0px;">HOW TO PLAY</h3>
+    <p>10.000 BANANO PUZZLE!</p>
+    <p>Your goal is to move the pieces around until your game looks like <a href="https://imgur.com/a/HHpv4jq" target="_blank">THIS</a></p>
+    <p>(the website will also tell you, that you made it.)</p>
+    <p>The guy/girl who sends me his solution with the LEAST AMOUNT of moves made, wins 10.000 BANANO.</p>
+    <p>To submit your solution, hit the COPY SOLUTION button and send the text to me on discord (not_idol#5004)</p>
+    <p>If u have any questions, just DM me, Good Luck!</p>
+
+    <h3 style="margin-bottom:0px;">Cómo jugar</h3>
+    <p>PUZZLE 10.000 BANANO!</p>
+    <p>El objetivo es mover las piezas hasta que el puzzle se vea <a href="https://imgur.com/a/HHpv4jq" target="_blank">ASÍ</a></p>
+    <p>(La web te dirá que lo has conseguido)</p>
+    <p>La persona que me envíe la solución con el menor número de movimientos realizados, ganará 10.000 BANANO.</p>
+    <p>Para enviar la solución, pulsa el botón COPY SOLUTION - COPIAR SOLUCIÓN y envíame el texto por Discord (not_idol#5004)</p>
+    <p>Si tienen alguna pregunta, envíen un mensaje privado. ¡Buena suerte!</p>
+
+  </div>
+  <button id="solve" type="button" name="button">SOLVE</button>
+  <p>
+    <button id="solve-random" type="button" name="button">SOLVE RANDOM</button>
+    <p>
+  <textarea style="width:1000px;height:1000px" id="solution">
+    /* move box to middle right */
+    down5 down5 down4 down4 down1 left1
+
+    /* swap green and blue */
+    down3 down3 right2 right2 up1 up1 left3 left3 down3 up5 up5 up5
+
+    /* order pgygb */
+    right3 down3 right3 up4 up4 left3 left3
+
+    /* box on top left 30 */
+    down5 down5 down5 down2 down2
+
+    /* rotate box to bottom right 52 */
+    right1 right1 up4 up4 up3 up3 left5 left5 down2 down2
+    down1 down1 right4 right4 up3 up3
+    up5 up5 left2 left2 down1 down1
+
+    /* rotate gbpry to gbypr rotate bottom clockwise */
+    right5 right5 up2 up2
+
+    /* rotate gbypr to brypg */
+    left1 left1 down5 down5 right2 right2 down3 down3
+
+    /* rotate brypg to brgyp */
+    left4 left4 up2 up2 right3 right3
+    down4 down4 left2 left2 up3 up3 up5 up5 right1
+  </textarea>
+  <!--
+  down5 down5 down4 down4 down1 left1
+  down3 down3 right2 right2 up1 up1 left3 left3 down3 up5 up5 up5
+  right3 down3 right3 up4 up4 left3 left3
+  down5 down5 down5 down2 down2 right1
+  right1 up4 up4 up3 up3 left5 left5 down2
+  down2 down1 down1 right4 right4 up3 up3
+  up5 up5 left2 left2 down1 down1
+  right5 right5 up2 up2 left1 left1
+  down5 down5 right2 right2 down3 down3
+  left4 left4 up2 up2 right3 right3
+  down4 down4 left2 left2 up3 up3 up5 up5 right1
+-->
+</body>
+
+</html>
