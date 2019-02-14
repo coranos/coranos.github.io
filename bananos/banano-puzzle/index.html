@@ -4,102 +4,47 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <script type="text/javascript" src="script.js">
-
-  </script>
-
-  <style>
-    .black {
- background-color: black;
- color:white;
- }
-
- .blue {
- background-color: blue;
- color:white;
- }
-
- .yellow {
- background-color: yellow;
- color:black;
- }
-
- .green {
- background-color: green;
- color:white;
- }
-
- .red {
- background-color: red;
- color:white;
- }
-
- .control {
- margin-bottom: 10px;
- }
-
- .up {
- display: block;
- margin-left: 70px;
- }
- button {
-
- }
-
- </style>
-
+  <link type="text/css" href="style.css" rel="stylesheet">
 </head>
 
-<body id="body">
-
-
-
+<body id="body" onload="onLoad()">
   <canvas id="canvas-back" style="position:absolute; z-index:1;"></canvas>
   <canvas id="canvas" style="position:absolute; z-index:2;"></canvas>
-
-
   <div class="" style="margin-left:410px;">
-
     <div class="control">
       <button id="up2" class="up red" name="button">UP2</button>
       <button id="left2" class="left red" name="button">LEFT2</button>
       <button id="down2" class="down red" name="button">DOWN2</button>
       <button id="right2" class="right red" name="button">RIGHT2</button>
     </div>
-
     <div class="control">
       <button id="up3" class="up green" name="button">UP3</button>
       <button id="left3" class="left green" name="button">LEFT3</button>
       <button id="down3" class="down green" name="button">DOWN3</button>
       <button id="right3" class="right green" name="button">RIGHT3</button>
     </div>
-
     <div class="control">
       <button id="up1" class="up black" name="button">UP1</button>
       <button id="left1" class="left black" name="button">LEFT1</button>
       <button id="down1" class="down black" name="button">DOWN1</button>
       <button id="right1" class="right black" name="button">RIGHT1</button>
     </div>
-
     <div class="control">
       <button id="up4" class="up blue" name="button">UP4</button>
       <button id="left4" class="left blue" name="button">LEFT4</button>
       <button id="down4" class="down blue" name="button">DOWN4</button>
       <button id="right4" class="right blue" name="button">RIGHT4</button>
     </div>
-
     <div class="control">
       <button id="up5" class="up yellow" name="button">UP5</button>
       <button id="left5" class="left yellow" name="button">LEFT5</button>
       <button id="down5" class="down yellow" name="button">DOWN5</button>
       <button id="right5" class="right yellow" name="button">RIGHT5</button>
     </div>
-
     <p id="counter" style="margin-top:50px;">Counter: 0</p>
     <input id="path"></inputs>
     <button id="copy" type="button" name="button">COPY SOLUTION</button>
     <button style="display:block;margin-top:30px;" id="reset" type="button" name="button">RESET</button>
-
     <h3 style="margin-bottom:0px;">HOW TO PLAY</h3>
     <p>10.000 BANANO PUZZLE!</p>
     <p>Your goal is to move the pieces around until your game looks like <a href="https://imgur.com/a/HHpv4jq" target="_blank">THIS</a></p>
@@ -107,7 +52,6 @@
     <p>The guy/girl who sends me his solution with the LEAST AMOUNT of moves made, wins 10.000 BANANO.</p>
     <p>To submit your solution, hit the COPY SOLUTION button and send the text to me on discord (not_idol#5004)</p>
     <p>If u have any questions, just DM me, Good Luck!</p>
-
     <h3 style="margin-bottom:0px;">Cómo jugar</h3>
     <p>PUZZLE 10.000 BANANO!</p>
     <p>El objetivo es mover las piezas hasta que el puzzle se vea <a href="https://imgur.com/a/HHpv4jq" target="_blank">ASÍ</a></p>
@@ -115,7 +59,6 @@
     <p>La persona que me envíe la solución con el menor número de movimientos realizados, ganará 10.000 BANANO.</p>
     <p>Para enviar la solución, pulsa el botón COPY SOLUTION - COPIAR SOLUCIÓN y envíame el texto por Discord (not_idol#5004)</p>
     <p>Si tienen alguna pregunta, envíen un mensaje privado. ¡Buena suerte!</p>
-
   </div>
   <button id="solve" type="button" name="button">SOLVE</button>
   <p>
@@ -130,6 +73,14 @@
         up3 up3 right4 right4 up4
         down5 down1 down5 down1 left2 up3 up4 left2 up3 right5 down1 right5 down1 left4 up5 left4 up5 right1
       </textarea>
+      <script type="text/javascript" src="game.js"></script>
+      <script type="text/javascript" src="solver.js"></script>
+      <script>
+      const onLoad = () => {
+        gameLoad();
+        solverLoad();
+      }
+      </script>
 </body>
 
 </html>
