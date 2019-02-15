@@ -46,19 +46,23 @@ const gameLoad = () => {
   // 0 0 0 0
   // 0 0 0 0
 
-  var counter = document.getElementById('counter');
-  var path = document.getElementById('path');
-  var pathString = "";
+  const counter = document.getElementById('counter');
+  const path = document.getElementById('path');
 
-  var count = -1;
+  let pathString = "";
 
-  function countUp() {
+  let count = -1;
+
+  // re-drawing
+  let done = false;
+
+  const countUp = () => {
     count = count + 1;
     counter.innerHTML = "Counter: " + count;
     path.value = pathString;
   }
 
-  var colors = [
+  const colors = [
     'white',
     'black',
     'red',
@@ -67,7 +71,31 @@ const gameLoad = () => {
     'yellow'
   ]
 
-  function init() {
+  const newc = () => {
+    if (!done) {
+      countUp();
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (var i = 0; i < state.length; i++) {
+        for (var j = 0; j < state[i].length; j++) {
+          var corx = j;
+          var cory = i;
+          var v = state[i][j];
+          if (v != 0) {
+            ctx.fillStyle = colors[v];
+            ctx.fillRect((corx * 100), (cory * 100), 100, 100);
+            ctx.stroke();
+          }
+        }
+      }
+
+      if (finished()) {
+        alert("You made it! If you are confident with your solution, hit the COPY SOLUTION button and sent it to not_idol#5004");
+        done = true;
+      }
+    }
+  }
+
+  const init = () => {
     count = -1;
     pathString = "";
     done = false;
@@ -101,15 +129,15 @@ const gameLoad = () => {
 
 
 
-  var canvas = document.getElementById("canvas");
-  var canvasback = document.getElementById("canvas-back");
+  const canvas = document.getElementById("canvas");
+  const canvasback = document.getElementById("canvas-back");
   canvas.width = 400;
   canvas.height = 600;
   canvasback.width = 400;
   canvasback.height = 600;
 
-  var ctx = canvas.getContext("2d");
-  var ctxback = canvasback.getContext("2d");
+  const ctx = canvas.getContext("2d");
+  const ctxback = canvasback.getContext("2d");
 
   ctxback.beginPath();
   ctxback.moveTo(0, 0);
@@ -138,34 +166,7 @@ const gameLoad = () => {
 
   init();
 
-  // re-drawing
-  var done = false;
-
-  function newc() {
-    if (!done) {
-      countUp();
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      for (var i = 0; i < state.length; i++) {
-        for (var j = 0; j < state[i].length; j++) {
-          var corx = j;
-          var cory = i;
-          var v = state[i][j];
-          if (v != 0) {
-            ctx.fillStyle = colors[v];
-            ctx.fillRect((corx * 100), (cory * 100), 100, 100);
-            ctx.stroke();
-          }
-        }
-      }
-
-      if (finished()) {
-        alert("You made it! If you are confident with your solution, hit the COPY SOLUTION button and sent it to not_idol#5004");
-        done = true;
-      }
-    }
-  }
-
-  function findNumber(v) {
+  const findNumber = (v) => {
     for (var i = 0; i < state.length; i++) {
       for (var j = 0; j < state[i].length; j++) {
         if (state[i][j] == v) {
@@ -180,8 +181,8 @@ const gameLoad = () => {
     }
   }
 
-  function isFree(a, b) {
-    if (a >= 6 || b >= 4 || a < 0 || b < 0) {
+  const isFree = (a, b) => {
+    if ((a >= 6) || (b >= 4) || (a < 0) || (b < 0)) {
       return false;
     }
     return (state[a][b] == 0);
@@ -192,14 +193,14 @@ const gameLoad = () => {
   }, false)
 
   // DOWN MOVEMENT
-  var buttonsDown = document.getElementsByClassName('down');
-  for (var i = 0; i < buttonsDown.length; i++) {
+  const buttonsDown = document.getElementsByClassName('down');
+  for (let i = 0; i < buttonsDown.length; i++) {
     buttonsDown[i].addEventListener("click", function() {
-      var type = this.id;
+      const type = this.id;
 
       if (type == "down1") {
-        var x = findNumber(1).x;
-        var y = findNumber(1).y;
+        const x = findNumber(1).x;
+        const y = findNumber(1).y;
 
         if (isFree(y + 2, x) && isFree(y + 2, x + 1)) {
           state[y][x] = 0;
@@ -217,8 +218,8 @@ const gameLoad = () => {
       }
 
       if (type == "down2") {
-        var x = findNumber(2).x;
-        var y = findNumber(2).y;
+        const x = findNumber(2).x;
+        const y = findNumber(2).y;
 
         if (isFree(y + 2, x) && isFree(y + 1, x + 1)) {
           state[y][x] = 0;
@@ -234,8 +235,8 @@ const gameLoad = () => {
       }
 
       if (type == "down3") {
-        var x = findNumber(3).x;
-        var y = findNumber(3).y;
+        const x = findNumber(3).x;
+        const y = findNumber(3).y;
 
         if (isFree(y + 1, x) && isFree(y + 2, x + 1)) {
           state[y][x] = 0;
@@ -251,8 +252,8 @@ const gameLoad = () => {
       }
 
       if (type == "down4") {
-        var x = findNumber(4).x;
-        var y = findNumber(4).y;
+        const x = findNumber(4).x;
+        const y = findNumber(4).y;
 
         if (isFree(y + 2, x) && isFree(y + 2, x + 1)) {
           state[y][x] = 0;
@@ -268,8 +269,8 @@ const gameLoad = () => {
       }
 
       if (type == "down5") {
-        var x = findNumber(5).x;
-        var y = findNumber(5).y;
+        const x = findNumber(5).x;
+        const y = findNumber(5).y;
 
         if (isFree(y + 2, x) && isFree(y + 2, x - 1)) {
           state[y][x] = 0;
@@ -289,14 +290,14 @@ const gameLoad = () => {
 
 
   // UP MOVEMENT
-  var buttonsUp = document.getElementsByClassName('up');
-  for (var i = 0; i < buttonsUp.length; i++) {
+  const buttonsUp = document.getElementsByClassName('up');
+  for (let i = 0; i < buttonsUp.length; i++) {
     buttonsUp[i].addEventListener("click", function() {
-      var type = this.id;
+      const type = this.id;
 
       if (type == "up1") {
-        var x = findNumber(1).x;
-        var y = findNumber(1).y;
+        const x = findNumber(1).x;
+        const y = findNumber(1).y;
 
         if (isFree(y - 1, x) && isFree(y - 1, x + 1)) {
           state[y][x] = 0;
@@ -314,8 +315,8 @@ const gameLoad = () => {
       }
 
       if (type == "up2") {
-        var x = findNumber(2).x;
-        var y = findNumber(2).y;
+        const x = findNumber(2).x;
+        const y = findNumber(2).y;
 
         if (isFree(y - 1, x) && isFree(y - 1, x + 1)) {
           state[y][x] = 0;
@@ -331,8 +332,8 @@ const gameLoad = () => {
       }
 
       if (type == "up3") {
-        var x = findNumber(3).x;
-        var y = findNumber(3).y;
+        const x = findNumber(3).x;
+        const y = findNumber(3).y;
 
         if (isFree(y - 1, x) && isFree(y - 1, x + 1)) {
           state[y][x] = 0;
@@ -348,8 +349,8 @@ const gameLoad = () => {
       }
 
       if (type == "up4") {
-        var x = findNumber(4).x;
-        var y = findNumber(4).y;
+        const x = findNumber(4).x;
+        const y = findNumber(4).y;
 
         if (isFree(y - 1, x) && isFree(y, x + 1)) {
           state[y][x] = 0;
@@ -365,8 +366,8 @@ const gameLoad = () => {
       }
 
       if (type == "up5") {
-        var x = findNumber(5).x;
-        var y = findNumber(5).y;
+        const x = findNumber(5).x;
+        const y = findNumber(5).y;
 
         if (isFree(y - 1, x) && isFree(y, x - 1)) {
           state[y][x] = 0;
@@ -386,14 +387,14 @@ const gameLoad = () => {
 
 
   // Right MOVEMENT
-  var buttonsRight = document.getElementsByClassName('right');
-  for (var i = 0; i < buttonsRight.length; i++) {
+  const buttonsRight = document.getElementsByClassName('right');
+  for (let i = 0; i < buttonsRight.length; i++) {
     buttonsRight[i].addEventListener("click", function() {
-      var type = this.id;
+      const type = this.id;
 
       if (type == "right1") {
-        var x = findNumber(1).x;
-        var y = findNumber(1).y;
+        const x = findNumber(1).x;
+        const y = findNumber(1).y;
 
         if (isFree(y, x + 2) && isFree(y + 1, x + 2)) {
           state[y][x] = 0;
@@ -411,8 +412,8 @@ const gameLoad = () => {
       }
 
       if (type == "right2") {
-        var x = findNumber(2).x;
-        var y = findNumber(2).y;
+        const x = findNumber(2).x;
+        const y = findNumber(2).y;
 
         if (isFree(y, x + 2) && isFree(y + 1, x + 1)) {
           state[y][x] = 0;
@@ -428,8 +429,8 @@ const gameLoad = () => {
       }
 
       if (type == "right3") {
-        var x = findNumber(3).x;
-        var y = findNumber(3).y;
+        const x = findNumber(3).x;
+        const y = findNumber(3).y;
 
         if (isFree(y, x + 2) && isFree(y + 1, x + 2)) {
           state[y][x] = 0;
@@ -445,8 +446,8 @@ const gameLoad = () => {
       }
 
       if (type == "right4") {
-        var x = findNumber(4).x;
-        var y = findNumber(4).y;
+        const x = findNumber(4).x;
+        const y = findNumber(4).y;
 
         if (isFree(y, x + 1) && isFree(y + 1, x + 2)) {
           state[y][x] = 0;
@@ -462,8 +463,8 @@ const gameLoad = () => {
       }
 
       if (type == "right5") {
-        var x = findNumber(5).x;
-        var y = findNumber(5).y;
+        const x = findNumber(5).x;
+        const y = findNumber(5).y;
 
         if (isFree(y, x + 1) && isFree(y + 1, x + 1)) {
           state[y][x] = 0;
@@ -482,14 +483,14 @@ const gameLoad = () => {
   }
 
   // Right MOVEMENT
-  var buttonsLeft = document.getElementsByClassName('left');
-  for (var i = 0; i < buttonsLeft.length; i++) {
+  const buttonsLeft = document.getElementsByClassName('left');
+  for (let i = 0; i < buttonsLeft.length; i++) {
     buttonsLeft[i].addEventListener("click", function() {
-      var type = this.id;
+      const type = this.id;
 
       if (type == "left1") {
-        var x = findNumber(1).x;
-        var y = findNumber(1).y;
+        const x = findNumber(1).x;
+        const y = findNumber(1).y;
 
         if (isFree(y, x - 1) && isFree(y + 1, x - 1)) {
           state[y][x] = 0;
@@ -507,8 +508,8 @@ const gameLoad = () => {
       }
 
       if (type == "left2") {
-        var x = findNumber(2).x;
-        var y = findNumber(2).y;
+        const x = findNumber(2).x;
+        const y = findNumber(2).y;
 
         if (isFree(y, x - 1) && isFree(y + 1, x - 1)) {
           state[y][x] = 0;
@@ -524,8 +525,8 @@ const gameLoad = () => {
       }
 
       if (type == "left3") {
-        var x = findNumber(3).x;
-        var y = findNumber(3).y;
+        const x = findNumber(3).x;
+        const y = findNumber(3).y;
 
         if (isFree(y, x - 1) && isFree(y + 1, x)) {
           state[y][x] = 0;
@@ -541,8 +542,8 @@ const gameLoad = () => {
       }
 
       if (type == "left4") {
-        var x = findNumber(4).x;
-        var y = findNumber(4).y;
+        const x = findNumber(4).x;
+        const y = findNumber(4).y;
 
         if (isFree(y, x - 1) && isFree(y + 1, x - 1)) {
           state[y][x] = 0;
@@ -558,8 +559,8 @@ const gameLoad = () => {
       }
 
       if (type == "left5") {
-        var x = findNumber(5).x;
-        var y = findNumber(5).y;
+        const x = findNumber(5).x;
+        const y = findNumber(5).y;
 
         if (isFree(y, x - 1) && isFree(y + 1, x - 2)) {
           state[y][x] = 0;
@@ -579,7 +580,7 @@ const gameLoad = () => {
 
   document.getElementById('copy').addEventListener("click", function() {
     /* Get the text field */
-    var copyText = path;
+    let copyText = path;
     copyText.value = copyText.value + " counter " + count;
 
     /* Select the text field */
