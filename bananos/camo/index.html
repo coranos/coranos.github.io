@@ -1,69 +1,47 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta charset="UTF-8" />
-<style>
-img[title=monKey] {
-  height: 100px;
-  max-width: 100%;
-  float: none;
-  overflow: auto;
-}
-
-table {
-  border: solid;
-  border-width: 0.5px;
-  font-family: monospace;
-}
-
-tr {
-  border: solid;
-  border-width: 0.5px;
-  font-family: monospace;
-}
-
-td {
-  border: solid;
-  border-width: 0.5px;
-  font-family: monospace;
-}
-</style>
+  <meta charset="UTF-8" />
+  <title></title>
+  <link type="text/css" href="style.css" rel="stylesheet">
 </head>
+
 <body onLoad="onLoad();">
-  <div id="targetDiv"></div>
-  <script src='../../js-lib/jquery-3.2.1.js'></script>
-  <script src='../../js-lib/load-json.js'></script>
-  <script src='../../js-lib/showdown-1.8.6.min.js'></script>
+  <table>
+    <tr>
+      <th>Step</th>
+      <th>Description</th>
+      <th>Detail</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Create a private key and derive a camo public key</td>
+      <td>
+        <form action="." method="get" onsubmit="return submitForm();">
+          Private Key:<br>
+          <input id="private_key" name="private_key" value="" size="64" type="text">
+          <p>
+            Camo Public Key:<br>
+            <input id="camo_public_key" name="camo_public_key" value="" size="64" type="text">
+            <p><input value="Derive Camo Public Key" type="submit">
+        </form>
+      </td>
+    </tr>
+  </table>
+  <script src='camo.js'></script>
   <script>
-      function onLoad () {
-        $.ajaxSetup({
-          beforeSend : function (xhr) {
-            if (xhr.overrideMimeType) {
-              xhr.overrideMimeType('text/markdown');
-            }
-          },
-          cache: false
-        });
+    const submitForm = () => {
+      const private_key_elt = document.getElementById('private_key');
+      private_key_elt.value = 'private_key';
+      const camo_public_key_elt = document.getElementById('camo_public_key');
+      camo_public_key_elt.value = 'camo_public_key';
+      return false;
+    }
+    const onLoad = () => {
 
-        $.ajax({
-          url : 'index.md',
-          type : 'get',
-          dataType : 'text',
-          async : true,
-          success : function (text) {
-            var target = document.getElementById('targetDiv');
-
-            showdown.setOption('tables', 'true');
-            showdown.setOption('tablesHeaderId', 'true');
-            showdown.setOption('parseImgDimension', 'true');
-            showdown.setFlavor('github');
-
-            var converter = new showdown.Converter();
-            var html = converter.makeHtml(text);
-            target.innerHTML = html;
-          }
-        });
-      }
-    </script>
+    }
+  </script>
 </body>
+
 </html>
