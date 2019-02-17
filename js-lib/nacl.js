@@ -1200,5 +1200,44 @@ window.nacl = {};
     }
   })();
 
+  nacl.camo = {};
+  nacl.camo.hashsecret = hashSecret;
+
+  nacl.camo.scalarMult = function (n, p) {
+    checkArrayTypes(n, p);
+    if (n.length !== crypto_scalarmult_SCALARBYTES * 2)
+      throw new Error('bad n size');
+    if (p.length !== crypto_scalarmult_BYTES)
+      throw new Error('bad p size');
+    var q = new Uint8Array(crypto_scalarmult_BYTES);
+    crypto_scalarmult(q, n, p);
+    return q;
+  };
+
+  nacl.camo.scalarMult.base = function (n) {
+    checkArrayTypes(n);
+    if (n.length !== crypto_scalarmult_SCALARBYTES*2)
+      throw new Error('bad n size');
+    var q = new Uint8Array(crypto_scalarmult_BYTES);
+    crypto_scalarmult_base(q, n);
+    return q;
+  };
+
+  nacl.camo.scalarbase = deriveUnhashedPublicFromSecret;
+
+  function deriveUnhashedPublicFromSecret (sk) {
+    var d = sk;
+    var p = [ gf(), gf(), gf(), gf() ];
+    var i;
+    var pk = new Uint8Array(32);
+
+    d[0] &= 248;
+    d[31] &= 127;
+    d[31] |= 64;
+
+    scalarbase(p, d);
+    pack(pk, p);
+    return pk;
+  }
 // })(typeof module !== 'undefined' && module.exports ? module.exports : (self.nacl = self.nacl || {}));
 })(window.nacl);
