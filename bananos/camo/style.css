@@ -1,5 +1,5 @@
-table, tr, td, th {
+table, tr, td, th, input {
   border: solid;
   border-width: 0.5px;
-  font-family: monospace;
+  font-family: monospace,monospace;
 }

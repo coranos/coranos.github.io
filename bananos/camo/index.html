@@ -17,18 +17,22 @@
       </tr>
       <tr>
         <td>1</td>
-        <td>Create a private key and derive a camo public key</td>
+        <td>Create a private key </td>
         <td>
           Private Key:<br>
           <input id="private_key" name="private_key" value="" size="64" type="text">
           <p>
             <input value="New Random Private Key" type="button" onclick='return getNewPrivateKey();'>
           </p>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Create a private key and derive a camo public key</td>
+        <td>
+          Banano Account:<br>
+          <input id="banano_account" name="banano_account" value="" size="64" type="text">
           <p>
-            Banano Account:<br>
-            <input id="banano_account" name="banano_account" value="" size="64" type="text">
-            <br>
-            <br>
             Camo Account:<br>
             <input id="camo_account" name="camo_account" value="" size="64" type="text">
           </p>
@@ -43,6 +47,9 @@
           (Somebody Else's) Camo Account <br>
           (From their rep field on their banano account):<br>
           <input id="other_camo_account" name="other_camo_account" value="" size="64" type="text">
+          <p>
+            Shared Secret <br>
+            <input id="shared_secret" name="shared_secret" value="" size="64" type="text">
           </p>
           <p><input value="Derive Shared Secret" type="button" onclick='return getNewSharedSecret();'>
           </p>
@@ -58,39 +65,6 @@
   <script src='../../js-lib/blake2b.js'></script>
   <script src='../../js-lib/banano.js'></script>
   <script>
-    const hexToBytes = (hex) => {
-      const ret = new Uint8Array(hex.length / 2);
-      for (var i = 0; i < ret.length; i++) {
-        ret[i] = parseInt(hex.substring(i * 2, i * 2 + 2), 16);
-      }
-      return ret;
-    }
-
-    const bytesToHex = (array) => {
-      return [...array].map(b => b.toString(16).padStart(2, '0'))
-        .join('');
-    }
-
-    const getCamoPublicKey = (privateKey) => {
-      return bytesToHex(getCamoPublicKeyBytes(hexToBytes(privateKey)));
-    }
-
-    const getCamoPublicKeyBytes = (privateKeyBytes) => {
-      const camoPrivateKeyBytes = nacl.camo.hashsecret(privateKeyBytes);
-      const camoPublicKeyBytes = nacl.camo.scalarMult.base(camoPrivateKeyBytes);
-      return camoPublicKeyBytes;
-    }
-
-    const getNewPrivateKey = () => {
-      const private_key_elt = document.getElementById('private_key');
-      const privateKey = new Uint8Array(32);
-      window.crypto.getRandomValues(privateKey);
-      const hex = bytesToHex(privateKey);
-      // console.log('privateKey Set', hex.length, hex);
-      private_key_elt.value = hex;
-      return false;
-    }
-
     const submitForm = () => {
       try {
         const private_key_elt = document.getElementById('private_key');
@@ -117,7 +91,22 @@
     }
 
     const getNewSharedSecret = () => {
-      alert('not implemented yet');
+      const private_key_elt = document.getElementById('private_key');
+      const privateKey = private_key_elt.value;
+      if (privateKey.length != 64) {
+        alert(`bad secret key size ${privateKey.length} expecting ${64}`)
+        return false;
+      }
+      const other_camo_account_elt = document.getElementById('other_camo_account');
+      const otherCamoAccount = other_camo_account_elt.value;
+      if (otherCamoAccount.length != 64) {
+        alert(`bad (other) camo account size ${otherCamoAccount.length} expecting ${64}`)
+        return false;
+      }
+      const sharedSecret = getSharedSecret(privateKey, otherCamoAccount);
+      const shared_secret_elt = document.getElementById('shared_secret');
+      shared_secret_elt.value = sharedSecret;
+
       return false;
     }
 
