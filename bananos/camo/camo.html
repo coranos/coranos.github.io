@@ -103,7 +103,7 @@
         alert(`bad (other) camo account size ${otherCamoAccount.length} expecting ${64}`)
         return false;
       }
-      const sharedSecret = getSharedSecret(privateKey, otherCamoAccount);
+      const sharedSecret = getSharedSecret(privateKey, getAccountPublicKey(otherCamoAccount));
       const shared_secret_elt = document.getElementById('shared_secret');
       shared_secret_elt.value = sharedSecret;
 

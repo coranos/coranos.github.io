@@ -83,7 +83,7 @@ const getAccountPublicKey = (account) => {
   const key_uint4 = array_crop(uint5ToUint4(stringToUint5(account_crop.substring(0, 52))));
   const hash_uint4 = uint5ToUint4(stringToUint5(account_crop.substring(52, 60)));
   const key_array = uint4ToUint8(key_uint4);
-  const blake_hash = blake.blake2b(key_array, null, 5).reverse();
+  const blake_hash = blake2b(key_array, null, 5).reverse();
 
   if (!equal_arrays(hash_uint4, uint8ToUint4(blake_hash))) {
     throw new Error(`Incorrect checksum`);
@@ -138,10 +138,10 @@ const decToHex = (decValue, bytes = null) => {
 
 const generateAccountSecretKeyBytes = (seedBytes, accountIndex) => {
   const accountBytes = hexToUint8(decToHex(accountIndex, 4));
-  const context = blake.blake2bInit(32);
-  blake.blake2bUpdate(context, seedBytes);
-  blake.blake2bUpdate(context, accountBytes);
-  const newKey = blake.blake2bFinal(context);
+  const context = blake2bInit(32);
+  blake2bUpdate(context, seedBytes);
+  blake2bUpdate(context, accountBytes);
+  const newKey = blake2bFinal(context);
   return newKey;
 }
 
