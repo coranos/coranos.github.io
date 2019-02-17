@@ -8,17 +8,17 @@
 </head>
 
 <body onLoad="onLoad();">
-  <table>
-    <tr>
-      <th>Step</th>
-      <th>Description</th>
-      <th>Detail</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Create a private key and derive a camo public key</td>
-      <td>
-        <form action="." method="get" onsubmit="return submitForm();">
+  <form action="." method="get" onsubmit="return submitForm();">
+    <table>
+      <tr>
+        <th>Step</th>
+        <th>Description</th>
+        <th>Detail</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Create a private key and derive a camo public key</td>
+        <td>
           Private Key:<br>
           <input id="private_key" name="private_key" value="" size="64" type="text">
           <p>
@@ -34,10 +34,22 @@
           </p>
           <p><input value="Derive Camo And Banano Addresses" type="submit">
           </p>
-        </form>
-      </td>
-    </tr>
-  </table>
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Create a shared secret from (your) private key and somebody else's camo account</td>
+        <td>
+          (Somebody Else's) Camo Account <br>
+          (From their rep field on their banano account):<br>
+          <input id="other_camo_account" name="other_camo_account" value="" size="64" type="text">
+          </p>
+          <p><input value="Derive Shared Secret" type="button" onclick='return getNewSharedSecret();'>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </form>
   <script src='camo.js'></script>
   <!--
   <script src='https://coranos.github.io/js-lib/nacl.js'></script>
@@ -103,6 +115,12 @@
 
       return false;
     }
+
+    const getNewSharedSecret = () => {
+      alert('not implemented yet');
+      return false;
+    }
+
     const onLoad = () => {
 
     }
