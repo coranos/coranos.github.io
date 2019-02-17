@@ -1,5 +1,15 @@
 table, tr, td, th, input {
   border: solid;
   border-width: 0.5px;
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
+}
+
+table {
+  width: 100%;
+}
+
+iframe {
+  position: relative;
+  height: 90vh;
+  width: 100%;
 }

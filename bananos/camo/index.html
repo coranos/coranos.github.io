@@ -3,113 +3,27 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title></title>
+  <title>Camo</title>
   <link type="text/css" href="style.css" rel="stylesheet">
 </head>
 
 <body onLoad="onLoad();">
-  <form action="." method="get" onsubmit="return submitForm();">
-    <table>
-      <tr>
-        <th>Step</th>
-        <th>Description</th>
-        <th>Detail</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Create a private key </td>
-        <td>
-          Private Key:<br>
-          <input id="private_key" name="private_key" value="" size="64" type="text">
-          <p>
-            <input value="New Random Private Key" type="button" onclick='return getNewPrivateKey();'>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Create a private key and derive a camo public key</td>
-        <td>
-          Banano Account:<br>
-          <input id="banano_account" name="banano_account" value="" size="64" type="text">
-          <p>
-            Camo Account:<br>
-            <input id="camo_account" name="camo_account" value="" size="64" type="text">
-          </p>
-          <p><input value="Derive Camo And Banano Addresses" type="submit">
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Create a shared secret from (your) private key and somebody else's camo account</td>
-        <td>
-          (Somebody Else's) Camo Account <br>
-          (From their rep field on their banano account):<br>
-          <input id="other_camo_account" name="other_camo_account" value="" size="64" type="text">
-          <p>
-            Shared Secret <br>
-            <input id="shared_secret" name="shared_secret" value="" size="64" type="text">
-          </p>
-          <p><input value="Derive Shared Secret" type="button" onclick='return getNewSharedSecret();'>
-          </p>
-        </td>
-      </tr>
-    </table>
+  <table>
+    <tr>
+      <th>Sender</th>
+      <th>Reciever</th>
+    </tr>
+    <tr>
+      <td>
+        <iframe src="camo.html" scrolling="no" frameborder="0"></iframe>
+      </td>
+      <td>
+        <iframe src="camo.html" scrolling="no" frameborder="0"></iframe>
+      </td>
+    </tr>
+  </table>
   </form>
-  <script src='camo.js'></script>
-  <!--
-  <script src='https://coranos.github.io/js-lib/nacl.js'></script>
--->
-  <script src='../../js-lib/nacl.js'></script>
-  <script src='../../js-lib/blake2b.js'></script>
-  <script src='../../js-lib/banano.js'></script>
   <script>
-    const submitForm = () => {
-      try {
-        const private_key_elt = document.getElementById('private_key');
-        const privateKey = private_key_elt.value;
-        if (privateKey.length != 64) {
-          alert(`bad secret key size ${privateKey.length} expecting ${64}`)
-          return false;
-        }
-
-        // console.log('privateKey Get', privateKey.length, privateKey);
-        const bananoPublicKey = getPublicKey(privateKey);
-        const banano_account_elt = document.getElementById('banano_account');
-        banano_account_elt.value = getAccount(bananoPublicKey);
-
-        const camoPublicKey = getCamoPublicKey(privateKey);
-        // console.log('camoPublicKey', camoPublicKey.length, camoPublicKey);
-        const camo_account_elt = document.getElementById('camo_account');
-        camo_account_elt.value = getAccount(camoPublicKey);
-      } catch (error) {
-        console.trace(error);
-      }
-
-      return false;
-    }
-
-    const getNewSharedSecret = () => {
-      const private_key_elt = document.getElementById('private_key');
-      const privateKey = private_key_elt.value;
-      if (privateKey.length != 64) {
-        alert(`bad secret key size ${privateKey.length} expecting ${64}`)
-        return false;
-      }
-      const other_camo_account_elt = document.getElementById('other_camo_account');
-      const otherCamoAccount = other_camo_account_elt.value;
-      if (otherCamoAccount.length != 64) {
-        alert(`bad (other) camo account size ${otherCamoAccount.length} expecting ${64}`)
-        return false;
-      }
-      const sharedSecret = getSharedSecret(privateKey, otherCamoAccount);
-      const shared_secret_elt = document.getElementById('shared_secret');
-      shared_secret_elt.value = sharedSecret;
-
-      return false;
-    }
-
     const onLoad = () => {
 
     }
