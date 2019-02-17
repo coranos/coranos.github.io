@@ -1,7 +1,7 @@
 table, tr, td, th, input {
   border: solid;
   border-width: 0.5px;
-  font-family: monospace, monospace;
+  font-family: Montserrat;
   text-shadow:
     -1px -1px 0 #FFF,
     1px -1px 0 #FFF,
@@ -24,9 +24,18 @@ body {
   background-repeat: repeat;
 }
 
+input[type=text] {
+  font-family: monospace, monospace;
+}
+
+input[type=button] {
+  border-radius: 4px;
+}
+
 input {
   text-shadow: none;
   background-color: olive;
+  font-family: Montserrat;
 }
 
 .center {
