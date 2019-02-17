@@ -21,6 +21,7 @@
         <form action="." method="get" onsubmit="return submitForm();">
           Private Key:<br>
           <input id="private_key" name="private_key" value="" size="64" type="text">
+          <input value="Clear" type="button" onclick='return clearPrivateKey();'>
           <p>
             Camo Public Key:<br>
             <input id="camo_public_key" name="camo_public_key" value="" size="64" type="text">
@@ -31,9 +32,42 @@
   </table>
   <script src='camo.js'></script>
   <script>
+    const hexToBytes = (hex) => {
+      const ret = new Uint8Array(hex.length / 2);
+      for (var i = 0; i < ret.length; i++) {
+        ret[i] = parseInt(hex.substring(i * 2, i * 2 + 2), 16);
+      }
+      return ret;
+    }
+
+    const bytesToHex = (bytes) => {
+      return Buffer.from(bytes).toString('hex').toUpperCase();
+    }
+    const getCamoPublicKeyBytes = (privateKeyBytes) => {
+      const camoPrivateKeyBytes = nacl.camo.hashsecret(privateKeyBytes);
+      const camoPublicKeyBytes = nacl.camo.scalarMult.base(camoPrivateKeyBytes);
+      return camoPublicKeyBytes;
+    }
+
+    const clearPrivateKey = () => {
+      const private_key_elt = document.getElementById('private_key');
+      private_key_elt.value = '';
+      return false;
+    }
+
     const submitForm = () => {
       const private_key_elt = document.getElementById('private_key');
-      private_key_elt.value = 'private_key';
+      if (private_key_elt.value.length == 0) {
+        const privateKey = new Uint8Array(32);
+        window.crypto.getRandomValues(array);
+        const hex = bytesToHex(array);
+        console.log('array', array, 'hex', hex);
+
+        private_key_elt.value = hex;
+      }
+      const privateKeyBytes = hexToBytes(private_key_elt.value);
+      const camoPublicKeyBytes = getCamoPublicKeyBytes(privateKeyBytes);
+      const camoPublicKey = bytesToHex(camoPublicKeyBytes);
       const camo_public_key_elt = document.getElementById('camo_public_key');
       camo_public_key_elt.value = 'camo_public_key';
       return false;
