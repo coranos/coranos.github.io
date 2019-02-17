@@ -1129,7 +1129,7 @@ window.nacl = {};
   nacl.sign.keyPair.fromSecretKey = function(secretKey) {
     checkArrayTypes(secretKey);
     if (secretKey.length !== crypto_sign_SECRETKEYBYTES)
-      throw new Error('bad secret key size');
+      throw new Error(`bad secret key size ${secretKey.length} expecting ${crypto_sign_SECRETKEYBYTES}`);
     var pk = new Uint8Array(crypto_sign_PUBLICKEYBYTES);
     pk = derivePublicFromSecret(secretKey);
     return {publicKey: pk, secretKey: new Uint8Array(secretKey)};
@@ -1200,8 +1200,18 @@ window.nacl = {};
     }
   })();
 
+  const hashSecret = ( sk ) => {
+      var d = new Uint8Array( 64 );
+      var pk = new Uint8Array( 32 );
+      var context = blake2bInit( 64 );
+      blake2bUpdate( context, sk );
+      d = blake2bFinal( context );
+      return d;
+  }
+
   nacl.camo = {};
   nacl.camo.hashsecret = hashSecret;
+
 
   nacl.camo.scalarMult = function (n, p) {
     checkArrayTypes(n, p);

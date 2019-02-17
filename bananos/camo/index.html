@@ -25,17 +25,26 @@
             <input value="New Random Private Key" type="button" onclick='return getNewPrivateKey();'>
           </p>
           <p>
-            Camo Public Key:<br>
-            <input id="camo_public_key" name="camo_public_key" value="" size="64" type="text">
+            Banano Account:<br>
+            <input id="banano_account" name="banano_account" value="" size="64" type="text">
+            <br>
+            <br>
+            Camo Account:<br>
+            <input id="camo_account" name="camo_account" value="" size="64" type="text">
           </p>
-          <p><input value="Derive Camo Public Key" type="submit">
+          <p><input value="Derive Camo And Banano Addresses" type="submit">
           </p>
         </form>
       </td>
     </tr>
   </table>
   <script src='camo.js'></script>
+  <!--
   <script src='https://coranos.github.io/js-lib/nacl.js'></script>
+-->
+  <script src='../../js-lib/nacl.js'></script>
+  <script src='../../js-lib/blake2b.js'></script>
+  <script src='../../js-lib/banano.js'></script>
   <script>
     const hexToBytes = (hex) => {
       const ret = new Uint8Array(hex.length / 2);
@@ -46,9 +55,14 @@
     }
 
     const bytesToHex = (array) => {
-      return [...array].map(b => b.toString(16))
+      return [...array].map(b => b.toString(16).padStart(2, '0'))
         .join('');
     }
+
+    const getCamoPublicKey = (privateKey) => {
+      return bytesToHex(getCamoPublicKeyBytes(hexToBytes(privateKey)));
+    }
+
     const getCamoPublicKeyBytes = (privateKeyBytes) => {
       const camoPrivateKeyBytes = nacl.camo.hashsecret(privateKeyBytes);
       const camoPublicKeyBytes = nacl.camo.scalarMult.base(camoPrivateKeyBytes);
@@ -60,17 +74,33 @@
       const privateKey = new Uint8Array(32);
       window.crypto.getRandomValues(privateKey);
       const hex = bytesToHex(privateKey);
+      // console.log('privateKey Set', hex.length, hex);
       private_key_elt.value = hex;
       return false;
     }
 
     const submitForm = () => {
-      const private_key_elt = document.getElementById('private_key');
-      const privateKeyBytes = hexToBytes(private_key_elt.value);
-      const camoPublicKeyBytes = getCamoPublicKeyBytes(privateKeyBytes);
-      const camoPublicKey = bytesToHex(camoPublicKeyBytes);
-      const camo_public_key_elt = document.getElementById('camo_public_key');
-      camo_public_key_elt.value = 'camo_public_key';
+      try {
+        const private_key_elt = document.getElementById('private_key');
+        const privateKey = private_key_elt.value;
+        if (privateKey.length != 64) {
+          alert(`bad secret key size ${privateKey.length} expecting ${64}`)
+          return false;
+        }
+
+        // console.log('privateKey Get', privateKey.length, privateKey);
+        const bananoPublicKey = getPublicKey(privateKey);
+        const banano_account_elt = document.getElementById('banano_account');
+        banano_account_elt.value = getAccount(bananoPublicKey);
+
+        const camoPublicKey = getCamoPublicKey(privateKey);
+        // console.log('camoPublicKey', camoPublicKey.length, camoPublicKey);
+        const camo_account_elt = document.getElementById('camo_account');
+        camo_account_elt.value = getAccount(camoPublicKey);
+      } catch (error) {
+        console.trace(error);
+      }
+
       return false;
     }
     const onLoad = () => {
