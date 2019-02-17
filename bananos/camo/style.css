@@ -2,6 +2,11 @@ table, tr, td, th, input {
   border: solid;
   border-width: 0.5px;
   font-family: monospace, monospace;
+  text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
 }
 
 table {
@@ -12,4 +17,21 @@ iframe {
   position: relative;
   height: 90vh;
   width: 100%;
+}
+
+body {
+  background-image: url("bancamo.gif");
+  background-repeat: repeat;
+}
+
+input {
+  text-shadow: none;
+  background-color: olive;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
