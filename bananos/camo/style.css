@@ -1,7 +1,12 @@
 table, tr, td, th, input {
   border: solid;
-  border-width: 0.5px;
+  border-color: RGB(77, 65, 41);
+  color: black;
+  border-width: 1px;
   font-family: Montserrat;
+}
+
+.text_shadow {
   text-shadow:
     -1px -1px 0 #FFF,
     1px -1px 0 #FFF,
@@ -20,11 +25,11 @@ iframe {
 }
 
 body {
-  background-image: url("bancamo.gif");
-  background-repeat: repeat;
+  background-color: #aca96c;
 }
 
 input[type=text] {
+  color: RGB(51, 67, 46);
   font-family: monospace, monospace;
 }
 
@@ -36,6 +41,10 @@ input {
   text-shadow: none;
   background-color: olive;
   font-family: Montserrat;
+}
+
+h3 {
+  text-align: center;
 }
 
 .center {
