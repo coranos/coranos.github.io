@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Camo Instructions</title>
+  <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+
+<body onLoad="onLoad();">
+  <h1>Why is camo useful?</h1>
+  <ul>
+    <li>Do you want to hold ten million banano, but not show up on the rich list?</li>
+    <li>Do you want to be able to send someone a million banano, but not show up on a whale watch?</li>
+    <li>Do you want to be able to dump a million banano on an exchange, and not be yelled at for tanking the price?</li>
+    <li>Do you want to be able to hold funds in a shared account (both parties can spend) withount sharing the seed?</li>
+  </ul>
+  <h2>Then camo may be for you!</h2>
+  <p>Camo is a second layer, built on top of banano.</p>
+  <ul>
+    <li>It uses on-chain shared secrets to store a seed on-chain.</li>
+    <li>It uses seed based fund storage, rather than account based fund storage, to split a large account into smaller amounts.</li>
+    <li>It uses seed based fund transfers, rather than account based fund transfers, to split a large transfer into smaller amounts.</li>
+  </ul>
+  <h2>How do I use camo?</h2>
+  <h3>Account Setup</h3>
+  <ol>
+    <li>You need to start with a seed. save this seed someplace safe.</li>
+    <li>Put the seed into the manual camo site to get a 'camo account'
+      <a target="_blank" href="camo.html">Manual Camo</a></li>
+    <li>Go to bananovault, enter the seed, and set the account's representative to your 'camo account'.
+      <a target="_blank" href="https://vault.banano.cc/">Banano Vault</a></li>
+    <li>Enter the camo account into Manual Camo, and get the Shared Secret.</li>
+  </ol>
+  <p>You now have a secret seed, the 'shared secret' from Manual Camo.
+    You can use that seed in bananovault, and don't have it written down anywhere!</p>
+  <p>
+    As long as the camo site is up, you can use the starter seed to derive the shared secret.</p>
+  <p>Then use the shared secret as your seed in the vault.</p>
+  <h3>Using the Shared Secret To Hold Funds</h3>
+  <ol>
+    <li>Enter your shared secret into bananovault as a seed.
+      <a target="_blank" href="https://vault.banano.cc/">Banano Vault</a></li>
+    <li>Create 20 accounts under that seed.</li>
+    <li>Fill each account with 500,000 banano. Slowly if you want. No hurry.</li>
+  </ol>
+  <p>You now have ten million banano, but do not show up on the rich list.</p>
+  <h3>Using the Shared Secret To Send Funds</h3>
+  <ol>
+    <li>Have a friend set up their account as a camo account.</li>
+    <li>Look up the representative of your friend's account, and put it into Manual Camo with your own seed.
+      <a target="_blank" href="camo.html">Manual Camo</a></li>
+    <li>You now have a shared secret that both you and your friend know, and both can use as a seed.</li>
+    <li>Create 20 accounts under that seed.</li>
+    <li>Fill each account with 50,000 banano. Slowly if you want. No hurry.</li>
+    <li>Tell your friend.</li>
+    <li>Your friend can now use his seed and your representative to get the shared seed.</li>
+  </ol>
+  <p>You have now sent ten million banano, but do not show up on a whale watch.</p>
+  <p>Both of you can spend from the accounts, but neither of you needs to save the seed.</p>
+  <p>If your friend owns an exchange, and the account he set up was a exchange account, you can dump the bans and nobody knows it was you.</p>
+  <h1>And that is why camo is useful</h1>
+  <script>
+    const onLoad = () => {
+
+    }
+  </script>
+</body>
+
+</html>

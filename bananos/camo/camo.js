@@ -17,7 +17,6 @@ const getSharedSecret = (privateKey, publicKey) => {
   return secret;
 }
 
-
 const hexToBytes = (hex) => {
   const ret = new Uint8Array(hex.length / 2);
   for (var i = 0; i < ret.length; i++) {
@@ -41,12 +40,12 @@ const getCamoPublicKeyBytes = (privateKeyBytes) => {
   return camoPublicKeyBytes;
 }
 
-const getNewPrivateKey = () => {
-  const private_key_elt = document.getElementById('private_key');
-  const privateKey = new Uint8Array(32);
-  window.crypto.getRandomValues(privateKey);
-  const hex = bytesToHex(privateKey);
+const getNewSeed = () => {
+  const seed_elt = document.getElementById('seed');
+  const seed = new Uint8Array(32);
+  window.crypto.getRandomValues(seed);
+  const hex = bytesToHex(seed);
   // console.log('privateKey Set', hex.length, hex);
-  private_key_elt.value = hex;
+  seed_elt.value = hex;
   return false;
 }
