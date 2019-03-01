@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+
+<head>
+</head>
+
+<body>
+  <h2>Welcome to The Wall!</h2>
+  <button onclick="zoom1x()">Zoom 1x</button>
+  <button onclick="zoom4x()">Zoom 4x</button>
+  <button onclick="zoom40x()">Zoom 40x</button>
+  <br>
+  <canvas id='canvas'></canvas>
+
+  <script type="text/javascript">
+    let fullCanvas; {
+      const canvas = document.createElement("CANVAS");
+      const context = canvas.getContext('2d');
+      context.canvas.width = 1000;
+      context.canvas.height = 1000;
+      const imageData = context.createImageData(1000, 1000);
+
+      for (let i = 0; i < imageData.data.length; i++) {
+        imageData.data[i] = Math.round(255 * Math.random());
+      }
+
+      context.putImageData(imageData, 0, 0);
+      fullCanvas = canvas;
+    }
+
+    {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      context.canvas.width = 1000;
+      context.canvas.height = 1000;
+      context.imageSmoothingEnabled = false;
+      // const imageData = context.createImageData(1000, 1000);
+
+      // for (let i = 0; i < imageData2.data.length; i++) {
+      // imageData2.data[i] = Math.round(255 * Math.random());
+      // }
+      context.drawImage(fullCanvas, 0, 0);
+      // context2.putImageData(imageData2, 0, 0);
+    }
+    const zoom40x = () => {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      context.fillStyle = 'white';
+      context.fillRect(0, 0, 1000, 1000);
+      context.drawImage(fullCanvas, 0, 0, 1000 / 40, 1000 / 40, 0, 0, 1000, 1000);
+    }
+
+    const zoom4x = () => {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      context.fillStyle = 'white';
+      context.fillRect(0, 0, 1000, 1000);
+      context.drawImage(fullCanvas, 0, 0, 1000 / 4, 1000 / 4, 0, 0, 1000, 1000);
+    }
+
+    const zoom1x = () => {
+      const canvas = document.getElementById('canvas');
+      const context = canvas.getContext('2d');
+      context.fillStyle = 'white';
+      context.fillRect(0, 0, 1000, 1000);
+      context.drawImage(fullCanvas, 0, 0, 1000 / 1, 1000 / 1, 0, 0, 1000, 1000);
+    }
+  </script>
+</body>
+
+</html>
