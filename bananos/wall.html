@@ -11,27 +11,56 @@
   <button onclick="zoom4x()">Zoom 4x</button>
   <button onclick="zoom40x()">Zoom 40x</button>
 
-  <button style="background:black;">&nbsp;</button>
-  <button style="background:fuchsia;">&nbsp;</button>
-  <button style="background:red;">&nbsp;</button>
-  <button style="background:orange;">&nbsp;</button>
-  <button style="background:yellow;">&nbsp;</button>
-  <button style="background:lime;">&nbsp;</button>
-  <button style="background:teal;">&nbsp;</button>
-  <button style="background:green;">&nbsp;</button>
-  <button style="background:olive;">&nbsp;</button>
-  <button style="background:blue;">&nbsp;</button>
-  <button style="background:purple;">&nbsp;</button>
-  <button style="background:indigo;">&nbsp;</button>
-  <button style="background:maroon;">&nbsp;</button>
-  <button style="background:gray;">&nbsp;</button>
-  <button style="background:white;">&nbsp;</button>
+  <button class="color-picker" style="background:black;">&nbsp;</button>
+  <button class="color-picker" style="background:fuchsia;">&nbsp;</button>
+  <button class="color-picker" style="background:red;">&nbsp;</button>
+  <button class="color-picker" style="background:orange;">&nbsp;</button>
+  <button class="color-picker" style="background:yellow;">&nbsp;</button>
+  <button class="color-picker" style="background:lime;">&nbsp;</button>
+  <button class="color-picker" style="background:teal;">&nbsp;</button>
+  <button class="color-picker" style="background:green;">&nbsp;</button>
+  <button class="color-picker" style="background:olive;">&nbsp;</button>
+  <button class="color-picker" style="background:blue;">&nbsp;</button>
+  <button class="color-picker" style="background:purple;">&nbsp;</button>
+  <button class="color-picker" style="background:indigo;">&nbsp;</button>
+  <button class="color-picker" style="background:maroon;">&nbsp;</button>
+  <button class="color-picker" style="background:gray;">&nbsp;</button>
+  <button class="color-picker" style="background:white;">&nbsp;</button>
   <br>
   <canvas id='canvas'></canvas>
 
   <script type="text/javascript">
-    let fullCanvas; {
-      const canvas = document.createElement("CANVAS");
+    const colorPickerElts = document.getElementsByClassName('color-picker');
+
+    let selectedColor = undefined;
+
+    const selectColor = (colorPickerElt) => {
+      const color = colorPickerElt.style.backgroundColor;
+      selectedColor = color;
+      for (let testColorPickerElt of colorPickerElts) {
+        if (testColorPickerElt.style.backgroundColor == colorPickerElt.style.backgroundColor) {
+          testColorPickerElt.style.borderColor = 'darkgray';
+        } else {
+          testColorPickerElt.style.borderColor = 'white';
+        }
+      }
+    }
+
+    // console.log('colorPickerElts', colorPickerElts);
+
+    for (let colorPickerElt of colorPickerElts) {
+      colorPickerElt.style.border = 'solid';
+      colorPickerElt.style.borderWidth = 4;
+      colorPickerElt.style.borderColor = 'white';
+      colorPickerElt.onclick = () => {
+        selectColor(colorPickerElt);
+      };
+    }
+
+    let fullCanvas;
+
+    {
+      const canvas = document.createElement('CANVAS');
       const context = canvas.getContext('2d');
       context.canvas.width = 1000;
       context.canvas.height = 1000;
