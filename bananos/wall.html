@@ -32,10 +32,11 @@
   <button onclick="moveRight()">Right</button>
   <button onclick="moveUp()">Up</button>
   <button onclick="moveDown()">Down</button>
+  <button onclick="setDataAt00()">Set Upper Left Corner</button>
   <table>
     <tbody>
       <tr>
-        <td><canvas id='colorData' onmousedown="dataCanvasEvent(event)" onmousemove="dataCanvasEvent(event)" ontouchmove="dataCanvasEvent(event)" ontouchstart="dataCanvasEvent(event)" onclick="dataCanvasEvent(event)"></canvas></td>
+        <td><canvas id='colorData' onmousedown="dataCanvasEvent(event)" onmousemove="dataCanvasEvent(event)"></canvas></td>
         <td><canvas id='priceData'></canvas></td>
       </tr>
     </tbody>
@@ -238,9 +239,6 @@
       if (event.buttons == 0) {
         return;
       }
-      if (selectedColor == undefined) {
-        return;
-      }
 
       // e = Mouse click event.
       const rect = event.target.getBoundingClientRect();
@@ -251,7 +249,17 @@
 
       const dataX = Math.floor((x * dataSize) / (canvasSize * zoomSize)) + offsetX;
       const dataY = Math.floor((y * dataSize) / (canvasSize * zoomSize)) + offsetY;
+      setDataAt(dataX, dataY);
+    }
 
+    const setDataAt00 = () => {
+      setDataAt(offsetX, offsetY);
+    }
+
+    const setDataAt = (dataX, dataY) => {
+      if (selectedColor == undefined) {
+        return;
+      }
       // console.log('STARTED dataCanvasOnMouseMove', x, y, randomData[dataX][dataY], randomPrice[dataX][dataY]);
 
       randomData[dataY][dataX] = selectedColor;
