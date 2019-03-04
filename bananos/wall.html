@@ -28,10 +28,14 @@
   <button class="color-picker" style="background:gray;">&nbsp;</button>
   <button class="color-picker" style="background:white;">&nbsp;</button>
   <br>
+  <button onclick="moveLeft()">Left</button>
+  <button onclick="moveRight()">Right</button>
+  <button onclick="moveUp()">Up</button>
+  <button onclick="moveDown()">Down</button>
   <table>
     <tbody>
       <tr>
-        <td><canvas id='colorData' onmousemove="dataCanvasOnMouseMove(event)"></canvas></td>
+        <td><canvas id='colorData' onmousedown="dataCanvasEvent(event)" onmousemove="dataCanvasEvent(event)"></canvas></td>
         <td><canvas id='priceData'></canvas></td>
       </tr>
     </tbody>
@@ -41,12 +45,14 @@
 
   <script type="text/javascript">
     const canvasSize = 512;
-    const maxDataSize = 64;
-    const minDataSize = 4;
 
-    let dataSize = maxDataSize;
+    const dataSize = 128;
 
     let zoomSize = 1;
+
+    let offsetX = 0;
+
+    let offsetY = 0;
 
     let selectedColor = undefined;
 
@@ -103,7 +109,7 @@
           imageData.data[gIx] = colorRGB[2];
           imageData.data[bIx] = colorRGB[3];
           imageData.data[aIx] = 0xFF;
-          // console.log(x, y, color, colorRGB);
+          // console.log(x, y, colorLetter, colorPickerElt, colorRGB);
         }
       }
 
@@ -118,6 +124,13 @@
       // for (let i = 0; i < imageData.data.length; i++) {
       // imageData.data[i] = Math.round(255 * Math.random());
       // }
+      let maxPrice = 0;
+      for (let y = 0; y < dataSize; y++) {
+        for (let x = 0; x < dataSize; x++) {
+          const price = randomPrice[y][x];
+          maxPrice = Math.max(maxPrice, price);
+        }
+      }
 
       for (let y = 0; y < dataSize; y++) {
         for (let x = 0; x < dataSize; x++) {
@@ -126,7 +139,7 @@
           const bIx = gIx + 1;
           const aIx = bIx + 1;
           const price = randomPrice[y][x];
-          const color = 255 - ((Math.log(price) / Math.log(2)) * 10);
+          const color = 255 * (price / maxPrice);
           // const color = window.getComputedStyle(colorPickerElt, null).backgroundColor;
           imageData.data[rIx] = color;
           imageData.data[gIx] = color;
@@ -148,12 +161,14 @@
       }
 
       const selectColor = (colorPickerElt) => {
-        selectedColor = colorPickerLetterMap[colorPickerElt];
+        const color = colorPickerLetterMap[colorPickerElt.style.backgroundColor];
+        // console.log('STARTED selectColor', colorPickerElt.style.backgroundColor, color);
+        selectedColor = color;
         for (let testColorPickerElt of colorPickerElts) {
           if (testColorPickerElt.style.backgroundColor == colorPickerElt.style.backgroundColor) {
             testColorPickerElt.style.borderColor = 'darkgray';
           } else {
-            testColorPickerElt.style.borderColor = 'white';
+            testColorPickerElt.style.borderColor = 'lightgray';
           }
         }
       }
@@ -161,7 +176,7 @@
       for (let colorPickerElt of colorPickerElts) {
         colorPickerElt.style.border = 'solid';
         colorPickerElt.style.borderWidth = 4;
-        colorPickerElt.style.borderColor = 'white';
+        colorPickerElt.style.borderColor = 'lightgray';
         colorPickerElt.onclick = () => {
           selectColor(colorPickerElt);
         };
@@ -171,9 +186,10 @@
       randomLetters.forEach((randomLetter, randomLetterIx) => {
         const colorPickerElt = colorPickerElts[randomLetterIx];
         colorPickerEltMap[randomLetter] = colorPickerElt;
-        colorPickerLetterMap[colorPickerElt] = randomLetter;
-        // console.log('colorPickerElt', randomLetter, colorPickerElt);
+        colorPickerLetterMap[colorPickerElt.style.backgroundColor] = randomLetter;
       });
+
+      // console.log('colorPickerLetterMap', colorPickerLetterMap);
 
       for (let y = 0; y < dataSize; y++) {
         const randomRow = [];
@@ -187,7 +203,7 @@
       for (let y = 0; y < dataSize; y++) {
         const randomRow = [];
         for (let x = 0; x < dataSize; x++) {
-          const randomPrice = Math.floor(1024 * 1024 * Math.random());
+          const randomPrice = 0;
           randomRow.push(randomPrice);
         }
         randomPrice.push(randomRow);
@@ -215,10 +231,10 @@
       const context = canvas.getContext('2d');
       const fullCanvas = canvasMap[name];
       context.fillRect(0, 0, canvasSize, canvasSize);
-      context.drawImage(fullCanvas, 0, 0, dataSize / zoomSize, dataSize / zoomSize, 0, 0, canvasSize, canvasSize);
+      context.drawImage(fullCanvas, offsetX, offsetY, dataSize / zoomSize, dataSize / zoomSize, 0, 0, canvasSize, canvasSize);
     }
 
-    const dataCanvasOnMouseMove = (event) => {
+    const dataCanvasEvent = (event) => {
       if (event.buttons == 0) {
         return;
       }
@@ -232,16 +248,17 @@
       const x = Math.floor(event.clientX - rect.left);
       //y position within the element.
       const y = Math.floor(event.clientY - rect.top);
-      console.log('STARTED dataCanvasOnMouseMove', x, y);
 
-      const dataX = Math.floor((x * dataSize) / canvasSize);
-      const dataY = Math.floor((y * dataSize) / canvasSize);
+      const dataX = Math.floor((x * dataSize) / (canvasSize * zoomSize));
+      const dataY = Math.floor((y * dataSize) / (canvasSize * zoomSize));
+
+      // console.log('STARTED dataCanvasOnMouseMove', x, y, randomData[dataX][dataY], randomPrice[dataX][dataY]);
 
       randomData[dataY][dataX] = selectedColor;
       randomPrice[dataY][dataX]++;
       initCanvases();
       zoom();
-      console.log('SUCCESS dataCanvasOnMouseMove', x, y, randomData[y][x], randomPrice[y][x]);
+      // console.log('SUCCESS dataCanvasOnMouseMove', x, y, randomData[dataX][dataY], randomPrice[dataX][dataY]);
     }
 
     const init = () => {
@@ -266,6 +283,32 @@
 
     const zoom32x = () => {
       zoomSize = 32;
+      zoom();
+    }
+
+    const normalizeOffset = () => {
+      offsetX = Math.max(0, Math.min(offsetX, dataSize - zoomSize));
+      offsetY = Math.max(0, Math.min(offsetY, dataSize - zoomSize));
+    }
+
+    const moveLeft = () => {
+      offsetX -= 1;
+      normalizeOffset();
+      zoom();
+    }
+    const moveRight = () => {
+      offsetX += 1;
+      normalizeOffset();
+      zoom();
+    }
+    const moveUp = () => {
+      offsetY -= 1;
+      normalizeOffset();
+      zoom();
+    }
+    const moveDown = () => {
+      offsetY += 1;
+      normalizeOffset();
       zoom();
     }
   </script>
