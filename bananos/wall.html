@@ -35,7 +35,7 @@
   <table>
     <tbody>
       <tr>
-        <td><canvas id='colorData' onmousedown="dataCanvasEvent(event)" onmousemove="dataCanvasEvent(event)"></canvas></td>
+        <td><canvas id='colorData' onmousedown="dataCanvasEvent(event)" onmousemove="dataCanvasEvent(event)" ontouchmove="dataCanvasEvent(event)" ontouchstart="dataCanvasEvent(event)"></canvas></td>
         <td><canvas id='priceData'></canvas></td>
       </tr>
     </tbody>
@@ -249,8 +249,8 @@
       //y position within the element.
       const y = Math.floor(event.clientY - rect.top);
 
-      const dataX = Math.floor((x * dataSize) / (canvasSize * zoomSize));
-      const dataY = Math.floor((y * dataSize) / (canvasSize * zoomSize));
+      const dataX = Math.floor((x * dataSize) / (canvasSize * zoomSize)) + offsetX;
+      const dataY = Math.floor((y * dataSize) / (canvasSize * zoomSize)) + offsetY;
 
       // console.log('STARTED dataCanvasOnMouseMove', x, y, randomData[dataX][dataY], randomPrice[dataX][dataY]);
 
