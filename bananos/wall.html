@@ -41,12 +41,104 @@
 
   <script type="text/javascript">
     const canvasSize = 512;
-    const maxDataSize = 512;
+    const maxDataSize = 64;
     const minDataSize = 4;
 
     let dataSize = maxDataSize;
 
+    let zoomSize = 1;
+
     let selectedColor = undefined;
+
+    const randomData = [];
+    const randomPrice = [];
+    const colorPickerEltMap = {};
+    const colorPickerLetterMap = {};
+
+    const initCanvases = () => {
+      canvasMap['colorData'] = getDataCanvas();
+      canvasMap['priceData'] = getPriceCanvas();
+    }
+
+
+    const getBlankCanvas = () => {
+      const canvas = document.createElement('CANVAS');
+      const context = canvas.getContext('2d');
+      context.imageSmoothingEnabled = false;
+      context.canvas.width = dataSize;
+      context.canvas.height = dataSize;
+      const imageData = context.createImageData(dataSize, dataSize);
+
+      context.putImageData(imageData, 0, 0);
+      return canvas;
+    }
+
+    const getColorRGB = (colorPickerElt) => {
+      const color = window.getComputedStyle(colorPickerElt, null).backgroundColor;
+      const colorRGB = color.match(/^rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/i);
+      return colorRGB;
+    }
+
+    const getDataCanvas = () => {
+      const canvas = getBlankCanvas();
+      const context = canvas.getContext('2d');
+      const imageData = context.getImageData(0, 0, dataSize, dataSize);
+      // for (let i = 0; i < imageData.data.length; i++) {
+      // imageData.data[i] = Math.round(255 * Math.random());
+      // }
+
+      for (let y = 0; y < dataSize; y++) {
+        for (let x = 0; x < dataSize; x++) {
+          const rIx = ((y * dataSize) + x) * 4;
+          const gIx = rIx + 1;
+          const bIx = gIx + 1;
+          const aIx = bIx + 1;
+          const colorLetter = randomData[y][x];
+          const colorPickerElt = colorPickerEltMap[colorLetter];
+          // console.log(x, y, colorLetter, colorPickerElt);
+
+          const colorRGB = getColorRGB(colorPickerElt);
+
+          imageData.data[rIx] = colorRGB[1];
+          imageData.data[gIx] = colorRGB[2];
+          imageData.data[bIx] = colorRGB[3];
+          imageData.data[aIx] = 0xFF;
+          // console.log(x, y, color, colorRGB);
+        }
+      }
+
+      context.putImageData(imageData, 0, 0);
+      return canvas;
+    }
+
+    const getPriceCanvas = () => {
+      const canvas = getBlankCanvas();
+      const context = canvas.getContext('2d');
+      const imageData = context.getImageData(0, 0, dataSize, dataSize);
+      // for (let i = 0; i < imageData.data.length; i++) {
+      // imageData.data[i] = Math.round(255 * Math.random());
+      // }
+
+      for (let y = 0; y < dataSize; y++) {
+        for (let x = 0; x < dataSize; x++) {
+          const rIx = ((y * dataSize) + x) * 4;
+          const gIx = rIx + 1;
+          const bIx = gIx + 1;
+          const aIx = bIx + 1;
+          const price = randomPrice[y][x];
+          const color = 255 - ((Math.log(price) / Math.log(2)) * 10);
+          // const color = window.getComputedStyle(colorPickerElt, null).backgroundColor;
+          imageData.data[rIx] = color;
+          imageData.data[gIx] = color;
+          imageData.data[bIx] = color;
+          imageData.data[aIx] = 0xFF;
+          // console.log(x, y, color);
+        }
+      }
+
+      context.putImageData(imageData, 0, 0);
+      return canvas;
+    }
 
     const onLoad = () => {
 
@@ -56,8 +148,7 @@
       }
 
       const selectColor = (colorPickerElt) => {
-        const color = colorPickerElt.style.backgroundColor;
-        selectedColor = color;
+        selectedColor = colorPickerLetterMap[colorPickerElt];
         for (let testColorPickerElt of colorPickerElts) {
           if (testColorPickerElt.style.backgroundColor == colorPickerElt.style.backgroundColor) {
             testColorPickerElt.style.borderColor = 'darkgray';
@@ -77,14 +168,13 @@
       }
 
       const randomLetters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
-      const colorPickerEltMap = {};
       randomLetters.forEach((randomLetter, randomLetterIx) => {
         const colorPickerElt = colorPickerElts[randomLetterIx];
         colorPickerEltMap[randomLetter] = colorPickerElt;
+        colorPickerLetterMap[colorPickerElt] = randomLetter;
         // console.log('colorPickerElt', randomLetter, colorPickerElt);
       });
 
-      const randomData = [];
       for (let y = 0; y < dataSize; y++) {
         const randomRow = [];
         for (let x = 0; x < dataSize; x++) {
@@ -93,7 +183,7 @@
         }
         randomData.push(randomRow);
       }
-      const randomPrice = [];
+
       for (let y = 0; y < dataSize; y++) {
         const randomRow = [];
         for (let x = 0; x < dataSize; x++) {
@@ -103,81 +193,7 @@
         randomPrice.push(randomRow);
       }
 
-      const getBlankCanvas = () => {
-        const canvas = document.createElement('CANVAS');
-        const context = canvas.getContext('2d');
-        context.imageSmoothingEnabled = false;
-        context.canvas.width = dataSize;
-        context.canvas.height = dataSize;
-        const imageData = context.createImageData(dataSize, dataSize);
-
-        context.putImageData(imageData, 0, 0);
-        return canvas;
-      }
-
-      const getDataCanvas = () => {
-        const canvas = getBlankCanvas();
-        const context = canvas.getContext('2d');
-        const imageData = context.getImageData(0, 0, dataSize, dataSize);
-        for (let i = 0; i < imageData.data.length; i++) {
-          imageData.data[i] = Math.round(255 * Math.random());
-        }
-
-        for (let y = 0; y < dataSize; y++) {
-          for (let x = 0; x < dataSize; x++) {
-            const rIx = ((y * dataSize) + x) * 4;
-            const gIx = rIx + 1;
-            const bIx = gIx + 1;
-            const aIx = bIx + 1;
-            const colorLetter = randomData[y][x];
-            const colorPickerElt = colorPickerEltMap[colorLetter];
-            // console.log(x, y, colorLetter, colorPickerElt);
-            const color = window.getComputedStyle(colorPickerElt, null).backgroundColor;
-
-            const colorRGB = color.match(/^rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)$/i);
-
-            imageData.data[rIx] = colorRGB[1];
-            imageData.data[gIx] = colorRGB[2];
-            imageData.data[bIx] = colorRGB[3];
-            imageData.data[aIx] = 0xFF;
-            // console.log(x, y, color, colorRGB);
-          }
-        }
-
-        context.putImageData(imageData, 0, 0);
-        return canvas;
-      }
-
-      const getPriceCanvas = () => {
-        const canvas = getBlankCanvas();
-        const context = canvas.getContext('2d');
-        const imageData = context.getImageData(0, 0, dataSize, dataSize);
-        // for (let i = 0; i < imageData.data.length; i++) {
-        // imageData.data[i] = Math.round(255 * Math.random());
-        // }
-
-        for (let y = 0; y < dataSize; y++) {
-          for (let x = 0; x < dataSize; x++) {
-            const rIx = ((y * dataSize) + x) * 4;
-            const gIx = rIx + 1;
-            const bIx = gIx + 1;
-            const aIx = bIx + 1;
-            const price = randomPrice[y][x];
-            const color = 255 - ((Math.log(price) / Math.log(2)) * 10);
-            // const color = window.getComputedStyle(colorPickerElt, null).backgroundColor;
-            imageData.data[rIx] = color;
-            imageData.data[gIx] = color;
-            imageData.data[bIx] = color;
-            imageData.data[aIx] = 0xFF;
-            // console.log(x, y, color);
-          }
-        }
-
-        context.putImageData(imageData, 0, 0);
-        return canvas;
-      }
-      canvasMap['colorData'] = getDataCanvas();
-      canvasMap['priceData'] = getPriceCanvas();
+      initCanvases();
 
       init();
       zoom1x();
@@ -194,28 +210,19 @@
       context.fillStyle = 'white';
     }
 
-    const zoomCanvas = (name, scale) => {
+    const zoomCanvas = (name) => {
       const canvas = document.getElementById(name);
       const context = canvas.getContext('2d');
       const fullCanvas = canvasMap[name];
       context.fillRect(0, 0, canvasSize, canvasSize);
-      context.drawImage(fullCanvas, 0, 0, dataSize / scale, dataSize / scale, 0, 0, canvasSize, canvasSize);
-    }
-
-    const zoomCanvas32x = (name) => {
-      zoomCanvas(name, 32);
-    }
-
-    const zoomCanvas4x = (name) => {
-      zoomCanvas(name, 4);
-    }
-
-    const zoomCanvas1x = (name) => {
-      zoomCanvas(name, 1);
+      context.drawImage(fullCanvas, 0, 0, dataSize / zoomSize, dataSize / zoomSize, 0, 0, canvasSize, canvasSize);
     }
 
     const dataCanvasOnMouseMove = (event) => {
       if (event.buttons == 0) {
+        return;
+      }
+      if (selectedColor == undefined) {
         return;
       }
 
@@ -225,24 +232,41 @@
       const x = Math.floor(event.clientX - rect.left);
       //y position within the element.
       const y = Math.floor(event.clientY - rect.top);
-      console.log('dataCanvasOnMouseMove', x, y);
+      console.log('STARTED dataCanvasOnMouseMove', x, y);
+
+      const dataX = Math.floor((x * dataSize) / canvasSize);
+      const dataY = Math.floor((y * dataSize) / canvasSize);
+
+      randomData[dataY][dataX] = selectedColor;
+      randomPrice[dataY][dataX]++;
+      initCanvases();
+      zoom();
+      console.log('SUCCESS dataCanvasOnMouseMove', x, y, randomData[y][x], randomPrice[y][x]);
     }
 
     const init = () => {
       initCanvas('colorData');
       initCanvas('priceData');
     }
+
+    const zoom = () => {
+      zoomCanvas('colorData');
+      zoomCanvas('priceData');
+    }
+
     const zoom1x = () => {
-      zoomCanvas1x('colorData');
-      zoomCanvas1x('priceData');
+      zoomSize = 1;
+      zoom();
     }
+
     const zoom4x = () => {
-      zoomCanvas4x('colorData');
-      zoomCanvas4x('priceData');
+      zoomSize = 4;
+      zoom();
     }
+
     const zoom32x = () => {
-      zoomCanvas32x('colorData');
-      zoomCanvas32x('priceData');
+      zoomSize = 32;
+      zoom();
     }
   </script>
 </body>
