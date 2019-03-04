@@ -31,7 +31,7 @@
   <table>
     <tbody>
       <tr>
-        <td><canvas id='colorData'></canvas></td>
+        <td><canvas id='colorData' onmousemove="dataCanvasOnMouseMove(event)"></canvas></td>
         <td><canvas id='priceData'></canvas></td>
       </tr>
     </tbody>
@@ -212,6 +212,20 @@
 
     const zoomCanvas1x = (name) => {
       zoomCanvas(name, 1);
+    }
+
+    const dataCanvasOnMouseMove = (event) => {
+      if (event.buttons == 0) {
+        return;
+      }
+
+      // e = Mouse click event.
+      const rect = event.target.getBoundingClientRect();
+      //x position within the element.
+      const x = Math.floor(event.clientX - rect.left);
+      //y position within the element.
+      const y = Math.floor(event.clientY - rect.top);
+      console.log('dataCanvasOnMouseMove', x, y);
     }
 
     const init = () => {
