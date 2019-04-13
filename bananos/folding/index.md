@@ -6,19 +6,19 @@ This walkthrough is based on the guide on the folding at home webpage, modified 
 
 1) First, get a username for you wallet at the banano miner website:
 
-<https://bananominer.com/>
+https://bananominer.com/
 
 remember bot the user name and the team id.
 
 2) Second, get a passkey from the folding at home site:
 
-<https://apps.foldingathome.org/getpasskey>
+https://apps.foldingathome.org/getpasskey
 
 This increases your score.
 
 3) follow the below guide:
 
-<https://foldingathome.org/support/faq/installation-guides/linux/>
+https://foldingathome.org/support/faq/installation-guides/linux/
 
 Which is basically:
 
