@@ -1,63 +1,80 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta charset="UTF-8" />
-<title>Banano Folding Headless</title>
-<style>
-table {
-  border: solid;
-  border-width: 0.5px;
-  font-family: monospace;
-}
-
-tr {
-  border: solid;
-  border-width: 0.5px;
-  font-family: monospace;
-}
-
-td {
-  border: solid;
-  border-width: 0.5px;
-  font-family: monospace;
-}
-</style>
+  <meta charset="UTF-8" />
+  <title>Banano Folding Headless</title>
 </head>
-<body onLoad="onLoad();">
-  <div id="targetDiv"></div>
-  <script src='../../js-lib/jquery-3.2.1.js'></script>
-  <script src='../../js-lib/load-json.js'></script>
-  <script src='../../js-lib/showdown-1.8.6.min.js'></script>
-  <script>
-      function onLoad () {
-        $.ajaxSetup({
-          beforeSend : function (xhr) {
-            if (xhr.overrideMimeType) {
-              xhr.overrideMimeType('text/markdown');
-            }
-          },
-          cache: false
-        });
 
-        $.ajax({
-          url : 'index.md',
-          type : 'get',
-          dataType : 'text',
-          async : true,
-          success : function (text) {
-            var target = document.getElementById('targetDiv');
+<body>
+  <h1>Banano Folding Headless Client</h1>
+  <h2>Folding Guide</h2>
+  <p>
+    This walkthrough is based on the guide on the folding at home webpage, modified slightly for banano.
+  </p>
+  <ol>
+    <li> First, get a username for you wallet at the banano miner website:</li>
+    <p>
+      <a target="_blank" href="https://bananominer.com" />https://bananominer.com</a>
+    </p>
+    <p>
+      remember bot the user name and the team id.
+    </p>
+    <li>Second, get a passkey from the folding at home site:</li>
+    <p>
+      <a target="_blank" href="https://apps.foldingathome.org/getpasskey">https://apps.foldingathome.org/getpasskey</a>
+    </p>
+    <p>
+      This increases your score.
+    </p>
+    <li>follow the below guide:</li>
+    <p>
+      <a target="_blank" href="https://foldingathome.org/support/faq/installation-guides/linux/>">https://foldingathome.org/support/faq/installation-guides/linux/</a>
+    </p>
+    Which is basically these two commands:
+    <p>
+      <code>
+        wget download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.5/fahclient_7.5.1_amd64.deb
+        <br>
+        sudo dpkg -i --force-depends fahclient_7.5.1_amd64.deb
+      </code>
+    </p>
+    <p> Then follow the onscreen prompts: </p>
+    <p> enter user name </p>
+    <p> enter team number </p>
+    <p> enter passkey </p>
+    <p> auostart or no </p>
+    <code>
+      <p>sudo /etc/init.d/FAHClient help </p>
+    </code>
+  </ol>
 
-            showdown.setOption('tables', 'true');
-            showdown.setOption('tablesHeaderId', 'true');
-            showdown.setOption('parseImgDimension', 'true');
-            showdown.setFlavor('github');
+  <h2>common special cases</h2>
 
-            var converter = new showdown.Converter();
-            var html = converter.makeHtml(text);
-            target.innerHTML = html;
-          }
-        });
-      }
-    </script>
+  <ol>
+    <li>subprocess installed post-installation script returned error exit status 1</li>
+    <p>
+      <a target="_blank" href="https://foldingforum.org/viewtopic.php?p=287334#p287334">https://foldingforum.org/viewtopic.php?p=287334#p287334</a>
+    </p>
+    <code>
+      <p>
+        sudo ln -s /usr/lib/python2.7 /usr/lib/python2.6
+      </p>
+    </code>
+    <li>granting remote web access</li>
+    <p>
+      <a target="_blank" href="https://www.iceflatline.com/2017/12/install-and-configure-foldinghome-on-ubuntu-server/">
+        granting remote web access</a>
+    </p>
+    <p>
+      Which is basically adding these two lines to the config file <code>/etc/fahclient/config.xml</code>:
+    </p>
+    <p>
+      <code>
+        &lt;allow&gt;192.168.10.100&lt;/allow&gt;<br>
+        &lt;web-allow&gt;192.168.10.100&lt;/web-allow&gt;<br>
+      </code>
+  </ol>
 </body>
+
 </html>
