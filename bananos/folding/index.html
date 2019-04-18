@@ -73,7 +73,7 @@
       <p>
         sudo ln -s /usr/lib/python2.7 /usr/lib/python2.6
       </p>
-    </code>
+    </code>0
     <li>granting remote web access</li>
     <p>
       <a target="_blank" href="https://www.iceflatline.com/2017/12/install-and-configure-foldinghome-on-ubuntu-server/">
@@ -83,10 +83,17 @@
       Which is basically adding these two lines to the config file <code>/etc/fahclient/config.xml</code>:
     </p>
     <p>
+      Also remember you are adding your client computer's IP to the config, not the server's ip.
+    </p>
+    <p>
       <code>
         &lt;allow&gt;192.168.10.100&lt;/allow&gt;<br>
         &lt;web-allow&gt;192.168.10.100&lt;/web-allow&gt;<br>
       </code>
+      <li>folding anonymously</li>
+      <p>
+        If it turns out your are folding anonymously, change this foag in the config file:<code>&lt;fold-anon v='false'/&gt;</code>
+      </p>
   </ol>
 </body>
 
