@@ -1,4 +1,4 @@
-# Food Contest Banano December 2018
+# Dance Contest Banano May 2018
 
 Prize Pool: <a
 href="https://creeper.banano.cc/explorer/account/ban_1dance6aoe5cw8ohuxwtodwo8fus75pfsgsizy4nfny1k71fcjjnnb4ywtso/history" target="_blank">
