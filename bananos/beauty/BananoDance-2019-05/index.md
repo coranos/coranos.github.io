@@ -51,6 +51,8 @@ https://faucet.banano.coranos.io/contest
 | 2          | @ bantano snow v19#1919             |
 | 3          | @ Send Noodles#0595                 |
 | 4          | @ Angeb#9157                        |
+| 5          | @ ESKA#0001                         |
+
 
 # The rules would be:      
 # (ES) Las reglas serían:       
