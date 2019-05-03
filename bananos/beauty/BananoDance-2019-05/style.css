@@ -1,0 +1,187 @@
+/* background: FEF6BF => FEF6BF yellow */
+/* border-color: 000000 => #000000; */
+/* 916600 => #3DA83C green  */
+body {
+  background: #FEF6BF;
+}
+
+table, tr, td, th {
+  border-color: #3DA83C;
+  border: solid;
+  border-color: black;
+  border-width: 0.5px;
+  font-family: monospace;
+  font-size: 8pt;
+}
+
+label {
+  display: inline-block;
+  background-color: green;
+  color: #000000;
+  padding: 2px 2px;
+}
+
+label:active {
+  background-color: white;
+}
+
+label:hover {
+  background-color: black;
+}
+
+label[id="monkey_side_0"] {}
+
+label[id="monkey_side_1"] {}
+
+input {
+  background-color: #FEF6BF;
+  border-color: #3DA83C;
+  color: black;
+}
+
+input[type="submit"][name="monkey_side"] {
+  display: none;
+}
+
+button {
+  background-color: #FEF6BF;
+  border-color: #3DA83C;
+}
+
+form {
+  display: inline;
+}
+
+img {
+  image-rendering: crisp-edges;
+}
+
+.nav {
+  background-color: #3DA83C;
+  color: #000000;
+  padding: 0.25em 0.5em;
+  border: none;
+}
+
+.nav:hover {
+  background-color: #000000;
+  color: #FEF6BF;
+}
+
+.nav-bar {
+  height: 50px;
+  width: 800px;
+  text-align: center;
+  margin: auto;
+}
+
+.nav-bookend-img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.monkey_image {
+  width: 250px;
+}
+
+.home_image {
+  width: 350px;
+  height: 350px;
+}
+
+.dropzone {
+  display: block;
+}
+
+.wrap_words {
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.centered {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+.no_border {
+  border: none;
+}
+
+.small_image_wrapper {
+  width: 2em;
+  height: 3em;
+  display: inline;
+}
+
+.small_image {
+  width: 2em;
+  height: 3em;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thumbnail {
+  height: 100px;
+  max-width: 100%;
+  float: none;
+  overflow: auto;
+}
+
+#scene {
+  width: 350px;
+  display: inline-block;
+}
+
+#scene-description {
+  display: inline-block;
+  border-style: inset;
+  border-color: black;
+  border-width: 2px;
+}
+
+#faucet-table-padding {
+  width: 0%;
+  border: none;
+}
+
+#faucet-table-navbar {
+  border: none;
+  display: inline-block;
+}
+
+#faucet-table {
+  width: 100%;
+  height: 554px;
+  border: none;
+}
+
+#adcopy-outer {
+  background: #FEF6BF !important;
+  transform: scale(1.8) !important;
+  margin: 90px !important;
+}
+
+#center-column {
+  vertical-align: top;
+  text-align: center !important;
+  border: none;
+}
+
+#adcopy-outer {
+  display: inline-block !important;
+}
+
+#center-background {
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 500px;
+  width: 996 px;
+}
