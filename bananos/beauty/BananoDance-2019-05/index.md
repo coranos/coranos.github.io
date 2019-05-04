@@ -53,6 +53,10 @@ https://faucet.banano.coranos.io/contest
 | 4          | @ Angeb#9157                        |
 | 5          | @ ESKA#0001                         |
 | 6          | @ maffs#1206                        |
+| 7          | @ bb-8#0450                         |
+| 8          | @ MMI#0352                          |
+| 9          | @ Cristalla#6092                    |
+
 
 # The rules would be:      
 # (ES) Las reglas serían:       
