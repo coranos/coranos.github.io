@@ -99,7 +99,7 @@ https://faucet.banano.coranos.io/contest
 
 ### Image one / identification
 
-1. First photo, it must be the participant holding a paper with their discord ID and discord user name. Usually, the face must be visible. If the user does not want to show their face, the participant must wear a mask in this photo and the same mask in the dance video.   
+1. First photo, it must be the participant holding a paper with their discord ID and discord user name. Usually, the face must be visible. If the user does not want to show their face, the participant must wear a mask in this photo and the same mask in the dance video. If the user is not from discord, the paper must show the first five letters and last five letters of your account. I.E. BAN_1CORA...OCDXA   
 (es)     
 (pt)    
 
