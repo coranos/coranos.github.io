@@ -27,7 +27,7 @@ ban_1dance6aoe5cw8ohuxwtodwo8fus75pfsgsizy4nfny1k71fcjjnnb4ywtso
 (ES) Tercer lugar obtendra 10% del pote.    
 (PT) Terceiro lugar você receberá 10% do pote.     
 
-4) Ten Finalists that did not win will split 25% getting 2.5% each.     
+4) Ten Finalists that did not win will split 25%, getting 2.5% each.     
 (ES) Diez finalistas que no ganaron se dividirán un 25% obteniendo un 2.5% cada uno.     
 (PT) Dez finalistas que não venceram serão divididos em 25%, obtendo 2,5% cada.     
 
@@ -35,7 +35,7 @@ ban_1dance6aoe5cw8ohuxwtodwo8fus75pfsgsizy4nfny1k71fcjjnnb4ywtso
 (ES) Los participantes que cumplan con todas las reglas se dividirán el 25% del bote.     
 (PT) Os participantes que cumprirem todas as regras dividirão 25% do pote.    
 
-# Please give all submissions to :
+# Please send all submissions to :
 <a
 href="https://faucet.banano.coranos.io/contest" target="_blank">
 https://faucet.banano.coranos.io/contest
@@ -65,11 +65,11 @@ https://faucet.banano.coranos.io/contest
 
 ### Guidelines (Optional)  
 
-1. It is not necessary for you to be a citizen of the banana republic.    
+1. It is not necessary for you to be a citizen of the Banano Republic.    
 (es) No es necesario que sea ciudadano de la Republica banano.    
 (pt) Não é necessário que você seja um cidadão da república das bananas.    
 
-2. Use your imagination, be creative.    
+2. Use your imagination and be creative.    
 (es) Usa tu imaginación, sé creativo.    
 (pt) Use sua imaginação, seja criativo.    
 
@@ -79,38 +79,38 @@ https://faucet.banano.coranos.io/contest
 (es) Todos los participantes deben ser mayores de edad. (18+).    
 (pt) Todos os participantes devem ter idade legal (18 anos ou mais).    
 
-2. All photos and videos must be legal, and you agree the contest can use them for the contest, visible to the public (not just to judges).    
+2. All photos and videos must be legal. You agree they will be used for the contest and be visible not only to the judges, but to the public as well. 
 (es) Todas las fotos y videos tienen que ser legales y accede a que el concurso los use y sean visibles para el público (no sólo para los jueces).    
 (pt) Todas as fotos e vídeos devem ser legais, e você concorda que o concurso pode usá-los para o concurso, visível para o público (não apenas para os juízes).    
 
-3. Avoid including anything that would help someone harrass you, like your street address.    
+3. Avoid including anything that could help someone harrass you, like your street address.    
 (es) Evite incluir cualquier cosa que pueda permitir a otros acosarle, como su dirección de casa, etc.    
 (pt) Evite incluir algo que ajude alguém a atormentá-lo, como seu endereço.    
 
-4. Children can participate if accompanied by an adult.  
+4. Children may participate if accompanied by an adult.  
 (es)  Los niños pueden participar si van acompañados por un adulto.   
 (pt)  As crianças podem participar se forem acompanhadas por um adulto.   
 
-## images and identification
+## Images and Identification
 
-1. The contest will consist of one verification image, and one dance video.   
+1. Submissions must consist of one verification photograph and one dance video. 
 (es)     
 (pt)    
 
-### Image one / identification
+### Image One / Identification
 
-1. First photo, it must be the participant holding a paper with their discord ID and discord user name. Usually, the face must be visible. If the user does not want to show their face, the participant must wear a mask in this photo and the same mask in the dance video. If the user is not from discord, the paper must show the first five letters and last five letters of your account. I.E. BAN_1CORA...OCDXA   
+1. The verification photograph should be the participant holding a paper with their Discord username and ID. The face should be visible; however, if a participant does not wish to show their face, they may wear a mask for the photo and the same mask in their dance video. If participants do not have a Discord account, the paper must include the first and last five letters of their Banano wallet address. Example: BAN_1CORA...OCDXA.     
 (es)     
 (pt)    
 
 ![01-photo-example-01]
 
 ### Video / Dance
-2. Video photo, it must be the participant dancing. At least some effort must be put into dancing. Judges have final say.   
+2. Participants will submit a video of themselves dancing. At least some effort must be put into the dancing. Judges will have final say. 
 (es)     
 (pt)    
 
-### Image limits
+### Image Limits
 
 3. Limit of 3 photos and videos per contestant.  
 (es)   
