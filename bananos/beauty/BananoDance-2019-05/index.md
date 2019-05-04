@@ -103,6 +103,8 @@ https://faucet.banano.coranos.io/contest
 (es)     
 (pt)    
 
+![01-photo-example-01]
+
 ### Video / Dance
 2. Video photo, it must be the participant dancing. At least some effort must be put into dancing. Judges have final say.   
 (es)     
@@ -113,3 +115,5 @@ https://faucet.banano.coranos.io/contest
 3. Limit of 3 photos and videos per contestant.  
 (es)   
 (pt)   
+
+[01-photo-example-01]: http://oi64.tinypic.com/2nvcv2c.jpg "thumbnail"

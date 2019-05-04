@@ -134,6 +134,13 @@ img {
   overflow: auto;
 }
 
+img[title=thumbnail] {
+  height: 200px;
+  max-width: 100%;
+  float: none;
+  overflow: auto;
+}
+
 #scene {
   width: 350px;
   display: inline-block;
