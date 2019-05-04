@@ -35,7 +35,7 @@ ban_1dance6aoe5cw8ohuxwtodwo8fus75pfsgsizy4nfny1k71fcjjnnb4ywtso
 (ES) Los participantes que cumplan con todas las reglas se dividirán el 25% del bote.     
 (PT) Os participantes que cumprirem todas as regras dividirão 25% do pote.    
 
-# Please give all submissions to :
+# Please send all submissions to :
 <a
 href="https://faucet.banano.coranos.io/contest" target="_blank">
 https://faucet.banano.coranos.io/contest
@@ -87,17 +87,17 @@ https://faucet.banano.coranos.io/contest
 (es) Evite incluir cualquier cosa que pueda permitir a otros acosarle, como su dirección de casa, etc.    
 (pt) Evite incluir algo que ajude alguém a atormentá-lo, como seu endereço.    
 
-4. Children can participate if accompanied by an adult.  
+4. Children may participate if accompanied by an adult.  
 (es)  Los niños pueden participar si van acompañados por un adulto.   
 (pt)  As crianças podem participar se forem acompanhadas por um adulto.   
 
-## images and identification
+## Images and Identification
 
 1. Submissions must consist of one verification photograph and one dance video. 
 (es)     
 (pt)    
 
-### Image one / identification
+### Image One / Identification
 
 1. The verification photograph should be the participant holding a paper with their Discord username and ID. The face should be visible; however, if a participant does not wish to show their face, they may wear a mask for the photo and the same mask in their dance video. If participants do not have a Discord account, the paper must include the first and last five letters of their Banano wallet address. Example: BAN_1CORA...OCDXA.     
 (es)     
@@ -110,7 +110,7 @@ https://faucet.banano.coranos.io/contest
 (es)     
 (pt)    
 
-### Image limits
+### Image Limits
 
 3. Limit of 3 photos and videos per contestant.  
 (es)   
