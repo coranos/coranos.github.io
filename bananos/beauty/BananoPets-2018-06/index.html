@@ -1,0 +1,221 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+<head>
+<title>Pet Contest Banano June 2018 - Community Contest - Sponsored by La Jungla</title>
+<link rel="stylesheet" type="text/css" href="../../style.css">
+</head>
+<body onload="onLoad();">
+  <H1>75,600 BANANO</H1>
+  <H1>0.0 NANO</H1>
+  <table style="width: 100%">
+    <tr>
+      <td class="rules_column solid_border"><img class="centered"
+        src="https://i.imgur.com/a9Dgvwf.jpg"></td>
+      <td class="rules_column solid_border"><img class="centered"
+        src="https://i.imgur.com/XZvcanV.jpg"></td>
+      <td class="rules_column solid_border"><img class="centered"
+        src="https://i.imgur.com/lU3DSNn.jpg"></td>
+    </tr>
+    <tr>
+      <td class="solid_border centered_text">
+        <h2>Submission Timeframe - Deadline</h2>
+        <p>The deadline is Saturday, June 16, 13:00 Caracas time, or 5:00 PM UTC.</p>
+        <p>Submissions will be accepted for six hours after the deadline, but risk being penalized (see rules below)</p>
+        <p>Results will be available during the week</p>
+        <H2>Flyers</H2>
+
+        <p>This is a community contest sponsored by the la jungla discord channel.</p>
+        <p>All donations and contestants are from the community and not from the banano core team.</p>
+        <p>Banano devs (I.E. Coranos) are providing administrative support and discord id verification.</p>
+        <p>Para registrar a su mascota, envíe enlaces a sus imágenes y videos a @ Coranos # 4281 en discord.</p>
+        <p>
+          <b>To register your pet, send links to your images and videos to @Mayrapina#9547 on discord</b>
+          (@Coranos#4281 is letting her run it.)
+        </p>
+      </td>
+      <td class="solid_border centered_text">
+        <h2>Plazo de presentación: fecha límite</h2>
+        <p>La fecha límite es el sábado 16 de junio a las 13:00, hora de Caracas, o a las 5:00 p. M. UTC.</p>
+        <p>Las presentaciones serán aceptadas por seis horas después de la fecha límite, pero corre el riesgo de ser penalizado (ver las reglas a continuación)</p>
+        <p>Los resultados estarán disponibles durante la semana</p>
+        <H2>Folleto</H2>
+        
+        <p>Este es un concurso comunitario patrocinado por el canal de discordia de la jungla.</p>
+        <p>Todas las donaciones y concursantes son de la comunidad y no del equipo central de banano.</p>
+        <p>Los desarrolladores de Banano (I.E. Coranos) brindan soporte administrativo y verificación de id. de discordia.</p>
+        <p>Para registrar a su mascota, enviar enlaces a sus imágenes y videos a @ Coranos # 4281 en discord.</p>
+        <p>
+          <b>Para registrar su mascota, envíe enlaces a sus imágenes y videos a @Mayrapina # 9547 en discord.</b>
+          (@Coranos#4281 está dejando que lo ejecute).
+        </p>
+      </td>
+      <td class="solid_border centered_text">
+        <h2>Data de Envio - The deadline</h2>
+        <p>The deadline is Saturday, June 16, 13:00 Caracas time, or 5:00 PM UTC.</p>
+        <p>Envios (foto e/ou vídeo) serão aceitos até seis horas depois do horário limite, mas correm o risco de serem penalizados (veja regras abaixo).</p>
+        <p>Os resultados estarão disponíveis durante a semana.</p>
+        <H2>Folheto</H2>
+
+        <p>Este concurso é patrocinado pelo canal La Jungla do Discord.</p>
+        <p>Todas doações e participantes são da comunidade e não da Equipe Central da Banano.</p>
+        <p>Banano devs (como Coranos) estão fornecendo apoio administrativo e verificando a ID do Discord.</p>
+        <p>Los desarrolladores de Banano (como Coranos) están fortaleciendo apoyo administrativo y verificando una ID en Discord.</p>
+        <p>Para participar envie los links de las imagenes y vídeo a @Coranos#4281 en Discord.
+        
+      </td>
+    </tr>
+  </table>
+  <H3></H3>
+  <h2>Judges</h2>
+  <ul>
+    <li>@Mayrapina#9547</li>
+    <li>@Coranos#4281</li>
+    <li>@👑King Kong👑#1771</li>
+    <li>@.👽.Andreiniana...💋🎼#3438</li>
+    <li>@sipipao#8293</li>
+    <li>@Jacko#7828</li>
+  </ul>
+  <H1 class="solid_border centered_text">Rules</H1>
+  Images courtesy of our meme and pun channel.
+  <table id='rulesTable' style="width: 100%">
+    <tr>
+      <th class="solid_border centered_text">English</th>
+      <th class="solid_border centered_text">Spanish</th>
+      <th class="solid_border centered_text">Portuguese</th>
+    </tr>
+    <tr>
+      <td class="rules_column  solid_border">
+      <td class="rules_column  solid_border">
+      <td class="rules_column  solid_border">
+    </tr>
+  </table>
+  <table id='dataTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <script src="../../../js-lib/google-tracking.js"></script>
+  <script src='../../../js-lib/jquery-3.2.1.js'></script>
+  <script src='../../../js-lib/load-json.js'></script>
+  <script src='../../../js-lib/json-table.js'></script>
+  <script>
+      callGoogleTracker();
+
+      function processVideoArray (videos) {
+        let result = ''
+        for (let videoIx = 0; videoIx < videos.length; videoIx++) {
+          if (videos[videoIx].message !== undefined) {
+            result += videos[videoIx].message;
+          } else {
+            result += '<a target="_blank" href="' + videos[videoIx].video + '"><img class="thumbnail" src="' + videos[videoIx].thumbnail + '" />';
+          }
+        }
+        return result;
+      }
+
+      function processImageArray (images) {
+        let result = ''
+        for (let imageIx = 0; imageIx < images.length; imageIx++) {
+          result += '<a target="_blank" href="' + images[imageIx] + '"><img class="thumbnail" src="' + images[imageIx] + '" />';
+        }
+        return result;
+      }
+
+      function onLoad () {
+        console.log('onLoad');
+
+        jsonTable('#dataTable', {
+          head : [ 'Contestant Number','Registration Date and Time (UTC)','Discord ID', 'Verification Photo<br> <small>Click For Larger Image</small>',
+              'Bananos<br> <small>Click For Larger Image</small>', 'Your Strength<br> <small>Click For Video' ],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
+        let options = {};
+        options.json = [ 'contestant','entry-date-time-yyyy-mon-dd-hh-mm-utc','discord', 'verification', 'banano', 'video' ];
+
+        $.ajaxSetup({
+          beforeSend : function (xhr) {
+            if (xhr.overrideMimeType) {
+              xhr.overrideMimeType('application/json');
+            }
+          }
+        });
+
+        $.getJSON('rules.json', function (results) {
+          let table = $('#rulesTable').find('tbody');
+          table.empty();
+          
+          for (const [section, rules] of Object.entries(results)) {
+            var sectionHtml = '';
+            sectionHtml += '<!-- ' + section + ' -->' + '\n';
+            sectionHtml += '<h2>' + rules[0].title.en + '</h2>' + '\n';
+            sectionHtml += '<ol>\n';
+            for (let ruleIx = 1; ruleIx < rules.length; ruleIx++) {
+              const rule = rules[ruleIx];
+              sectionHtml += '<li>\n';
+              if(typeof rule === 'string') {
+                sectionHtml += rule;
+                sectionHtml += '\n';
+              } else {
+                for (const [subsection, subrules] of Object.entries(rule)) {
+                  if(subsection ==='en') {
+                    sectionHtml += subrules;
+                    sectionHtml += '<br>\n';
+                  } else if(subsection ==='pt') {
+                    sectionHtml += subrules;
+                    sectionHtml += '<br>\n';
+                  } else if(subsection ==='es') {
+                    sectionHtml += subrules;
+                    sectionHtml += '<br>\n';
+                  } else if(subsection ==='img') {
+                    sectionHtml += '<a target="_blank" href="' + subrules + '"><img class="thumbnail" src="' + subrules + '" /></a>';
+                    sectionHtml += '\n';
+                    sectionHtml += '<p></p>\n';
+                  } else {
+                    sectionHtml += '<!-- ' + subsection + ' -->' + '\n';
+                    sectionHtml += '<h3>' + subrules[0].title.en + '</h3>' + '\n';
+                    sectionHtml += '<ol>\n';
+                    for (let subruleIx = 1; subruleIx < subrules.length;subruleIx++) {
+                      sectionHtml += '<li>\n';
+                      const subrule = subrules[subruleIx];
+                      for (const [lang, translation] of Object.entries(subrule)) {
+                          sectionHtml += translation;
+                          sectionHtml += '<br>\n';
+                      }
+                      sectionHtml += '</li>\n';
+                    }
+                    sectionHtml += '</ol>\n';
+                  }
+                }                
+              }
+              sectionHtml += '</li>\n';
+            }
+            sectionHtml += '</ol>\n';
+            table.append(sectionHtml);
+          }
+        });
+        
+        $.getJSON('contestants.json', function (results) {
+          let table = $('#dataTable').find('tbody');
+          table.empty();
+          const response = {};
+          response.results = results;
+
+          for (let dataIx = 0; dataIx < results.length; dataIx++) {
+            results[dataIx].verification = processImageArray(results[dataIx].verification);
+            results[dataIx].banano = processImageArray(results[dataIx].banano);
+            results[dataIx].video = processVideoArray(results[dataIx].video);
+          }
+
+          const row = makeRow(response, options, 'solid_border centered_text', 'solid_border centered_text');
+          table.append(row);
+        });
+      }
+    </script>
+</body>
+
+</html>

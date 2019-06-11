@@ -1,0 +1,423 @@
+[
+	{
+		"contestant": "1",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-27 22:05",
+		"discord": "gladiache#4650",
+		"verification": [
+			"https://i.imgur.com/VP2DmJx.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/VP2DmJx.jpg"
+		],
+		"video": []
+	},
+	{
+		"contestant": "2",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-27 22:15",
+		"discord": "Deacero1000#3856",
+		"verification": [
+			"https://i.imgur.com/T8q7xcv.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/T8q7xcv.jpg",
+			"https://i.imgur.com/DhsRZNw.jpg",
+			"https://i.imgur.com/3kjWRju.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/PqL24u_OrMU/default.jpg",
+				"video": "https://www.youtube.com/embed/PqL24u_OrMU"
+			}
+		]
+	},
+	{
+		"contestant": "3",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-29 12:00",
+		"discord": "ArticPaul#8132",
+		"verification": [
+			"https://i.imgur.com/vyraWbc.jpg",
+			"https://i.imgur.com/N8GdzUG.jpg",
+			"https://i.imgur.com/pqVrFFr.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/odIrDLO.jpg",
+			"https://i.imgur.com/mVbVgMI.jpg",
+			"https://i.imgur.com/8zBGL5r.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/veosr9sqHb8/default.jpg",
+				"video": "https://www.youtube.com/embed/veosr9sqHb8"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/fXmMTKGOxHQ/default.jpg",
+				"video": "https://www.youtube.com/embed/fXmMTKGOxHQ"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/bFdzLXNvcjo/default.jpg",
+				"video": "https://www.youtube.com/embed/bFdzLXNvcjo"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/NvpWEzwHdtA/default.jpg",
+				"video": "https://www.youtube.com/embed/NvpWEzwHdtA"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/UAx9yFIL6no/default.jpg",
+				"video": "https://www.youtube.com/embed/UAx9yFIL6no"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/Vcn3SdS4fwk/default.jpg",
+				"video": "https://www.youtube.com/embed/Vcn3SdS4fwk"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/Vcn3SdS4fwk/default.jpg",
+				"video": "https://www.youtube.com/embed/Vcn3SdS4fwk"
+			}
+		]
+	},
+	{
+		"contestant": "4",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-29 12:10",
+		"discord": "rah 🇨🇦#0704",
+		"verification": [
+			"https://i.imgur.com/T3J1Hc5.jpg",
+			"https://i.imgur.com/hV2N3Gz.jpg",
+			"https://i.imgur.com/3b4sBLW.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/ZSSz9jF.jpg",
+			"https://i.imgur.com/CrWZj6W.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/UpnlGGJhDzU/default.jpg",
+				"video": "https://www.youtube.com/embed/UpnlGGJhDzU"
+			}
+		]
+	},
+	{
+		"contestant": "5",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-29 16:00",
+		"discord": "Jacko#7828",
+		"verification": [
+			"https://i.imgur.com/C64vjvE.png"
+		],
+		"banano": [
+			"https://i.imgur.com/vnyQYsb.png",
+			"https://i.imgur.com/Ej68FQ3.png"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/jMLyT5w2a2c/default.jpg",
+				"video": "https://www.youtube.com/embed/jMLyT5w2a2c"
+			}
+		]
+	},
+	{
+		"contestant": "6",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-30 12:00",
+		"discord": "l333nny#2143",
+		"verification": [
+			"https://i.imgur.com/2aXslmp.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/jQNmrcg.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/90oYZZEzc5k/default.jpg",
+				"video": "https://www.youtube.com/embed/90oYZZEzc5k"
+			}
+		]
+	},
+	{
+		"contestant": "7",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-30 16:00",
+		"discord": "jbrice#2496",
+		"verification": [
+			"https://i.imgur.com/iGyfJsf.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/ZEfTVGU.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/UrEYMkwQs0k/default.jpg",
+				"video": "https://www.youtube.com/embed/UrEYMkwQs0k"
+			}
+		]
+	},
+	{
+		"contestant": "8",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 12:00",
+		"discord": "azuLeto#1082",
+		"verification": [
+			"https://i.imgur.com/ZwCajSf.jpg",
+			"https://i.imgur.com/SY4nrx7.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/iBPa67t.jpg",
+			"https://i.imgur.com/iwg3Lsx.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/BbPmdILHn6Q/default.jpg",
+				"video": "https://www.youtube.com/embed/BbPmdILHn6Q"
+			}
+		]
+	},
+	{
+		"contestant": "9",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-05-31 17:00",
+		"discord": "JhonAlvarez#1227",
+		"verification": [
+			"https://i.imgur.com/YJObSjz.jpg",
+			"https://i.imgur.com/cmbunxX.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/i9jqJuC.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/hbTV4-WPAjI/default.jpg",
+				"video": "https://www.youtube.com/embed/hbTV4-WPAjI"
+			}
+		]
+	},
+	{
+		"contestant": "10",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:00",
+		"discord": "GreatDragonian#2741",
+		"verification": [
+			"https://i.imgur.com/6c3QQrz.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/KYcQJ4D.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/mnY8bMwFPYo/default.jpg",
+				"video": "https://www.youtube.com/embed/mnY8bMwFPYo"
+			}
+		]
+	},
+	{
+		"contestant": "11",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:10",
+		"discord": "el potacio del mal#2634",
+		"verification": [
+			"https://i.imgur.com/lK5nWBX.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/pYOlCoY.jpg"
+		],
+		"video": []
+	},
+	{
+		"contestant": "12",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:20",
+		"discord": "Bananoeira✌#4382",
+		"verification": [
+			"https://i.imgur.com/uV3PzbO.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/oCHLa4U.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/T2cJP132AKM/default.jpg",
+				"video": "https://www.youtube.com/embed/T2cJP132AKM"
+			}
+		]
+	},
+	{
+		"contestant": "13",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:30",
+		"discord": "@JosegrexD-Team Los Sopla Nuca-#3635",
+		"verification": [
+			"https://i.imgur.com/Nevpfu4.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/kS78dqa.jpg",
+			"https://i.imgur.com/dayICVK.jpg",
+			"https://i.imgur.com/kGni9vD.png"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/dzpt9JvRFlA/default.jpg",
+				"video": "https://www.youtube.com/embed/dzpt9JvRFlA"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/5KJJNWkN6gY/default.jpg",
+				"video": "https://www.youtube.com/embed/5KJJNWkN6gY"
+			}
+		]
+	},
+	{
+		"contestant": "14",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 16:40",
+		"discord": "@Emocrat3#7550",
+		"verification": [
+			"https://i.imgur.com/aYNULdB.png"
+		],
+		"banano": [
+			"https://i.imgur.com/i8KZN1R.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/HSwwVAiJgK8/default.jpg",
+				"video": "https://www.youtube.com/embed/HSwwVAiJgK8"
+			},
+			{
+				"thumbnail": "https://img.youtube.com/vi/v_R-U_CVMdk/default.jpg",
+				"video": "https://www.youtube.com/embed/v_R-U_CVMdk"
+			}
+		]
+	},
+	{
+		"contestant": "15",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 17:34",
+		"discord": "@TUNENE#0351",
+		"verification": [
+			"https://i.imgur.com/CErDOm4.jpg",
+			"https://i.imgur.com/88yHe6h.jpg",
+			"https://i.imgur.com/DFoHjzC.jpg",
+			"https://i.imgur.com/2KsoyM4.jpg",
+			"https://i.imgur.com/i5NJLY2.png"
+		],
+		"banano": [
+			"https://i.imgur.com/lfVrC7p.png"
+		],
+		"video": []
+	},
+	{
+		"contestant": "16",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 17:39",
+		"discord": "@Algiorno Oficial.#6911",
+		"verification": [
+			"https://i.imgur.com/ZQbILzi.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/8RUMxea.jpg",
+			"https://i.imgur.com/JgsNLc5.jpg",
+			"https://i.imgur.com/4sH24f7.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/jLOiSHm5dLg/default.jpg",
+				"video": "https://www.youtube.com/embed/jLOiSHm5dLg"
+			}
+		]
+	},
+	{
+		"contestant": "17",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 17:55",
+		"discord": "jacintoelbarouki#7206",
+		"verification": [
+			"https://i.imgur.com/iTqtbQh.jpg",
+			"https://i.imgur.com/szQWhsP.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/GR7s9Bj.jpg",
+			"https://i.imgur.com/QWnPld2.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/NR_8WJnUyO0/default.jpg",
+				"video": "https://www.youtube.com/embed/NR_8WJnUyO0"
+			}
+		]
+	},
+	{
+		"contestant": "18",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-01 22:12",
+		"discord": "gruvious#6760",
+		"verification": [
+			"https://i.imgur.com/K7BbBsS.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/Hu7Z7ZF.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/oQPu3UA-vs0/default.jpg",
+				"video": "https://www.youtube.com/embed/oQPu3UA-vs0"
+			}
+		]
+	},
+	{
+		"contestant": "20",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 9:58",
+		"discord": "DAGO#2780",
+		"verification": [
+			"https://i.imgur.com/KJgDYet.jpg",
+			"https://i.imgur.com/cf3tf5D.jpg",
+			"https://i.imgur.com/Z12CbPC.jpg",
+			"https://i.imgur.com/MU7mFfd.jpg"
+		],
+		"banano": [],
+		"video": []
+	},
+	{
+		"contestant": "21",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 10:12",
+		"discord": "CrC#6030",
+		"verification": [
+			"https://i.imgur.com/w1jIFus.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/Ti3Jmpc.jpg",
+			"https://i.imgur.com/ygPBTFY.jpg",
+			"https://i.imgur.com/ie3luDO.jpg",
+			"https://i.imgur.com/QV2GxLN.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/XZbNTtrUCXs/default.jpg",
+				"video": "https://www.youtube.com/embed/XZbNTtrUCXs"
+			}
+		]
+	},
+	{
+		"contestant": "22",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 11:06",
+		"discord": "LuisM#9062",
+		"verification": [
+			"https://i.imgur.com/wk1XYAE.jpg",
+			"https://i.imgur.com/fZ4sLw0.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/SIu2MU9.jpg",
+			"https://i.imgur.com/Pbqzfaz.jpg"
+		],
+		"video": [
+			{
+				"thumbnail": "https://img.youtube.com/vi/kLIg1t2_RnE/default.jpg",
+				"video": "https://www.youtube.com/embed/kLIg1t2_RnE"
+			}
+		]
+	},
+	{
+		"contestant": "24",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 13:07",
+		"discord": "Team Junglo |Toro Manuel#9143",
+		"verification": [
+			"https://i.imgur.com/z2wWCIg.jpg"
+		],
+		"banano": [
+			"https://i.imgur.com/1RWUneO.jpg",
+			"https://i.imgur.com/RyH7xtc.jpg"
+		],
+		"video": []
+	},
+	{
+		"contestant": "25",
+		"entry-date-time-yyyy-mon-dd-hh-mm-utc": "2018-06-02 12:05",
+		"discord": "NanoRass#5354",
+		"verification": [
+			"https://i.imgur.com/pdBvuB3.jpg"
+		],
+		"banano": [],
+		"video": []
+	}
+]

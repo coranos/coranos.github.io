@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>NEO CLI Chain Stats Chart</title>
+<script src="../../js-lib/chart-2.6.0.js"></script>
+<script src="../../js-lib/jquery-3.2.1.js"></script>
+<script src="../../js-lib/load-json.js"></script>
+<script src="../../js-lib/bollinger.js"></script>
+<style>
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+</style>
+</head>
+
+<body>
+  <div style="width: 100%;">
+    <canvas id="price-canvas"></canvas>
+  </div>
+  <script src="../../js-lib/google-tracking.js"></script>
+  <script>
+      callGoogleTracker();
+    </script>
+  <script>
+      var priceChartConfig = {
+        type : 'bar',
+        data : {},
+        options : {
+          spanGaps : true,
+          legend : {
+            position : "top",
+            display : true
+          },
+          responsive : true,
+          title : {
+            display : true,
+            text : "Chart"
+          },
+          tooltips : {
+            mode : 'index',
+          },
+          hover : {
+            mode : 'index'
+          },
+          scales : {
+            xAxes : [ {
+              scaleLabel : {
+                display : true,
+                labelString : 'Month'
+              }
+            } ],
+            yAxes : [ {
+              stacked : false,
+              id : 'bytes',
+              position : 'left',
+              scaleLabel : {
+                display : true,
+                labelString : 'bytes'
+              }
+            }, {
+              stacked : false,
+              id : 'seconds',
+              position : 'right',
+              scaleLabel : {
+                display : true,
+                labelString : 'seconds'
+              }
+            }, {
+              stacked : true,
+              id : 'transactions',
+              position : 'right',
+              scaleLabel : {
+                display : true,
+                labelString : 'transactions'
+              }
+            }, {
+              stacked : false,
+              id : 'tps',
+              position : 'right',
+              scaleLabel : {
+                display : true,
+                labelString : 'tps'
+              }
+            } ]
+          }
+        }
+      };
+
+      function loadJsonIntoChart (url, chartConfig, canvasId) {
+        $.ajaxSetup({
+          beforeSend : function (xhr) {
+            if (xhr.overrideMimeType) {
+              xhr.overrideMimeType("application/json");
+            }
+          }
+        });
+        $.getJSON(url, function (response) {
+          chartConfig.data = response;
+          var ctx = document.getElementById(canvasId).getContext("2d");
+          window.myLine = new Chart(ctx, chartConfig);
+        });
+      }
+
+      function callback (response) {
+        let data = {};
+        data.labels = [];
+        data.datasets = [];
+        let bytesDs = {};
+        let txDs = {};
+        let secondsDs = {};
+        let tpsDs = {};
+
+        let txMinerTransactionDs = {};
+        let txClaimTransactionDs = {};
+        let txContractTransactionDs = {};
+        let txInvocationTransactionDs = {};
+
+        bytesDs.label = "bytes";
+        txDs.label = "Other Transactions";
+        secondsDs.label = "seconds";
+        tpsDs.label = "tps";
+
+        txMinerTransactionDs.label = "Mine Block(MinerTx)";
+        txClaimTransactionDs.label = "2x Tx Claim Gas(ClaimTx)";
+        txContractTransactionDs.label = "Transfer Asset(ContractTx)";
+        txInvocationTransactionDs.label = "SC Or NEP-5 Token(InvocationTx)";
+
+        bytesDs.borderColor = "#AA0000";
+        txDs.borderColor = "#FF7F00";
+        secondsDs.borderColor = "#AAAA00";
+        tpsDs.borderColor = "#AA7F00";
+
+        txMinerTransactionDs.borderColor = "#00FF00";
+        txClaimTransactionDs.borderColor = "#0000FF";
+        txContractTransactionDs.borderColor = "#4B0082";
+        txInvocationTransactionDs.borderColor = "#9400D3";
+
+        data.datasets.push(bytesDs);
+        data.datasets.push(secondsDs);
+        data.datasets.push(txMinerTransactionDs);
+        data.datasets.push(txClaimTransactionDs);
+        data.datasets.push(txContractTransactionDs);
+        data.datasets.push(txInvocationTransactionDs);
+
+        data.datasets.push(txDs);
+        data.datasets.push(tpsDs);
+
+        for (let ix = 0; ix < data.datasets.length; ix++) {
+          data.datasets[ix].data = [];
+          data.datasets[ix].backgroundColor = "rgb(255,255,255)";
+          //data.datasets[ix].borderColor = "rgb(0,255,0)";
+          data.datasets[ix].steppedLine = false;
+          data.datasets[ix].fill = false;
+          data.datasets[ix].type = "line";
+          data.datasets[ix].yAxisID = data.datasets[ix].label;
+        }
+
+        txDs.yAxisID = "transactions";
+        txMinerTransactionDs.yAxisID = "transactions";
+        txClaimTransactionDs.yAxisID = "transactions";
+        txContractTransactionDs.yAxisID = "transactions";
+        txInvocationTransactionDs.yAxisID = "transactions";
+
+        priceChartConfig.data = data;
+
+        for (let ix = 0; ix < response.length; ix++) {
+          let elt = response[ix];
+          data.labels[ix] = elt.date;
+          bytesDs.data[ix] = elt["bytes"];
+
+          txDs.data[ix] = elt["daily-tx"];
+          secondsDs.data[ix] = elt["daily-seconds"];
+          tpsDs.data[ix] = elt["daily-tx"] / elt["daily-seconds"];
+
+          txMinerTransactionDs.data[ix] = elt.transactions["MinerTransaction"];
+          txClaimTransactionDs.data[ix] = elt.transactions["ClaimTransaction"];
+          txContractTransactionDs.data[ix] = elt.transactions["ContractTransaction"];
+          txInvocationTransactionDs.data[ix] = elt.transactions["InvocationTransaction"];
+
+          txContractTransactionDs.data[ix] -= txClaimTransactionDs.data[ix];
+          txClaimTransactionDs.data[ix] += txClaimTransactionDs.data[ix];
+
+          txDs.data[ix] -= txMinerTransactionDs.data[ix];
+          txDs.data[ix] -= txClaimTransactionDs.data[ix];
+          txDs.data[ix] -= txContractTransactionDs.data[ix];
+          txDs.data[ix] -= txInvocationTransactionDs.data[ix];
+
+        }
+
+        var ctx = document.getElementById("price-canvas").getContext("2d");
+        window.myLine = new Chart(ctx, priceChartConfig);
+      }
+
+      window.onload = function () {
+        loadJson("neo-cli-chain-stats.json", callback);
+      };
+    </script>
+</body>
+
+</html>

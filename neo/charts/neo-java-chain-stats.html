@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>NEO Java Chain Stats Chart</title>
+<script src="../../js-lib/chart-2.6.0.js"></script>
+<script src="../../js-lib/jquery-3.2.1.js"></script>
+<script src="../../js-lib/load-json.js"></script>
+<script src="../../js-lib/bollinger.js"></script>
+<style>
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+</style>
+</head>
+
+<body>
+  <div style="width: 100%;">
+    <canvas id="price-canvas"></canvas>
+  </div>
+  <script src="../../js-lib/google-tracking.js"></script>
+  <script>
+      callGoogleTracker();
+    </script>
+  <script>
+      var priceChartConfig = {
+        type : 'bar',
+        data : {},
+        options : {
+          spanGaps : true,
+          legend : {
+            position : "top",
+            display : true
+          },
+          responsive : true,
+          title : {
+            display : true,
+            text : "Chart"
+          },
+          tooltips : {
+            mode : 'index',
+          },
+          hover : {
+            mode : 'index'
+          },
+          scales : {
+            xAxes : [ {
+              scaleLabel : {
+                display : true,
+                labelString : 'Month'
+              }
+            } ],
+            yAxes : [ {
+              stacked : false,
+              id : 'blocks',
+              position : 'left',
+              scaleLabel : {
+                display : true,
+                labelString : 'blocks'
+              }
+            }, {
+              stacked : false,
+              id : 'accounts',
+              position : 'right',
+              scaleLabel : {
+                display : true,
+                labelString : 'accounts'
+              }
+            }, {
+              stacked : false,
+              id : 'transactions',
+              position : 'right',
+              scaleLabel : {
+                display : true,
+                labelString : 'transactions'
+              }
+            }, {
+              stacked : false,
+              id : 'transaction_network_fees',
+              position : 'right',
+              scaleLabel : {
+                display : true,
+                labelString : 'transaction_network_fees'
+              }
+            }, {
+              stacked : false,
+              id : 'max_block_bin',
+              position : 'left',
+              scaleLabel : {
+                display : true,
+                labelString : 'max tx in block'
+              }
+            }, {
+              stacked : false,
+              id : 'max_block_bin_count',
+              position : 'left',
+              scaleLabel : {
+                display : true,
+                labelString : 'num blocks at max txs'
+              }
+            } ]
+          }
+        }
+      };
+
+      function loadJsonIntoChart (url, chartConfig, canvasId) {
+        $.ajaxSetup({
+          beforeSend : function (xhr) {
+            if (xhr.overrideMimeType) {
+              xhr.overrideMimeType("application/json");
+            }
+          }
+        });
+        $.getJSON(url, function (response) {
+          chartConfig.data = response;
+          var ctx = document.getElementById(canvasId).getContext("2d");
+          window.myLine = new Chart(ctx, chartConfig);
+        });
+      }
+
+      function callback (response) {
+        let data = {};
+        data.labels = [];
+        data.datasets = [];
+        let blocksDs = {};
+        let txMinerDs = {};
+        let txClaimDs = {};
+        let txContractDs = {};
+        let accountActiveDs = {};
+        let accountClaimDs = {};
+
+        let transactionNetworkFeesDs = {};
+        let blockBinMaxSizeDs = {};
+        let blockBinMaxSizeCountDs = {};
+
+        blocksDs.label = "blocks";
+        txMinerDs.label = "transactions miner";
+        txClaimDs.label = "transactions claim";
+        txContractDs.label = "transactions contract";
+        //accountTotalDs.label = "accounts total";
+        accountActiveDs.label = "accounts active";
+        accountClaimDs.label = "accounts claiming gas";
+        transactionNetworkFeesDs.label = "transaction_network_fees";
+        blockBinMaxSizeDs.label = "max_block_bin";
+        blockBinMaxSizeCountDs.label = "max_block_bin_count";
+
+        blocksDs.borderColor = "rgb(0,0,127)";
+        txMinerDs.borderColor = "rgb(0,127,0)";
+        txClaimDs.borderColor = "rgb(0,127,0)";
+        txContractDs.borderColor = "rgb(0,127,0)";
+        //accountTotalDs.borderColor = "rgb(127,0,0)";
+        accountActiveDs.borderColor = "rgb(127,0,0)";
+        accountClaimDs.borderColor = "rgb(127,0,0)";
+        transactionNetworkFeesDs.borderColor = "rgb(0,255,0)";
+        blockBinMaxSizeDs.borderColor = "rgb(0,0,127)";
+        blockBinMaxSizeCountDs.borderColor = "rgb(0,0,127)";
+
+        data.datasets.push(blocksDs);
+        data.datasets.push(blockBinMaxSizeDs);
+        data.datasets.push(blockBinMaxSizeCountDs);
+        data.datasets.push(txMinerDs);
+        data.datasets.push(txClaimDs);
+        data.datasets.push(txContractDs);
+        //data.datasets.push(accountTotalDs);
+        data.datasets.push(accountActiveDs);
+        data.datasets.push(accountClaimDs);
+        data.datasets.push(transactionNetworkFeesDs);
+
+        for (let ix = 0; ix < data.datasets.length; ix++) {
+          data.datasets[ix].data = [];
+          data.datasets[ix].backgroundColor = "rgb(255,255,255)";
+          data.datasets[ix].steppedLine = false;
+          data.datasets[ix].fill = false;
+          data.datasets[ix].type = "line";
+          if (data.datasets[ix].label.includes(" ")) {
+            let label = data.datasets[ix].label;
+            let spaceIx = label.indexOf(" ");
+            let yAxisID = label.substring(0, spaceIx);
+            data.datasets[ix].yAxisID = yAxisID;
+          } else {
+            data.datasets[ix].yAxisID = data.datasets[ix].label;
+          }
+        }
+
+        priceChartConfig.data = data;
+
+        for (let ix = 0; ix < response.length; ix++) {
+          let elt = response[ix];
+          data.labels[ix] = elt.date;
+          blocksDs.data[ix] = elt.blocks;
+          txMinerDs.data[ix] = elt.transactions.miner_transaction;
+          txClaimDs.data[ix] = elt.transactions.claim_transaction;
+          txContractDs.data[ix] = elt.transactions.contract_transaction;
+          //accountTotalDs.data[ix] = elt.accounts.total;
+          accountActiveDs.data[ix] = elt.accounts.active.total;
+          accountClaimDs.data[ix] = elt.accounts.active.claim_transaction;
+
+          transactionNetworkFeesDs.data[ix] = 0;
+          transactionNetworkFeesDs.data[ix] += elt.transaction_network_fees.invocation_transaction;
+          transactionNetworkFeesDs.data[ix] += elt.transaction_network_fees.publish_transaction;
+          transactionNetworkFeesDs.data[ix] += elt.transaction_network_fees.register_transaction;
+          transactionNetworkFeesDs.data[ix] += elt.transaction_network_fees.contract_transaction;
+          transactionNetworkFeesDs.data[ix] += elt.transaction_network_fees.issue_transaction;
+          transactionNetworkFeesDs.data[ix] += elt.transaction_network_fees.claim_transaction;
+          transactionNetworkFeesDs.data[ix] += elt.transaction_network_fees.miner_transaction;
+          transactionNetworkFeesDs.data[ix] += elt.transaction_network_fees.enrollment_transaction;
+          transactionNetworkFeesDs.data[ix] = transactionNetworkFeesDs.data[ix] / 100000000;
+          transactionNetworkFeesDs.data[ix] = transactionNetworkFeesDs.data[ix].toFixed(0);
+
+          let block_bins = elt.block_bins;
+          let max_bin = "0";
+          for ( let block_bin in block_bins) {
+            if (parseInt(block_bin) > parseInt(max_bin)) {
+              max_bin = block_bin;
+            }
+          }
+
+          blockBinMaxSizeDs.data[ix] = parseInt(max_bin);
+          blockBinMaxSizeCountDs.data[ix] = block_bins[max_bin];
+        }
+
+        var ctx = document.getElementById("price-canvas").getContext("2d");
+        window.myLine = new Chart(ctx, priceChartConfig);
+      }
+
+      window.onload = function () {
+        loadJson("neo-java-chain-stats.json", callback);
+      };
+    </script>
+</body>
+
+</html>

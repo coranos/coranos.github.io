@@ -1,0 +1,128 @@
+[
+	{
+		"startDate": "Sep 01 2017",
+		"endDate": "Sep 17 2017",
+		"taskName": "Roadmap And White Paper",
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Sept 09 2017",
+		"endDate": "Sept 13 2017",
+		"taskName": "Ledger Nano S Hardware Wallet Prototype",
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Sept 07 2017",
+		"endDate": "Sept 13 2017",
+		"taskName": "TestNET Client GUI in Electrum",
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Sept 8 2017",
+		"endDate": "Sept 15 2017",
+		"taskName": "Modified neon-js to work with Ledger Nano S",
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Sept 15 2017",
+		"endDate": "Sept 17 2017",
+		"taskName": "neon-js PR",
+		"status": "RUNNING"
+	},
+	{
+		"startDate": "Sept 06 2017",
+		"endDate": "Sept 15 2017",
+		"taskName": "Modified neon-wallet to work with Ledger Nano S",
+		"status": "SUCCEEDED"
+	},
+	{
+		"startDate": "Sept 15 2017",
+		"endDate": "Sept 17 2017",
+		"taskName": "neon-wallet PR",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Sept 17 2017",
+		"endDate": "Nov 30 2017",
+		"taskName": "Ledger Nano S Hardware Wallet GUI",
+		"status": "RUNNING"
+	},
+	{
+		"startDate": "Sept 17 2017",
+		"endDate": "Oct 01 2017",
+		"taskName": "Ledger Nano S Hardware Wallet GUI design",
+		"status": "RUNNING"
+	},
+	{
+		"startDate": "Sept 17 2017",
+		"endDate": "Oct 01 2017",
+		"taskName": "Ledger Nano S Hardware Wallet GUI Web Page Mockup",
+		"status": "RUNNING"
+	},
+	{
+		"startDate": "Sept 17 2017",
+		"endDate": "Oct 01 2017",
+		"taskName": "Ledger Nano S Hardware Wallet GUI User Workflow Diagram",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Sept 17 2017",
+		"endDate": "Oct 01 2017",
+		"taskName": "Ledger Nano S Hardware Wallet GUI Class Diagrams",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Sept 17 2017",
+		"endDate": "Oct 01 2017",
+		"taskName": "Ledger Nano S Hardware Wallet GUI Sequence Diagrams",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Sept 17 2017",
+		"endDate": "Oct 01 2017",
+		"taskName": "Coding the Hardware Wallet GUI For Real",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Nov 01 2017",
+		"endDate": "Nov 30 2017",
+		"taskName": "Code audit and acceptance by NEO team",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Nov 01 2017",
+		"endDate": "Nov 30 2017",
+		"taskName": "Ledger acceptance as a signed app",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Nov 01 2017",
+		"endDate": "Nov 30 2017",
+		"taskName": "Update bip39 standalone website to use CX_CURVE_256R1 instead of CX_CURVE_256K1",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Nov 01 2017",
+		"endDate": "Nov 30 2017",
+		"taskName": "Register NEO coin at SLIP-0044",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Nov 01 2017",
+		"endDate": "Nov 30 2017",
+		"taskName": "Update Ledger Nano S Hardware Wallet for NEO to support custom paths.",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Nov 01 2017",
+		"endDate": "Nov 30 2017",
+		"taskName": "Update NEON Wallet to support loading custom NEO Ledger app onto ledger.",
+		"status": "NOT STARTED"
+	},
+	{
+		"startDate": "Nov 01 2017",
+		"endDate": "Nov 30 2017",
+		"taskName": "Update NEO Ledger app to support signing large (10kb+) tx by only signing the hash.",
+		"status": "NOT STARTED"
+	}
+]

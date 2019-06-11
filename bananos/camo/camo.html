@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Camo</title>
+  <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+
+<body onLoad="onLoad();">
+  <form action="." method="get" onsubmit="return submitForm();">
+    <table>
+      <tr>
+        <th>Step</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>
+          <h3>Create a Seed</h3>
+          Seed:<br>
+          <input id="seed" name="seed" value="" size="64" type="text">
+          <p>
+            <input value="New Random Seed" type="button" onclick='return getNewSeed();'>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>
+          <h3>Derive a Camo Account from the Seed (Private Key at index 0)</h3>
+          Banano Account:<br>
+          <input id="banano_account" name="banano_account" value="" size="64" type="text">
+          <p>
+            Camo Account:<br>
+            <input id="camo_account" name="camo_account" value="" size="64" type="text">
+          </p>
+          <p><input value="Derive Camo And Banano Addresses" type="submit">
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>
+          <h3>Create a Shared Secret</h3>
+          Use (your) Seed and somebody else's camo account.
+          <br>
+          (Somebody Else's) Camo Account
+          (From their rep field on their banano account):<br>
+          <input id="other_camo_account" name="other_camo_account" value="" size="64" type="text">
+          <p>
+            Shared Secret <br>
+            <input id="shared_secret" name="shared_secret" value="" size="64" type="text">
+          </p>
+          <p><input value="Derive Shared Secret" type="button" onclick='return getNewSharedSecret();'>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <script src='camo.js'></script>
+  <script src='../../js-lib/nacl.js'></script>
+  <script src='../../js-lib/blake2b.js'></script>
+  <script src='../../js-lib/banano.js'></script>
+  <script>
+    const submitForm = () => {
+      try {
+        const seed_elt = document.getElementById('seed');
+        const seed = seed_elt.value;
+        if (seed.length != 64) {
+          alert(`bad seed size ${seed.length} expecting ${64}`)
+          return false;
+        }
+        const privateKey = getPrivateKey(seed, 0);
+
+        // console.log('privateKey Get', privateKey.length, privateKey);
+        const bananoPublicKey = getPublicKey(privateKey);
+        const banano_account_elt = document.getElementById('banano_account');
+        banano_account_elt.value = getAccount(bananoPublicKey);
+
+        const camoPublicKey = getCamoPublicKey(privateKey);
+        // console.log('camoPublicKey', camoPublicKey.length, camoPublicKey);
+        const camo_account_elt = document.getElementById('camo_account');
+        camo_account_elt.value = getAccount(camoPublicKey);
+      } catch (error) {
+        console.trace(error);
+      }
+
+      return false;
+    }
+
+    const getNewSharedSecret = () => {
+      const seed_elt = document.getElementById('seed');
+      const seed = seed_elt.value;
+      if (seed.length != 64) {
+        alert(`bad seed size ${seed.length} expecting ${64}`)
+        return false;
+      }
+
+      const privateKey = getPrivateKey(seed, 0);
+      const other_camo_account_elt = document.getElementById('other_camo_account');
+      const otherCamoAccount = other_camo_account_elt.value;
+      if (otherCamoAccount.length != 64) {
+        alert(`bad (other) camo account size ${otherCamoAccount.length} expecting ${64}`)
+        return false;
+      }
+
+      const sharedSecret = getSharedSecret(privateKey, getAccountPublicKey(otherCamoAccount));
+      const shared_secret_elt = document.getElementById('shared_secret');
+      shared_secret_elt.value = sharedSecret;
+
+      return false;
+    }
+
+    const onLoad = () => {
+
+    }
+  </script>
+</body>
+
+</html>

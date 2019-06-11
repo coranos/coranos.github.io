@@ -1,0 +1,4662 @@
+[
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "118456553069215744",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 1,
+		"clanName": "yes."
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 2,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "120862008479449088",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 20,
+		"clanName": "SoftTofu"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 331,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "131624281133154304",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 331,
+		"clanName": "Mr Pickles"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 51,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "156812076210323458",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 51,
+		"clanName": "Muziu \u2022"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 408,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "181845255023362049",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 408,
+		"clanName": "azuLeto"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1,
+		"payGrade": "bad ip, citizen, partial, 10%; cleared vpn",
+		"clan": "186534361099796481",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 13,
+		"clanName": "Kirby"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 398,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "193778424429543424",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 398,
+		"clanName": "Nick"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 434,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "203353159035387904",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 434,
+		"clanName": "Wolfen"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 6,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "203658481214029825",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 6,
+		"clanName": "gowness"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 112,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "208201546654154753",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 112,
+		"clanName": "just_dmitry"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 5,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "210215048663007232",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 5,
+		"clanName": "Coranos, coranos"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 2,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "210390829259292673",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 21,
+		"clanName": "Mad_Man"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 287,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "210750017496023040",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 287,
+		"clanName": "Deiv"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 75,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; cleared",
+		"clan": "231975636930002944",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 754,
+		"clanName": "KingofNorth"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 2,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "232791453200285696",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 24,
+		"clanName": "Ronchiporc"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 43,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "236877238375677953",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 437,
+		"clanName": "magiksen"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 240,
+		"payGrade": "good ip, suspect discord id, partial, 10%; in Monkey Match channel; FALSE POSITIVE",
+		"clan": "237212003351920641",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2400,
+		"clanName": "Xavier"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 6,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "244656042108125194",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 6,
+		"clanName": "Mappinus"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 11,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "250351048089272325",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 110,
+		"clanName": "DaKapo"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 0,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "250687662657241089",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 5,
+		"clanName": "InspectMoustache"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "254704133125308426",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 3,
+		"clanName": "Taspeed"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 191,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "254803019575590913",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 191,
+		"clanName": "Keimtael-Happy BTF"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 7,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;after",
+		"clan": "261287837465444353",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 77,
+		"clanName": "Edicksonjga"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 364,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "270758048094486529",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 364,
+		"clanName": "Chibi"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "271613988976984064",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2,
+		"clanName": "BrachistocronaJirona"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "272801663583256578",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 8,
+		"clanName": "n3groo"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 23,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "274849357604323330",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 23,
+		"clanName": "Zulfiqaar"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 362,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "277630911112151051",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 362,
+		"clanName": "Shikoku"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 6,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "277957440841187328",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 6,
+		"clanName": "Inficiopalma"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 4,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "282635496142798848",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 4,
+		"clanName": "Josh"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "282907358546362368",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2,
+		"clanName": "Noodles"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 184,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "300643098500005890",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 184,
+		"clanName": "GMontero"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 3770,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "309470666669686785",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 3770,
+		"clanName": "andrej"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 52,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "309760808357855232",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 52,
+		"clanName": "Mojo"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1027,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "313514272246464513",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1027,
+		"clanName": "! guillew"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 40,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "316489552640475137",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 40,
+		"clanName": "Cleo_is_no_Cat"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 5,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "316789167399108610",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 51,
+		"clanName": "Torii"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 125,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;after",
+		"clan": "325667007821381644",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1258,
+		"clanName": "Luisana"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 165,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "327859788165939201",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 1655,
+		"clanName": "Liger zero"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 132,
+		"payGrade": "good ip, non member discord id, partial, 10%; cleared",
+		"clan": "331919787003346945",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1325,
+		"clanName": "dude"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 69,
+		"payGrade": "good ip, non member discord id, partial, 10%; cleared",
+		"clan": "335912826428194818",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 694,
+		"clanName": "jaime14"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 65,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "339297864356462592",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 657,
+		"clanName": "0932947977"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 64,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "339835698460884993",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 64,
+		"clanName": "Maramo"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "340226154927620098",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 1,
+		"clanName": "FERCHO"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "342907569917919232",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 15,
+		"clanName": "ojedax"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "349055409920933899",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2,
+		"clanName": "Soneliem"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "349278804042317824",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 3,
+		"clanName": "M4sterM0nkey"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 26,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "363870582200074250",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 260,
+		"clanName": "Dam Long"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 87,
+		"payGrade": "good ip, non member discord id, partial, 10%;after",
+		"clan": "370050285445447680",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 873,
+		"clanName": "xmarkinmtlx"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 190,
+		"payGrade": "good ip, non member discord id, partial, 10%; not bot",
+		"clan": "370283091891191809",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1901,
+		"clanName": "gotowerdown"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 467,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; cleared",
+		"clan": "370337152812318720",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4670,
+		"clanName": "tolik"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 5145,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "370339467938234368",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 5145,
+		"clanName": "Devius"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 34,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "370342847280316418",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 340,
+		"clanName": "👻Martinez 🌬❄"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 10,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "370351496870756353",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 10,
+		"clanName": "Gharuda"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 424,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "370373118595694600",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 424,
+		"clanName": "rambo"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 100,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "370449853580443658",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 100,
+		"clanName": "Nomina"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 125,
+		"payGrade": "good ip, suspect discord id, partial, 10%; false positive.",
+		"clan": "370475694591049740",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1257,
+		"clanName": "ponchik458"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 305,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; cleared",
+		"clan": "370496639972147202",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3052,
+		"clanName": "Desten"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 104,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "370511851672436738",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 1042,
+		"clanName": "rayan_ehia18"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 487,
+		"payGrade": "bad ip, non member discord id, partial, 10%;cleared",
+		"clan": "370604352655851520",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4871,
+		"clanName": "Samir360"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 476,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "370747448634638337",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4762,
+		"clanName": "Nicolas"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 6,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "371024947709214731",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 6,
+		"clanName": "Zerkis"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 165,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "371470005742731265",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1657,
+		"clanName": "Lukert"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 4480,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "372512843527880707",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 4480,
+		"clanName": "bubenya"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 23,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "373638081238007808",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 238,
+		"clanName": "Damsito"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 9,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "373932532049379330",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 9,
+		"clanName": "the pussy eater"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 18,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "374980397647396874",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 189,
+		"clanName": "soutazcat"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 118,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "375718248362147841",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1185,
+		"clanName": "vetal85"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2153,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "377612498079318017",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2153,
+		"clanName": "SQUAD.DASH.TX"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 22,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "378276251569225728",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 22,
+		"clanName": "manpan"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 27,
+		"payGrade": "good ip, suspect discord id, partial, 10%; chatted; not a bot",
+		"clan": "380302037985918977",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 271,
+		"clanName": "nmendes"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 46,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "382977345725923355",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 462,
+		"clanName": "cristhian"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "383819713836482560",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 14,
+		"clanName": "antonioluiscc"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 20,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "384525980762505220",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 201,
+		"clanName": "Alri_17"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 15,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "386572278730588160",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 154,
+		"clanName": "Lai binh"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 437,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "388015094589816832",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 437,
+		"clanName": "aglkm"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 4,
+		"payGrade": "good ip, non member discord id, partial, 10%;cleared",
+		"clan": "388966189759594496",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 41,
+		"clanName": "thestarflyer"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 232,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;after",
+		"clan": "389596726169960448",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2320,
+		"clanName": "Chencho"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 802,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "389864760864276490",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 802,
+		"clanName": "Vlas95"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 0,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "390631540465336330",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 3,
+		"clanName": "Vermox"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 25,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "390923712246972416",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 257,
+		"clanName": "Banano Man"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 2,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "391118941109354496",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 26,
+		"clanName": "heartcore"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 3,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "391695605237415948",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 32,
+		"clanName": "milkyklim"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 80,
+		"payGrade": "good ip, suspect discord id, partial, 10%;phone,cleared",
+		"clan": "391953284103143434",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 800,
+		"clanName": "MissBanana83"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 49,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared.",
+		"clan": "392065485048381440",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 496,
+		"clanName": "bertheimer"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "392446410831691776",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2,
+		"clanName": "MassiveAppeal"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 50,
+		"payGrade": "bad ip, non member discord id, partial, 10%;cleared",
+		"clan": "393615262114381825",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 500,
+		"clanName": "son"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 21,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "394588096769032193",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 211,
+		"clanName": "stacey"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 4,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "395457295317729292",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 45,
+		"clanName": "Ashley"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 47,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "395726361521684480",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 478,
+		"clanName": "Meliodas"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 336,
+		"payGrade": "good ip, suspect discord id, partial, 10%; after",
+		"clan": "395952405935685633",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 3365,
+		"clanName": "andersonflores"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 63,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "396050169608798208",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 63,
+		"clanName": "Paddington"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 5,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "396754914631614465",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 5,
+		"clanName": "terryg"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2345,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "397215033882443799",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2345,
+		"clanName": "Rolex"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 535,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "397476613660344331",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 535,
+		"clanName": "!belmont.👽.C94*"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 5,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "397500414016225280",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 52,
+		"clanName": "gcondol"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "397552147727908864",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 16,
+		"clanName": "Totally confused Banano"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 15,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "397609733554438145",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 15,
+		"clanName": "assassin"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 25,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "398133694801379329",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 25,
+		"clanName": "rah🇨🇦"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 13,
+		"payGrade": "good ip, non member discord id, partial, 10%;cleared",
+		"clan": "398225105647566850",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 130,
+		"clanName": "ClemFandango"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 97,
+		"payGrade": "good ip, non member discord id, partial, 10%;after",
+		"clan": "398875613210869773",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 976,
+		"clanName": "Rebob"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 970,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "399128747594219520",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 970,
+		"clanName": "Kaskad"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 247,
+		"payGrade": "bad ip, citizen, partial, 10%; fixed",
+		"clan": "400006270607949824",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2473,
+		"clanName": "Jan Cisneros⚜𝐁𝐃𝐕 + 𝐏𝐀𝐆𝐎 𝐌𝐎́𝐕𝐈𝐋⚜"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2968,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "400078133975449611",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2968,
+		"clanName": "xrazor"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 0,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "400646742611066881",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 6,
+		"clanName": "Krypton"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 432,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "400829920995049472",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 432,
+		"clanName": "altcoinage"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1278,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "400839727009234967",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1278,
+		"clanName": "carlosluna"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "401341683142492194",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 3,
+		"clanName": "JaernStaang"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 122,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "401457553873174538",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 122,
+		"clanName": "Snappadoodle"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 2,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "401686062541570049",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 26,
+		"clanName": "zendream"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 2,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "401747386042417162",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 23,
+		"clanName": "badders00"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "401782505444737034",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 12,
+		"clanName": "Jim8888"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 2,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "402800833600684032",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 27,
+		"clanName": "bengoa"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 266,
+		"payGrade": "good ip, non member discord id, partial, 10%;cleared",
+		"clan": "403332355579969536",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2667,
+		"clanName": "yava"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 9,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "403857187254042635",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 9,
+		"clanName": "LISSOGOR"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 504,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "404007652725882883",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 504,
+		"clanName": "Alexander¢¥\u20ac£"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 22,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "404674851836657674",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 22,
+		"clanName": "count bantanola"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 2,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "404837864841412619",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 24,
+		"clanName": "Suarez18"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 643,
+		"payGrade": "bad ip, citizen, partial, 10%; false ip match;false positive",
+		"clan": "404982484510441475",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 6434,
+		"clanName": "ninavera"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 651,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "405005581523484673",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 651,
+		"clanName": "£nderson☆☆╮"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 88,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "405371003678490628",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 886,
+		"clanName": "Banboooo, beelzeboss"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 144,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "407044518047645696",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 144,
+		"clanName": "B U N N Y"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 266,
+		"payGrade": "good ip, suspect discord id, partial, 10%; cleared",
+		"clan": "407684181406253067",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2667,
+		"clanName": "joseleo19"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 393,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; cleared",
+		"clan": "407810143351341057",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3935,
+		"clanName": "Valenok"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 9058,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "407967328127418379",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 9058,
+		"clanName": "Pavel"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1067,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "408091977662595072",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1067,
+		"clanName": "dlvs"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 36,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "408365801842671616",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 364,
+		"clanName": "alexa44"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 3,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "409838003150913546",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 3,
+		"clanName": "Fabianooo\\o/"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 423,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "410213691309555724",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 423,
+		"clanName": "Luis Ivan Bastardo"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 587,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "410562584484249601",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 587,
+		"clanName": "steph"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 72,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "411347508326039553",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 72,
+		"clanName": "Moose"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 96,
+		"payGrade": "bad ip, non member discord id, partial, 10%; mac",
+		"clan": "412124978289442816",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 963,
+		"clanName": "oioioioi"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "412286270694359052",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 12,
+		"clanName": "David_99"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 612,
+		"payGrade": "good ip, non member discord id, partial, 10%;dophuchau2998",
+		"clan": "412637722323189770",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 6120,
+		"clanName": "dophuchau2998"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 777,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "414231415383916576",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 777,
+		"clanName": "Flightless_Pig"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 5,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "414777401164431360",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 54,
+		"clanName": "Jmcp"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 5,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "414938931227000833",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 50,
+		"clanName": "dollarman"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "416625597989650452",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 13,
+		"clanName": "sunshinerain"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "416658435753639939",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 4,
+		"clanName": "Namayd"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 172,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "417683457993342979",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 172,
+		"clanName": "cmonkey"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 17,
+		"payGrade": "good ip, suspect discord id, partial, 10%; cleared",
+		"clan": "418453833836920843",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 171,
+		"clanName": "xippix"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 10,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "419512356679319562",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 100,
+		"clanName": "Banarkellraiser"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 21,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "420256768858521600",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 216,
+		"clanName": "snkstreet"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 45,
+		"payGrade": "bad ip, citizen, partial, 10%; cleared",
+		"clan": "420661783255056385",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 455,
+		"clanName": "JHEEEY🌸"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 34,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "421642510314504204",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 344,
+		"clanName": "le9nhat"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 488,
+		"payGrade": "good ip, suspect discord id, partial, 10%; on discord, cleared",
+		"clan": "422061250642444291",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 4882,
+		"clanName": "Irina"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 120,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "422341145977421824",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 120,
+		"clanName": "Sal0s"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "422850622816256010",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 13,
+		"clanName": "Leonard"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 100,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "423351721453158439",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 100,
+		"clanName": "prae"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 352,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "423380553555771396",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3520,
+		"clanName": "Arnold"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 370,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "425200142124187648",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3702,
+		"clanName": "Please tell me why???"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 222,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared.",
+		"clan": "425301499061731329",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2222,
+		"clanName": "kien"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 0,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "426139981019348994",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 1,
+		"clanName": "yoclens"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 46,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "427130384707485707",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 464,
+		"clanName": "javierCP"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1450,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "427811002265108480",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1450,
+		"clanName": "BananoBird"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "427892808926494723",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 5,
+		"clanName": "bongo"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 53,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "428638455044636692",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 532,
+		"clanName": "Maui"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "428711028726038545",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 12,
+		"clanName": "paulopimentel"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 100,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "429039110104154132",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 100,
+		"clanName": "Banano Ghost"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 12,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "429273736424718336",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 12,
+		"clanName": "ChuckEetBanano 🇳🇱"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 316,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "430519925174566932",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 316,
+		"clanName": "bananaman 🖕🏼 💖  🍌"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 57,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "430575197020618753",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 573,
+		"clanName": "karlarubi"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 106,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "430577118238474241",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1065,
+		"clanName": "orliara"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 316,
+		"payGrade": "good ip, suspect discord id, partial, 10%; talked, cleared",
+		"clan": "430619628776062978",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 3161,
+		"clanName": "BEN SPB"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 11,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "430676368288776192",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 113,
+		"clanName": "Enrique_Gmz"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 37,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "430750965172535306",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 37,
+		"clanName": "thebroje"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 382,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "430763469201997835",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 382,
+		"clanName": "Atalaya"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 190,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "430793620816134144",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1909,
+		"clanName": "Svetlanа"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 149,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "430999253884862464",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 149,
+		"clanName": "iguANNA"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2402,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "431152677523816464",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2402,
+		"clanName": "anghek"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "431155565259915265",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 16,
+		"clanName": "cat"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 378,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "431314893627719681",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 378,
+		"clanName": "The Bananus"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 220,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "431436918723706881",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 220,
+		"clanName": "theJoin"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 4,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "431449940246396929",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 43,
+		"clanName": "NupleX"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 13,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "431505558059876352",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 136,
+		"clanName": "darkfenyx"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 42,
+		"payGrade": "good ip, suspect discord id, partial, 10%;after",
+		"clan": "431511270320111617",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 425,
+		"clanName": "BlueWings"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 33,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "431514727445823489",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 333,
+		"clanName": "ricardo15"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 54,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "431525656669454346",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 542,
+		"clanName": "Adn🔥, Penis👻Wise☠"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "431542350771257345",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 4,
+		"clanName": "Lilisc"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 5,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "431561879895146526",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 51,
+		"clanName": "RafaD34"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 18,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; cleared",
+		"clan": "431563481112641558",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 181,
+		"clanName": "Glaix3"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 30,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "431591980003229706",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 303,
+		"clanName": "Jack ♪♫♩esto es Halloween♪♫♩"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 2,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "431625653805252628",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 21,
+		"clanName": "Yeferson"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 106,
+		"payGrade": "bad ip, citizen, partial, 10% : RAN AVAST; FALSE POSITIVE",
+		"clan": "431667341005422613",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1062,
+		"clanName": "Orlando"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 576,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "431772321532084224",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 576,
+		"clanName": "serj"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 35,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "431871400270233610",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 352,
+		"clanName": "williampc"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 329,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "432173097097887746",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 329,
+		"clanName": "dungav"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 24,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "432204323582115840",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 24,
+		"clanName": "Sdanielm"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 205,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "432209023325044736",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2055,
+		"clanName": "linh4432"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 22,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "432214597546541056",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 227,
+		"clanName": "niconico23"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 373,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "432250282274062346",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3739,
+		"clanName": "Joset_Bear"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 85,
+		"payGrade": "bad ip, citizen, partial, 10%;after",
+		"clan": "432252532174225418",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 851,
+		"clanName": "oskita_20"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1359,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "432553174872752135",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1359,
+		"clanName": "VaneOgando"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1897,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "432738137098158090",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1897,
+		"clanName": "Jose Trk✅👻... AGGU Te amo"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 44,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "432742580166590464",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 448,
+		"clanName": "nguyenlua"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 47,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "432798738952486933",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 47,
+		"clanName": "anton"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 66,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "432802286226374657",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 667,
+		"clanName": "Vell"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1380,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "433063982589280257",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1380,
+		"clanName": "TVC-Konstantinovich Rokossovsky"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "433162165340471296",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 16,
+		"clanName": "stefano"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 60,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared, inrpcg",
+		"clan": "433196339992592395",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 606,
+		"clanName": "Roll Macer"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 226,
+		"payGrade": "good ip, suspect discord id, partial, 10%; cleared",
+		"clan": "433259448845336587",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2269,
+		"clanName": "jondeiber"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 222,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "433263408721428480",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 222,
+		"clanName": "viktor28021983"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 27,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "433287687798128671",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 273,
+		"clanName": "mariangeles"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 30,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "433290872566710273",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 301,
+		"clanName": "timans"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 4565,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "433322037227028481",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 4565,
+		"clanName": "Geysel"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 61,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "433694853629739008",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 61,
+		"clanName": "abedwo"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 400,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "433856037930663936",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4003,
+		"clanName": "Rampage"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 18,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "434342577588666398",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 184,
+		"clanName": "paoprd"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 7,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "434412755777486849",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 79,
+		"clanName": "william_13_23"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 300,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "434551590905446411",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3008,
+		"clanName": "Broadways"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 88,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "434616185221283850",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 884,
+		"clanName": "Lena"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 12,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "435231935170609184",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 126,
+		"clanName": "miguelramireez_"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 3,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "435262535000653834",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 38,
+		"clanName": "vinicioperezp"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 19,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "435549601450426369",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 19,
+		"clanName": "Keysil"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 4,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "435581146605158412",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 46,
+		"clanName": "Jacky"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 67,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "435660876549324800",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 673,
+		"clanName": "Xover11"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 495,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "435891840688979968",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4950,
+		"clanName": "BestBopBoy"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 26,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "435952089600884737",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 26,
+		"clanName": "IsaVillarroel"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 324,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "436173891069542431",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 324,
+		"clanName": "stefano"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 37,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "436310540038569985",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 37,
+		"clanName": "Nazareth"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 60,
+		"payGrade": "good ip, suspect discord id, partial, 10%;after",
+		"clan": "436352527504769025",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 607,
+		"clanName": "BlueWings"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 158,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "436558494662131712",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1582,
+		"clanName": "Egor"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 123,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "436564625941594112",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 123,
+		"clanName": "Pittiplatsch"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 57,
+		"payGrade": "bad ip, citizen, partial, 10%;after",
+		"clan": "436628664189452289",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 572,
+		"clanName": "camix"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 146,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "436868592621846548",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1465,
+		"clanName": "gbriela"
+	},
+	{
+		"clanDiscordStatus": "non_citizens_no_flags",
+		"bananos": 3940,
+		"payGrade": "good ip, non citizen discord id in good standing, full, 100%",
+		"clan": "437028969188163584",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 3940,
+		"clanName": "Natalia"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 28,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "437310235103854594",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 285,
+		"clanName": "JDunderground"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 409,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "437369911140941845",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 409,
+		"clanName": "joseit0"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 532,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; cleared",
+		"clan": "437396679566688256",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 5326,
+		"clanName": "SpookyBanCat, athamashiara"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 34,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "437726360102764544",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 340,
+		"clanName": "elisaveth oliveros"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 50,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "437731729193566229",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 504,
+		"clanName": "nixonwilson"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 133,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "437793459718324225",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 133,
+		"clanName": "JosegrexD"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 119,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "438645996579454977",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 1192,
+		"clanName": "Hoangle296"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 135,
+		"payGrade": "good ip, suspect discord id, partial, 10%; not a bot; false positive",
+		"clan": "439104894620794890",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1350,
+		"clanName": "SinCollector"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 4,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "439188276927004679",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 47,
+		"clanName": "Yuusha"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 64,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "439228026241417216",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 645,
+		"clanName": "Eloi"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 83,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "439607134666096642",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 835,
+		"clanName": "nadaco"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 10,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "439619192602361858",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 10,
+		"clanName": "Raphy Zoe&Bianca"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 138,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "439661426798231552",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1381,
+		"clanName": "cristiannn09"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 48,
+		"payGrade": "bad ip, citizen, partial, 10%;phone",
+		"clan": "439991120710205443",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 481,
+		"clanName": "pedroso92★"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 131,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; fixed",
+		"clan": "440017154432172035",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1310,
+		"clanName": "Manuel Colmenarez"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 75,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "440105947436810240",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 756,
+		"clanName": "*XGabytax*"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 106,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "440274370825551873",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 106,
+		"clanName": "SterlinSky"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 27,
+		"payGrade": "good ip, suspect discord id, partial, 10%; cleared",
+		"clan": "440287067067514893",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 270,
+		"clanName": "Andreinaclh"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 40,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "440308066383298576",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 40,
+		"clanName": "* CHALLENGER  *"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1330,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "441051687847985163",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1330,
+		"clanName": "jesus"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 14,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "441209686935470080",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 14,
+		"clanName": "Silvia"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 28,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared phone",
+		"clan": "441267665529602049",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 289,
+		"clanName": "👑-------£££¥£¢  💲 WRPB💲💰"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 293,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "441292975515893760",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 293,
+		"clanName": "Jorgito LoCo HuMilde y RealG"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 71,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "441458094891991040",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 71,
+		"clanName": "thompsano"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 5,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "441752508269068288",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 53,
+		"clanName": "Bananoeira✌"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1542,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "441780769002749962",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1542,
+		"clanName": "Muối"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "441882048127565834",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 2,
+		"clanName": "ing40n"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 0,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "442378430646976525",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 8,
+		"clanName": "Daniela🎀"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 124,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "442489769549627402",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1244,
+		"clanName": "Gabriela"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 129,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "442704888766529548",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1293,
+		"clanName": "david16"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 3860,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "442770335113281546",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 3860,
+		"clanName": "Jhon C"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 186,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "443250147443605507",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 186,
+		"clanName": "Bitbanano"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 37,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;after",
+		"clan": "443338423751802880",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 373,
+		"clanName": "may11"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 5029,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "443390257187127296",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 5029,
+		"clanName": "✌  ☬  ☠⇜♛☣\u20aeℝĪτǿℕ☣♛⇝☠ ☬ ✌"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 3518,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "443474925525925889",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 3518,
+		"clanName": "\"Paulcp10\""
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 60,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "443504808989556766",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 602,
+		"clanName": "jose"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 28,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "443805692713893890",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 284,
+		"clanName": "liam05"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 122,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "443946473449717770",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1223,
+		"clanName": "Fyodor Mikhailovich Dostoevsky"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 311,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "443964405152219137",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 311,
+		"clanName": "Monachita"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 104,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "444264061807362048",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 104,
+		"clanName": "Jose Gregorio"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 63,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "444351730013044748",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 63,
+		"clanName": "marlboro_casta94-casanay"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 635,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "444354148947984394",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 635,
+		"clanName": "Cati Cati Cati Cati"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 484,
+		"payGrade": "bad ip, citizen, partial, 10%; cleared",
+		"clan": "444472487552745473",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4847,
+		"clanName": "Bємsh👽tC94´"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "444542108171239424",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 6,
+		"clanName": "Angel"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 3,
+		"payGrade": "bad ip, citizen, partial, 10%;after",
+		"clan": "444574101860778023",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 37,
+		"clanName": "Jesús Brito del kongo"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 10,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "444620704953139221",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 101,
+		"clanName": "sblamet"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "444883681547517964",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 26,
+		"clanName": "Arisbelyz🐞Team junglo"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 5,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "444883877719179264",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 50,
+		"clanName": "estef"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 17,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "444947419734736897",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 17,
+		"clanName": "Nuzer"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "445170377899900940",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2,
+		"clanName": "Valentin V"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 216,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "445210461839818752",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 216,
+		"clanName": "KIN"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 8,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "445277031316586496",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 86,
+		"clanName": "chu tât vương"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1304,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "445420139232493569",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1304,
+		"clanName": "Oops"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 963,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "445588277601239041",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 963,
+		"clanName": "BENZINA"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 350,
+		"payGrade": "bad ip, citizen, partial, 10%; false positive, phone",
+		"clan": "445603667924615180",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3501,
+		"clanName": "paparacu"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 0,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "445658862129774616",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 1,
+		"clanName": "Tsunami"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 61,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "445937351542439937",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 61,
+		"clanName": "Наталия"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 38,
+		"payGrade": "good ip, suspect discord id, partial, 10%; fixed",
+		"clan": "445988829682335760",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 387,
+		"clanName": "littleflower"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 5,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "446078061943980053",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 57,
+		"clanName": "lapuchungosa-TEAM CASANAY"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 11,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "446097608176435215",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 119,
+		"clanName": "Bananatic🍌Minions"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 27,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "446333931646746626",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 279,
+		"clanName": "altokalibre"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 96,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "446635603325485077",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 96,
+		"clanName": "Karla☪"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 60,
+		"payGrade": "bad ip, citizen, partial, 10%; cleared",
+		"clan": "446673878857809920",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 600,
+		"clanName": "Suri-chan"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "446701683050020876",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 16,
+		"clanName": "elgopur-VMX"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 77,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "446782217645981718",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 77,
+		"clanName": "Cr7"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 3,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "446882251712757760",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 31,
+		"clanName": "dabg2103"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 284,
+		"payGrade": "bad ip, citizen, partial, 10%; cleared",
+		"clan": "447053330783666178",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2847,
+		"clanName": "Mayrapina"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 20,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "447186394473824258",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 207,
+		"clanName": "Argenis 📷  LMDHH"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 10,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "447931711968378880",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 100,
+		"clanName": "Ếch Ụt Ụt( em của Ủn Ỉn)"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 260,
+		"payGrade": "bad ip, citizen, partial, 10%; cleared",
+		"clan": "448095711570165790",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2600,
+		"clanName": "maurodor"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 8,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "448214795317936138",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 88,
+		"clanName": "Medussa"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1710,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "448302207855624192",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1710,
+		"clanName": "Omargc23"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 183,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "448306766749368322",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 183,
+		"clanName": "🎀Mariia🎀💋"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 67,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "448434977579991040",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 67,
+		"clanName": "Genay"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 6,
+		"payGrade": "good ip, suspect discord id, partial, 10%;phone,cleared",
+		"clan": "448669375160123393",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 69,
+		"clanName": "simplesirup"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2275,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "448867007337857024",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 2275,
+		"clanName": "Yojan"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "448889889849737226",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 5,
+		"clanName": "Gregory matute"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 134,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "449032565538553856",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 1341,
+		"clanName": "zamanthag"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 263,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "449098969898024962",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 263,
+		"clanName": "Leonet"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "449211254368763915",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 20,
+		"clanName": "MaryLpz-.*"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 72,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "449812203428773898",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 720,
+		"clanName": "*Periquito"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1837,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "450024877710245889",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1837,
+		"clanName": "Sergey m"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 462,
+		"payGrade": "bad ip, citizen, partial, 10%; cleared",
+		"clan": "450420625408786453",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4622,
+		"clanName": "Richard-JFC"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "450728069129568276",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 3,
+		"clanName": "AlexisAcostaMc"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 85,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "450996984103305232",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 853,
+		"clanName": "ROSMERYSCA"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 38,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "450997688679399425",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 381,
+		"clanName": "ROGER"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 42,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "451552010198581248",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 421,
+		"clanName": "racentenog"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 300,
+		"payGrade": "bad ip, citizen, partial, 10%; cleared",
+		"clan": "451857903733833728",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3000,
+		"clanName": "Bandirka🍒, Dancr🍒"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 180,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "452514946861891624",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 180,
+		"clanName": "naiver"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 121,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "452789325533544471",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 1215,
+		"clanName": "Tiểu Muối"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 8,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "453380661013905421",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 84,
+		"clanName": "JESUS_ARTEAGA"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 95,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "453572994397372418",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 953,
+		"clanName": "Mvicky"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 23,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "453706000231301132",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 231,
+		"clanName": "heliberthh"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 543,
+		"payGrade": "bad ip, citizen, partial, 10%; ran avast; false positive;",
+		"clan": "454030566569017388",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 5439,
+		"clanName": "Black Hawk, black hawk"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 147,
+		"payGrade": "bad ip, citizen, partial, 10%:cleared",
+		"clan": "454407669755936768",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1475,
+		"clanName": "Mairim"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 7,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "454464008926265364",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 72,
+		"clanName": "Proyecto \"X\""
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "454815433195913229",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 16,
+		"clanName": "citySushi"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 134,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "454976238306590720",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 1341,
+		"clanName": "nancy"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 812,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "455049407973425152",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 812,
+		"clanName": "Andrey"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 5,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "455074268146040844",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 55,
+		"clanName": "0Kt0b3rf3st-Juan"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 14,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "456068982076604425",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 145,
+		"clanName": "12341saws"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 63,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "456130488617271309",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 63,
+		"clanName": "carupano good people"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 758,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "456964520867397632",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 758,
+		"clanName": "BANLUCIFEROCK"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 88,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "456985180838559744",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 888,
+		"clanName": "Dario"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 227,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "457229867965218837",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2276,
+		"clanName": "Kaydan"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "457527832382406678",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 2,
+		"clanName": "mel"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 114,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "457536021710503947",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1143,
+		"clanName": "gabrielarte4226"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 52,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "457540476770189322",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 529,
+		"clanName": "jeniferp"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 20,
+		"payGrade": "good ip, non member discord id, partial, 10%;after",
+		"clan": "457600190233313280",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 201,
+		"clanName": "Sirmagister"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 2,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "457619313621336112",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 27,
+		"clanName": "Petrella"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 13,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "457646322653331478",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 135,
+		"clanName": "Michael Myers"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 108,
+		"payGrade": "good ip, suspect discord id, partial, 10%;notbot",
+		"clan": "457649400743723030",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1088,
+		"clanName": "Makuntum"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 419,
+		"payGrade": "bad ip, non member discord id, partial, 10%;cleared",
+		"clan": "457664401110073345",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4191,
+		"clanName": "Cometa2.4"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 64,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "457681641393881098",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 642,
+		"clanName": "rafaelbejasm"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "457767549531193345",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 4,
+		"clanName": "luv304"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1063,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "457868782652620810",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1063,
+		"clanName": "Jose"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 95,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; cleared",
+		"clan": "457978369641021441",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 951,
+		"clanName": "Ya_Gor32"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 43,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "458064138607001620",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 432,
+		"clanName": "as9292830"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 77,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "458111483986051078",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 777,
+		"clanName": "Cắt chim ông nhà cái"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 71,
+		"payGrade": "bad ip, citizen, partial, 10%; cleared",
+		"clan": "458605816967200771",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 712,
+		"clanName": "bin"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 75,
+		"payGrade": "good ip, suspect discord id, partial, 10%;clear",
+		"clan": "458744605190651904",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 751,
+		"clanName": "Rainbowmoon"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 63,
+		"payGrade": "bad ip, citizen, partial, 10%; cleared",
+		"clan": "459012834236432385",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 631,
+		"clanName": "Skies"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1906,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "459062293326462986",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1906,
+		"clanName": "Antonietta"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 420,
+		"payGrade": "good ip, non member discord id, partial, 10%; cleared",
+		"clan": "460458225138008095",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 4200,
+		"clanName": "Defiler"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 155,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "460861950205755405",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 155,
+		"clanName": "Neymar AA Bebe sita"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 11,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "461194178332983318",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 116,
+		"clanName": "irvinj"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 43,
+		"payGrade": "good ip, non member discord id, partial, 10%;after",
+		"clan": "462440314620346368",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 439,
+		"clanName": "Danilisceth"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 31,
+		"payGrade": "good ip, non member discord id, partial, 10%;after",
+		"clan": "463047447048880128",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 315,
+		"clanName": "danielacho"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 362,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "464094323625951232",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 362,
+		"clanName": "eukarys"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 32,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "464439905947222026",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 322,
+		"clanName": "narielita🌻"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 245,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "464451075563454478",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2457,
+		"clanName": "Oriana"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 153,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "464456940584435732",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 1536,
+		"clanName": "damela"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 67,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "464462502382534656",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 670,
+		"clanName": "isidro"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 2,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "464480259098673173",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 20,
+		"clanName": "DANI"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 2,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "464839018719477778",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 25,
+		"clanName": "lia"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 23,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "465871948627443712",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 238,
+		"clanName": "Mitsunari_Mizuki"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 534,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "465902327459610625",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 534,
+		"clanName": "Tekachin.👽."
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1918,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "466306544573612032",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1918,
+		"clanName": "kingbls"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 133,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "466434627683221515",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 133,
+		"clanName": "Madasiaka"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 125,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "467071717681135648",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 1254,
+		"clanName": "longho1991"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 7,
+		"payGrade": "good ip, suspect discord id, partial, 10%; disputed, cleared, notabot",
+		"clan": "467213904074899467",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 72,
+		"clanName": "satr9v2"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 273,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "469301392134242329",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2733,
+		"clanName": "Gang Stevie"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 830,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "472279472842866690",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 830,
+		"clanName": "Victoriamrt29"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "472747419587575808",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 19,
+		"clanName": "jackibb"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 22,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "472985298192695298",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 222,
+		"clanName": "Jenny"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 41,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "473393059338649613",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 413,
+		"clanName": "NerOz"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "473913550302347264",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 10,
+		"clanName": "lebicahlz"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 20,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; cleared, helped",
+		"clan": "474350994759614469",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 209,
+		"clanName": "juanc292"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 0,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "474680765054058497",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 6,
+		"clanName": "nein_no_nu"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 49,
+		"payGrade": "bad ip, citizen, partial, 10%;cleared",
+		"clan": "474897203215859715",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 495,
+		"clanName": "Bananotoy"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 6,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "474917877133082644",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 6,
+		"clanName": "Ram-Bo"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 61,
+		"payGrade": "good ip, suspect discord id, partial, 10%; inrpcg",
+		"clan": "474950840013160450",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 615,
+		"clanName": "Đình Hiệp"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "474955223064903681",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 3,
+		"clanName": "Masaka981"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 3,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "475671331053240326",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 3,
+		"clanName": "pseudotwit"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 98,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "476112177758208011",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 981,
+		"clanName": "iLoveBanana"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 106,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "476116391607533569",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1060,
+		"clanName": "insider"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 43,
+		"payGrade": "bad ip, citizen, partial, 10%;after",
+		"clan": "476819973243928586",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 432,
+		"clanName": "ChelyPeCa👽Casta94"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 53,
+		"payGrade": "bad ip, citizen, partial, 10%;after",
+		"clan": "478510544496754689",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 535,
+		"clanName": "Whenceslao"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 95,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "478567657512108042",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 956,
+		"clanName": "jose pineda"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 40,
+		"payGrade": "good ip, non member discord id, partial, 10%; cleared",
+		"clan": "478778413696417792",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 402,
+		"clanName": "Auri"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 0,
+		"payGrade": "bad ip, citizen, partial, 10%",
+		"clan": "478967805501374464",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 3,
+		"clanName": "winibeth🍎"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 32,
+		"payGrade": "good ip, suspect discord id, partial, 10%;after",
+		"clan": "479092135975714817",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 324,
+		"clanName": "BarbaraTKM"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 0,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "479820137956900900",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 2,
+		"clanName": "AmeliaMaria"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 17,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "480048383256690704",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 171,
+		"clanName": "Tundan"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 104,
+		"payGrade": "bad ip, non member discord id, partial, 10%; cleared",
+		"clan": "480919694644084736",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1046,
+		"clanName": "Aliesker"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 32,
+		"payGrade": "bad ip, non member discord id, partial, 10%; travelling",
+		"clan": "481126408651800598",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 324,
+		"clanName": "Backyardfarmer420"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 95,
+		"payGrade": "good ip, suspect discord id, partial, 10%; cleared",
+		"clan": "483782883451076609",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 959,
+		"clanName": "RodC"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 6,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "484068148061011979",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 6,
+		"clanName": "spartan2024"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 823,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "484576382152867840",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 823,
+		"clanName": "MaraOss"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 133,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "486143952559407105",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 1333,
+		"clanName": "Gann"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 40,
+		"payGrade": "good ip, suspect discord id, partial, 10%; cleared",
+		"clan": "486335924909899786",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 409,
+		"clanName": "Rafadiaz"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 3,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "487295462144212993",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 33,
+		"clanName": "Markelin"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "488052018381062159",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 10,
+		"clanName": "Knoda20🇨🇦"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 159,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "488105768340553740",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 159,
+		"clanName": "B-dawg"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "488514262910763008",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 2,
+		"clanName": "Mariu Rivas"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "488910327761731594",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 3,
+		"clanName": "Gobovene"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1397,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "489070173152608292",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1397,
+		"clanName": "<Phoenix>«$|-|!|°0®©|-|!»™, bane, shiporchi"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 59,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "489199446148644915",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 599,
+		"clanName": "nilibethestrella"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 140,
+		"payGrade": "good ip, suspect discord id, partial, 10%; inrpcg",
+		"clan": "489679676571385856",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1400,
+		"clanName": "Tui Tên Bô"
+	},
+	{
+		"clanDiscordStatus": "non_citizens_no_flags",
+		"bananos": 484,
+		"payGrade": "good ip, non citizen discord id in good standing, full, 100%",
+		"clan": "490973151056887838",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 484,
+		"clanName": "flequillo1986, nightmare1986"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 4,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "492362850463907851",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 41,
+		"clanName": "ImpoziBolzz"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 544,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "492379793275224066",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 5449,
+		"clanName": "Really"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 61,
+		"payGrade": "bad ip, non member discord id, partial, 10%;cleared",
+		"clan": "493150091939414016",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 619,
+		"clanName": "Swachgriter"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 61,
+		"payGrade": "bad ip, non member discord id, partial, 10%;cleared",
+		"clan": "493345501429760000",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 610,
+		"clanName": "AstroBastro"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 172,
+		"payGrade": "good ip, suspect discord id, partial, 10%; cleared, monkey",
+		"clan": "493515848493957120",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1726,
+		"clanName": "Jorge"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 312,
+		"payGrade": "bad ip, non member discord id, partial, 10%; cleared",
+		"clan": "493775979508924427",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3122,
+		"clanName": "Balalike"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 55,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "493801655612211211",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 553,
+		"clanName": "elandres"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 45,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "493816489858826240",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 452,
+		"clanName": "meowmeow"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 51,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "494674211806248970",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 510,
+		"clanName": "Origin"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 7,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "495225315371646997",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 70,
+		"clanName": "hoanglien"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 22,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "495237158228066304",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 222,
+		"clanName": "CarlosLezama"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 156,
+		"payGrade": "good ip, non member discord id, partial, 10%;cleared",
+		"clan": "495239265173635073",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1562,
+		"clanName": "ligerzeroo"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 4,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "495403274414063616",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 47,
+		"clanName": "thienha2"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 454,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "495489092918837249",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 4540,
+		"clanName": "SweetDeath"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 37,
+		"payGrade": "good ip, suspect discord id, partial, 10%;cleared",
+		"clan": "495558870278864927",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 375,
+		"clanName": "betania zurita"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 8,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "495781753118785556",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 82,
+		"clanName": "natalia marquez"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 255,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "496789246296719373",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2555,
+		"clanName": "igilina"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 3,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "497236303780511757",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 34,
+		"clanName": "Gargona"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 442,
+		"payGrade": "bad ip, non member discord id, partial, 10%; false positive",
+		"clan": "497430942378360832",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4423,
+		"clanName": "sanmagol"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 75,
+		"payGrade": "good ip, non member discord id, partial, 10%;fixed",
+		"clan": "497521231654944768",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 751,
+		"clanName": "kaka"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 311,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "498896007744978954",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3117,
+		"clanName": "wheelsa"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 113,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "498972561258840075",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 113,
+		"clanName": "KyttaCatt150"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 10,
+		"payGrade": "good ip, non member discord id, partial, 10%;cleared",
+		"clan": "499340856990629894",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 109,
+		"clanName": "mveronica22"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 41,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "499976780220989482",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 418,
+		"clanName": "James Banano"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 30,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "500549327136096261",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 302,
+		"clanName": "donik"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 16,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "500878288802021381",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 165,
+		"clanName": "jopx96hit!"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "501128816496869413",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 2,
+		"clanName": "Sixto69"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 6,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "502381723104051210",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 65,
+		"clanName": "thaomy04"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 390,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "502906897826054144",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3907,
+		"clanName": "shinjo"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 202,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "502911213672595467",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2025,
+		"clanName": "femjoy"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 377,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "502913583752151080",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 3771,
+		"clanName": "lajanga"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 498,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; cleared",
+		"clan": "502916020231733250",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4985,
+		"clanName": "leeroy"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 459,
+		"payGrade": "bad ip, suspect discord id, partial, 10%; cleared",
+		"clan": "502918945087684618",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 4596,
+		"clanName": "castros"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 1,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "503674286733787146",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 13,
+		"clanName": "Bukowski"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "503918749737418755",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 6,
+		"clanName": "karol A."
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 30,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "503965010779701249",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 302,
+		"clanName": "Prack"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 11,
+		"payGrade": "good ip, suspect discord id, partial, 10%; not a robot",
+		"clan": "504052899287138316",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 113,
+		"clanName": "Dj kallled"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 187,
+		"payGrade": "good ip, suspect discord id, partial, 10%; fixed",
+		"clan": "504637003393007626",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1872,
+		"clanName": "melero1"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 4,
+		"payGrade": "bad ip, suspect discord id, partial, 10%",
+		"clan": "504660702930272257",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 49,
+		"clanName": "jhotsy L"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 155,
+		"payGrade": "good ip, non member discord id, partial, 10%; cleared",
+		"clan": "504801302442803224",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1555,
+		"clanName": "huan4432"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 70,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;after",
+		"clan": "505137578681434125",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 702,
+		"clanName": "joseangel5831"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 1,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "505152818341216266",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 10,
+		"clanName": "Tanakatango"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 43,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "505430704046473226",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 434,
+		"clanName": "Jmontilla"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 67,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "505728833727496225",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 676,
+		"clanName": "adamwra10"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 42,
+		"payGrade": "bad ip, non member discord id, partial, 10%; cleared.",
+		"clan": "506011683928408084",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 427,
+		"clanName": "julian"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 120,
+		"payGrade": "good ip, non member discord id, partial, 10%; fixed",
+		"clan": "506476955936227349",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1200,
+		"clanName": "chuntaro18"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 68,
+		"payGrade": "good ip, non member discord id, partial, 10%;solved",
+		"clan": "506500837091049494",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 683,
+		"clanName": "manuelmadron"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 0,
+		"payGrade": "good ip, suspect discord id, partial, 10%",
+		"clan": "506753675214192641",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 4,
+		"clanName": "prvnjs"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 240,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "506877668885528576",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 2405,
+		"clanName": "hoffguy"
+	},
+	{
+		"clanDiscordStatus": "suspects",
+		"bananos": 95,
+		"payGrade": "bad ip, suspect discord id, partial, 10%;cleared",
+		"clan": "506909419917934601",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 957,
+		"clanName": "quatar"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 102,
+		"payGrade": "bad ip, non member discord id, partial, 10%;after",
+		"clan": "507170178996371465",
+		"clanIpBad": true,
+		"isCheater": false,
+		"totalScore": 1020,
+		"clanName": "elfreites"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 60,
+		"payGrade": "good ip, non member discord id, partial, 10%;cleared",
+		"clan": "507211357704421407",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 600,
+		"clanName": "pernuzzy"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 119,
+		"payGrade": "good ip, non member discord id, partial, 10%;cleared",
+		"clan": "507216851202211850",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1191,
+		"clanName": "tongchinh"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 10,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "507217483715969024",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 100,
+		"clanName": "nhocpham"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 26,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "507236982708240384",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 263,
+		"clanName": "Jaxerp"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 0,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "507284585470492704",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 3,
+		"clanName": "bananoperson"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 37,
+		"payGrade": "bad ip, non member discord id, partial, 10%",
+		"clan": "507308053272461319",
+		"clanIpBad": true,
+		"isCheater": true,
+		"totalScore": 371,
+		"clanName": "josefranco"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 53,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "507322380775849994",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 535,
+		"clanName": "shiro38"
+	},
+	{
+		"clanDiscordStatus": "non_members",
+		"bananos": 1,
+		"payGrade": "good ip, non member discord id, partial, 10%",
+		"clan": "507541485499973633",
+		"clanIpBad": false,
+		"isCheater": true,
+		"totalScore": 12,
+		"clanName": "JinetEspinoza"
+	},
+	{
+		"clanDiscordStatus": "citizens",
+		"bananos": 1007,
+		"payGrade": "good ip, citizen, 100%",
+		"clan": "90909125164163072",
+		"clanIpBad": false,
+		"isCheater": false,
+		"totalScore": 1007,
+		"clanName": "MLT"
+	}
+]

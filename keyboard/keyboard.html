@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Big Keyboard</title>
+<link rel="stylesheet" type="text/css" href="keyboard.css">
+<table style="width:100%;height:100%;">
+<tr>
+  <td colspan="3" id="text"></td>
+</tr>
+<tr>
+  <td id="left" onclick="left()"></td>
+  <td id="center" onclick="center()"></td>
+  <td id="right" onclick="right()"></td>
+</tr>
+<tr>
+  <td colspan="1" id="delete" onclick="del()">Delete</td>
+  <td colspan="1" id="space" onclick="space()">Spacebar</td>
+  <td colspan="1" id="clear" onclick="clear()">Clear</td>
+</tr>
+</table>
+</head>
+<body onload="onLoad()">
+  <script>
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let index = 0;
+  let text = '';
+  let leftLetter = '<';
+  let selectedLetter = '';
+  let rightLetter = '>';
+  const onLoad = () => {
+    clear();
+  }
+  const left = () => {
+    index = (index - 1);
+    if(index < 0) {
+      index = alphabet.length-1;
+    }
+    update();
+  }
+  const right = () => {
+    index = (index + 1) % alphabet.length;
+    update();
+  }
+  const center = () => {
+    text += selectedLetter;
+    update();
+  }
+  const space = () => {
+    text += ' ';
+    update();
+  }
+  const clear = () => {
+    text = '';
+    update();
+  }
+  const del = () => {
+    text = text.slice(0,-1);
+    update();
+  }
+  const update = () => {
+    selectedLetter = alphabet.charAt(index);
+    document.getElementById('text').innerText = text;
+    document.getElementById('left').innerText = leftLetter;
+    document.getElementById('center').innerText = selectedLetter;
+    document.getElementById('right').innerText = rightLetter;
+  }
+  </script>
+</body>
+</html>

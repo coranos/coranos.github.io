@@ -1,0 +1,25 @@
+{
+	"wins": 0,
+	"serverVersion": "static",
+	"prefix2": "https://coranos.github.io/banano-finder-images/",
+	"prefix": "https://coranos.github.io/bananos/monkey/m/",
+	"winnerThreshold": 1000,
+	"expected": {
+		"right": "0512857",
+		"left": "0522078"
+	},
+	"totalPayout": 30536,
+	"maxPayout": 2000000,
+	"totalWinners": 0,
+	"accountIsInvalidFlag": false,
+	"time": 0,
+	"slowDownFlag": false,
+	"losses": 0,
+	"maxWinners": 10,
+	"choices": [
+		{
+			"R": "0512857",
+			"L": "0522078"
+		}
+	]
+}

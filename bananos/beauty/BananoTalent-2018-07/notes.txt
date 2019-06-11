@@ -1,0 +1,38 @@
+1	WINNER	WINNER First Place 6 of 11 for @GreatDragonian#2741 
+2	WINNER	WINNER Second Place 6 of 11 for @Andreiniana.junglo#3438
+3	WINNER	WINNER Third Place 6 of 11 for @Rai of Sunshine#7580
+4	WINNER	WINNER Fourth Place 6 of 11 for @Gollo Tattoo 56#5364
+5	WINNER	WINNER Fifth Place 6 of 11 for @todibananin2#8646
+6	WINNER	WINNER Sixth Place 6 of 11 for @Team Junglo Arisbelyz#7758
+7	WINNER	WINNER Seventh Place 6 of 11 for @MariaST#5727
+8	WINNER	WINNER Eigth Place 6 of 11 for @oskita_20#3723
+9	WINNER	WINNER Ninth Place 6 of 11 for @Bananoeira#4382
+10	WINNER	WINNER Tenth Place 6 of 11 for @gruvious#6760
+
+250,000 Banano
+2.5 Nano, 2,500,000
+
+.ban 82500  @SapoDragonian#2741
+?tip 825000 @SapoDragonian#2741
+
+.ban 57500 @Andreiniana.junglo#3438
+?tip 575000 @Andreiniana.junglo#3438
+
+.ban 25000 @Rai of Sunshine#7580
+?tip 250000 @Rai of Sunshine#7580
+
+.ban 20000 @Gollo Tattoo 56#5364
+?tip 200000 @Gollo Tattoo 56#5364
+
+.ban 15000 @todibananin2#8646
+?tip 150000 @todibananin2#8646
+
+.bansplit 25000   @Team Junglo Arisbelyz#7758  @Maria*ST*#5727  @oskita_20#3723  @Bananoeira✌#4382  @gruvious#6760
+?tipsplit 250000 @Team Junglo Arisbelyz#7758  @Maria*ST*#5727  @oskita_20#3723  @Bananoeira✌#4382  @gruvious#6760
+
+10% will be divided among the participants who remain in place 6, 7, 8, 9 and 10, according to the votes.
+
+The remaining 10% of the pot will be divided among the rest of the participants.
+
+.bansplit 25000 @chjpmay1996#4174 @gladiache#4650 @azuLeto#1082 @Blixtann03#5414 @Majoypunto#2112 @IsaVillarroel#5381 @gorillaalbino 👽 Casta94#9474  @IsBemsh👽#0467  @Algiorno Oficial!#8968  @Tefytur.La Exploradora#7742 @Keysil#6623 @Goliad293#6439 @jbrice#2496 @jCristalla#6092 @Deacero1000#3856 @thompsano#8149 @ashleybananin2#2412
+?tipsplit 250000  @chjpmay1996#4174 @gladiache#4650 @azuLeto#1082 @Blixtann03#5414 @Majoypunto#2112 @IsaVillarroel#5381 @gorillaalbino 👽 Casta94#9474  @IsBemsh👽#0467  @Algiorno Oficial!#8968  @Tefytur.La Exploradora#7742 @Keysil#6623 @Goliad293#6439 @jbrice#2496 @jCristalla#6092 @Deacero1000#3856 @thompsano#8149 @ashleybananin2#2412

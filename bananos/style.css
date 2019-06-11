@@ -1,0 +1,38 @@
+.titles {
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.solid_border {
+  border: solid;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+
+.thumbnail {
+  height: 100px;
+  max-width: 100%;
+  float: none;
+  overflow: auto;
+}
+
+.centered_text {
+  text-align: center;
+}
+
+.rules_column {
+  width: 20%;
+  text-align: left;
+  vertical-align: top;
+}
+
+input[type="submit"] {
+	display: none;
+}

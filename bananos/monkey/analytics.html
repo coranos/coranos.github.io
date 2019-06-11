@@ -1,0 +1,125 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+<head>
+<title>Monkey Analytics</title>
+<style type='text/css'>
+.solid_border {
+  border: solid;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+
+.centered_text {
+  text-align: center;
+}
+</style>
+</head>
+<body onload="onLoad();">
+  <table id='accounts' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <script src="../../js-lib/google-tracking.js"></script>
+  <script src='../../js-lib/jquery-3.2.1.js'></script>
+  <script src='../../js-lib/load-json.js'></script>
+  <script src='../../js-lib/json-table.js'></script>
+  <script>
+      callGoogleTracker();
+
+      function onLoad () {
+        jsonTable('#accounts', {
+          head : [ 'Log Ix','Category','Description'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
+        let accountsTableOptions = {};
+        accountsTableOptions.json = [ 'ix', 'category', 'description' ];
+
+        $.ajaxSetup({
+          beforeSend : function (xhr) {
+            if (xhr.overrideMimeType) {
+              xhr.overrideMimeType('application/json');
+            }
+          }
+        });
+
+        $.getJSON('analytics.json', function (results) {
+          const accountsTable = $('#accounts').find('tbody');
+          accountsTable.empty();
+          const accountsResponse = {};
+          accountsResponse.results = [];
+          
+          const pushAccountRow = (category,description) => {
+            const responseRow = {};
+            responseRow.ix = accountsResponse.results.length + 1;
+            responseRow.category = category;
+            responseRow.description = description;
+            accountsResponse.results.push(responseRow);
+          };
+
+          results.min_ts = undefined;
+          results.max_ts = undefined;
+
+          results.analytics.forEach(function(a) {
+          	if(results.min_ts === undefined) {
+        	    results.min_ts = a.first_ts;
+          	} else {
+          	  if(a.first_ts < results.min_ts) {
+          	    results.min_ts = a.first_ts;
+          	  }
+          	}
+          	if(results.max_ts === undefined) {
+        	    results.max_ts = a.last_ts;
+          	} else {
+          	  if(a.last_ts > results.max_ts) {
+          	    results.max_ts = a.last_ts;
+          	  }
+          	}
+          });
+
+          pushAccountRow('Min Ts', results.min_ts);
+          pushAccountRow('Max Ts', results.max_ts);
+          
+          const durationInHoursDiv =  1000 * 60 * 60;
+          pushAccountRow('Max Duration', (results.max_ts - results.min_ts) / durationInHoursDiv);
+
+          results.analytics.forEach(function(a) {
+            a.first_ts = a.last_ts - a.time_statistics.typical_sum;
+            a.first_hour = (a.first_ts - results.min_ts) / durationInHoursDiv;
+            a.last_hour = (a.last_ts - results.min_ts) / durationInHoursDiv;
+          	a.duration = (a.time_statistics.typical_sum) / durationInHoursDiv;
+          });
+
+          results.analytics.sort(function(a0, a1){
+            	return a0.first_ts - a1.first_ts;
+            });
+          
+          for(var accountIx = 0; accountIx < results.analytics.length; accountIx++) {
+            pushAccountRow('Account',
+                ' Discord:' + results.analytics[accountIx].discord 
+                + ' Account:' + results.analytics[accountIx].account 
+                + ' Score:' + results.analytics[accountIx].score
+                + ' First:' + results.analytics[accountIx].first_ts
+                + ' Last:' + results.analytics[accountIx].last_ts
+                + ' Typical:' + results.analytics[accountIx].time_statistics.typical_sum
+                + ' FirstHour:' + results.analytics[accountIx].first_hour
+                + ' Duration:' + results.analytics[accountIx].duration
+                );
+          }
+          
+          First:1528801633453 
+          Last: 1529303455598
+
+          const accountRow = makeRow(accountsResponse, accountsTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          accountsTable.append(accountRow);
+        });
+      }
+    </script>
+</body>
+
+</html>
