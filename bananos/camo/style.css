@@ -1,0 +1,67 @@
+table, tr, td, th, input {
+  border: solid;
+  border-color: RGB(77, 65, 41);
+  color: black;
+  border-width: 1px;
+  font-family: Montserrat;
+}
+
+.text_shadow {
+  text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
+}
+
+.hide {
+  display: none;
+}
+
+table {
+  width: 100%;
+}
+
+iframe {
+  position: relative;
+  height: 65vh;
+  width: 100%;
+}
+
+body {
+  background-color: #aca96c;
+  font-size: 12px;
+}
+
+textarea {
+  color: RGB(51, 67, 46);
+  font-family: monospace, monospace;
+  background-color: olive;
+  font-size: 12px;
+}
+
+input[type=text] {
+  color: RGB(51, 67, 46);
+  font-family: monospace, monospace;
+}
+
+input[type=button] {
+  border-radius: 4px;
+}
+
+input {
+  text-shadow: none;
+  background-color: olive;
+  font-family: Montserrat;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

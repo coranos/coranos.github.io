@@ -1,0 +1,144 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+<style>
+</style>
+<head>
+<title>NEO Network</title>
+</head>
+<body onload="onLoad();">
+	<div id="chart"></div>
+	<div style="background: #FFFFFF; border: solid;">
+		<span id="status"></span>
+	</div>
+	<div style="background: #AA7777">
+		Offline<span id="offline"></span>
+	</div>
+	<table>
+		<tr>
+			<td style="background: #00FF00; vertical-align: top;">Neo<span id="neo"></span>
+			</td>
+			<td style="background: #7777FF; vertical-align: top;">Antshares<span id="antshares"></span>
+			</td>
+		</tr>
+	</table>
+	<script src="../../js-lib/google-tracking.js"></script>
+	<script src="../../js-lib/d3-4.6.0.js"></script>
+	<script src="../../js-lib/topojson.3.0.0.js"></script>
+	<script src="../../js-lib/jquery-3.2.1.js"></script>
+	<script src="../../js-lib/load-json.js"></script>
+	<!-- https://bost.ocks.org/mike/map/ -->
+	<script>
+		callGoogleTracker();
+
+		function onLoad() {
+			var width = 960;
+			var height = 600;
+
+			var svg = d3.select("#chart").append("svg").attr("viewbox", "0 0 " + width + " " + height).attr("width", width).attr("height", height);
+
+			//https://unpkg.com/world-atlas@1/world/110m.json
+			d3.json("world-100m.json", function(error, world) {
+				if (error)
+					return console.error(error);
+
+				svg.append("path").datum(topojson.feature(world, world.objects.countries)).attr("d", d3.geoPath().projection(d3.geoMercator())).attr("style",
+						"fill:#000;stroke:#FFF");
+			});
+
+			var projection = d3.geoMercator();
+
+			function addNodes(nodeTimeArray) {
+
+				let neoLatLong = [];
+				let ansLatLong = [];
+
+				let maxTs = "2000-00-00_00_00";
+
+				let tableStart = "<table style=\"border:solid\">";
+				let tableEnd = "</table>";
+
+				let neoDesc = tableStart;
+				let ansDesc = tableStart;
+
+				let neoIpSet = new Set();
+				let ansIpSet = new Set();
+				let offlineIpSet = new Set();
+
+				for ( var nodeTime in nodeTimeArray) {
+					if (nodeTime.localeCompare(maxTs) > 0) {
+						maxTs = nodeTime;
+					}
+
+					if (nodeTimeArray.hasOwnProperty(nodeTime)) {
+						let nodeArray = nodeTimeArray[nodeTime];
+						for (let ix = 0; ix < nodeArray.length; ix++) {
+							let node = nodeArray[ix];
+							let latitude = node.geoip.latitude;
+							let longitude = node.geoip.longitude;
+							let ip = node.geoip.ip;
+							let desc = "<tr><td style=\"border:solid\">" + ip + "</td><td style=\"border:solid\">" + node.geoip.country_name
+									+ "</td><td style=\"border:solid\">" + node.geoip.region_name + "</td></tr>";
+
+							if (node.error == undefined) {
+								if (node.userAgent.startsWith("/NEO")) {
+									if (!neoIpSet.has(ip)) {
+										neoIpSet.add(ip);
+										neoLatLong.push([ longitude, latitude, "#00FF00", ip ]);
+										neoDesc += desc;
+									}
+								} else {
+									if (!ansIpSet.has(ip)) {
+										ansIpSet.add(ip);
+										ansLatLong.push([ longitude, latitude, "#7777FF", ip ]);
+										ansDesc += desc;
+									}
+								}
+							} else {
+								offlineIpSet.add(ip);
+							}
+						}
+					}
+				}
+
+				neoDesc += tableEnd;
+				ansDesc += tableEnd;
+
+				let latLong = [];
+
+				for (let ix = 0; ix < ansLatLong.length; ix++) {
+					let node = ansLatLong[ix];
+					let ip = node[3];
+					node[3] = undefined;
+					if (!neoIpSet.has(ip)) {
+						latLong.push(node);
+					}
+				}
+				for (let ix = 0; ix < neoLatLong.length; ix++) {
+					let node = neoLatLong[ix];
+					let ip = node[3];
+					node[3] = undefined;
+					latLong.push(node);
+				}
+
+				svg.selectAll("circle").data(latLong).enter().append("circle").attr("cx", function(d) {
+					let p = projection(d);
+					//console.log(d + " -> " + p);
+					return projection(d)[0];
+				}).attr("cy", function(d) {
+					return projection(d)[1];
+				}).attr("r", "2px").attr("fill", function(d) {
+					return d[2]
+				});
+
+				document.getElementById("status").innerHTML = "last update " + maxTs + " Central US Time.";
+				document.getElementById("offline").innerHTML = "&nbsp" + offlineIpSet.size;
+				document.getElementById("neo").innerHTML = "&nbsp" + neoIpSet.size + "&nbsp" + neoDesc;
+				document.getElementById("antshares").innerHTML = "&nbsp" + ansIpSet.size + "&nbsp" + ansDesc;
+			}
+
+			loadJson("timestamped-nodes.json", addNodes);
+		}
+	</script>
+</body>
+</html>

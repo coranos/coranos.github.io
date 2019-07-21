@@ -1,0 +1,21 @@
+sudo mkdir /usr/local/boost
+sudo chmod 777 /usr/local/boost
+export CPLUS_INCLUDE_PATH=/usr/include/python2.7
+
+git clone https://github.com/BananoCoin/banano.git
+cd banano
+sh ci/bootstrap_boost.sh 
+git submodule update --init --recursive
+cmake -DBOOST_ROOT=/usr/local/boost/ -G "Unix Makefiles"
+make
+./bananode --daemon
+
+---
+for bananovault run:
+ng serve --open
+
+for the desktop version run:
+npm run desktop
+
+to build the distro run:
+npm run dist-full  --python=python2.7

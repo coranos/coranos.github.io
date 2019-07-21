@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Address List</title>
+<style type="text/css">
+.solid {
+  border: solid;
+  border-width: 0.5px;
+  text-align: right;
+  font-family: monospace;
+}
+
+form {
+  display: inline;
+}
+</style>
+<script src="../../js-lib/jquery-3.2.1.js"></script>
+<script src="../../js-lib/load-json.js"></script>
+<script src="../../js-lib/json-table.js"></script>
+<script src="../../js-lib/crypto-js.js"></script>
+</head>
+<body onload="onLoad();">
+  <div>
+    <div id="mssg"></div>
+    <form onsubmit="return sortByNeo();">
+      <input type="submit" value="Sort By NEO">
+    </form>
+    <form onsubmit="return sortByGas();">
+      <input type="submit" value="Sort By GAS">
+    </form>
+    <form onsubmit="return sortByGasClaims();">
+      <input type="submit" value="Sort By GAS Claims">
+    </form>
+    <p>
+    <form onsubmit="return loadAddress();">
+      Search For Address<input type="text" name="address" id="address"> <input type="submit" value="Load Address">
+    </form>
+    <p>
+    <form onsubmit="return loadPrevPage();">
+      <input type="submit" value="Load Prev Page">
+    </form>
+    <form onsubmit="return loadRows();">
+      Start Row (Inclusive)<input type="number" name="startRowNbr" id="startRowNbr" min="1"><input type="submit" value="Load Rows">End Row
+      (Inclusive)<input type="number" name="endRowNbr" id="endRowNbr" min="1">
+    </form>
+    <form onsubmit="return loadNextPage();">
+      <input type="submit" value="Load Next Page">
+    </form>
+    <table id="dataTable" class="solid">
+      <thead class="solid">
+      </thead>
+      <tbody class="solid">
+      </tbody>
+    </table>
+  </div>
+  <script src="../../js-lib/google-tracking.js"></script>
+  <script>
+      callGoogleTracker();
+    </script>
+  <script>
+      var tableWorker = new Worker("account-list-worker.js");
+
+      var pageSize = 50;
+      var currIx = 0;
+      var sortField = "NEO";
+
+      function sortByNeo () {
+        sortField = "NEO";
+        clearAndLoadPage();
+        return false;
+      }
+
+      function sortByGasClaims () {
+        sortField = "GAS_CLAIM";
+        clearAndLoadPage();
+        return false;
+      }
+
+      function sortByGas () {
+        sortField = "GAS";
+        clearAndLoadPage();
+        return false;
+      }
+
+      function loadAddress () {
+        var address = document.getElementById("address").value;
+        $("#dataTable").find('tbody').empty();
+
+        var message = {
+          address : address
+        };
+        tableWorker.postMessage(message);
+      }
+
+      function loadRows () {
+        var startNbr = parseInt(document.getElementById("startRowNbr").value);
+        var endNbr = parseInt(document.getElementById("endRowNbr").value);
+
+        //console.log("loadRows " + startNbr + " to " + endNbr);
+
+        if (startNbr < endNbr) {
+          //console.log("loadRows (startNbr < endNbr)");
+          currIx = startNbr - 1;
+          pageSize = endNbr - currIx;
+        } else {
+          //console.log("loadRows (startNbr > endNbr)");
+          currIx = endNbr - 1;
+          pageSize = (startNbr - endNbr) + 1;
+        }
+
+        //console.log("loadRows " + currIx + " pageSize " + pageSize);
+
+        clearAndLoadPage();
+        return false;
+      }
+
+      function setRowNumbers () {
+        document.getElementById("startRowNbr").value = currIx + 1;
+        document.getElementById("endRowNbr").value = currIx + pageSize;
+
+        var url = new URL(window.location);
+        var address = url.searchParams.get("address");
+        if (address != undefined) {
+          document.getElementById("address").value = address;
+        }
+      }
+
+      function clearAndLoadPage () {
+        $("#dataTable").find('tbody').empty();
+
+        var message = {
+          endIx : currIx + pageSize,
+          startIx : currIx,
+          sort : sortField
+        };
+        tableWorker.postMessage(message);
+        setRowNumbers();
+      }
+
+      function loadPrevPage () {
+        if (currIx <= 0) {
+          return false;
+        }
+        currIx -= pageSize;
+        clearAndLoadPage();
+        return false;
+      }
+
+      function loadNextPage () {
+        currIx += pageSize;
+        clearAndLoadPage();
+        return false;
+      }
+
+      tableWorker.onmessage = function (e) {
+        jsonTableCallbackFromWorker("#dataTable", {
+          json : [ 'neoRank', 'gasRank', 'account', 'neo', 'gas', 'neo_running_total', 'neo_percent_of_total', 'gas_running_total', 'gas_percent_of_total',
+              'neo_tx', 'neo_in', 'neo_out', 'gas_tx', 'gas_in', 'gas_out', 'gas_dx', 'neo_dx', 'first_ts', 'last_ts', 'claim_tx', 'claim_tx_rank' ],
+          trClass : "solid",
+          tdClass : "solid",
+          callback : function (data) {
+            $("#mssg").html("Data updated at " + data.date);
+
+            if (data.ix != undefined) {
+              currIx = data.ix;
+              pageSize = 1;
+              setRowNumbers();
+            }
+          },
+          preprocess : function (data) {
+          }
+        }, e.data);
+
+      };
+
+      function onLoad () {
+        var url = new URL(window.location);
+        var address = url.searchParams.get("address");
+        //console.log("onLoad address:" + address);
+        setRowNumbers();
+
+        var numDays = "14";
+
+        jsonTable("#dataTable", {
+          head : [ 'NEO Rank', 'GAS Rank', 'Account', 'NEO', 'GAS', 'NEO Running Total', 'NEO Running Total, Percent', 'GAS Running Total',
+              'GAS Running Total, Percent', 'NEO TX ' + numDays + ' Days', 'NEO In ' + numDays + ' Days', 'NEO Out ' + numDays + ' Days',
+              'GAS TX ' + numDays + ' Days', 'GAS In ' + numDays + ' Days', 'GAS Out ' + numDays + ' Days', 'GAS Diff ' + numDays + ' Days',
+              'NEO Diff ' + numDays + ' Days', "First Timestamp", "Last Timestamp", "GAS Claims", "GAS Claims Rank" ],
+          thClass : "solid",
+          trClass : "solid",
+          sortTable : false
+        });
+
+        tableWorker.postMessage({
+          source : "neo-account-data.json",
+          endIx : pageSize,
+          startIx : currIx,
+          address : address,
+          sort : sortField
+        });
+      };
+    </script>
+</body>
+
+</html>

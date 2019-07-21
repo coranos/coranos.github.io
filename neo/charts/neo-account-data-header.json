@@ -1,0 +1,68 @@
+{
+	"header": [
+		{
+			"label": "Rank",
+			"name": "rank"
+		},
+		{
+			"label": "Account",
+			"name": "account"
+		},
+		{
+			"label": "NEO",
+			"name": "neo"
+		},
+		{
+			"label": "GAS",
+			"name": "gas"
+		},
+		{
+			"label": "NEO Running Total",
+			"name": "neo_running_total"
+		},
+		{
+			"label": "NEO Percent Of Total",
+			"name": "neo_percent_of_total"
+		},
+		{
+			"label": "GAS Running Total",
+			"name": "gas_running_total"
+		},
+		{
+			"label": "GAS Percent Of Total",
+			"name": "gas_percent_of_total"
+		},
+		{
+			"label": "NEO TX 30 Days",
+			"name": "neo_tx"
+		},
+		{
+			"label": "NEO In 30 Days",
+			"name": "neo_in"
+		},
+		{
+			"label": "NEO Out 30 Days",
+			"name": "neo_out"
+		},
+		{
+			"label": "GAS TX 30 Days",
+			"name": "gas_tx"
+		},
+		{
+			"label": "GAS In 30 Days",
+			"name": "gas_in"
+		},
+		{
+			"label": "GAS Out 30 Days",
+			"name": "gas_out"
+		},
+		{
+			"label": "GAS Diff 30 Days",
+			"name": "gas_dx"
+		},
+		{
+			"label": "NEO Diff 30 Days",
+			"name": "neo_dx"
+		}
+	]
+}
