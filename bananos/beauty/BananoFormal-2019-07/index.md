@@ -65,8 +65,8 @@ https://faucet.banano.coranos.io/contest
 | 4          | @ Cristalla#6092                    |
 | 5          | @ SimonCoin#7072                    |
 | 6          | @ /dev/aux#8820                     |
-
-
+| 7          | @ mg#7988                           |
+| 8          | @ ChocolateFudCake#1337             |
 
 # The rules would be:      
 # (ES) Las reglas serían:       
