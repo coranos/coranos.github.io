@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Sketch</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onload="onLoad()">
+
+  <div id="log" class="h_centered highlighted centered monospace">
+    <h1>Sketchy Stuff</h1>
+    <button onclick="return undo()">undo</button>
+    <hr>
+    <canvas id="sketchpad" width="500" height="500"></canvas>
+  </div>
+  <script src="/js-lib/atrament.min.js" async defer></script>
+  <script>
+    const globalStrokeRecord = [];
+    let sketchpad;
+
+    const onLoad = () => {
+      const canvas = document.querySelector('#sketchpad');
+      sketchpad = new Atrament(canvas);
+      sketchpad.recordStrokes = true;
+      sketchpad.addEventListener('strokerecorded', record);
+    }
+
+    const record = (stroke) => {
+      if (stroke.stroke.points.length > 1) {
+        console.info('STARTED record', globalStrokeRecord.length, stroke.stroke);
+        globalStrokeRecord.push(stroke.stroke);
+        console.info('SUCCESS record');
+      }
+    }
+
+    const undo = () => {
+      console.info('STARTED undo', globalStrokeRecord.length);
+      const localStrokeRecord = [...globalStrokeRecord];
+      globalStrokeRecord.length = 0;
+      sketchpad.clear();
+      sketchpad.recordStrokes = true;
+      localStrokeRecord.forEach((stroke, strokeIx) => {
+        console.info('INTERIM undo', strokeIx, localStrokeRecord.length, stroke);
+        if (strokeIx != (localStrokeRecord.length) - 1) {
+          sketchpad.weight = parseFloat(stroke.weight);
+          if (stroke.opacity) {
+            sketchpad.opacity = parseFloat(stroke.opacity);
+          } else {
+            sketchpad.opacity = undefined;
+          }
+          sketchpad.smoothing = parseFloat(stroke.smoothing);
+          sketchpad.color = stroke.color;
+          sketchpad.adaptiveStroke = stroke.adaptiveStroke;
+          const points = stroke.points.slice();
+
+          const firstPoint = points.shift();
+          // beginStroke moves the "pen" to the given position and starts the path
+          sketchpad.beginStroke(firstPoint.x, firstPoint.y);
+
+          let prevPoint = firstPoint;
+          while (points.length > 0) {
+            const point = points.shift();
+
+            // the `draw` method accepts the current real coordinates
+            // (i. e. actual cursor position), and the previous processed (filtered)
+            // position. It returns an object with the current processed position.
+            const {
+              x,
+              y
+            } = sketchpad.draw(point.x, point.y, prevPoint.x, prevPoint.y);
+
+            // the processed position is the one where the line is actually drawn to
+            // so we have to store it and pass it to `draw` in the next step
+            prevPoint = {
+              x,
+              y
+            };
+          }
+
+          // endStroke closes the path
+          sketchpad.endStroke(prevPoint.x, prevPoint.y);
+        }
+      })
+      console.info('SUCCESS undo', localStrokeRecord.length);
+    }
+  </script>
+</body>
+
+</html>

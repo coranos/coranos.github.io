@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Payments</title>
+</head>
+
+<body>
+  <div id="payments">
+  </div>
+  <script>
+    const paymentList = [{
+    ];
+
+    const addPaymentUrls = () => {
+      const paymentsDiv = document.getElementById('payments');
+      paymentList.forEach((payment) => {
+        const a = document.createElement('a');
+        a.target = `_blank`;
+        a.title = `pay ${payment.amount} to ${payment.account}`
+        a.href = `https://vault.banano.cc/send?to=${payment.account}&amount=${payment.amount}`;
+        paymentsDiv.appendChild(a);
+        a.appendChild(document.createTextNode(a.title));
+        paymentsDiv.appendChild(document.createElement('br'));
+      })
+    }
+
+    addPaymentUrls();
+  </script>
+</body>
+
+</html>

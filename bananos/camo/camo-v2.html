@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Camo</title>
+  <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+
+<body onLoad="onLoad();">
+  <form action="." method="get" onsubmit="return submitForm();">
+    <table>
+      <tr>
+        <td colspan="2">
+          <h1>Camo v2</h1>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>
+          <h3>Encrypt A Value</h3>
+          <p>
+            How many bananos does the source account have?<br>
+            Source Previous Bananos: <input id="src_ban_amount" name="src_ban_amount" value="" size="64" type="number">
+          </p>
+          <p>
+            How many bananos does the destination account have?<br>
+            Destination Previous Bananos: <input id="dest_ban_amount" name="dest_ban_amount" value="" size="64" type="number">
+          </p>
+          <p>
+            How many banano do you want to send?<br>
+            Destination Next Bananos: <input id="ban_tx_amount" name="ban_tx_amount" value="" size="64" type="number">
+          </p>
+          <p><input value="Encrypt Amounts" type="button" onclick='return encryptBananos();'>
+          </p>
+          <p>
+            How many bananos does the source account have?<br>
+            Encrypted Source Previous Bananos:
+            <input id="enc_src_prev_amount" name="enc_src_prev_amount" value="" size="64" type="number">
+          </p>
+          <p>
+            How many bananos does the destination account have?<br>
+            Encrypted Destination Previous Bananos:
+            <input id="enc_dest_prev_amount" name="enc_dest_prev_amount" value="" size="64" type="number">
+          </p>
+          <p>
+            How many banano do you want to send?<br>
+            Encrypted Destination Next Bananos:
+            <input id="enc_dest_next_amount" name="enc_dest_next_amount" value="" size="64" type="number">
+          </p>
+          <p>
+            Is the transaction valid?<br>
+            <textarea id="enc_notes" rows="10" cols="128">
+            </textarea>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <script src='camo.js'></script>
+  <script src='../../js-lib/nacl.js'></script>
+  <script src='../../js-lib/blake2b.js'></script>
+  <script src='../../js-lib/banano.js'></script>
+  <script>
+    const encrypt = (src_value, dest_elt) => {
+      dest_elt.value = src_value;
+    }
+
+    const validate = (enc_src_prev_amount, enc_dest_prev_amount, enc_dest_next_amount) => {
+      const enc_notes_elt = document.getElementById('enc_notes');
+      enc_notes_elt.value = new Date().toISOString() + '\n';
+
+      // cannot send more than you have.
+      const ban_tx_amount = enc_dest_next_amount - enc_dest_prev_amount;
+      if (ban_tx_amount > enc_src_prev_amount) {
+        enc_notes_elt.value += `Error, cannot send '${ban_tx_amount}'` +
+          ` as it is more than source '${enc_src_prev_amount}'.\n`;
+      } else {
+        enc_notes_elt.value += `Check Passed, tx amount '${ban_tx_amount}'` +
+          ` is less than or equal to source amount '${enc_src_prev_amount}'.\n`;
+      }
+    }
+
+    const encryptBananos = () => {
+      const src_ban_amount_elt = document.getElementById('src_ban_amount');
+      const dest_ban_amount_elt = document.getElementById('dest_ban_amount');
+      const ban_tx_amount_elt = document.getElementById('ban_tx_amount');
+      const enc_src_prev_amount_elt = document.getElementById('enc_src_prev_amount');
+      const enc_dest_prev_amount_elt = document.getElementById('enc_dest_prev_amount');
+      const enc_dest_next_amount_elt = document.getElementById('enc_dest_next_amount');
+
+      const src_ban_amount = parseInt(src_ban_amount_elt.value);
+      const dest_ban_amount = parseInt(dest_ban_amount_elt.value);
+      const ban_tx_amount = parseInt(ban_tx_amount_elt.value);
+
+      encrypt(src_ban_amount, enc_src_prev_amount_elt);
+      encrypt(dest_ban_amount, enc_dest_prev_amount_elt);
+
+      const dest_next_amount = dest_ban_amount + ban_tx_amount;
+      encrypt(dest_next_amount, enc_dest_next_amount_elt);
+
+      validate(enc_src_prev_amount_elt.value,
+        enc_dest_prev_amount_elt.value,
+        enc_dest_next_amount_elt.value);
+
+      return false;
+    }
+
+    const onLoad = () => {
+
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+<style>
+</style>
+<head>
+<title>Monkey Network</title>
+</head>
+<body onload="onLoad();">
+  <object id="svg" style="background-color: white; width: 100%; height: 100%;" type="image/svg+xml" data="world.svg.xml"> </object>
+  <script src="../../js-lib/google-tracking.js"></script>
+  <script src="../../js-lib/d3-4.6.0.js"></script>
+  <script src="../../js-lib/jquery-3.2.1.js"></script>
+  <script src="../../js-lib/load-json.js"></script>
+  <!-- https://bost.ocks.org/mike/map/ -->
+  <script>
+      callGoogleTracker();
+
+      function onLoad () {
+        function fillChildren(g,color) {
+        	for(let i = 0; i < g.children.length; i++) {
+        	  	g.children[i].style.fill = color;
+        	}
+        	for(let i = 0; i < g.children.length; i++) {
+        	  fillChildren(g.children[i],color);
+        	}
+        }
+        function addNodes (nodeArrayWrapper) {
+          const nodeArray = nodeArrayWrapper.analytics;
+
+          const ipCountByCountry = {};
+          const scoreByCountry = {};
+          
+          for (let ix = 0; ix < nodeArray.length; ix++) {
+            const node = nodeArray[ix];
+            if (node.score <= 0) {
+              node.score = 1;
+            }
+            const score = node.score;
+            if(node.last_geo_ip.country_code != undefined) {
+              const country = node.last_geo_ip.country_code.toLowerCase();
+              
+              if (scoreByCountry[country] == undefined) {
+                scoreByCountry[country] = 0;
+              }
+              scoreByCountry[country] += score;
+              
+              if (ipCountByCountry[country] == undefined) {
+                ipCountByCountry[country] = 0;
+              }
+              ipCountByCountry[country]++;
+            }
+          }
+
+          let maxScore = 1;
+          for (const [country, score] of Object.entries(scoreByCountry)) {
+            if(Math.log(score) > maxScore) {
+              maxScore = Math.log(score);
+            }
+          }
+          
+          //const lowColor = [0xFF,0x00,0xFF];
+          //const highColor = [0xFF,0xFF,0x00];
+          
+          var svg = document.getElementById('svg');
+          var svgDoc = svg.contentDocument;
+          for (const [country, score] of Object.entries(scoreByCountry)) {
+            var countryG = svgDoc.getElementById(country);
+            var ipCount = ipCountByCountry[country];
+			const logScore = Math.log(score) / maxScore;
+            const g = (logScore * (255 - 0)) + 0;
+            //console.log('country score',country,score,logScore,g);
+
+            const color = 'rgb('+ 0 +',' + g + ','+ 0 +')';
+            countryG.style.fill = color;
+            countryG.children[0].innerHTML='Total Score:' + score + ' Ip Count:' + ipCount;
+            fillChildren(countryG,color);
+          }
+        }
+
+        loadJson('analytics.json', addNodes);
+      }
+    </script>
+</body>
+</html>

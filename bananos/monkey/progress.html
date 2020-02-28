@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Monkey Progress</title>
+<style>
+.solid_border {
+  border: solid;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+
+.centered_text {
+  text-align: center;
+}
+</style>
+</head>
+<body onload="onLoad();">
+  <div id="progress"></div>
+  <script src="../../js-lib/google-tracking.js"></script>
+  <script src="../../js-lib/d3-4.6.0.js"></script>
+  <script src="progress.js"></script>
+  <script>
+      callGoogleTracker();
+
+      const width = window.innerWidth - 20;
+      const height = window.innerHeight - 20;
+      const url = 'progress.json';
+      function onLoad () {
+        loadChart();
+      }
+    </script>
+</body>
+</html>

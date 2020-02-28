@@ -1,0 +1,16 @@
+table, tr, td, th {
+  border: solid;
+  border-color: black;
+  border-width: 0.5;
+  font-size: 2em;
+  font-family: monospace;
+  width:33%;
+}
+
+tr {
+  height: 30vh;
+}
+
+#space {
+  text-align:center;
+}

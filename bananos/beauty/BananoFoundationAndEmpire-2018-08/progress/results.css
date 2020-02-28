@@ -1,0 +1,10 @@
+.small_image {
+  height: 100px;
+  width: 100px;
+}
+
+table, tr, td, th {
+  border: solid;
+  border-width: 0.5px;
+  font-family: monospace;
+}

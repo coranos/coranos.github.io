@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Banano Folding Headless</title>
+</head>
+
+<body>
+  <h1>Banano Folding Headless Client</h1>
+  <h2>Folding Guide</h2>
+  <p>
+    This walkthrough is based on the guide on the folding at home webpage, modified slightly for banano.
+  </p>
+  <ol>
+    <li> First, get a username for you wallet at the banano miner website:</li>
+    <p>
+      <a target="_blank" href="https://bananominer.com" />https://bananominer.com</a>
+    </p>
+    <p>
+      remember both the user name and the team id.
+    </p>
+    <li>Second, get a passkey from the folding at home site:</li>
+    <p>
+      <b>The user name you put into the passcode form needs to be the banano user
+        from https://bananominer.com, not your discord username, or any other name.</b>
+    </p>
+    <p>
+      <b>Only the banano user from https://bananominer.com</b>
+    </p>
+    <p>
+      <b>Otherwise your score will not count.</b>
+    </p>
+    <p>
+      <a target="_blank" href="https://apps.foldingathome.org/getpasskey">https://apps.foldingathome.org/getpasskey</a>
+    </p>
+    <p>
+      <b>If you put in the wrong name and need to redo it, there's a four hour wait per email address. So be careful.</b>
+    </p>
+    <p>
+      This increases your score.
+    </p>
+    <li>follow the below guide:</li>
+    <p>
+      <a target="_blank" href="https://foldingathome.org/support/faq/installation-guides/linux/">https://foldingathome.org/support/faq/installation-guides/linux/</a>
+    </p>
+    Which is basically these two commands:
+    <p>
+      <code>
+        wget download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.5/fahclient_7.5.1_amd64.deb
+        <br>
+        sudo dpkg -i --force-depends fahclient_7.5.1_amd64.deb
+      </code>
+    </p>
+    <p> Then follow the onscreen prompts: </p>
+    <p> enter user name </p>
+    <p> enter team number </p>
+    <p> enter passkey </p>
+    <p> auostart or no </p>
+    <code>
+      <p>sudo /etc/init.d/FAHClient help </p>
+    </code>
+  </ol>
+
+  <h2>common special cases</h2>
+
+  <ol>
+    <li>subprocess installed post-installation script returned error exit status 1</li>
+    <p>
+      <a target="_blank" href="https://foldingforum.org/viewtopic.php?p=287334#p287334">https://foldingforum.org/viewtopic.php?p=287334#p287334</a>
+    </p>
+    <code>
+      <p>
+        sudo ln -s /usr/lib/python2.7 /usr/lib/python2.6
+      </p>
+    </code>0
+    <li>granting remote web access</li>
+    <p>
+      <a target="_blank" href="https://www.iceflatline.com/2017/12/install-and-configure-foldinghome-on-ubuntu-server/">
+        granting remote web access</a>
+    </p>
+    <p>
+      Which is basically adding these two lines to the config file <code>/etc/fahclient/config.xml</code>:
+    </p>
+    <p>
+      Also remember you are adding your client computer's IP to the config, not the server's ip.
+    </p>
+    <p>
+      <code>
+        &lt;allow&gt;192.168.10.100&lt;/allow&gt;<br>
+        &lt;web-allow&gt;192.168.10.100&lt;/web-allow&gt;<br>
+      </code>
+      <li>folding anonymously</li>
+      <p>
+        If it turns out your are folding anonymously, change this foag in the config file:<code>&lt;fold-anon v='false'/&gt;</code>
+      </p>
+  </ol>
+</body>
+
+</html>

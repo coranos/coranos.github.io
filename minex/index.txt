@@ -1,0 +1,3 @@
+to make the app:
+
+make clean;make load COIN=minex

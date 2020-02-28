@@ -1,0 +1,63 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+
+<head>
+<title>Banano Finder</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body onload="onLoad();">
+  <p>Objective: Make a game that shows two graphs, each of which is a undirected planar graph of maximum degree three.</p>
+  <p>One graph will contain a hamiltonian cycle that forms the picture of a banana.</p>
+  <p>We discovered that a banana with a spike is not really sufficient, you need to have a banana with one spike that is another banana, and a second spike
+    that is not a banana.</p>
+  <p>The other graph will not contain a hamiltonian cycle.</p>
+  <table>
+    <tr>
+      <th class="solid_border centered_text">Good</th>
+      <th class="solid_border centered_text">Bad</th>
+      <th class="solid_border centered_text">Total</th>
+    </tr>
+    <tr>
+      <td class="solid_border centered_text" id="goodScore">0</td>
+      <td class="solid_border centered_text" id="badScore">0</td>
+      <td class="solid_border centered_text" id="totalScore">0</td>
+    </tr>
+  </table>
+  <div id="slowDownFlag">
+    <p>
+      <b>Slow down, you submitted to quickly and your entry was not counted.</b>
+    </p>
+  </div>
+  <form>
+    <div style="width: 600px">
+      <div id="hasAccountFlagYes">
+        <p>
+          <b>Account: ${account}</b> <input id="account" type="hidden" name="account" value="${account}" />
+        </p>
+      </div>
+      <div id="hasAccountFlagNo">
+        <p>
+          <b>Please enter a bananos account, then click on the matching monkey.</b>
+        </p>
+        <input id="account" type="text" name="account" value="" size="64" />
+      </div>
+      <div style="width: 800; height: 800;" id="game"></div>
+  </form>
+  <script src='../../js-lib/jquery-3.2.1.js'></script>
+  <script src="../../js-lib/d3-4.6.0.js"></script>
+  <script src='banano.js'></script>
+  <script>
+      function onLoad () {
+        const options = {
+          'gameSelector' : '#game',
+          'goodScoreSelector' : '#goodScore',
+          'badScoreSelector' : '#badScore',
+          'totalScoreSelector' : '#totalScore',
+          'numberOfGames' : 16
+        };
+        makeGame(options);
+      }
+    </script>
+</body>
+</html>
