@@ -9,18 +9,66 @@
 <body>
   <h1>Bananojs Account</h1>
   <div id="response"></div>
-  <script src="bundle.js"></script>
+  <script>
+    const require = (modname) => {
+      const module = requireRaw(modname);
+      if (module) {
+        return module;
+      } else {
+        throw Error(`undefined module:'${modname}'`);
+      }
+    }
+    const requireRaw = (modname) => {
+      if (modname == './banano-util.js') {
+        return window.bananoUtil;
+      }
+      if (modname == './app/scripts/banano-util.js') {
+        return window.bananoUtil;
+      }
+      if (modname == './app/scripts/bananode-api.js') {
+        return window.bananodeApi;
+      }
+      if (modname == './app/scripts/camo-util.js') {
+        return window.camoUtil;
+      }
+      if (modname == './app/scripts/deposit-util.js') {
+        return window.depositUtil;
+      }
+      if (modname == './app/scripts/withdraw-util.js') {
+        return window.withdrawUtil;
+      }
+      if (modname == './app/scripts/logging-util.js') {
+        return window.loggingUtil;
+      }
+      if (modname == '../../libraries/tweetnacl/nacl.js') {
+        return window.nacl;
+      }
+      if (modname == 'blakejs') {
+        return window.blakejs;
+      }
+      if (modname == './blake2bUtil') {
+        return window.blake2bUtil;
+      }
+      if (window[modname]) {
+        return window[modname];
+      } else {
+        throw Error(`unknown module:'${modname}'`);
+      }
+    }
+    window.https = {};
+  </script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/libraries/blake2b/blake2b-util.js"></script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/libraries/blake2b/blake2b.js"></script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/libraries/tweetnacl/nacl.js"></script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/app/scripts/bananode-api.js"></script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/app/scripts/logging-util.js"></script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/app/scripts/sleep-util.js"></script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/app/scripts/banano-util.js"></script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/app/scripts/deposit-util.js"></script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/app/scripts/withdraw-util.js"></script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/camo-util.js"></script>
+  <script src="https://raw.githubusercontent.com/BananoCoin/bananojs/master/index.js"></script>
+  <script src="main.js"></script>
 </body>
-<script>
-  window.require = require;
-  const bananojs = require('@bananocoin/bananojs');
-  bananojs.setBananodeApiUrl('https://kaliumapi.appditto.com/api');
 
-  const crypto = require('crypto');
-  const seed = crypto.randomBytes(32).toString('hex');
-  const privateKey = bananojs.getPrivateKey(seed, 0);
-  const publicKey = bananojs.getPublicKey(privateKey);
-  const account = bananojs.getAccount(publicKey);
-  window.getElementById('response').innerText = account;
-</script>
 </html>
