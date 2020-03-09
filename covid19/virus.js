@@ -225,19 +225,16 @@ const onLoad = async () => {
 
   Object.keys(countryChartDataMap).forEach((country) => {
     const chartData = countryChartDataMap[country];
-    let continueShift = true;
-    while (continueShift) {
-      if (chartData.datasets[0].data.length == 0) {
-        continueShift = false;
-      } else {
-        if (chartData.datasets[0].data[0] == 0) {
-          chartData.datasets[0].data.shift();
-          chartData.labels.shift();
-        } else {
-          continueShift = false;
-        }
+    const newLabels = [];
+    const newData = [];
+    for (let ix = 0; ix < chartData.labels.length; ix++) {
+      if (chartData.datasets[0].data[ix] !== 0) {
+        newLabels.push(chartData.labels[ix]);
+        newData.push(chartData.datasets[0].data[ix]);
       }
     }
+    chartData.labels = newLabels;
+    chartData.datasets[0].data = newData;
   });
 
   const virusChartElt = document.querySelector('#virusChart');
