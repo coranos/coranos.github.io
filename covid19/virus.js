@@ -123,6 +123,9 @@ const onLoad = async () => {
     const longitude = cols.shift();
     recoveredColsByLabel[label] = cols;
   });
+
+  const countryChartDataMap = {};
+
   // console.log(rows.length)
   const labels = [];
   confirmedRows.forEach((cols, rowIx) => {
@@ -144,18 +147,37 @@ const onLoad = async () => {
         });
       }
 
-      const chartData = [];
-      chartData.labels = [];
-      chartData.datasets = [];
-      const dataSet = {};
-      dataSet.label = label;
-      dataSet.data = [];
-      dataSet.borderColor = '#777';
-      dataSet.backgroundColor = '#FFF';
-      dataSet.steppedLine = false;
-      dataSet.fill = false;
-      dataSet.type = 'line';
-      dataSet.yAxisID = 'cases';
+      const newChartData = (_label) => {
+        const chartData = [];
+        chartData.labels = [];
+        chartData.datasets = [];
+
+        const dataSet = {};
+        dataSet.label = _label;
+        dataSet.data = [];
+        dataSet.borderColor = '#777';
+        dataSet.backgroundColor = '#FFF';
+        dataSet.steppedLine = false;
+        dataSet.fill = false;
+        dataSet.type = 'line';
+        dataSet.yAxisID = 'cases';
+        chartData.datasets.push(dataSet);
+
+        return chartData;
+      };
+      const chartData = newChartData(label);
+
+      let countryChartData;
+
+      if ((state.length > 0) && (country != 'Country/Region')) {
+        if (!countryChartDataMap[country]) {
+          // console.log('adding country', country);
+          countryChartData= newChartData(country);
+          countryChartDataMap[country] = countryChartData;
+          chartDatas.push(countryChartData);
+        }
+        countryChartData = countryChartDataMap[country];
+      }
 
       let prev = 0;
       let started = false;
@@ -169,24 +191,51 @@ const onLoad = async () => {
           if (curr !== 0) {
             if (!started) {
               chartData.labels.push(labels[colIx-1]);
-              dataSet.data.push(0);
+              chartData.datasets[0].data.push(0);
             }
             started = true;
           }
+          const diff = (curr - prev);
+
+          if (countryChartData) {
+            while (countryChartData.labels.length < colIx) {
+              countryChartData.labels.push(labels[colIx]);
+            }
+            while (countryChartData.datasets[0].data.length <= colIx) {
+              countryChartData.datasets[0].data.push(0);
+            }
+            countryChartData.datasets[0].data[colIx] += diff;
+          }
+
           if (started) {
-            const diff = (curr - prev);
             // console.log(label, rowIx, colIx, 'c:', confirmed, 'r:', recovered, 'd:', dead, 'diff:', diff);
             if (diff !== 0) {
               chartData.labels.push(labels[colIx]);
-              dataSet.data.push(diff);
+              chartData.datasets[0].data.push(diff);
             }
             prev = curr;
           }
         }
       });
-      if (dataSet.data.length > 0) {
+      if (chartData.datasets[0].data.length > 0) {
         chartDatas.push(chartData);
-        chartData.datasets.push(dataSet);
+      }
+    }
+  });
+
+  Object.keys(countryChartDataMap).forEach((country) => {
+    const chartData = countryChartDataMap[country];
+    let continueShift = true;
+    while (continueShift) {
+      if (chartData.datasets[0].data.length < 2) {
+        continueShift = false;
+      } else {
+        if ((chartData.datasets[0].data[0] == 0) && (chartData.datasets[0].data[2] == 0)) {
+          chartData.datasets[0].data.shift();
+          chartData.labels.shift();
+        } else {
+          continueShift = false;
+        }
       }
     }
   });
