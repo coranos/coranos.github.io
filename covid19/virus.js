@@ -127,6 +127,9 @@ const onLoad = async () => {
   let virusChartHTML = '';
   chartDatas.forEach((chartData, ix) => {
     // virusChartHTML += '<div style="position: relative; height:64vh; width:64vw">';
+    virusChartHTML += '<h1>';
+    virusChartHTML += chartData.datasets[0].label;
+    virusChartHTML += '</h1>';
     virusChartHTML += `<canvas id="virusCanvas${ix}" class="w100pct"></canvas>`;
     // virusChartHTML += '</div>';
   });
