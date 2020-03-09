@@ -11,7 +11,7 @@ const getChartConfig = (chartData) => {
         position: 'top',
         display: true,
       },
-      responsive: true,
+      responsive: false,
       maintainAspectRatio: false,
       animation: {
         duration: 0,
@@ -126,9 +126,9 @@ const onLoad = async () => {
   const virusChartElt = document.querySelector('#virusChart');
   let virusChartHTML = '';
   chartDatas.forEach((chartData, ix) => {
-    virusChartHTML += '<div style="position: relative; height:64vh; width:64vw">';
-    virusChartHTML += `<canvas id="virusCanvas${ix}"></canvas>`;
-    virusChartHTML += '</div>';
+    // virusChartHTML += '<div style="position: relative; height:64vh; width:64vw">';
+    virusChartHTML += `<canvas id="virusCanvas${ix}" class="w100pct"></canvas>`;
+    // virusChartHTML += '</div>';
   });
   virusChartElt.innerHTML = virusChartHTML;
   chartDatas.forEach((chartData, ix) => {
