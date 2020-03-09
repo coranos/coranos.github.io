@@ -104,8 +104,8 @@ const onLoad = async () => {
       const dataSet = {};
       dataSet.label = state + ':' + country;
       dataSet.data = [];
-      dataSet.borderColor = '#FFF';
-      dataSet.backgroundColor = '#000';
+      dataSet.borderColor = '#777';
+      dataSet.backgroundColor = '#FFF';
       dataSet.steppedLine = false;
       dataSet.fill = false;
       dataSet.type = 'line';
