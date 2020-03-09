@@ -227,10 +227,10 @@ const onLoad = async () => {
     const chartData = countryChartDataMap[country];
     let continueShift = true;
     while (continueShift) {
-      if (chartData.datasets[0].data.length < 2) {
+      if (chartData.datasets[0].data.length == 0) {
         continueShift = false;
       } else {
-        if ((chartData.datasets[0].data[0] == 0) && (chartData.datasets[0].data[2] == 0)) {
+        if (chartData.datasets[0].data[0] == 0) {
           chartData.datasets[0].data.shift();
           chartData.labels.shift();
         } else {
