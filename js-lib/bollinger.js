@@ -55,7 +55,7 @@ function getBollinger (movingAverageData, standardDeviationData, stdevScale) {
     bollingers.push(0);
   }
   for (let dataIx = 0; dataIx < movingAverageData.length; dataIx++) {
-    bollingers[dataIx] = movingAverageData[dataIx] + (standardDeviationData[dataIx] * stdevScale);
+    bollingers[dataIx] = (movingAverageData[dataIx] + (standardDeviationData[dataIx] * stdevScale)).toFixed(3);
   }
   return bollingers;
 }
