@@ -166,13 +166,15 @@ const onLoad = async () => {
         return chartData;
       };
       const chartData = newChartData(label);
+      chartData.cols = cols;
 
       let countryChartData;
 
       if ((state.length > 0) && (country != 'Country/Region')) {
         if (!countryChartDataMap[country]) {
           // console.log('adding country', country);
-          countryChartData= newChartData(country);
+          countryChartData = newChartData(country);
+          countryChartData.cols = [];
           countryChartDataMap[country] = countryChartData;
           chartDatas.push(countryChartData);
         }
@@ -208,14 +210,18 @@ const onLoad = async () => {
                 countryChartData.datasets[0].data.push(0);
               }
               countryChartData.datasets[0].data[colIx] += diff;
+              while (countryChartData.cols.length <= colIx) {
+                countryChartData.cols.push('0');
+              }
+              countryChartData.cols[colIx] = (parseInt(countryChartData.cols[colIx]) + confirmed).toFixed(0);
             }
 
             if (started) {
               // console.log(label, rowIx, colIx, 'col:', col, 'c:', confirmed, 'r:', recovered, 'd:', dead, 'diff:', diff);
-              if (diff !== 0) {
-                chartData.labels.push(labels[colIx]);
-                chartData.datasets[0].data.push(diff);
-              }
+              // if (diff !== 0) {
+              chartData.labels.push(labels[colIx]);
+              chartData.datasets[0].data.push(diff);
+              // }
               prev = curr;
             }
           }
@@ -231,12 +237,19 @@ const onLoad = async () => {
     const chartData = countryChartDataMap[country];
     const newLabels = [];
     const newData = [];
+    const newCols = [];
+    let started = false;
     for (let ix = 0; ix < chartData.labels.length; ix++) {
       if (chartData.datasets[0].data[ix] !== 0) {
+        started = true;
+      }
+      if (started) {
         newLabels.push(chartData.labels[ix]);
         newData.push(chartData.datasets[0].data[ix]);
+        newCols.push(chartData.cols[ix]);
       }
     }
+    chartData.cols = newCols;
     chartData.labels = newLabels;
     chartData.datasets[0].data = newData;
   });
@@ -246,6 +259,136 @@ const onLoad = async () => {
   const getValue = (chartData) => {
     return chartData.datasets[0].data[chartData.datasets[0].data.length-1];
   };
+
+  const benfordsLawPct = [
+    [
+      '',
+      '0.301',
+      '0.176',
+      '0.125',
+      '0.097',
+      '0.079',
+      '0.067',
+      '0.058',
+      '0.051',
+      '0.046',
+    ],
+    [
+      '0.120',
+      '0.114',
+      '0.109',
+      '0.104',
+      '0.100',
+      '0.097',
+      '0.093',
+      '0.090',
+      '0.088',
+      '0.085',
+    ],
+    [
+      '0.102',
+      '0.101',
+      '0.101',
+      '0.101',
+      '0.100',
+      '0.100',
+      '0.099',
+      '0.099',
+      '0.099',
+      '0.098',
+    ],
+  ];
+
+  const getBenfordsLawTable = (data) => {
+    if (!data) {
+      return '';
+    }
+    let maxLen = 0;
+    const table = {};
+    const totalTable = {};
+    data.forEach((value) => {
+      if (parseInt(value) !== 0) {
+        const digits = parseInt(value).toFixed(0).split('');
+        maxLen = Math.max(maxLen, digits.length);
+        digits.forEach((digit, digitIx) => {
+          if (table[digitIx] == undefined) {
+            table[digitIx] = {};
+          }
+          if (totalTable[digitIx] == undefined) {
+            totalTable[digitIx] = 0;
+          }
+          if (table[digitIx][digit] == undefined) {
+            table[digitIx][digit] = 0;
+          }
+          totalTable[digitIx]++;
+          table[digitIx][digit]++;
+        });
+      }
+      // console.log('value', value, 'digits', digits);
+    });
+    let html = '';
+    html += '<table>';
+    html += '<tr>';
+    html += '<td>';
+    html += 'Digit';
+    html += '</td>';
+    for (let digitIx = 0; digitIx < maxLen; digitIx++) {
+      html += '<td>';
+      if (digitIx == 0) {
+        html += '1st';
+      } else if (digitIx == 1) {
+        html += '2nd';
+      } else if (digitIx == 2) {
+        html += '3rd';
+      } else {
+        html += digitIx+1;
+        html += 'th';
+      }
+      html += '</td>';
+    }
+    // for (let i = 0; i < 10; i++) {
+    //   html += '<td>';
+    //   html += i;
+    //   html += '</td>';
+    // }
+    html += '</tr>';
+    for (let digit = 0; digit < 10; digit++) {
+      html += '<tr>';
+      html += '<td>';
+      html += digit;
+      html += '</td>';
+      for (let digitIx = 0; digitIx < maxLen; digitIx++) {
+        html += '<td>';
+        const value = table[digitIx][digit];
+        if (value !== undefined) {
+          const valuePct = (value/totalTable[digitIx]).toFixed(1);
+          let expectedValuePct;
+          if (digitIx >= benfordsLawPct.length) {
+            expectedValuePct = '0.1';
+          } else {
+            expectedValuePct = parseFloat(benfordsLawPct[digitIx][digit]).toFixed(1);
+          }
+          html += value;
+          html += '&nbsp;';
+
+          if (Math.abs(valuePct - expectedValuePct) <= 0.2) {
+            html += '<span>';
+            html += `${valuePct}~=${expectedValuePct}`;
+            html += '</span>';
+          } else {
+            html += '<span style="background:pink;">';
+            html += `${valuePct}!=${expectedValuePct}`;
+            html += '</span>';
+          }
+        }
+        html += '</td>';
+      }
+      html += '</tr>';
+    }
+    html += '</table>';
+    return html;
+  };
+
   chartDatas.sort((chartData0, chartData1) => {
     const value0 = getValue(chartData0);
     const value1 = getValue(chartData1);
@@ -258,6 +401,8 @@ const onLoad = async () => {
     virusChartHTML += '<strong>';
     virusChartHTML += chartData.datasets[0].label + ':' + getValue(chartData);
     virusChartHTML += '</strong>';
+    // virusChartHTML += getBenfordsLawTable(chartData.cols);
+    // virusChartHTML += getBenfordsLawTable(chartData.datasets[0].data);
     // virusChartHTML += '<div style="position: relative; height:16vh; width:16vw;">';
     virusChartHTML += '<div style="position: relative; height:30vh; width:30vw;">';
     virusChartHTML += `<canvas id="virusCanvas${ix}" class="w100pct"></canvas>`;
