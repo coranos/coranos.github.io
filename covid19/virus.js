@@ -190,8 +190,10 @@ const onLoad = async () => {
           const curr = confirmed - (recovered + dead);
           if (curr !== 0) {
             if (!started) {
-              chartData.labels.push(labels[colIx-1]);
-              chartData.datasets[0].data.push(0);
+              if(colIx > 0) {
+                chartData.labels.push(labels[colIx-1]);
+                chartData.datasets[0].data.push(0);                
+              }
             }
             started = true;
           }
