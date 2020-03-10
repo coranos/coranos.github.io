@@ -182,40 +182,42 @@ const onLoad = async () => {
       let prev = 0;
       let started = false;
       cols.forEach((col, colIx) => {
-        if (rowIx !== 0) {
-          const confirmed = parseInt(col);
-          const recovered = parseInt(recoveredCols[colIx]);
-          const dead = parseInt(deadCols[colIx]);
-          // const curr = confirmed;// confirmed - (recovered + dead);
-          const curr = confirmed - (recovered + dead);
-          if (curr !== 0) {
-            if (!started) {
-              if(colIx > 0) {
-                chartData.labels.push(labels[colIx-1]);
-                chartData.datasets[0].data.push(0);                
+        if (col.length > 0) {
+          if (rowIx !== 0) {
+            const confirmed = parseInt(col);
+            const recovered = parseInt(recoveredCols[colIx]);
+            const dead = parseInt(deadCols[colIx]);
+            // const curr = confirmed;// confirmed - (recovered + dead);
+            const curr = confirmed - (recovered + dead);
+            if (curr !== 0) {
+              if (!started) {
+                if (colIx > 0) {
+                  chartData.labels.push(labels[colIx-1]);
+                  chartData.datasets[0].data.push(0);
+                }
               }
+              started = true;
             }
-            started = true;
-          }
-          const diff = (curr - prev);
+            const diff = (curr - prev);
 
-          if (countryChartData) {
-            while (countryChartData.labels.length < colIx) {
-              countryChartData.labels.push(labels[colIx]);
+            if (countryChartData) {
+              while (countryChartData.labels.length < colIx) {
+                countryChartData.labels.push(labels[colIx]);
+              }
+              while (countryChartData.datasets[0].data.length <= colIx) {
+                countryChartData.datasets[0].data.push(0);
+              }
+              countryChartData.datasets[0].data[colIx] += diff;
             }
-            while (countryChartData.datasets[0].data.length <= colIx) {
-              countryChartData.datasets[0].data.push(0);
-            }
-            countryChartData.datasets[0].data[colIx] += diff;
-          }
 
-          if (started) {
-            // console.log(label, rowIx, colIx, 'c:', confirmed, 'r:', recovered, 'd:', dead, 'diff:', diff);
-            if (diff !== 0) {
-              chartData.labels.push(labels[colIx]);
-              chartData.datasets[0].data.push(diff);
+            if (started) {
+              // console.log(label, rowIx, colIx, 'col:', col, 'c:', confirmed, 'r:', recovered, 'd:', dead, 'diff:', diff);
+              if (diff !== 0) {
+                chartData.labels.push(labels[colIx]);
+                chartData.datasets[0].data.push(diff);
+              }
+              prev = curr;
             }
-            prev = curr;
           }
         }
       });
