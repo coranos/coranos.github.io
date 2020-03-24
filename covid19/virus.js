@@ -86,6 +86,8 @@ const csvToArray = (text) => {
 };
 
 const onLoad = async () => {
+  loadIllinois();
+
   const confirmedData = await (await fetch(covid19ConfirmedDataUrl)).text();
   const deadData = await (await fetch(covid19DeadDataUrl)).text();
   const recoveredData = await (await fetch(covid19RecoveredDataUrl)).text();
