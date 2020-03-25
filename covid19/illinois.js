@@ -59,6 +59,9 @@ const illinoisData = [
   },
   {
     'date': '2020-03-25',
+    'tested': 14209,
+    'positive': 1865,
+    'dead': 19,
     'italy_dead': 29,
     'hubei_dead': 40,
   },
@@ -200,26 +203,26 @@ const getIllinoisChartConfig = (chartData) => {
           stacked: false,
           id: 'cases',
           position: 'right',
-          // type: 'logarithmic',
-          // ticks: {
-          //      min: 0.1, //minimum tick
-          //      max: 100000, //maximum tick
-          //      callback: function (value, index, values) {
-          //          return Number(value.toString());
-          //          //pass tick values as a string into Number function
-          //      }
-          // },
-          // afterBuildTicks: function (chartObj) {
-          //   //Build ticks labelling as per your need
-          //     chartObj.ticks = [];
-          //     chartObj.ticks.push(0.1);
-          //     chartObj.ticks.push(1);
-          //     chartObj.ticks.push(10);
-          //     chartObj.ticks.push(100);
-          //     chartObj.ticks.push(1000);
-          //     chartObj.ticks.push(10000);
-          //     chartObj.ticks.push(100000);
-          // },
+          type: 'logarithmic',
+          ticks: {
+               min: 0.1, //minimum tick
+               max: 100000, //maximum tick
+               callback: function (value, index, values) {
+                   return Number(value.toString());
+                   //pass tick values as a string into Number function
+               }
+          },
+          afterBuildTicks: function (chartObj) {
+            //Build ticks labelling as per your need
+              chartObj.ticks = [];
+              chartObj.ticks.push(0.1);
+              chartObj.ticks.push(1);
+              chartObj.ticks.push(10);
+              chartObj.ticks.push(100);
+              chartObj.ticks.push(1000);
+              chartObj.ticks.push(10000);
+              chartObj.ticks.push(100000);
+          },
           scaleLabel: {
             display: true,
             labelString: 'Cases Per Day',
@@ -273,7 +276,11 @@ const loadIllinois = async () => {
       } else {
         const delta = array[ix] - prev;
         prev = array[ix];
-        array[ix] = delta;
+        if(delta == 0) {
+          array[ix] = undefined;
+        } else {
+          array[ix] = delta;
+        }
       }
     }
   };
