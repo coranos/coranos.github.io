@@ -51,6 +51,9 @@ const illinoisData = [
   },
   {
     'date': '2020-03-24',
+    'tested': 11485,
+    'positive': 1535,
+    'dead': 16,
     'italy_dead': 21,
     'hubei_dead': 24,
   },
@@ -258,9 +261,9 @@ const loadIllinois = async () => {
   const datasetByName = {};
   datasetByName.tested = newDataSet('cases per death', 'Tested Per Death', '#00F');
   datasetByName.positive = newDataSet('cases per death', 'Positive Per Death', '#F70');
-  datasetByName.dead = newDataSet('cases', 'Dead', '#777');
-  datasetByName.italy_dead = newDataSet('cases', 'Italy Dead', '#D77');
-  datasetByName.hubei_dead = newDataSet('cases', 'Hubei Dead', '#7D7');
+  datasetByName.dead = newDataSet('cases', 'Dead Per Day', '#777');
+  datasetByName.italy_dead = newDataSet('cases', 'Italy Dead Per Day', '#D77');
+  datasetByName.hubei_dead = newDataSet('cases', 'Hubei Dead Per Day', '#7D7');
 
   const convertToDelta = (array) => {
     let prev;
