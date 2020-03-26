@@ -57,11 +57,14 @@ const illinoisData = [
     'tested': 14209,
     'positive': 1865,
     'illinois_dead': 19,
-    'italy_dead': 34,
+    'italy_dead': 34, // 2020-03-01
     'hubei_dead': 76,
   },
   {
     'date': '2020-03-26',
+    'tested': 16631,
+    'positive': 2538,
+    'illinois_dead': 26,
     'italy_dead': 52,
     'hubei_dead': 125,
   },
@@ -210,15 +213,15 @@ const getIllinoisChartConfig = (chartData) => {
           },
           scaleLabel: {
             display: true,
-            labelString: 'Deaths Per Day per person per 100 square miles',
+            labelString: 'New Deaths Per Day per person per 100 square miles',
           },
         }, {
           stacked: false,
-          id: 'cases per death',
+          id: 'cases',
           position: 'left',
           scaleLabel: {
             display: true,
-            labelString: 'Cases Per Death',
+            labelString: 'New Cases Per Day',
           },
         }],
       },
@@ -254,11 +257,11 @@ const loadIllinois = async () => {
 
   // console.log(data)
   const datasetByName = {};
-  datasetByName.tested = newDataSet('cases per death', 'Tested Per Death', '#00F');
-  datasetByName.positive = newDataSet('cases per death', 'Positive Per Death', '#F70');
-  datasetByName.illinois_dead = newDataSet('deaths', 'Illinois', '#777');
-  datasetByName.italy_dead = newDataSet('deaths', 'Italy', '#D77');
-  datasetByName.hubei_dead = newDataSet('deaths', 'Hubei', '#7D7');
+  datasetByName.tested = newDataSet('cases', 'IL Tested', '#00F');
+  datasetByName.positive = newDataSet('cases', 'IL Positive', '#F70');
+  datasetByName.illinois_dead = newDataSet('deaths', 'Illinois Dead', '#777');
+  datasetByName.italy_dead = newDataSet('deaths', 'Italy Dead', '#D77');
+  datasetByName.hubei_dead = newDataSet('deaths', 'Hubei Dead', '#7D7');
 
   const convertToDelta = (array) => {
     let prev;
