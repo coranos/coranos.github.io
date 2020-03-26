@@ -1,158 +1,143 @@
 const illinoisData = [
   {
-    'date': '2020-03-17',
-    'tested': 1143,
-    'positive': 160,
-    'dead': 1,
-    'italy_dead': 1,
-  },
-  {
     'date': '2020-03-18',
     'tested': 1500,
     'positive': 273,
-    'dead': 1,
-    'italy_dead': 2,
+    'illinois_dead': 1,
+    'italy_dead': 3,
   },
   {
     'date': '2020-03-19',
     'tested': 2052,
     'positive': 418,
-    'dead': 4,
-    'italy_dead': 3,
+    'illinois_dead': 4,
+    'italy_dead': 7,
   },
   {
     'date': '2020-03-20',
     'tested': 4286,
     'positive': 585,
-    'dead': 5,
-    'italy_dead': 7,
+    'illinois_dead': 5,
+    'italy_dead': 10,
   },
   {
     'date': '2020-03-21',
     'tested': 6247,
     'positive': 753,
-    'dead': 6,
-    'italy_dead': 10,
+    'illinois_dead': 6,
+    'italy_dead': 12,
+    'hubei_dead': 17,
   },
   {
     'date': '2020-03-22',
     'tested': 8374,
     'positive': 1049,
-    'dead': 9,
-    'italy_dead': 12,
+    'illinois_dead': 9,
+    'italy_dead': 17,
+    'hubei_dead': 24,
   },
   {
     'date': '2020-03-23',
     'tested': 9868,
     'positive': 1285,
-    'dead': 12,
-    'italy_dead': 17,
-    'hubei_dead': 17,
+    'illinois_dead': 12,
+    'italy_dead': 21,
+    'hubei_dead': 40,
   },
   {
     'date': '2020-03-24',
     'tested': 11485,
     'positive': 1535,
-    'dead': 16,
-    'italy_dead': 21,
-    'hubei_dead': 24,
+    'illinois_dead': 16,
+    'italy_dead': 29,
+    'hubei_dead': 52,
   },
   {
     'date': '2020-03-25',
     'tested': 14209,
     'positive': 1865,
-    'dead': 19,
-    'italy_dead': 29,
-    'hubei_dead': 40,
-  },
-  {
-    'date': '2020-03-26',
+    'illinois_dead': 19,
     'italy_dead': 34,
-    'hubei_dead': 52,
-  },
-  {
-    'date': '2020-03-27',
-    'italy_dead': 52,
     'hubei_dead': 76,
   },
   {
-    'date': '2020-03-28',
+    'date': '2020-03-26',
+    'italy_dead': 52,
+    'hubei_dead': 125,
+  },
+  {
+    'date': '2020-03-27',
     'italy_dead': 79,
     'hubei_dead': 125,
   },
   {
-    'date': '2020-03-29',
+    'date': '2020-03-28',
     'italy_dead': 107,
-    'hubei_dead': 125,
-  },
-  {
-    'date': '2020-03-30',
-    'italy_dead': 148,
     'hubei_dead': 162,
   },
   {
-    'date': '2020-03-31',
-    'italy_dead': 197,
+    'date': '2020-03-29',
+    'italy_dead': 148,
     'hubei_dead': 204,
   },
   {
-    'date': '2020-04-01',
-    'italy_dead': 233,
+    'date': '2020-03-30',
+    'italy_dead': 197,
     'hubei_dead': 249,
   },
   {
-    'date': '2020-04-02',
-    'italy_dead': 366,
+    'date': '2020-03-31',
+    'italy_dead': 233,
     'hubei_dead': 350,
   },
   {
-    'date': '2020-04-03',
-    'italy_dead': 463,
+    'date': '2020-04-01',
+    'italy_dead': 366,
     'hubei_dead': 414,
   },
   {
-    'date': '2020-04-04',
-    'italy_dead': 631,
+    'date': '2020-04-02',
+    'italy_dead': 463,
     'hubei_dead': 479,
   },
   {
-    'date': '2020-04-05',
-    'italy_dead': 827,
+    'date': '2020-04-03',
+    'italy_dead': 631,
     'hubei_dead': 549,
   },
   {
-    'date': '2020-04-06',
-    'italy_dead': 1000,
+    'date': '2020-04-04',
+    'italy_dead': 827,
     'hubei_dead': 618,
   },
   {
-    'date': '2020-04-07',
-    'italy_dead': 1266,
+    'date': '2020-04-05',
+    'italy_dead': 1000,
     'hubei_dead': 699,
   },
   {
-    'date': '2020-04-08',
-    'italy_dead': 1441,
+    'date': '2020-04-06',
+    'italy_dead': 1266,
     'hubei_dead': 780,
   },
   {
-    'date': '2020-04-09',
-    'italy_dead': 1809,
+    'date': '2020-04-07',
+    'italy_dead': 1441,
     'hubei_dead': 871,
   },
   {
-    'date': '2020-04-10',
-    'italy_dead': 2158,
+    'date': '2020-04-08',
+    'italy_dead': 1809,
     'hubei_dead': 974,
   },
   {
-    'date': '2020-04-11',
-    'italy_dead': 2503,
+    'date': '2020-04-09',
+    'italy_dead': 2158,
     'hubei_dead': 1068,
   },
   {
-    'date': '2020-04-12',
-    'italy_dead': 2978,
+    'date': '2020-04-10',
+    'italy_dead': 2503,
     'hubei_dead': 1310,
   },
 ];
@@ -201,7 +186,7 @@ const getIllinoisChartConfig = (chartData) => {
         }],
         yAxes: [{
           stacked: false,
-          id: 'cases',
+          id: 'deaths',
           position: 'right',
           type: 'logarithmic',
           ticks: {
@@ -225,7 +210,7 @@ const getIllinoisChartConfig = (chartData) => {
           },
           scaleLabel: {
             display: true,
-            labelString: 'Cases Per Day',
+            labelString: 'Deaths Per Day per person per 100 square miles',
           },
         }, {
           stacked: false,
@@ -243,6 +228,13 @@ const getIllinoisChartConfig = (chartData) => {
 };
 
 const loadIllinois = async () => {
+  // const hubeiPop =  58.5 million;
+  // const italyPop = 60.48 million;
+  // const illinoisPop = 12.74 million;
+  const hubeiDensity = 820 / 100; //people per mi2;
+  const italyDensity = 532 / 100; //people per mi2;
+  const illinoisDensity = 230 / 100; //people per mi2;
+
   const chartData = {};
   chartData.labels = [];
   chartData.datasets = [];
@@ -264,22 +256,23 @@ const loadIllinois = async () => {
   const datasetByName = {};
   datasetByName.tested = newDataSet('cases per death', 'Tested Per Death', '#00F');
   datasetByName.positive = newDataSet('cases per death', 'Positive Per Death', '#F70');
-  datasetByName.dead = newDataSet('cases', 'Dead Per Day', '#777');
-  datasetByName.italy_dead = newDataSet('cases', 'Italy Dead Per Day', '#D77');
-  datasetByName.hubei_dead = newDataSet('cases', 'Hubei Dead Per Day', '#7D7');
+  datasetByName.illinois_dead = newDataSet('deaths', 'Illinois', '#777');
+  datasetByName.italy_dead = newDataSet('deaths', 'Italy', '#D77');
+  datasetByName.hubei_dead = newDataSet('deaths', 'Hubei', '#7D7');
 
   const convertToDelta = (array) => {
     let prev;
     for (let ix = 0; ix < array.length; ix++) {
       if (ix == 0) {
         prev = array[ix];
+        array[ix] = array[ix].toFixed(2);
       } else {
         const delta = array[ix] - prev;
         prev = array[ix];
         if(delta == 0) {
           array[ix] = undefined;
         } else {
-          array[ix] = delta;
+          array[ix] = delta.toFixed(2);
         }
       }
     }
@@ -289,9 +282,9 @@ const loadIllinois = async () => {
     chartData.labels.push(dataElt.date);
     datasetByName.tested.data.push(dataElt.tested);
     datasetByName.positive.data.push(dataElt.positive);
-    datasetByName.dead.data.push(dataElt.dead);
-    datasetByName.italy_dead.data.push(dataElt.italy_dead);
-    datasetByName.hubei_dead.data.push(dataElt.hubei_dead);
+    datasetByName.illinois_dead.data.push(dataElt.illinois_dead / illinoisDensity);
+    datasetByName.italy_dead.data.push(dataElt.italy_dead / italyDensity);
+    datasetByName.hubei_dead.data.push(dataElt.hubei_dead / hubeiDensity);
   });
 
   chartData.datasets.forEach((dataSet) => {
