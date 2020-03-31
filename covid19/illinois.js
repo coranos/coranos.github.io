@@ -95,13 +95,16 @@ const illinoisData = [
   {
     'date': '2020-03-30',
     'tested': 30446,
-    'positive': 5056,
-    'illinois_dead': 72,
+    'positive': 5057,
+    'illinois_dead': 73,
     'italy_dead': 197,
     'hubei_dead': 249,
   },
   {
     'date': '2020-03-31',
+    'tested': 35225,
+    'positive': 5994,
+    'illinois_dead': 99,
     'italy_dead': 233,
     'hubei_dead': 350,
   },
