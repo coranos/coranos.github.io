@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<head>
+<title>Banano</title>
+<link rel="stylesheet" type="text/css" href="results.css">
+</head>
+<body onload="onLoad();">
+  <div id="results"></div>
+  <script src='results.js'></script>
+  <script>
+      const onLoad = () => {
+        const dataTypeVisiters = {
+          'image': (url) => {
+            const child = document.createElement('img');
+            child.setAttribute('src',url);
+            child.setAttribute('class','small_image');
+            return child;
+          }  
+        };
+        loadJsonTable('results','results.json',dataTypeVisiters);
+      }
+    </script>
+</body>
+</html>

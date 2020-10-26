@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sum of Squares</title>
+  <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+
+<body onLoad="onLoad();">
+  <p id="refreshTime" class="hide">10</p>
+  Refresh in : <span id="countdown">-</span>
+  <button type="button" onclick="addSos();">Force Refresh</button>
+  <button type="button" onclick="countdown();">Start Refresh</button>
+  <button type="button" onclick="clearInterval(countdownInteval);">Stop Refresh</button>
+  <table>
+    <tbody id="sos">
+    </tbody>
+  </table>
+  <script>
+    // let sosNum = 100000000000000000000000000000;
+
+    const sosBase = 100000000000000;
+    let sosNum = sosBase;
+
+    const getSumOfSquares = () => {
+      let remainder = sosNum;
+      const squares = [];
+      while (remainder > 0) {
+        let sqrt = Math.ceil(Math.sqrt(remainder));
+        while ((sqrt * sqrt) > remainder) {
+          sqrt--;
+        }
+        // console.log('sosNum', sosNum, 'remainder', remainder, 'sqrt', sqrt);
+        squares.push(sqrt);
+        remainder -= (sqrt * sqrt);
+      }
+      squares.sort((a, b) => {
+        return parseInt(b) - parseInt(a);
+      });
+
+      while (squares.length > 4) {
+        squares.pop();
+      }
+
+      return squares;
+    }
+
+    const getSumOfSquaresDiv = () => {
+      const squares = getSumOfSquares();
+      const div = document.createElement('div');
+
+      let squaresFormula = '';
+      let sum = 0;
+      squares.forEach((square, squareIx) => {
+        if (squareIx > 0) {
+          squaresFormula += ' + ';
+        }
+        squaresFormula += `(${square}*${square})`;
+        sum += (square * square);
+      });
+      squaresFormula += ' = ';
+      squaresFormula += sum;
+
+      div.appendChild(document.createTextNode(squaresFormula));
+
+      return div;
+    }
+
+    const addSos = () => {
+      const sosElt = document.getElementById("sos");
+
+      const tr = document.createElement('tr');
+      const numberTd = document.createElement('td');
+      numberTd.appendChild(document.createTextNode(sosNum));
+      tr.appendChild(numberTd);
+
+      const graphTd = document.createElement('td');
+      graphTd.appendChild(getSumOfSquaresDiv());
+      tr.appendChild(graphTd);
+
+      sosElt.appendChild(tr);
+
+      sosNum += sosBase;
+    }
+
+    const addSosAndCountdown = () => {
+      addSos();
+      countdown();
+
+    }
+
+    const onLoad = () => {
+      for (let i = 0; i < 1000; i++) {
+        addSos();
+      }
+      // addSos();
+      // addSos();
+      // addSos();
+      // addSos();
+      // addSosAndCountdown();
+    }
+  </script>
+  <script>
+    let countdownInteval;
+    const countdownElt = document.getElementById("countdown");
+    const refreshTimeElt = document.getElementById("refreshTime");
+    const refreshTime = parseInt(refreshTimeElt.innerText);
+    const countdown = () => {
+      const countdownFn = () => {
+        if (countdownElt !== null) {
+          countdownElt.innerHTML = --c;
+        }
+        if (c == 0) {
+          clearInterval(countdownInteval);
+          addSosAndCountdown();
+        }
+      }
+      countdownInteval = setInterval(countdownFn, 1000);
+      let c = refreshTime;
+      if (countdownElt !== null) {
+        countdownElt.innerHTML = c;
+      }
+    }
+  </script>
+</body>
+
+</html>

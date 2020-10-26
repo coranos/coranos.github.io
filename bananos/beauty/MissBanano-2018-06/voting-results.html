@@ -1,0 +1,220 @@
+<!DOCTYPE html5>
+<html>
+<meta charset="utf-8" />
+<head>
+<title>Miss Banano June 2018 - Community Pageant - Sponsored by La Jungla - Voting Results</title>
+<style type='text/css'>
+.titles {
+  font-family: monospace;
+  font-size: 10px;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.solid_border {
+  border: solid;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+
+.thumbnail {
+  height: 100px;
+  max-width: 100%;
+}
+
+.centered_text {
+  text-align: center;
+}
+
+.rules_column {
+  width: 20%;
+  text-align: left;
+  vertical-align: top;
+}
+
+.rankup:active {
+  background: yellow;
+}
+
+.rankup {
+  display: block;
+  border: solid;
+  text-align: center;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+
+.rankdown:active {
+  background: yellow;
+}
+
+.rankdown {
+  display: block;
+  border: solid;
+  text-align: center;
+  border-width: 0.5px;
+  font-family: monospace;
+}
+</style>
+</head>
+<body onload="onLoad();">
+  Ranking algorithm:
+  <ol>
+    <li>Sum how many votes each contestant got for each rank.</li>
+    <li>If a contestant at the top rank has a majority of votes in the top rank, they win. (I.E. a candidate needs a majority to win first place)</li>
+    <li>If there is not a majority winner, eliminate the candidate with the least number of votes in the top rank, and for the judges that voted for that
+      voted for that candidate, pull in their choice from the next rank. (I.E. if the votes in Rank 1 are : {A:2,B:2,C:1} eliminate C, and find out who voted
+      for C. take their Rank 2 choice.)</li>
+    <li>If there is still not a majority winner due to ties, reset the elimination votes, and combine the next lower rank's votes with the top rank (I.E.
+      if the votes in Rank 1 are : {A:3,B:3,C:2}, you eliminate C, and get {A:4,B:4}, reset to {A:3,B:3,C:2} and pull in rank 2.)</li>
+  </ol>
+  <h2>contestantTable</h2>
+  <table id='contestantTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <h2>scoringTable</h2>
+  <table id='scoringTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <h2>judgesTable</h2>
+  <table id='judgesTable' class='solid_border' style="width: 100%">
+    <thead class='solid_border'>
+    </thead>
+    <tbody class='solid_border'>
+    </tbody>
+  </table>
+  <script src="../../../js-lib/google-tracking.js"></script>
+  <script src='../../../js-lib/jquery-3.2.1.js'></script>
+  <script src='../../../js-lib/load-json.js'></script>
+  <script src='../../../js-lib/json-table.js'></script>
+  <script>
+      callGoogleTracker();
+
+      function onLoad () {
+        jsonTable('#contestantTable', {
+          head : [ 'Rank', 'Contestants'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
+        jsonTable('#scoringTable', {
+          head : [ 'Rank', 'Contestants'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
+        jsonTable('#judgesTable', {
+          head : [ 'Judge', 'Contestants'],
+          thClass : 'solid_border centered_text',
+          trClass : 'solid_border',
+          sortTable : false
+        });
+
+        let contestantTableOptions = {};
+        contestantTableOptions.json = [ 'rank', 'contestants' ];
+
+        let scoringTableOptions = {};
+        scoringTableOptions.json = [ 'rank', 'contestants' ];
+
+        let judgesTableOptions = {};
+        judgesTableOptions.json = [ 'judge', 'contestants' ];
+
+        $.ajaxSetup({
+          beforeSend : function (xhr) {
+            if (xhr.overrideMimeType) {
+              xhr.overrideMimeType('application/json');
+            }
+          }
+        });
+
+        $.getJSON('judges-votes.json', function (results) {
+          let contestantTable = $('#contestantTable').find('tbody');
+          contestantTable.empty();
+          const contestantResponse = {};
+          contestantResponse.results = [];
+
+          let scoringTable = $('#scoringTable').find('tbody');
+          scoringTable.empty();
+          const scoringResponse = {};
+          scoringResponse.results = [];
+
+          let judgesTable = $('#judgesTable').find('tbody');
+          judgesTable.empty();
+          const judgesResponse = {};
+          judgesResponse.results = [];
+
+          const rank_scores = {};
+          const rank_judges = {};
+          
+          for (const [judge, votes] of Object.entries(results)) {
+            votes.forEach(function (vote) {
+              const rank = vote.rank;
+              const contestant = vote.contestant;
+              if(rank_scores[rank] === undefined) {
+                rank_scores[rank] = {};
+              }
+              if(rank_scores[rank][contestant] == undefined) {
+                rank_scores[rank][contestant] = 1;
+              } else {
+                rank_scores[rank][contestant] += 1;
+              }
+              
+              if(rank_judges[rank] === undefined) {
+                rank_judges[rank] = {};
+              }
+              if(rank_judges[rank][contestant] == undefined) {
+                rank_judges[rank][contestant] = [];
+              }
+              rank_judges[rank][contestant].push(judge);
+            });
+          }
+
+          for (const [rank, contestants] of Object.entries(rank_scores)) {
+            const responseRow = {};
+            responseRow.rank = rank;
+            responseRow.contestants = JSON.stringify(contestants, null, 2);
+            contestantResponse.results.push(responseRow);
+          }
+
+          for (const [rank, contestants] of Object.entries(rank_judges)) {
+            const responseRow = {};
+            responseRow.rank = rank;
+            responseRow.contestants = JSON.stringify(contestants, null, 2).replace(new RegExp('([,\{\}])', 'g'),'$1<br>');
+            scoringResponse.results.push(responseRow);
+          }
+          
+
+          for (const [judge, votes] of Object.entries(results)) {
+            const responseRow = {};
+            responseRow.judge = judge;
+            responseRow.contestants = JSON.stringify(votes, null, 2);
+            judgesResponse.results.push(responseRow);
+          }
+          
+          const contestantRow = makeRow(contestantResponse, contestantTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          contestantTable.append(contestantRow);
+          
+          const scoringRow = makeRow(scoringResponse, scoringTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          scoringTable.append(scoringRow);
+          
+          const judgesRow = makeRow(judgesResponse, judgesTableOptions, 'solid_border centered_text', 'solid_border centered_text');
+          judgesTable.append(judgesRow);
+        });
+      }
+    </script>
+</body>
+
+</html>

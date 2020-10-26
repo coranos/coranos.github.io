@@ -1,0 +1,54 @@
+#reset after bad merge
+git reset --merge;git fetch;git merge --strategy-option ours --allow-unrelated-histories
+
+#save credentials
+git config credential.helper 'store'
+
+#compare two tags
+https://github.com/coranos/blue-app-neo/compare/RC1...RC2
+
+# remove a tag (for removing a release, note no space after the colon in the second command)
+git tag -d <tag>
+git push origin :<tag>
+
+# adding an upstream repo.
+git clone https://github.com/<you>/<your_repository>.git
+git remote add upstream https://github.com/<original_owner>/<original_repository>.git
+git fetch upstream master
+
+#force origin to be same as master
+git fetch upstream
+git reset --hard upstream/master
+git push origin master --force
+
+#keeping track of upstream.
+git fetch upstream
+git rebase upstream/master
+#or
+git merge upstream/master
+
+#Combining the commits to push to upstream
+git reset --soft upstream/master
+git commit -m "Ledger Nano S methods"
+git push origin +master
+
+#reverting a single file
+git checkout 9e904051b17c130f85e539b40712788bf9e08f5d -- neo/neo.csproj
+
+
+#to untrack a file
+git rm --cached <filename>
+then refresh and add it to .gitignore.
+
+## keep gh-pages up to date with master
+git checkout gh-pages;git rebase master;git push origin gh-pages;git checkout master
+
+## force only most recent version of coranos.github.io
+find . -exec touch {} \;
+rm -rf .git;
+git init;
+git add .;
+git commit -m "Initial commit";
+git remote add origin https://github.com/coranos/coranos.github.io.git;
+git push -u --force origin master;
+git pull;git push;

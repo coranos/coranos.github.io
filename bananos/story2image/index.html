@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Story To Image</title>
+</head>
+
+<body onload="onLoad()">
+  <h2>🌴🍌🐒🌴 Story To Image 🌴🍌🐒🌴</h2>
+  <div id="simulation" />
+  <script>
+    const clientSeed = '1';
+    const serverSeed = '2';
+    const numImagesStart = 4;
+    const numImagesEnd = 200;
+    const winScoreDelta = 10;
+    const maxWinnerViewCount = 8;
+    let rngCounter = 0;
+
+    const imageScore = [];
+
+    var enc = new TextEncoder("utf-8");
+
+    const HmacSHA512 = async (data, secretKey) => {
+      return new Promise((resolve) => {
+        window.crypto.subtle.importKey(
+          "raw", // raw format of the key - should be Uint8Array
+          enc.encode(secretKey), { // algorithm details
+            name: "HMAC",
+            hash: {
+              name: "SHA-512"
+            }
+          },
+          false, // export = false
+          ["sign", "verify"] // what this key can do
+        ).then(key => {
+          window.crypto.subtle.sign(
+            "HMAC",
+            key,
+            enc.encode(data)
+          ).then(signature => {
+            var b = new Uint8Array(signature);
+            var str = Array.prototype.map.call(b, x => ('00' + x.toString(16)).slice(-2)).join("")
+            resolve(str);
+          });
+        });
+      });
+    }
+
+    const randInt = async (maxInt) => {
+      const rngMessage = `clientSeed:${rngCounter}`;
+      // console.log('rngMessage', rngMessage);
+      const hash = await HmacSHA512(rngMessage, serverSeed);
+      // console.log('hash', hash);
+      const hashPrefix = hash.toString().substring(1, 6);
+      // console.log('hashPrefix', hashPrefix);
+      const result = (parseInt(hashPrefix, 16) % maxInt);
+      // console.log('result', result);
+      rngCounter++;
+      return result;
+    }
+
+    const onLoad = async () => {
+      const compare = async (numImages) => {
+        const imageIds = [...document.querySelectorAll('.imageId')];
+        // console.log('imageIds', imageIds);
+        const rankSet = new Set();
+        const rankList = [];
+        while (rankSet.size < numImages) {
+          let numTries = 0;
+          let winnerIx = (await randInt(imageIds.length - 1)) + 1;
+          // console.log('winnerIx[0]', winnerIx);
+          let foundGoodWinner = false;
+          while (foundGoodWinner == false) {
+            if (!rankSet.has(winnerIx)) {
+              const winnerViewCountElt = document.querySelector(`#imageViewCount${winnerIx}`);
+              const winnerViewCount = parseInt(winnerViewCountElt.innerText, 10) + 1;
+              if (winnerViewCount < maxWinnerViewCount) {
+                foundGoodWinner = true;
+              }
+            }
+            if (!foundGoodWinner) {
+              winnerIx = winnerIx + 1;
+              if (winnerIx > numImagesEnd) {
+                winnerIx = 1;
+              }
+              numTries++;
+              // console.log('numTries[1]', numTries);
+              // console.log('winnerIx[1]', winnerIx);
+              if (numTries > numImagesEnd) {
+                throw Error(`numTries(${numTries}) > numImagesEnd(${numImagesEnd})`);
+              }
+            }
+          }
+          rankSet.add(winnerIx);
+          rankList.push(winnerIx);
+
+          while (rankList.length > 1) {
+            const winnerIx = rankList.pop();
+            for (let loserIxIx = 0; loserIxIx < rankList.length; loserIxIx++) {
+              const loserIx = rankList[loserIxIx];
+              const winnerScoreElt = document.querySelector(`#imageScore${winnerIx}`);
+              const loserScoreElt = document.querySelector(`#imageScore${loserIx}`);
+              const winnerViewCountElt = document.querySelector(`#imageViewCount${winnerIx}`);
+              const loserViewCountElt = document.querySelector(`#imageViewCount${loserIx}`);
+              const winnerLogElt = document.querySelector(`#imageLog${winnerIx}`);
+              const loserLogElt = document.querySelector(`#imageLog${loserIx}`);
+              console.log('winnerScoreElt', winnerIx, winnerScoreElt);
+              console.log('loserScoreElt', loserIx, loserScoreElt);
+              const winnerScore = parseInt(winnerScoreElt.innerText, 10);
+              const loserScore = parseInt(loserScoreElt.innerText, 10);
+              console.log('winnerScore', winnerScore);
+              console.log('loserScore', loserScore);
+              const winnerViewCount = parseInt(winnerViewCountElt.innerText, 10) + 1;
+              const loserViewCount = parseInt(loserViewCountElt.innerText, 10) + 1;
+              console.log('winnerViewCount', winnerViewCount);
+              console.log('loserViewCount', loserViewCount);
+              const combinedScore = winnerScore + loserScore;
+              const newWinnerScore = ((combinedScore + winScoreDelta) / winnerViewCount).toFixed(0);
+              const newLoserScore = ((combinedScore - winScoreDelta) / loserViewCount).toFixed(0);
+              winnerScoreElt.innerText = newWinnerScore;
+              loserScoreElt.innerText = newLoserScore;
+              winnerViewCountElt.innerText = winnerViewCount;
+              loserViewCountElt.innerText = loserViewCount;
+              winnerLogElt.innerHTML += `W(VS:${loserIx},score:${loserScore}+${winnerScore}+${winScoreDelta}=>${newWinnerScore})<br>`;
+              loserLogElt.innerHTML += `L(VS:${winnerIx},score:${winnerScore}+${loserScore}-${winScoreDelta}=>${newLoserScore})<br>`;
+            }
+          }
+        }
+        console.log('rankList', rankList);
+      }
+
+      const simulation = document.querySelector('#simulation');
+
+      const table = addChildElement(simulation, 'table', {
+        'style': 'border:solid;border-width:1px;'
+      })
+
+      const headerRow = addChildElement(simulation, 'tr', {
+        'style': 'border:solid;border-width:1px;'
+      })
+      addChildTextNode(addChildElement(headerRow, 'td', {
+        'style': 'border:solid;border-width:1px;'
+      }), 'Image Number')
+
+      addChildTextNode(addChildElement(headerRow, 'td', {
+        'style': 'border:solid;border-width:1px;'
+      }), 'Image View Count')
+
+      addChildTextNode(addChildElement(headerRow, 'td', {
+        'style': 'border:solid;border-width:1px;'
+      }), 'Image Score')
+
+      addChildTextNode(addChildElement(headerRow, 'td', {
+        'style': 'border:solid;border-width:1px;'
+      }), 'Image Log')
+
+      const addImageRow = (imageNbr) => {
+        const row = addChildElement(simulation, 'tr', {
+          'style': 'border:solid;border-width:1px;'
+        })
+        const imageNumberElt = addChildElement(row, 'td', {
+          'style': 'border:solid;border-width:1px;',
+          'class': 'imageId',
+          'id': `imageNumber${imageNbr}`
+        })
+        addChildTextNode(imageNumberElt, imageNbr);
+        const imageViewCountElt = addChildElement(row, 'td', {
+          'style': 'border:solid;border-width:1px;',
+          'id': `imageViewCount${imageNbr}`
+        })
+        addChildTextNode(imageViewCountElt, 0);
+        const imageScoreElt = addChildElement(row, 'td', {
+          'style': 'border:solid;border-width:1px;',
+          'id': `imageScore${imageNbr}`
+        })
+        const imageLogElt = addChildElement(row, 'td', {
+          'style': 'border:solid;border-width:1px;',
+          'id': `imageLog${imageNbr}`
+        })
+        addChildTextNode(imageScoreElt, 0);
+      }
+
+      for (let imageNbr = 1; imageNbr <= numImagesStart; imageNbr++) {
+        addImageRow(imageNbr);
+      }
+      for (let imageNbr = numImagesStart + 1; imageNbr <= numImagesEnd; imageNbr++) {
+        addImageRow(imageNbr);
+        await compare(4);
+      }
+    }
+
+    const addChildTextNode = (parent, childText) => {
+      const child = document.createTextNode(childText);
+
+      parent.appendChild(child);
+
+      return child;
+    }
+
+    const addChildElement = (parent, childType, attributes) => {
+      const child = document.createElement(childType);
+
+      parent.appendChild(child);
+
+      if (attributes) {
+        Object.keys(attributes).forEach((attibute) => {
+          const value = attributes[attibute];
+          child.setAttribute(attibute, value);
+        });
+      }
+
+      return child;
+    };
+  </script>
+</body>
+
+</html>

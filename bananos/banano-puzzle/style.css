@@ -1,0 +1,35 @@
+.black {
+  background-color: black;
+  color: white;
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+.yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.green {
+  background-color: green;
+  color: white;
+}
+
+.red {
+  background-color: red;
+  color: white;
+}
+
+.control {
+  margin-bottom: 10px;
+}
+
+.up {
+  display: block;
+  margin-left: 70px;
+}
+
+button {}

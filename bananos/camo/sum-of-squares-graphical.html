@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Sum of Squares</title>
+  <link type="text/css" href="style.css" rel="stylesheet">
+</head>
+
+<body onLoad="onLoad();">
+  <p id="refreshTime" class="hide">10</p>
+  Refresh in : <span id="countdown">-</span>
+  <button type="button" onclick="addSos();">Force Refresh</button>
+  <button type="button" onclick="countdown();">Start Refresh</button>
+  <button type="button" onclick="clearInterval(countdownInteval);">Stop Refresh</button>
+  <table>
+    <tbody id="sos">
+    </tbody>
+  </table>
+  <script>
+    // https://en.wikipedia.org/wiki/Euler%27s_four-square_identity
+    // let sosNum = 100000000000000000000000000000;
+    let sosNum = 1;
+    const getAllSumOfSquares = () => {
+      const allSquaresSet = new Set();
+      const sqrt0 = Math.ceil(Math.sqrt(sosNum));
+      for (let a = 0; a <= sqrt0; a++) {
+        const remainder1 = sosNum - (a * a);
+        // console.log('sqrt0', sqrt0, 'a', a, 'remainder1', remainder1);
+        if (remainder1 == 0) {
+          allSquaresSet.add(JSON.stringify([a, 0, 0, 0]));
+        } else {
+          const sqrt1 = Math.ceil(Math.sqrt(remainder1));
+          for (let b = a; b <= sqrt1; b++) {
+            const remainder2 = remainder1 - (b * b);
+            // console.log('sqrt1', sqrt1, 'a', a, 'b', b, 'remainder2', remainder2);
+            if (remainder2 == 0) {
+              allSquaresSet.add(JSON.stringify([a, b, 0, 0]));
+            } else {
+              const sqrt2 = Math.ceil(Math.sqrt(remainder2));
+              for (let c = b; c <= sqrt2; c++) {
+                const remainder3 = remainder2 - (c * c);
+                // console.log('sqrt2', sqrt2, 'a', a, 'b', b, 'c', c, 'remainder3', remainder3);
+                if (remainder3 == 0) {
+                  allSquaresSet.add(JSON.stringify([a, b, c, 0]));
+                } else {
+                  const sqrt3 = Math.ceil(Math.sqrt(remainder3));
+                  for (let d = c; d <= sqrt3; d++) {
+                    const remainder4 = remainder3 - (d * d);
+                    // console.log('sqrt3', sqrt3, 'a', a, 'b', b, 'c', c, 'd', d, 'remainder4', remainder4);
+                    if (remainder4 == 0) {
+                      // console.log(a, b, c, d, sosNum);
+                      allSquaresSet.add(JSON.stringify([a, b, c, d]));
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      const allSquares = [];
+      const allSquaresList = [...allSquaresSet];
+      allSquaresList.forEach((squares, squaresIx) => {
+        // console.log(squaresIx, 'squares', squares);
+        allSquares.push(JSON.parse(squares));
+      });
+      return allSquares;
+    };
+
+    const getSumOfSquaresDiv = () => {
+      const allSquares = getAllSumOfSquares();
+      const div = document.createElement('div');
+
+      allSquares.forEach((squares) => {
+        let squaresFormula = '';
+        let sum = 0;
+        squares.forEach((square, squareIx) => {
+          if (squareIx > 0) {
+            squaresFormula += ' + ';
+          }
+          squaresFormula += `(${square}*${square})`;
+          sum += (square * square);
+        });
+        squaresFormula += ' = ';
+        squaresFormula += sum;
+
+        div.appendChild(document.createTextNode(squaresFormula));
+        const tbl = document.createElement('table');
+        const tr = document.createElement('tr');
+        tbl.appendChild(tr);
+        tbl.style.width = '1px';
+        tbl.style.height = '1px';
+        div.appendChild(tbl);
+
+        squares.forEach((square) => {
+          const tbl = getSumOfSquaresTable(square);
+          const td = document.createElement('td');
+          tr.appendChild(td);
+          td.appendChild(tbl);
+        });
+
+      });
+
+      return div;
+    }
+
+    const getSumOfSquaresTable = (square) => {
+      const div = document.createElement('div');
+      div.style.width = square + 'px';
+      div.style.height = square + 'px';
+      return div;
+      // const tbl = document.createElement('table');
+      // tbl.style.width = '1px';
+      // tbl.style.height = '1px';
+      // for (let row = 0; row < square; row++) {
+      //   const tr = document.createElement('tr');
+      //   for (let col = 0; col < square; col++) {
+      //     const td = document.createElement('td');
+      //     td.appendChild(document.createTextNode(square));
+      //     td.style.width = '1px';
+      //     td.style.height = '1px';
+      //     tr.appendChild(td);
+      //   }
+      //   tbl.appendChild(tr);
+      // }
+      // return tbl;
+    }
+
+    const addSos = () => {
+      const sosElt = document.getElementById("sos");
+
+      const tr = document.createElement('tr');
+      const numberTd = document.createElement('td');
+      numberTd.appendChild(document.createTextNode(sosNum));
+      tr.appendChild(numberTd);
+
+      const graphTd = document.createElement('td');
+      graphTd.appendChild(getSumOfSquaresDiv());
+      tr.appendChild(graphTd);
+
+      sosElt.appendChild(tr);
+
+      sosNum++;
+    }
+
+    const addSosAndCountdown = () => {
+      addSos();
+      countdown();
+
+    }
+
+    const onLoad = () => {
+      for (let i = 0; i < 10; i++) {
+        addSos();
+      }
+      // addSos();
+      // addSos();
+      // addSos();
+      // addSos();
+      addSosAndCountdown();
+    }
+  </script>
+  <script>
+    let countdownInteval;
+    const countdownElt = document.getElementById("countdown");
+    const refreshTimeElt = document.getElementById("refreshTime");
+    const refreshTime = parseInt(refreshTimeElt.innerText);
+    const countdown = () => {
+      const countdownFn = () => {
+        if (countdownElt !== null) {
+          countdownElt.innerHTML = --c;
+        }
+        if (c == 0) {
+          clearInterval(countdownInteval);
+          addSosAndCountdown();
+        }
+      }
+      countdownInteval = setInterval(countdownFn, 1000);
+      let c = refreshTime;
+      if (countdownElt !== null) {
+        countdownElt.innerHTML = c;
+      }
+    }
+  </script>
+</body>
+
+</html>

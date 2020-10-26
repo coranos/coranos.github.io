@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Payments</title>
+</head>
+
+<body>
+  <div id="payments">
+  </div>
+  <script>
+    const paymentList = [{
+        amount: 31250,
+        account: 'ban_3gaiaszye7xbsytcrsoy5nc5yuudx6un1kz1hzfyo89rdnz5h49ntmxqj9ht'
+      },
+      {
+        amount: 18750,
+        account: 'ban_1g95d7s53jc65pey8z36gbgxtawf33dqx1ztmg58knqr1fda7mz4d1jzaids'
+      },
+      {
+        amount: 12500,
+        account: 'ban_1nb8j366qzkuu7ykh73t17dgomk41djatj5hxkni9zhuirg78oy8frg8um1a'
+      },
+      {
+        amount: 3125,
+        account: 'ban_3if74d8eqydo8ko15h9wwnnxkob8j81w3kzasf963wirz9m7sihmtjaq7hmp'
+      },
+      {
+        amount: 3125,
+        account: 'ban_1qba7xn45b6k3mdjbaq89mzk3gttfaekaj4w35fuxam5tsdhgpsq1y6rne5r'
+      },
+      {
+        amount: 3125,
+        account: 'ban_3jiabcc8xa87i1pkx6u6iiana3izbund9qx3to4zanthgn4oubzh5w3zrinn'
+      },
+      {
+        amount: 3125,
+        account: 'ban_3majeejdbja46ac4zcrdq7n33ewff83tsx585akghde4dmi4fnqixkgo4akq'
+      },
+      {
+        amount: 3125,
+        account: 'ban_3qndhnou8mgutcfd1xnyhzogadyht794b67iytyz1fi7h7p1sn767bq45f9p'
+      },
+      {
+        amount: 3125,
+        account: 'ban_17h4e8d9muzb1ggzgmh8gpx35cymbwg16mir1ihwk65qipptq1sg73ssnyp4'
+      },
+      {
+        amount: 3125,
+        account: 'ban_34phummsifspzkx49isey58ti8ddftakkb1u1sjhshyy1moq8catf1n9cgmr'
+      },
+      {
+        amount: 3125,
+        account: 'ban_1u19famobsjpk8a6zpzuwfahuwaq1sm9t568849f1t8iw8hr8asj1ex8eny4'
+      },
+      {
+        amount: 3125,
+        account: 'ban_3eisrt1im84f8nikpcec7zk1uq4ebm4uxrmuxkagxzsadcpyywf1hhxrn6dy'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1f44wk665n95qi9rccy7ngzdkuapcqr9exq1bfswepp6wnwgufhacw4bpxaf'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1qhr8ukpan9nrdp6u81uc93a5huymigybngk5bh1bfkq3qrpbgzxi5bh91yh'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1wku75o6ik5k8ze5ge1acc1w5xkf8g8pq1zzo6sbm6tmhq639uerd4ih4iwo'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1w93s79hye6xycax9gca99c9zrzi8css8pt7e35575woi3xh1h9x84x4qwky'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1wznc4eiax6eroryy1hkr5uegkmyk4kxw56ddfbdwzwps447t3kqfmjmzb6o'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1nk8pgr93fr5j7dmrk3j5qjowxb5w65kqgtgxngpnwmk1tmuwtkp6kbz3rbi'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1pk5aeabg1kfpgpfnegx1xzkunprjoimncah85d88fy771dyzzmasj39uah6'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3douxiu6wpscyenhkquajpeqaqoifnnd4g5pekzyqanxfk96bm8r61h6bd6r'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3o5gpeuopswqshzj4eb4wp144qoimerjh16zwfnigpyp3air3i8f8mph6fxw'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3erbm71ysjmo4rinksthudgum4sp4m7owrwgo35htjduz7ait6pkfzmmgxsg'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3i63uiiq46p1yzcm6yg81khts4xmdz9nyzw7mdhggxdtq8mif8scg1q71gfy'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3fatj6ubg5zfsxp6z3c7uzm8hqdmy14z61hany3iqjgawr86im3q8iftoops'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3fqfgso9chf8jug8rgq3kunmcg3fwts7tuosow9dp1tjnqm9fxurx3jwyms9'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3aqezuxdnfkbx1xfss8xhbnstfikm8743ws3tzb7h58itj34rc449qmk1bi4'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3ag75ow7wkjwg8hoffn49agm3tyazkf5xotacqto395ob7yx7br8dygd3bf8'
+      },
+      {
+        amount: 1157,
+        account: 'ban_31rgt3x6cyq6gxcg14mykq71mha5ix87rpabfmcfaofrr7x6t6dpsszpoedn'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3senpa8fqy19rtmgmu66r7ywosggbk566fx3pwkc7jdkaqgwoub9hiou49us'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1tr1mc34996ecfwuywdtcsg3xfmzkrzzt1guhgy1my8qj1dqk6j55c8d3ame'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1hugkuqjt9zfy3gq6ekqawqk5ioik1gc76bzr8grgusc9co7xzg4d6buepb3'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3dzid6cw4gd6eyrgcff3ekya5fgw5m36dze6bswok4i4ocwthuoxzs4rdir6'
+      },
+      {
+        amount: 1157,
+        account: 'ban_13nigfxb6jzopwdudd1pg9e9f38bneikiqxfnwmbw14qedot6yh99ebmjt3a'
+      },
+      {
+        amount: 1157,
+        account: 'ban_36hnfky8zq81pri1sjeds8j1shu585ffgmhiegxuc5a896f47k1qeekd8w5q'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3ro48crqx3mf9d714was7q6me1qptjf7kntf9d3zudhfkbbrwpegje9w5i1j'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1m4iz4czj4mfwx8ksbbbghrp1ou3qgky4h9h6xbgqjjtbp57tugauujf4j45'
+      },
+      {
+        amount: 1157,
+        account: 'ban_1qb7joyejp6dz5sf1zdbpz9oir86nemwkob4tr943oo9kyakehtmkcdxuhyg'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3o43z5gupm5xgscf6hbq9j6im45qnwryosbso8ekuz4k6ezjywauxeeuoojx'
+      },
+      {
+        amount: 1157,
+        account: 'ban_3siue7ime7pyr3pkq56mhmg44d7otj78s5nzoacmhaei7eiw5ara7su7pt8u'
+      }
+    ];
+
+    const addPaymentUrls = () => {
+      const paymentsDiv = document.getElementById('payments');
+      paymentList.forEach((payment) => {
+        const a = document.createElement('a');
+        a.target = `_blank`;
+        a.title = `pay ${payment.amount} to ${payment.account}`
+        a.href = `https://vault.banano.cc/send?to=${payment.account}&amount=${payment.amount}`;
+        paymentsDiv.appendChild(a);
+        a.appendChild(document.createTextNode(a.title));
+        paymentsDiv.appendChild(document.createElement('br'));
+      })
+    }
+
+    addPaymentUrls();
+  </script>
+</body>
+
+</html>

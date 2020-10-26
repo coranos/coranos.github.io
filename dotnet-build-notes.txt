@@ -1,0 +1,36 @@
+#
+dotnet publish -c release -f netstandard1.6
+
+#publish a release configuration.
+dotnet publish -c release
+
+#make nuget package
+dotnet pack -c release;
+cp -R ~/git-coranos/<dir>/<dir>/bin/Release/ ~/local-nuget/<dir>;
+
+#nuget config
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+    <add key="local nuget" value="~/local-nuget" />
+  </packageSources>
+</configuration>
+
+
+#fully rebuild neo
+rm -r ~/.nuget/packages;
+rm -r ~/local-nuget/neo-vm;
+rm -r ~/local-nuget/neo;
+cd ~/git-coranos/neo-vm;
+rm -r neo-vm/bin;
+rm -r neo-vm/obj;
+dotnet restore;
+dotnet pack -c release;
+cp -R ~/git-coranos/neo-vm/neo-vm/bin/Release/ ~/local-nuget/neo-vm;
+cd ~/git-coranos/neo;
+rm -r neo/bin;
+rm -r neo/obj;
+dotnet restore;
+dotnet pack -c release;
+cp -R ~/git-coranos/neo/neo/bin/Release/ ~/local-nuget/neo;

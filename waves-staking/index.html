@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Waves Staking</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onLoad=onLoad()>
+  <h1>Waves Staking</h1>
+  <form>
+    <h2>Private Key</h2>
+    <input id="privateKey" class="monospace" type="text" size="66" max_length="64" value=""></input><br>
+    <button onclick='return getNewSeed();'>New Private Key</button>
+    <hr>
+    <button onclick='return getAddress();'>Show Address</button>
+    <div id="address"></div>
+    <hr>
+    <button onclick='return getDepositInstructions();'>Show Deposit Instructions</button>
+    <div id="depositInstructions"></div>
+    <hr>
+    <button onclick='return setStakeEnabled();'>Enable Staking</button>
+    <div id="stake"></div>
+    <hr>
+    <button onclick='return setStakeDisabled();'>Disable Staking</button>
+    <div id="remove-staking"></div>
+    <hr>
+    <button onclick='return getBalance();'>Get Balance</button>
+    <div id="balance"></div>
+    <hr>
+    <button onclick='return sendWaves();'>Send Waves</button>
+    <h2>Send To Address</h2>
+    <input id="sendToAddress" class="monospace" type="text" size="66" max_length="64" value=""></input><br>
+    <h2>Send To Amount</h2>
+    <input id="sendToAmount" class="monospace" type="text" size="66" max_length="64" value=""></input><br>
+    <div id="wsend"></div>
+    <hr>
+    <button onclick='return withdraw();'>Withdraw Tokens</button>
+    <h2>Withdraw Token</h2>
+    <select id="withdrawToken">
+      <option value="ktm">💎 KRYPTONEUM 💎</option>
+      <option value="1mc">🌈Crypto 🌈Million</option>
+    </select>
+    <h2>Withdraw To address</h2>
+    <input id="withdrawToAddress" class="monospace" type="text" size="66" max_length="64" value=""></input><br>
+    <h2>Withdraw To Amount</h2>
+    <input id="withdrawToAmount" class="monospace" type="text" size="66" max_length="64" value=""></input><br>
+
+    <div id="withdraw"></div>
+    <hr>
+    <button onclick='return getHelp();'>Show Help</button>
+    <div id="help"></div>
+  </form>
+  <br>
+  <script src="index.js"></script>
+</body>
+
+</html>
