@@ -7,6 +7,15 @@ const onLoad = async () => {
 
 const loadSketchpad = () => {
   const canvas = document.querySelector('#sketchpad');
+  window.ondragover = function(e) {e.preventDefault()}
+  window.ondrop = function(e) {e.preventDefault(); draw(e.dataTransfer.files[0]); }
+  window.addEventListener("paste", async function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const file = e.clipboardData.items[0].getAsFile();
+    draw(file);
+  });
+
   sketchpad = new Atrament(canvas);
   sketchpad.recordStrokes = true;
   sketchpad.adaptiveStroke = false;
@@ -236,3 +245,20 @@ const convertToSvg = () => {
   }
   loadReferenceDrawing();
 };
+
+const draw = (file) => {
+
+    const img =new Image();
+    // URL @ Mozilla, webkitURL @ Chrome
+    img.src = (window.webkitURL ? webkitURL : URL).createObjectURL(file);
+
+    const canvas = document.querySelector('#sketchpad');
+    const ctx = canvas.getContext("2d");
+
+    // call ctx.drawImage when the image got loaded
+    img.onload = () => {
+      // ctx.drawImage(img, 0, 0);
+      ctx.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height); // stretch img to canvas size
+  }
+
+}
