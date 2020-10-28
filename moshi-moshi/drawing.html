@@ -21,6 +21,7 @@
         <button id="undo" class="yellow_input" onclick="event.preventDefault(); undoSketchpad();">
           Undo
         </button>
+        <input type="file" id="upload-image" class="yellow_input" />
         <p>1
           <label class="align_top">Thickness:</label>
           <input style="height:20px" type="range" min="1" max="40" oninput="sketchpad.weight = parseFloat(event.target.value);" value="2" step="0.1" autocomplete="off" />

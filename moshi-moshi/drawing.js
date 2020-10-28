@@ -13,7 +13,11 @@ const loadSketchpad = () => {
     e.preventDefault();
     e.stopPropagation();
     const file = e.clipboardData.items[0].getAsFile();
-    draw(file);
+    draw(file);0
+  });
+  const fileSelector = document.getElementById('upload-image');
+  fileSelector.addEventListener('change', (e) => {
+    draw(e.target.files[0]);
   });
 
   sketchpad = new Atrament(canvas);
