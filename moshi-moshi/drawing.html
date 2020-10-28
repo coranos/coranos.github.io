@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Moshi Moshi Drawing</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="not_selectable" onload="onLoad()">
+  <h1>Moshi Moshi Drawing</h1>
+  <div class="display_inline_block t_center">
+    <div class="t_center monospace align_top">
+      <canvas id="sketchpad" width="400" height="400" class="bordered"></canvas>
+      <br>
+      <form>
+        <button id="clear" class="yellow_input" onclick="event.preventDefault(); clearSketchpad();">
+          Clear
+        </button>
+        <button id="undo" class="yellow_input" onclick="event.preventDefault(); undoSketchpad();">
+          Undo
+        </button>
+        <p>1
+          <label class="align_top">Thickness:</label>
+          <input style="height:20px" type="range" min="1" max="40" oninput="sketchpad.weight = parseFloat(event.target.value);" value="2" step="0.1" autocomplete="off" />
+        <p>
+          <span id="color_inputs">
+          </span>
+      </form>
+    </div>
+  </div>
+  <script src="atrament-v1.2.0.min.js"></script>
+  <script src="drawing.js"></script>
+
+</html>

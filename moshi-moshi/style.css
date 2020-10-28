@@ -1,0 +1,53 @@
+.monospace {
+  font-family: monospace;
+}
+
+.not_selectable {
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.selectable {
+  cursor: text;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.display_inline_block {
+  display: inline-block;
+}
+
+.t_center {
+  text-align: center;
+}
+
+.align_top {
+  vertical-align: top;
+}
+
+.bordered {
+  border-radius: 4px;
+  border: solid;
+  border-width: 1px;
+}
+
+.color_display {
+  background: repeating-linear-gradient(45deg,
+      white,
+      white 5px,
+      lightgray 5px,
+      lightgray 10px);
+}
+
+.color_input {
+  background-image: radial-gradient(white 20%, transparent 20%),
+    radial-gradient(white 20%, transparent 20%);
+  background-color: lightgray;
+  background-position: 0 0, 4px 4px;
+  background-size: 8px 8px;
+}
+
+.w100pct {
+  width: 100%;
+}
