@@ -250,6 +250,14 @@ const convertToSvg = () => {
   loadReferenceDrawing();
 };
 
+const download = () => {
+  const download = document.getElementById("download");
+  const image = document.querySelector('#sketchpad')
+    .toDataURL("image/png")
+    .replace("image/png", "image/octet-stream");
+  download.setAttribute("href", image);
+}
+
 const draw = (file) => {
 
     const img =new Image();
