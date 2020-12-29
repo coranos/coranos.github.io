@@ -11,39 +11,42 @@
   <table>
     <tr>
       <td colspan="3">
-        <svg width="600" height="400" viewBox="0 0 600 400" stroke="black" stroke-width="2" class="bg_black" xmlns="http://www.w3.org/2000/svg">
+        <svg id='svg' width="600" height="400" viewBox="0 0 600 400" stroke="black" stroke-width="2" class="bg_black" xmlns="http://www.w3.org/2000/svg">
           <image id="planet" href="openmoji/ringed-planet.svg" x="250" y="150" width="100" height="100"></image>
-          <image id="rock1" href="openmoji/rock.svg" x="100" y="200" width="100" height="100"></image>
-          <image id="rock2" href="openmoji/rock.svg" x="200" y="200" width="100" height="100"></image>
-          <image id="rock3" href="openmoji/rock.svg" x="300" y="200" width="100" height="100"></image>
-          <image id="rock4" href="openmoji/rock.svg" x="400" y="200" width="100" height="100"></image>
           <image id="fox" href="openmoji/fox.svg" x="250" y="300" width="100" height="100"></image>
         </svg>
       </td>
     </tr>
     <tr>
       <td><button onclick="moveLeft()">Left(A)</button></td>
-      <td><button onclick="attack()">Attack(D)</button></td>
+      <td><button onclick="forward()">Forward(S)</button></td>
       <td><button onclick="moveRight()">Right(D)</button></td>
     </tr>
   </table>
   <script>
     let distance;
     let heading;
+    let skipRock;
 
     const onLoad = () => {
       distance = 25;
       heading = 0;
+      updateSkipRock();
+
       updateGame();
       document.addEventListener('keyup', keyUp, false);
     };
+
+    const updateSkipRock = () => {
+      skipRock = Math.floor(Math.random() * 6);
+    }
 
     const keyUp = (e) => {
       if (e.keyCode == 65) {
         moveLeft();
       }
       if (e.keyCode == 83) {
-        attack();
+        forward();
       }
       if (e.keyCode == 68) {
         moveRight();
@@ -69,6 +72,28 @@
       console.log('updateFox', heading, x, foxElt);
     }
 
+    const updateRocks = () => {
+      console.log('updateRocks', skipRock);
+      const svgElt = document.querySelector('#svg');
+      const rocksElt = document.querySelectorAll('.rocks');
+      rocksElt.forEach((rockElt) => {
+        rockElt.parentNode.removeChild(rockElt);
+      })
+      for (let rockIx = 0; rockIx < 6; rockIx += 1) {
+        if (rockIx !== skipRock) {
+          const x = rockIx * 100;
+          const rockElt = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+          rockElt.setAttribute('href', 'openmoji/rock.svg');
+          rockElt.setAttribute('x', x);
+          rockElt.setAttribute('y', 200);
+          rockElt.setAttribute('width', 100);
+          rockElt.setAttribute('height', 100);
+          rockElt.setAttribute('class', 'rocks');
+          svgElt.appendChild(rockElt);
+        }
+      }
+    }
+
     const updateGame = () => {
       distance = Math.max(0, distance);
       if (heading < -5) {
@@ -81,22 +106,24 @@
       // heading = Math.max(+2, heading);
       updatePlanet();
       updateFox();
+      updateRocks();
     };
 
     const moveLeft = () => {
       heading--;
-      distance--;
+      // distance--;
       updateGame();
     };
 
-    const attack = () => {
+    const forward = () => {
       distance--;
+      updateSkipRock();
       updateGame();
     };
 
     const moveRight = () => {
       heading++;
-      distance--;
+      // distance--;
       updateGame();
     };
   </script>
