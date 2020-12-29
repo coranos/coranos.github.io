@@ -13,7 +13,10 @@
       <td colspan="3">
         <svg width="600" height="400" viewBox="0 0 600 400" stroke="black" stroke-width="2" class="bg_black" xmlns="http://www.w3.org/2000/svg">
           <image id="planet" href="openmoji/ringed-planet.svg" x="250" y="150" width="100" height="100"></image>
-          <image id="rock" href="openmoji/rock.svg" x="0" y="200" width="100" height="100"></image>
+          <image id="rock1" href="openmoji/rock.svg" x="100" y="200" width="100" height="100"></image>
+          <image id="rock2" href="openmoji/rock.svg" x="200" y="200" width="100" height="100"></image>
+          <image id="rock3" href="openmoji/rock.svg" x="300" y="200" width="100" height="100"></image>
+          <image id="rock4" href="openmoji/rock.svg" x="400" y="200" width="100" height="100"></image>
           <image id="fox" href="openmoji/fox.svg" x="250" y="300" width="100" height="100"></image>
         </svg>
       </td>
@@ -59,11 +62,11 @@
       // console.log('updatePlanet', distance, size, planetElt);
     }
 
-    const updateRock = () => {
-      const rockElt = document.querySelector('#rock');
+    const updateFox = () => {
+      const foxElt = document.querySelector('#fox');
       const x = (heading + 5) * 50;
-      rockElt.setAttribute('x', x);
-      console.log('updateRock', heading, x, rockElt);
+      foxElt.setAttribute('x', x);
+      console.log('updateFox', heading, x, foxElt);
     }
 
     const updateGame = () => {
@@ -77,11 +80,11 @@
       // heading = Math.max(-2, heading);
       // heading = Math.max(+2, heading);
       updatePlanet();
-      updateRock();
+      updateFox();
     };
 
     const moveLeft = () => {
-      heading++;
+      heading--;
       distance--;
       updateGame();
     };
@@ -92,7 +95,7 @@
     };
 
     const moveRight = () => {
-      heading--;
+      heading++;
       distance--;
       updateGame();
     };
