@@ -27,6 +27,7 @@
     let distance;
     let heading;
     let skipRock;
+    let oldSkipRock;
 
     const onLoad = () => {
       distance = 25;
@@ -38,6 +39,7 @@
     };
 
     const updateSkipRock = () => {
+      oldSkipRock = skipRock;
       skipRock = Math.floor(Math.random() * 6);
     }
 
@@ -69,11 +71,11 @@
       const foxElt = document.querySelector('#fox');
       const x = (heading + 5) * 50;
       foxElt.setAttribute('x', x);
-      console.log('updateFox', heading, x, foxElt);
+      // console.log('updateFox', heading, x, foxElt);
     }
 
     const updateRocks = () => {
-      console.log('updateRocks', skipRock);
+      // console.log('updateRocks', skipRock);
       const svgElt = document.querySelector('#svg');
       const rocksElt = document.querySelectorAll('.rocks');
       rocksElt.forEach((rockElt) => {
@@ -86,6 +88,17 @@
           rockElt.setAttribute('href', 'openmoji/rock.svg');
           rockElt.setAttribute('x', x);
           rockElt.setAttribute('y', 200);
+          rockElt.setAttribute('width', 100);
+          rockElt.setAttribute('height', 100);
+          rockElt.setAttribute('class', 'rocks');
+          svgElt.appendChild(rockElt);
+        }
+        if (rockIx !== oldSkipRock) {
+          const x = rockIx * 100;
+          const rockElt = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+          rockElt.setAttribute('href', 'openmoji/rock.svg');
+          rockElt.setAttribute('x', x);
+          rockElt.setAttribute('y', 380);
           rockElt.setAttribute('width', 100);
           rockElt.setAttribute('height', 100);
           rockElt.setAttribute('class', 'rocks');
