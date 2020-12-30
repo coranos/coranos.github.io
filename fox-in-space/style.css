@@ -9,3 +9,12 @@
 .display_none {
   display: none;
 }
+
+.bordered {
+  border: solid;
+  border-width: 1px;
+}
+
+.w33pct {
+  width: 33%;
+}

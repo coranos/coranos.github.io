@@ -10,17 +10,27 @@
 <body onload="onLoad();">
   <table>
     <tr>
-      <td colspan="3">
+      <td colspan="3" class="bordered">
         <svg id='svg' width="600" height="400" viewBox="0 0 600 400" stroke="black" stroke-width="2" class="bg_black" xmlns="http://www.w3.org/2000/svg">
           <image id="planet" href="openmoji/ringed-planet.svg" x="250" y="150" width="100" height="100"></image>
           <image id="fox" href="openmoji/fox.svg" x="250" y="300" width="100" height="100"></image>
         </svg>
       </td>
     </tr>
+    <tr id="gameControls">
+      <td class="bordered w33pct"><button onclick="moveLeft()">Left(A)</button></td>
+      <td class="bordered w33pct"><button onclick="forward()">Forward(S)</button></td>
+      <td class="bordered w33pct"><button onclick="moveRight()">Right(D)</button></td>
+    </tr>
+    <tr id="resetControls">
+      <td colspan="3" class="bordered">
+        <button onclick="newGame()">New Game</button>
+      <td>
+    </tr>
     <tr>
-      <td><button onclick="moveLeft()">Left(A)</button></td>
-      <td><button onclick="forward()">Forward(S)</button></td>
-      <td><button onclick="moveRight()">Right(D)</button></td>
+      <td colspan="3">
+        <h3 id="score"></h3>
+      <td>
     </tr>
   </table>
   <script>
@@ -28,15 +38,30 @@
     let heading;
     let skipRock;
     let oldSkipRock;
+    let score = 0;
+    let gameState;
+    const GAME_STATE_RUNNING = 'Running';
+    const GAME_STATE_WON = 'You Win';
+    const GAME_STATE_LOST = 'You Lose';
 
     const onLoad = () => {
+      document.addEventListener('keyup', keyUp, false);
+      newGame();
+    };
+
+    const newGame = () => {
       distance = 25;
       heading = 0;
+      gameState = GAME_STATE_RUNNING;
       updateSkipRock();
 
       updateGame();
-      document.addEventListener('keyup', keyUp, false);
-    };
+    }
+
+    const updateScore = () => {
+      const scoreElt = document.querySelector('#score');
+      scoreElt.innerText = `Distance:${distance} Score:${score} Game:${gameState}`;
+    }
 
     const updateSkipRock = () => {
       oldSkipRock = skipRock;
@@ -67,11 +92,19 @@
       // console.log('updatePlanet', distance, size, planetElt);
     }
 
+    const getFoxX = () => {
+      return (heading + 5) * 50;
+    }
+
     const updateFox = () => {
       const foxElt = document.querySelector('#fox');
-      const x = (heading + 5) * 50;
+      const x = getFoxX();
       foxElt.setAttribute('x', x);
       // console.log('updateFox', heading, x, foxElt);
+    }
+
+    const getSkipRockX = () => {
+      return skipRock * 100;
     }
 
     const updateRocks = () => {
@@ -81,17 +114,20 @@
       rocksElt.forEach((rockElt) => {
         rockElt.parentNode.removeChild(rockElt);
       })
+
       for (let rockIx = 0; rockIx < 6; rockIx += 1) {
-        if (rockIx !== skipRock) {
-          const x = rockIx * 100;
-          const rockElt = document.createElementNS('http://www.w3.org/2000/svg', 'image');
-          rockElt.setAttribute('href', 'openmoji/rock.svg');
-          rockElt.setAttribute('x', x);
-          rockElt.setAttribute('y', 200);
-          rockElt.setAttribute('width', 100);
-          rockElt.setAttribute('height', 100);
-          rockElt.setAttribute('class', 'rocks');
-          svgElt.appendChild(rockElt);
+        if (gameState !== GAME_STATE_WON) {
+          if (rockIx !== skipRock) {
+            const x = rockIx * 100;
+            const rockElt = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+            rockElt.setAttribute('href', 'openmoji/rock.svg');
+            rockElt.setAttribute('x', x);
+            rockElt.setAttribute('y', 200);
+            rockElt.setAttribute('width', 100);
+            rockElt.setAttribute('height', 100);
+            rockElt.setAttribute('class', 'rocks');
+            svgElt.appendChild(rockElt);
+          }
         }
         if (rockIx !== oldSkipRock) {
           const x = rockIx * 100;
@@ -102,6 +138,9 @@
           rockElt.setAttribute('width', 100);
           rockElt.setAttribute('height', 100);
           rockElt.setAttribute('class', 'rocks');
+          if (gameState === GAME_STATE_LOST) {
+            rockElt.setAttribute('background-color', 'red');
+          }
           svgElt.appendChild(rockElt);
         }
       }
@@ -115,29 +154,42 @@
       if (heading > +5) {
         heading = +5;
       }
-      // heading = Math.max(-2, heading);
-      // heading = Math.max(+2, heading);
       updatePlanet();
       updateFox();
       updateRocks();
+      updateScore();
     };
 
     const moveLeft = () => {
-      heading--;
-      // distance--;
-      updateGame();
+      if (gameState === GAME_STATE_RUNNING) {
+        heading--;
+        // distance--;
+        updateGame();
+      }
     };
 
     const forward = () => {
-      distance--;
-      updateSkipRock();
-      updateGame();
+      if (gameState === GAME_STATE_RUNNING) {
+        distance--;
+        score++;
+        if (distance === 0) {
+          gameState = GAME_STATE_WON;
+        } else if (getFoxX() !== getSkipRockX()) {
+          gameState = GAME_STATE_LOST;
+          score = 0;
+        } else {
+          updateSkipRock();
+        }
+        updateGame();
+      }
     };
 
     const moveRight = () => {
-      heading++;
-      // distance--;
-      updateGame();
+      if (gameState === GAME_STATE_RUNNING) {
+        heading++;
+        // distance--;
+        updateGame();
+      }
     };
   </script>
 </body>
