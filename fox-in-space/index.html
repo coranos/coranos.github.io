@@ -59,8 +59,20 @@
     }
 
     const updateScore = () => {
+      const decimalPlaces = 9;
+      let scoreDecimal = score.toString();
+      if (scoreDecimal.length <= decimalPlaces) {
+        while (scoreDecimal.length < decimalPlaces) {
+          scoreDecimal = '0' + scoreDecimal;
+        }
+        scoreDecimal = '0.' + scoreDecimal;
+      } else {
+        const whole = scoreDecimal.substring(0, scoreDecimal.length - decimalPlaces);
+        const remainder = scoreDecimal.substring(scoreDecimal.length - decimalPlaces);
+        scoreDecimal = whole + '.' + remainder;
+      }
       const scoreElt = document.querySelector('#score');
-      scoreElt.innerText = `Distance:${distance} Score:${score} Game:${gameState}`;
+      scoreElt.innerHTML = `Distance:${distance} Game:${gameState}<br>ETHK SCORE TOKENS:${scoreDecimal}`;
     }
 
     const updateSkipRock = () => {
@@ -171,7 +183,7 @@
     const forward = () => {
       if (gameState === GAME_STATE_RUNNING) {
         distance--;
-        score++;
+        score += 1;
         if (distance === 0) {
           gameState = GAME_STATE_WON;
         } else if (getFoxX() !== getSkipRockX()) {
