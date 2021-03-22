@@ -26,7 +26,7 @@ https://volcano.coranos.cc/wallet
 
 The game will give you a default wallet, which is stored in your browser. You can change it using the 'edit' icon under the Pay to Account heading.
 
-![Edit Account](https://cdn.discordapp.com/attachments/765371532686917654/823352390690275368/image0.png)
+![Edit Account](https://i.imgur.com/3lWX2YQ.png)
 
 ### draw some drawings
 
