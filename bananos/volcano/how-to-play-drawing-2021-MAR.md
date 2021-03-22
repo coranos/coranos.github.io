@@ -18,6 +18,10 @@ The Prizes will be influenced by the scores, but the judge has final say in whic
 
 The Volcano Drawing Game is part of banano's new volcano game, where you are rewarded for drawing well!
 
+The rest of the Volcano Game is not done yet. You art will be a part!
+
+We will eventually make NFTs (Non Fungible Tokens) out of the best art, and introduce them as part of the game. (This part is still under construction).
+
 ### register your wallet, or use the one provided.
 
 The first thing you need to do is make sure you know which account will get rewarded.
