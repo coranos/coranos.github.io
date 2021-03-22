@@ -34,7 +34,7 @@ The next thing to do is to draw some drawings. Read the description in the upper
 
 https://volcano.coranos.cc/drawing
 
-(Draw)[https://cdn.discordapp.com/attachments/765371532686917654/823358160412475482/image0.png]
+![Draw](https://i.imgur.com/tHdth8B.png)
 
 The descriptions will eventually repeat themselves.
 
@@ -44,4 +44,4 @@ Once you have drawn all the drawings you want, go and vote in which ones you lik
 
 https://volcano.coranos.cc/voting
 
-(Vote)[https://cdn.discordapp.com/attachments/765371532686917654/823358562322350090/image0.png]
+![Vote](https://i.imgur.com/oozi7jC.png)
