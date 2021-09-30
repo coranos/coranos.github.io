@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Banano Game</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body onload="onLoad()">
+  <div class="w600px">
+    <table class="w100pct">
+      <tr>
+        <th>Win Chance</th>
+        <th>Roll Under</th>
+        <th>Payout</th>
+      </tr>
+      <tr>
+        <td id="win_chance"></td>
+        <td id="roll_under"></td>
+        <td id="payout"></td>
+      </tr>
+    </table>
+    <table class="w100pct">
+      <tr>
+        <th colspan="5">Pick Chance Of Winning!</th>
+      </tr>
+      <tr>
+        <td><button id="vl" class="button" onclick="chanceSelectionClick(this)">Very Low</button></td>
+        <td><button id="l" class="button" onclick="chanceSelectionClick(this)">Low</button></td>
+        <td><button id="a" class="button" onclick="chanceSelectionClick(this)">Average</button></td>
+        <td><button id="h" class="button" onclick="chanceSelectionClick(this)">High</button></td>
+        <td><button id="vh" class="button selected_button" onclick="chanceSelectionClick(this)">Very High</button></td>
+      </tr>
+      <tr>
+        <th colspan="2">Server Seed</th>
+        <td colspan="3"><input id="server_seed" class="w96pct" type="text" name="server_seed" value="123456"></td>
+      </tr>
+      <tr>
+        <th colspan="2">Client Seed</th>
+        <td colspan="3"><input id="client_seed" class="w96pct" type="text" name="client_seed" value="ABCDEF"></td>
+      </tr>
+      <tr>
+        <th colspan="2">Nonce</th>
+        <td colspan="3"><input id="nonce" class="w96pct" type="number" name="nonce" value="1"></td>
+      </tr>
+      <tr>
+        <th colspan="2">Number Of Bets</th>
+        <td colspan="3"><input id="number_of_bets" class="w96pct" type="number" name="number_of_bets" value="10"></td>
+      </tr>
+      <tr>
+        <td colspan="5"><button id="vh" class="button w99pct" onclick="playClick(this)">Play!</button></td>
+      </tr>
+    </table>
+    <p>
+    <h3 class="text_align_center">Record Of Bets</h3>
+    <div id="bets">
+      <table class="w100pct">
+        <tr>
+          <th>Bet Number</th>
+          <th>Hash</th>
+          <th>Result</th>
+          <th>Target</th>
+          <th>Win/Lose</th>
+          <th>Profit</th>
+          <th>Total Profit</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script src="https://coranos.github.io/js-lib/crypto-js.js"></script>
+  <script src="https://coranos.github.io/coranos-common.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onLoad="onLoad();">
+  <div id="targetDiv"></div>
+  <script src='../../../js-lib/jquery-3.2.1.js'></script>
+  <script src='../../../js-lib/load-json.js'></script>
+  <script src='../../../js-lib/showdown-1.8.6.min.js'></script>
+  <script>
+      function onLoad () {
+        $.ajaxSetup({
+          beforeSend : function (xhr) {
+            if (xhr.overrideMimeType) {
+              xhr.overrideMimeType('text/markdown');
+            }
+          },
+          cache : false
+        });
+
+        $.ajax({
+          url : 'index.md',
+          type : 'get',
+          dataType : 'text',
+          async : true,
+          success : function (text) {
+            var target = document.getElementById('targetDiv');
+
+            showdown.setOption('tables', 'true');
+            showdown.setOption('tablesHeaderId', 'true');
+            showdown.setOption('parseImgDimension', 'true');
+            showdown.setFlavor('github');
+
+            var converter = new showdown.Converter();
+            var html = converter.makeHtml(text);
+            target.innerHTML = html;
+
+            var images = target.getElementsByTagName('img');
+
+            var imageArray = [];
+            for (var i = 0; i < images.length; i++) {
+              const image = images[i];
+              imageArray.push(image);
+            }
+
+            for (var i = 0; i < imageArray.length; i++) {
+              const image = imageArray[i];
+              //console.log('alt:',image.alt);
+              const parentElement = image.parentElement;
+              const anchor = document.createElement('a');
+              anchor.href = image.src;
+              anchor.target = '_blank';
+              parentElement.appendChild(anchor);
+              anchor.appendChild(image);
+            }
+          }
+        });
+      }
+    </script>
+</body>
+</html>

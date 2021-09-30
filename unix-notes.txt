@@ -1,0 +1,11 @@
+to find the size of subfolders:
+sudo du . -h --max-depth=1
+
+to create users and give them quotas and sudo:
+  adduser (username)
+
+  usermod -aG sudo (username)
+
+test it:
+  su - (username)
+  sudo whoami

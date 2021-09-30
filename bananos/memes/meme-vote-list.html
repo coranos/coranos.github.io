@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Meme List</title>
+<link rel="stylesheet" type="text/css" href="../../index.css">
+<style type="text/css">
+.solid {
+  border: solid;
+  border-width: 0.5px;
+  text-align: right;
+  font-family: monospace;
+}
+
+form {
+  display: inline;
+}
+</style>
+<script src="../../coranos-common.js"></script>
+</head>
+<body onload="onLoad();">
+  <div>
+    <div style="display: none;">
+      <form onsubmit="return loadPrevPage();">
+        <input type="submit" value="Load Prev Page">
+      </form>
+      <form onsubmit="return loadRows();">
+        Start Row (Inclusive)<input type="number" name="startRowNbr" id="startRowNbr" min="1"><input type="submit" value="Load Rows">End Row
+        (Inclusive)<input type="number" name="endRowNbr" id="endRowNbr" min="1">
+      </form>
+      <form onsubmit="return loadNextPage();">
+        <input type="submit" value="Load Next Page">
+      </form>
+    </div>
+    <table id="dataTable" class="solid">
+      <thead class="solid">
+      </thead>
+      <tbody class="solid">
+      </tbody>
+    </table>
+  </div>
+  <script>
+      var pageSize = 50;
+      var currIx = 0;
+
+      function loadRows () {
+        var startNbr = parseInt(document.getElementById('startRowNbr').value);
+        var endNbr = parseInt(document.getElementById('endRowNbr').value);
+
+        //console.log('loadRows ' + startNbr + ' to ' + endNbr);
+
+        if (startNbr < endNbr) {
+          //console.log('loadRows (startNbr < endNbr)');
+          currIx = startNbr - 1;
+          pageSize = endNbr - currIx;
+        } else {
+          //console.log('loadRows (startNbr > endNbr)');
+          currIx = endNbr - 1;
+          pageSize = (startNbr - endNbr) + 1;
+        }
+
+        //console.log('loadRows ' + currIx + ' pageSize ' + pageSize);
+
+        clearAndLoadPage();
+        return false;
+      }
+
+      function setRowNumbers () {
+        document.getElementById('startRowNbr').value = currIx + 1;
+        document.getElementById('endRowNbr').value = currIx + pageSize;
+
+        var url = new URL(window.location);
+        var address = url.searchParams.get('address');
+        if (address != undefined) {
+          document.getElementById('address').value = address;
+        }
+      }
+
+      function clearAndLoadPage () {
+        $('#dataTable').find('tbody').empty();
+        setRowNumbers();
+      }
+
+      function loadPrevPage () {
+        if (currIx <= 0) {
+          return false;
+        }
+        currIx -= pageSize;
+        clearAndLoadPage();
+        return false;
+      }
+
+      function loadNextPage () {
+        currIx += pageSize;
+        clearAndLoadPage();
+        return false;
+      }
+
+      const callback = (response) => {
+        const combined = {};
+        response.forEach((json) => {
+          for (const [key, value] of Object.entries(json)) { 
+            if(combined[key] === undefined) {
+              combined[key] = value;
+            } else {
+              combined[key] += value;
+            }
+          }
+        });        
+        const list = [];
+        
+        for (const [key, value] of Object.entries(combined)) { 
+          const elt = {};
+          elt.votes = value;
+          elt.url = 'https://monkeymatch.coranos.io' + key;
+          elt.image = '';
+          list.push(elt);
+        }
+        
+        list.sort((a, b) => {
+          return b.votes - a.votes;
+      	});
+        
+        for(var ix = 0; ix < list.length; ix++) {
+          const url = list[ix].url;
+          if(ix < 50) {
+            list[ix].image = document.createElement('img');
+            list[ix].image.src = url;
+          }
+          list[ix].url = document.createElement('a');
+          list[ix].url.innerText = 'Image';
+          list[ix].url.href = url;
+          list[ix].url.target = '_blank';
+        }
+                
+        html('dataTable','');
+        createTable('dataTable',list);
+      }
+
+      const onLoad = () => {
+          loadJson('meme-vote-list.json', callback);
+      }
+    </script>
+</body>
+
+</html>
