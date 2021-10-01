@@ -38,6 +38,7 @@ const chartConfig = {
         },
       }],
       yAxes: [{
+        type: 'logarithmic',
         stacked: false,
         id: 'block_count',
         position: 'left',
@@ -61,11 +62,17 @@ const callback = (response) => {
   const vaultBlockCementedDs = {};
   const kaliumBlockCementedDs = {};
 
+  const vaultBlockUncheckedDs = {};
+  const kaliumBlockUncheckedDs = {};
+
   vaultBlockCountDs.label = 'vault_block_count';
   kaliumBlockCountDs.label = 'kalium_block_count';
 
   vaultBlockCementedDs.label = 'vault_block_cemented';
   kaliumBlockCementedDs.label = 'kalium_block_cemented';
+
+  vaultBlockUncheckedDs.label = 'vault_block_unchecked';
+  kaliumBlockUncheckedDs.label = 'kalium_block_unchecked';
 
   vaultBlockCountDs.borderColor = '#00FF00';
   kaliumBlockCountDs.borderColor = '#FFFF77';
@@ -73,11 +80,17 @@ const callback = (response) => {
   vaultBlockCementedDs.borderColor = '#007700';
   kaliumBlockCementedDs.borderColor = '#777733';
 
+  vaultBlockUncheckedDs.borderColor = '#007700';
+  kaliumBlockUncheckedDs.borderColor = '#777733';
+
   data.datasets.push(vaultBlockCountDs);
   data.datasets.push(kaliumBlockCountDs);
 
   data.datasets.push(vaultBlockCementedDs);
   data.datasets.push(kaliumBlockCementedDs);
+
+  data.datasets.push(vaultBlockUncheckedDs);
+  data.datasets.push(kaliumBlockUncheckedDs);
 
   for (let ix = 0; ix < data.datasets.length; ix++) {
     data.datasets[ix].data = [];
@@ -136,16 +149,20 @@ const callback = (response) => {
     data.labels[ix] = date;
 
     elt.envs.forEach((envElt) => {
-      if (envElt.block_count) {
+      if (envElt.block_count !== undefined) {
+        // if (envElt.block_count.unchecked < 500000) {
         // console.log('envElt', envElt);
-        if (envElt.env == 'vault') {
-          vaultBlockCountDs.data[ix] = envElt.block_count.count;
-          vaultBlockCementedDs.data[ix] = envElt.block_count.cemented;
-        }
-        if (envElt.env == 'kalium') {
-          kaliumBlockCountDs.data[ix] = envElt.block_count.count;
-          kaliumBlockCementedDs.data[ix] = envElt.block_count.cemented;
-        }
+          if (envElt.env == 'vault') {
+            vaultBlockCountDs.data[ix] = envElt.block_count.count;
+            vaultBlockCementedDs.data[ix] = envElt.block_count.cemented;
+            vaultBlockUncheckedDs.data[ix] = envElt.block_count.unchecked;
+          }
+          if (envElt.env == 'kalium') {
+            kaliumBlockCountDs.data[ix] = envElt.block_count.count;
+            kaliumBlockCementedDs.data[ix] = envElt.block_count.cemented;
+            kaliumBlockUncheckedDs.data[ix] = envElt.block_count.unchecked;
+          }
+        // }
       }
     });
   }
@@ -159,7 +176,7 @@ const callback = (response) => {
     } else {
       for (let dataSetIx = 0; dataSetIx < datasets.length; dataSetIx++) {
         const dataEltN0 = datasets[dataSetIx].data[labelIx];
-        if(dataEltN0 !== undefined) {
+        if (dataEltN0 !== undefined) {
           const dataEltN1 = datasets[dataSetIx].data[labelIx-1];
           // console.log('dataElt', labelIx, label, dataEltN0, dataEltN1);
           const roundN0 = Math.round(dataEltN0/10000);
