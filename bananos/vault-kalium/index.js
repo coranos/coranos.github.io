@@ -59,50 +59,62 @@ const callback = (response) => {
   const vaultBlockCountDs = {};
   const kaliumBlockCountDs = {};
   const v22BlockCountDs = {};
+  const v22fastBlockCountDs = {};
 
   const vaultBlockCementedDs = {};
   const kaliumBlockCementedDs = {};
   const v22BlockCementedDs = {};
+  const v22fastBlockCementedDs = {};
 
   const vaultBlockUncheckedDs = {};
   const kaliumBlockUncheckedDs = {};
   const v22BlockUncheckedDs = {};
+  const v22fastBlockUncheckedDs = {};
 
   vaultBlockCountDs.label = 'vault_block_count';
   kaliumBlockCountDs.label = 'kalium_block_count';
   v22BlockCountDs.label = 'v22_block_count';
+  v22fastBlockCountDs.label = 'v22fast_block_count';
 
   vaultBlockCementedDs.label = 'vault_block_cemented';
   kaliumBlockCementedDs.label = 'kalium_block_cemented';
   v22BlockCementedDs.label = 'v22_block_cemented';
+  v22fastBlockCementedDs.label = 'v22fast_block_cemented';
 
   vaultBlockUncheckedDs.label = 'vault_block_unchecked';
   kaliumBlockUncheckedDs.label = 'kalium_block_unchecked';
   v22BlockUncheckedDs.label = 'v22_block_unchecked';
+  v22fastBlockUncheckedDs.label = 'v22fast_block_unchecked';
 
   vaultBlockCountDs.borderColor = '#00FF00';
   kaliumBlockCountDs.borderColor = '#FFFF77';
   v22BlockCountDs.borderColor = '#FF0000';
+  v22fastBlockCountDs.borderColor = '#0000FF';
 
   vaultBlockCementedDs.borderColor = '#007700';
   kaliumBlockCementedDs.borderColor = '#777733';
   v22BlockCementedDs.borderColor = '#770000';
+  v22fastBlockCementedDs.borderColor = '#0077';
 
   vaultBlockUncheckedDs.borderColor = '#007700';
   kaliumBlockUncheckedDs.borderColor = '#777733';
   v22BlockUncheckedDs.borderColor = '#777733';
+  v22fastBlockUncheckedDs.borderColor = '#337777';
 
   data.datasets.push(vaultBlockCountDs);
   data.datasets.push(kaliumBlockCountDs);
   data.datasets.push(v22BlockCountDs);
+  data.datasets.push(v22fastBlockCountDs);
 
   data.datasets.push(vaultBlockCementedDs);
   data.datasets.push(kaliumBlockCementedDs);
   data.datasets.push(v22BlockCementedDs);
+  data.datasets.push(v22fastBlockCementedDs);
 
   data.datasets.push(vaultBlockUncheckedDs);
   data.datasets.push(kaliumBlockUncheckedDs);
   data.datasets.push(v22BlockUncheckedDs);
+  data.datasets.push(v22fastBlockUncheckedDs);
 
   for (let ix = 0; ix < data.datasets.length; ix++) {
     data.datasets[ix].data = [];
@@ -169,6 +181,11 @@ const callback = (response) => {
           v22BlockCountDs.data[ix] = envElt.block_count.count;
           v22BlockCementedDs.data[ix] = envElt.block_count.cemented;
           v22BlockUncheckedDs.data[ix] = envElt.block_count.unchecked;
+        }
+        if (envElt.env == 'v22fast') {
+          v22fastBlockCountDs.data[ix] = envElt.block_count.count;
+          v22fastBlockCementedDs.data[ix] = envElt.block_count.cemented;
+          v22fastBlockUncheckedDs.data[ix] = envElt.block_count.unchecked;
         }
         // }
       }
