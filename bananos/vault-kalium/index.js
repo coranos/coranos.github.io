@@ -157,7 +157,7 @@ const callback = (response) => {
     return a.tsMillis - b.tsMillis;
   });
 
-  for (let ix = 0; ix < response.length; ix++) {
+  for (let ix = 0; ix < response.length; ix+=6) {
     const elt = response[ix];
     const date = elt.ts;
 
