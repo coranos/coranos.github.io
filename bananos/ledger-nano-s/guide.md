@@ -7,8 +7,8 @@ Banano is a payment token. It's fast, feeless, and fun!
 ## Requirements
 
 To use Banano with a Ledger Nano S, you need a Ledger Nano S, and need access to the internet.
-We recommend using Bananovault:
-[bananovault](https://vault.banano.cc/)
+We recommend using Bananojs-Hw:
+[Bananojs-Hw](https://bananocoin.github.io/bananojs-hw/web/)
 
 ## Installation and Setup Instructions
 To install and setup a ledger Nano S with Bananovault, follow our guide:  
@@ -35,6 +35,6 @@ Be sure to verify the the transaction details on the device!
 If you have trouble, the best way to get help is to contact Coranos#4281 on the Banano Discord Server.
 [Banano Discord Server](https://discord.gg/ZdCmdCB)
 
-[view]: https://i.imgur.com/D9GSzym.png "screenshot"
-[receive]: https://i.imgur.com/D9GSzym.png "screenshot"
-[send]: https://i.imgur.com/yHggZCh.png "screenshot"
+[view]: https://i.imgur.com/fdvhbXI.png "screenshot"
+[receive]: https://i.imgur.com/fdvhbXI.png "screenshot"
+[send]: https://i.imgur.com/Qxo0Q2H.png "screenshot"
