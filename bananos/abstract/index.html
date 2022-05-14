@@ -13,13 +13,15 @@
     <table class="w100pct">
       <tr>
         <td class="w100pct border_black align_top">
-          <div id="generateMatch" class="border_black display_none">
+          <div id="generateMonkeys" class="border_black display_none">
             <h2>Generate New Match</h2>
             <form>
               Number of Monkeys<br />
               <input id="numberOfMonkeys" value="1" type="number" class="border_black" min="1"/>
-              <button onclick="generateNewMatches();return false;">Generate New Matches</button>
+              <button onclick="generateNewMonkeys();return false;">Generate New Monkeys</button>
             </form>
+          </div>
+          <div id="generatedMonkeys" class="border_black display_none">
           </div>
           <div id="spriteList" class="border_black display_none">
           </div>
