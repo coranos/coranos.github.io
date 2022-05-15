@@ -17,16 +17,16 @@
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-
+/* eslint-disable */
 window.PNG = (function() {
-  let APNG_DISPOSE_OP_NONE = 0;
-  let APNG_DISPOSE_OP_BACKGROUND = 1;
-  let APNG_DISPOSE_OP_PREVIOUS = 2;
-  let APNG_BLEND_OP_SOURCE = 0;
-  let APNG_BLEND_OP_OVER = 1;
-  let scratchCanvas = document.createElement('canvas');
-  let scratchCtx = scratchCanvas.getContext('2d');
-  let makeImage = function(imageData) {
+  const APNG_DISPOSE_OP_NONE = 0;
+  const APNG_DISPOSE_OP_BACKGROUND = 1;
+  const APNG_DISPOSE_OP_PREVIOUS = 2;
+  const APNG_BLEND_OP_SOURCE = 0;
+  const APNG_BLEND_OP_OVER = 1;
+  const scratchCanvas = document.createElement('canvas');
+  const scratchCtx = scratchCanvas.getContext('2d');
+  const makeImage = function(imageData) {
     scratchCtx.width = imageData.width;
     scratchCtx.height = imageData.height;
     scratchCtx.clearRect(0, 0, imageData.width, imageData.height);
@@ -95,7 +95,7 @@ window.PNG = (function() {
             this.animation = {
               numFrames: this.readUInt32(),
               numPlays: this.readUInt32() || Infinity,
-              frames: []
+              frames: [],
             };
             break;
 
@@ -113,7 +113,7 @@ window.PNG = (function() {
               width: this.readUInt32(),
               height: this.readUInt32(),
               xOffset: this.readUInt32(),
-              yOffset: this.readUInt32()
+              yOffset: this.readUInt32(),
             };
 
             var delayNum = this.readUInt16();
@@ -173,8 +173,8 @@ window.PNG = (function() {
             var index = text.indexOf(0);
             var key = String.fromCharCode.apply(String, text.slice(0, index));
             this.text[key] = String.fromCharCode.apply(
-              String,
-              text.slice(index + 1)
+                String,
+                text.slice(index + 1),
             );
             break;
 
@@ -259,11 +259,11 @@ window.PNG = (function() {
       data = new FlateStream(data);
       data = data.getBytes();
 
-      const { width, height } = this;
+      const {width, height} = this;
       const pixelBytes = this.pixelBitlength / 8;
 
       const pixels = new Uint8Array(width * height * pixelBytes);
-      const { length } = data;
+      const {length} = data;
       let pos = 0;
 
       function pass(x0, y0, dx, dy, singlePass = false) {
@@ -274,7 +274,7 @@ window.PNG = (function() {
         let row = 0;
         let c = 0;
         while (row < h && pos < length) {
-          var byte, col, i, left, upper;
+          var byte; var col; var i; var left; var upper;
           switch (data[pos++]) {
             case 0: // None
               for (i = 0; i < scanlineLength; i++) {
@@ -297,7 +297,7 @@ window.PNG = (function() {
                 upper =
                   row &&
                   buffer[
-                    (row - 1) * scanlineLength +
+                      (row - 1) * scanlineLength +
                       col * pixelBytes +
                       (i % pixelBytes)
                   ];
@@ -313,7 +313,7 @@ window.PNG = (function() {
                 upper =
                   row &&
                   buffer[
-                    (row - 1) * scanlineLength +
+                      (row - 1) * scanlineLength +
                       col * pixelBytes +
                       (i % pixelBytes)
                   ];
@@ -323,7 +323,7 @@ window.PNG = (function() {
 
             case 4: // Paeth
               for (i = 0; i < scanlineLength; i++) {
-                var paeth, upperLeft;
+                var paeth; var upperLeft;
                 byte = data[pos++];
                 col = (i - (i % pixelBytes)) / pixelBytes;
                 left = i < pixelBytes ? 0 : buffer[c - pixelBytes];
@@ -333,14 +333,14 @@ window.PNG = (function() {
                 } else {
                   upper =
                     buffer[
-                      (row - 1) * scanlineLength +
+                        (row - 1) * scanlineLength +
                         col * pixelBytes +
                         (i % pixelBytes)
                     ];
                   upperLeft =
                     col &&
                     buffer[
-                      (row - 1) * scanlineLength +
+                        (row - 1) * scanlineLength +
                         (col - 1) * pixelBytes +
                         (i % pixelBytes)
                     ];
@@ -371,8 +371,9 @@ window.PNG = (function() {
             let pixelsPos = ((y0 + row * dy) * width + x0) * pixelBytes;
             let bufferPos = row * scanlineLength;
             for (i = 0; i < w; i++) {
-              for (let j = 0; j < pixelBytes; j++)
+              for (let j = 0; j < pixelBytes; j++) {
                 pixels[pixelsPos++] = buffer[bufferPos++];
+              }
               pixelsPos += (dx - 1) * pixelBytes;
             }
           }
@@ -407,8 +408,8 @@ window.PNG = (function() {
     }
 
     decodePalette() {
-      const { palette } = this;
-      const { length } = palette;
+      const {palette} = this;
+      const {length} = palette;
       const transparency = this.transparency.indexed || [];
       const ret = new Uint8Array((transparency.length || 0) + length);
       let pos = 0;
@@ -426,8 +427,8 @@ window.PNG = (function() {
     }
 
     copyToImageData(imageData, pixels) {
-      let j, k;
-      let { colors } = this;
+      let j; let k;
+      let {colors} = this;
       let palette = null;
       let alpha = this.hasAlphaChannel;
 
@@ -439,7 +440,7 @@ window.PNG = (function() {
       }
 
       const data = imageData.data || imageData;
-      const { length } = data;
+      const {length} = data;
       const input = palette || pixels;
       let i = (j = 0);
 
@@ -488,7 +489,7 @@ window.PNG = (function() {
     }
 
     renderFrame(ctx, number) {
-      const { frames } = this.animation;
+      const {frames} = this.animation;
       const frame = frames[number];
       const prev = frames[number - 1];
 
@@ -515,7 +516,7 @@ window.PNG = (function() {
 
     animate(ctx) {
       let frameNumber = 0;
-      const { numFrames, frames, numPlays } = this.animation;
+      const {numFrames, frames, numPlays} = this.animation;
 
       const doFrame = () => {
         const f = frameNumber++ % numFrames;

@@ -16,12 +16,24 @@
           <div id="generateMonkeys" class="border_black display_none">
             <h2>Generate New Match</h2>
             <form>
-              Number of Monkeys<br />
-              <input id="numberOfMonkeys" value="1" type="number" class="border_black" min="1"/>
+              <p>
+                Number of Monkeys: Min 3, Max <span id="maxMonkeyCount"></span>, Must be an odd number.<br />
+                <input id="numberOfMonkeys" value="3" step="2" type="number" class="border_black" min="3"/>
+              </p>
+              <p>
+                Difficullty: Min 1, Max <span id="maxDifficulty"></span>, ((Number of Monkeys -1)/ 2)<br />
+                <input id="difficulty" value="1" type="number" class="border_black" min="1"/>
+              </p>
               <button onclick="generateNewMonkeys();return false;">Generate New Monkeys</button>
             </form>
           </div>
           <div id="generatedMonkeys" class="border_black display_none">
+          </div>
+          <div id="toggleSpriteList" style="clear:both;" class="border_black display_none">
+            <h2>Hide/Show Sprite List</h2>
+            <form>
+              <button onclick="toggleHideShowSpriteList();return false;">Hide/Show Sprite List</button>
+            </form>
           </div>
           <div id="spriteList" class="border_black display_none">
           </div>
