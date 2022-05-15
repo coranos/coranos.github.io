@@ -39,6 +39,30 @@ window.onLoad = async () => {
   show('toggleSpriteList');
 };
 
+window.guessWrong = async () => {
+  alert('wrong!');
+  const numberOfMonkeysElt = document.getElementById('numberOfMonkeys');
+  const difficultyElt = document.getElementById('difficulty');
+  numberOfMonkeysElt.value = 3;
+  difficultyElt.value = 1;
+  await generateNewMonkeys();
+};
+
+window.guessRight = async () => {
+  alert('right!');
+  const numberOfMonkeysElt = document.getElementById('numberOfMonkeys');
+  const difficultyElt = document.getElementById('difficulty');
+  const numberOfMonkeys = parseInt(numberOfMonkeysElt.value, 10);
+  const difficulty = parseInt(difficultyElt.value, 10);
+  if (difficulty < ((numberOfMonkeys-1)/2)) {
+    difficultyElt.value = difficulty + 1;
+  } else {
+    difficultyElt.value = 1;
+    numberOfMonkeysElt.value = numberOfMonkeys + 2;
+  }
+  await generateNewMonkeys();
+};
+
 window.toggleHideShowSpriteList = async () => {
   toggleHideShow('spriteList');
 };
@@ -58,6 +82,8 @@ window.generateNewMonkeys = async () => {
     innerHTML += '<div style="float:left;">';
     innerHTML += `<h3 id="monkey_${monkeyIx}_h3">${monkeyIx}</h3>`;
     innerHTML += `<canvas id="monkey_${monkeyIx}_canvas" width="${PICTURE_SIZE*2}" height="${PICTURE_SIZE*2}" style="border:1px solid"></canvas>`;
+    innerHTML += '<br>';
+    innerHTML += `<button id="monkey_${monkeyIx}_button" onclick="guessWrong();return false;">Guess ${monkeyIx}</button>`;
     innerHTML += '</div>';
   }
   // innerHTML += '</tr>';
@@ -105,10 +131,17 @@ window.generateNewMonkeys = async () => {
   for (let monkeyIx = 0; monkeyIx < numberOfMonkeys; monkeyIx++) {
     const spriteTitleElt = document.getElementById(`monkey_${monkeyIx}_h3`);
     const spriteElt = document.getElementById(`monkey_${monkeyIx}_canvas`);
+    const guessElt = document.getElementById(`monkey_${monkeyIx}_button`);
     let titleInnerHTML = '';
     const sprites = [];
     let maxW = 0;
     let maxH = 0;
+    if (monkeyIx == ((numberOfMonkeys-1)/2)) {
+      // guessElt.innerText = 'Guess Right';
+      guessElt.onclick=() => {
+        guessRight(); return false;
+      };
+    }
     for (let spriteSheetIx = 0; spriteSheetIx < spriteSheetsSubset.length; spriteSheetIx++) {
       const spriteSheet = spriteSheetsSubset[spriteSheetIx];
       const spriteIx = (monkeyIx + spriteSheetIx) % spriteSheet.sprites.length;
