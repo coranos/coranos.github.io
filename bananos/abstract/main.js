@@ -39,17 +39,28 @@ window.onLoad = async () => {
   show('toggleSpriteList');
 };
 
-window.guessWrong = async () => {
-  alert('wrong!');
+window.guessWrong = async (monkeyIx, rightMonkey) => {
+  const rightMonkeySpriteElt = document.getElementById(`monkey_${rightMonkey}_canvas`);
+  const spriteElt = document.getElementById(`monkey_${monkeyIx}_canvas`);
+
+  rightMonkeySpriteElt.style = "background:lightgreen;border:1px solid;";
+  spriteElt.style = "background:red;border:1px solid;";
+
   const numberOfMonkeysElt = document.getElementById('numberOfMonkeys');
   const difficultyElt = document.getElementById('difficulty');
   numberOfMonkeysElt.value = 3;
   difficultyElt.value = 1;
-  await generateNewMonkeys();
+  setTimeout(() => {
+    rightMonkeySpriteElt.style = "border:1px solid;";
+    spriteElt.style = "background:pink;border:1px solid;";
+  }, 1000);
+  setTimeout(generateNewMonkeys, 2000);
 };
 
-window.guessRight = async () => {
-  alert('right!');
+window.guessRight = async (monkeyIx) => {
+  const spriteElt = document.getElementById(`monkey_${monkeyIx}_canvas`);
+  spriteElt.style = "background:lightgreen;border:1px solid;";
+
   const numberOfMonkeysElt = document.getElementById('numberOfMonkeys');
   const difficultyElt = document.getElementById('difficulty');
   const numberOfMonkeys = parseInt(numberOfMonkeysElt.value, 10);
@@ -60,7 +71,8 @@ window.guessRight = async () => {
     difficultyElt.value = 1;
     numberOfMonkeysElt.value = numberOfMonkeys + 2;
   }
-  await generateNewMonkeys();
+  setTimeout(() => {spriteElt.style = "border:1px solid;"}, 500);
+  setTimeout(generateNewMonkeys, 1000);
 };
 
 window.toggleHideShowSpriteList = async () => {
@@ -80,10 +92,8 @@ window.generateNewMonkeys = async () => {
   // innerHTML += '<tr>';
   for (let monkeyIx = 0; monkeyIx < numberOfMonkeys; monkeyIx++) {
     innerHTML += '<div style="float:left;">';
-    innerHTML += `<h3 id="monkey_${monkeyIx}_h3">${monkeyIx}</h3>`;
-    innerHTML += `<canvas id="monkey_${monkeyIx}_canvas" width="${PICTURE_SIZE*2}" height="${PICTURE_SIZE*2}" style="border:1px solid"></canvas>`;
-    innerHTML += '<br>';
-    innerHTML += `<button id="monkey_${monkeyIx}_button" onclick="guessWrong();return false;">Guess ${monkeyIx}</button>`;
+    innerHTML += `<h3 class="display_none" id="monkey_${monkeyIx}_h3">${monkeyIx}</h3>`;
+    innerHTML += `<canvas id="monkey_${monkeyIx}_canvas" width="${PICTURE_SIZE*2}" height="${PICTURE_SIZE*2}" style="border:1px solid">Guess ${monkeyIx}></canvas>`;
     innerHTML += '</div>';
   }
   // innerHTML += '</tr>';
@@ -128,18 +138,34 @@ window.generateNewMonkeys = async () => {
     spriteSheetsSubset.push(spriteSheetSubset);
   }
 
+  const rightMonkey = ((numberOfMonkeys-1)/2);
+
+  const removeAllOnClick = () => {
+    for (let monkeyIx = 0; monkeyIx < numberOfMonkeys; monkeyIx++) {
+      const spriteElt = document.getElementById(`monkey_${monkeyIx}_canvas`);
+      spriteElt.onclick=() => {};
+    }
+  }
+
   for (let monkeyIx = 0; monkeyIx < numberOfMonkeys; monkeyIx++) {
     const spriteTitleElt = document.getElementById(`monkey_${monkeyIx}_h3`);
     const spriteElt = document.getElementById(`monkey_${monkeyIx}_canvas`);
-    const guessElt = document.getElementById(`monkey_${monkeyIx}_button`);
     let titleInnerHTML = '';
     const sprites = [];
     let maxW = 0;
     let maxH = 0;
-    if (monkeyIx == ((numberOfMonkeys-1)/2)) {
+    if (monkeyIx == rightMonkey) {
       // guessElt.innerText = 'Guess Right';
-      guessElt.onclick=() => {
-        guessRight(); return false;
+      spriteElt.onclick=() => {
+        removeAllOnClick();
+        guessRight(rightMonkey);
+        return false;
+      };
+    } else {
+      spriteElt.onclick=() => {
+        removeAllOnClick();
+        guessWrong(monkeyIx, rightMonkey);
+        return false;
       };
     }
     for (let spriteSheetIx = 0; spriteSheetIx < spriteSheetsSubset.length; spriteSheetIx++) {
