@@ -70,7 +70,7 @@ Three panels: [A space ship lands in rural USA] [A space ship lands in rural Rus
 
   Zelinskyy: I understand. So far, we are holding. Thank you, but I have other calls to make. If there is a number of dead Ukranians that needs to be met before you will help us, let me know, and I will call you back.
 
-[A middle aged woman in Ukranian colors prays to a Theotokos icon. A Smerch rocket booster section is there. It had already broken through the ceiling into the shrine where she prays.]
+[A middle aged woman in Ukranian colors prays to a Theotokos icon on a table. There is a bag of sunflower seeds on the table as well. A Smerch rocket booster section is there. It had already broken through the ceiling into the shrine where she prays.]
 
   Woman: Mother Mary, help us. St Michael the Archangel, protect us. St Jeremiah, hear my prayer as you heard Judas Maccabees.
 
@@ -78,6 +78,6 @@ Three panels: [A space ship lands in rural USA] [A space ship lands in rural Rus
 
   Jeremiah: Take this holy Javelin, a gift from God, with which you will strike down your adversaries.
 
-[The smerch is now a Javelin ATGM. The woman takes the Javelin, and poses like St Javelin of Ukraine]
+[The smerch is now a Javelin ATGM. The woman takes the Javelin, and poses like St Javelin of Ukraine. The bag of sunflower seeds falls to the ground.]
 
   St Javelin: Thank you. It is not by arms, but as the Lord decides. He gives victory to those who deserve it.
