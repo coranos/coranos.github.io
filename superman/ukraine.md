@@ -18,7 +18,7 @@ This work is public domain. If you want to use it, go ahead. If you want me to t
 
 [Both space ships travel to opposite sides of the earth]
 
-Three panels: [A space ship lands in rural USA] [A space ship lands in rural Russia] [A child is born in a hospital and named Johnathan, a girl is born in rural Ukraine]
+Four panels: [A space ship lands in rural USA] [A space ship lands in rural Russia] [A child is born in a hospital and named Johnathan] [a girl is born in rural Ukraine]
 
 # Chapter 2 - Elementary School - 1940s
 
